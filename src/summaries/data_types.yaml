@@ -1,15 +1,15 @@
-- title: Value Types
-  key: value-types
-  summary: Some Summary of Value Types
+- title: Variables
+  key: variables
+  summary: Some Summary of Variables
   details: |
     - Value type1
-- title: Reference Types
-  key: reference-types
-  summary: Some Summary of Address
+- title: Bit Manupilation
+  key: bit-manupilation
+  summary: Some Summary of Bit Manupilation
   details: |
     - Value type1
-- title: Mapping Type
-  key: mapping-type
-  summary: Some Summary of Mapping
+- title: strings
+  key: strings
+  summary: Some Summary of strings
   details: |
     - Value type1

@@ -5,16 +5,16 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  
  ## Blockchain Basics
  
- **Value Types**        
-Some Summary of Value Types   
+ **Variables**        
+Some Summary of Variables   
 - Value type1
  
- **Reference Types**        
-Some Summary of Address   
+ **Bit Manupilation**        
+Some Summary of Bit Manupilation   
 - Value type1
  
- **Mapping Type**        
-Some Summary of Mapping   
+ **strings**        
+Some Summary of strings   
 - Value type1
  
  

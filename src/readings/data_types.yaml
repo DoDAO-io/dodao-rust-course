@@ -4,7 +4,7 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=u70_rafPs-0
   subTopics:
-    - "value-types"
+    - variables
   description: |
     This video explains about
     * Point 1

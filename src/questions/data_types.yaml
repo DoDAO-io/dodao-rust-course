@@ -122,7 +122,7 @@
     - D
   topic: 01_data_types
   subTopics:
-    - bit manupilation
+    - bit-manupilation
   difficultyLevel: High
   choices:
     - content: "257"
