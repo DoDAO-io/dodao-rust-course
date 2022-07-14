@@ -1,0 +1,15 @@
+- title: Value Types
+  key: value-types
+  summary: Some Summary of Value Types
+  details: |
+    - Value type1
+- title: Reference Types
+  key: reference-types
+  summary: Some Summary of Address
+  details: |
+    - Value type1
+- title: Mapping Type
+  key: mapping-type
+  summary: Some Summary of Mapping
+  details: |
+    - Value type1
