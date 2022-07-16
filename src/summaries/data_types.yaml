@@ -1,15 +1,42 @@
+- title: Typed language
+  key: typed_language
+  summary: Some Summary of typed_language
+  details: |
+    - Value type1
+
+- title: Value Types
+  key: value-types
+  summary: Some Summary of Variables
+  details: |
+    - Value type1
+
 - title: Variables
   key: variables
   summary: Some Summary of Variables
   details: |
     - Value type1
+
+- title: Keywords
+  key: keywords
+  summary: Some Summary of Variables
+  details: |
+    - Value type1
+
+
 - title: Bit Manupilation
   key: bit-manupilation
   summary: Some Summary of Bit Manupilation
   details: |
     - Value type1
+
 - title: strings
   key: strings
+  summary: Some Summary of strings
+  details: |
+    - Value type1
+
+- title: Package Manager
+  key: package-manager
   summary: Some Summary of strings
   details: |
     - Value type1
