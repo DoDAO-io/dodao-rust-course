@@ -143,7 +143,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  **Bit Manipulation**        
 - Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.
  
- **strings**        
+ **Strings**        
 - String
   * A String is stored as a vector of bytes `(Vec<u8>)`.
   * It is guaranteed to always be a valid `UTF-8` sequence. 
