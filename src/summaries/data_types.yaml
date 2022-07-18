@@ -4,10 +4,15 @@
   details: |
     - Dynamically-Typed Languages
       * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.
+      * Dynamic languages are usually interpreted (with some pre-processing for optimisation) so it is fast to make changes and then immediately run the updated program.
+      * Dynamically-Typed languages allows for Fast Development Cycles and Fast Start-up times.
       * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.
 
     - Statically-Typed Languages
       * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.
+      * Many runtime errors become compile time errors as the compiler ensures that you are writing 'correct' code. This leads to a much smoother development experience.
+      * The execution of the code will be faster compared to the dynamically-typed languages.
+      * The compiler can use the type system to provide language features that are more expressive and succinct.
       * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.
 
     - Rust is a Statically-Typed Language
@@ -164,12 +169,21 @@
   summary: "There are two types of strings in Rust: `String` and `&str`."
   details: |
     - String
+      * Strings are formed by a list of characters, which is really an "array of characters".
       * A String is stored as a vector of bytes `(Vec<u8>)`.
+      * A String is made up of three components: a pointer to some bytes, a length, and a capacity.
+      * The pointer points to an internal buffer String uses to store its data.
+      * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.
+      * The buffer is always stored on the heap.
       * It is guaranteed to always be a valid `UTF-8` sequence. 
       * String is heap allocated, growable and not null terminated.
+      * We can create a String from a literal string with `String::from`
+      * We can append a char to a String with the push method, and append a &str with the `push_str` method
 
     - &str
-      * `&str` is a slice `(&[u8])` that always points to a valid UTF-8 sequence.
+      * The str type, also called a ‘string slice’, is the most primitive string type.
+      * A &str is made up of two components: a pointer to some bytes, and a length.
+      * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.
       * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.
 
 - title: Package Manager
