@@ -3,23 +3,25 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 
  ---
  
- ## Blockchain Basics
+ ## Data Types
  
  **Typed language**        
 - Dynamically-Typed Languages
   * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.
+  * Dynamic languages are usually interpreted (with some pre-processing for optimisation) so it is fast to make changes and then immediately run the updated program.
+  * Dynamically-Typed languages allows for Fast Development Cycles and Fast Start-up times.
   * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.
-
 - Statically-Typed Languages
   * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.
+  * Many runtime errors become compile time errors as the compiler ensures that you are writing 'correct' code. This leads to a much smoother development experience.
+  * The execution of the code will be faster compared to the dynamically-typed languages.
+  * The compiler can use the type system to provide language features that are more expressive and succinct.
   * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.
-
 - Rust is a Statically-Typed Language
  
  **Value Types**        
 - Scalar Types
   * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.
-
   - Integers
     * An integer is a number without a fractional component.
     * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.
@@ -36,7 +38,6 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
       * Let’s say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- 
         1. When you’re compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
         2. When you’re compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.
-
   - Floating-Point Types
     * Floating-Point Types are number with the decimal points.
     * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.
@@ -54,15 +55,12 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
     * There are two possible constant values:- True & False.
     * Booleans are one byte in size.
     * They are declared using the keyword 'bool'.
-
   - Character Type
     * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.
     * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.
     * We can use many more types of characters in rust, like, Chinese, emojis, etc.
-
 - Compound Data Types
   * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.
-
   - Tuples
     * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.
     * Tuples have a fixed length: once declared, they cannot grow or shrink in size.
@@ -78,7 +76,6 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
     * The tuple without any values has a special name knows as "unit".
     * "unit's" value and its corresponding type are both written () and represent an empty value or an empty return type. 
     * Expressions implicitly return the unit value if they don’t return any other value. 
-
   - Arrays
     * Arrays are a collection of multiple values, stored in a single entity.
     * Unlike a tuple, every element of an array must have the same data type.
@@ -131,11 +128,9 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 - Strict Keywords
   * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.
   * For Example:- ` mut, break, else, continue, return, impl, etc. ` 
-
 - Reserved Variables
   * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.
   * For Example:- ` abstract, try, do, final, typeof, etc. `
-
 - Weak Keywords
   * These keywords have special meaning only in certain contexts.
   * For example, it is possible to declare a variable or method with the name `union`.
@@ -145,15 +140,23 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  
  **Strings**        
 - String
+  * Strings are formed by a list of characters, which is really an "array of characters".
   * A String is stored as a vector of bytes `(Vec<u8>)`.
+  * A String is made up of three components: a pointer to some bytes, a length, and a capacity.
+  * The pointer points to an internal buffer String uses to store its data.
+  * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.
+  * The buffer is always stored on the heap.
   * It is guaranteed to always be a valid `UTF-8` sequence. 
   * String is heap allocated, growable and not null terminated.
-
+  * We can create a String from a literal string with `String::from`
+  * We can append a char to a String with the push method, and append a &str with the `push_str` method
 - &str
-  * `&str` is a slice `(&[u8])` that always points to a valid UTF-8 sequence.
+  * The str type, also called a ‘string slice’, is the most primitive string type.
+  * A &str is made up of two components: a pointer to some bytes, and a length.
+  * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.
   * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.
  
  **Package Manager**        
-- Cargo is the Rust package manager. 
+- Cargo is the Rust package manager.
  
  

@@ -3,7 +3,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 
  ---
  
- ## Blockchain Basics
+ ## Data Types
  
  
 ---
@@ -29,6 +29,7 @@ Hint: NoHint
          
 Explanation: Error would occur, because the variable x isn't set as mutable so it's value can't be changed.
 
+Sub Topics: variables
  
 
 ---
@@ -44,6 +45,7 @@ Hint: It doesn't use ASCII values
          
 Explanation: Rust's char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.
 
+Sub Topics: value-types
  
 
 ---
@@ -57,6 +59,7 @@ Hint: Does the compiler need to know the data type at compile time?
          
 Explanation: It is statically typed
 
+Sub Topics: typed_language
  
 
 ---
@@ -72,6 +75,7 @@ Hint: NoHint
          
 Explanation: It is declared as an unsigned integer, but the value is negative
 
+Sub Topics: variables
  
 
 ---
@@ -87,6 +91,7 @@ Hint: NoHint
          
 Explanation: After 255 the digits start rolling back to 0, 1 and so on
 
+Sub Topics: bit-manupilation
  
 
 ---
@@ -105,6 +110,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -124,6 +130,7 @@ Hint: NoHint
          
 Explanation: Strings are mutable in nature
 
+Sub Topics: strings
  
 
 ---
@@ -139,6 +146,7 @@ Hint: NoHint
          
 Explanation: var is not a keyword in rust
 
+Sub Topics: keywords
  
 
 ---
@@ -154,6 +162,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: variables
  
 
 ---
@@ -169,6 +178,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: variables
  
 
 ---
@@ -184,6 +194,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -199,6 +210,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -220,6 +232,7 @@ Hint: Look for the wrong declaration format, you may or may not find it
          
 Explanation: No explanation
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -235,6 +248,7 @@ Hint: How many of these can we update?
          
 Explanation: Constant doesn't uses any extra heap memory to update
 
+Sub Topics: variables
  
 
 ---
@@ -250,6 +264,7 @@ Hint: No hint
          
 Explanation: No explanation
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -265,6 +280,7 @@ Hint: Used for another types.
          
 Explanation: Sets an alias of another type.
 
+Sub Topics: keywords
  
 
 ---
@@ -280,6 +296,7 @@ Hint: What is npm used for?
          
 Explanation: No explanation
 
+Sub Topics: package-manager
  
 
 ---
@@ -295,6 +312,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -310,6 +328,7 @@ Hint: NoHint
          
 Explanation: Because they can handle both signed and unsigned values, and are typecasted in one data type only.
 
+Sub Topics: value-types, bit-manupilation
  
 
 ---
@@ -325,6 +344,7 @@ Hint: Think of the structures they're built upon
          
 Explanation: No explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -340,6 +360,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: variables
  
 
 ---
@@ -353,6 +374,7 @@ Hint: NoHint
          
 Explanation: Values can be updated, but can't be deleted
 
+Sub Topics: value-types
  
 
 ---
@@ -368,6 +390,7 @@ Hint: Look at the declarations, don't get confused by the order while declaring
          
 Explanation: The first argument is the integer you want to initialize an element with, and the second argument tells the end posistion till where you want to pre-initialize.
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -383,19 +406,19 @@ Hint: NoHint
          
 Explanation: They can handle and store different data types
 
+Sub Topics: value-types
  
 
 ---
 
-##### "What would be the output of the following code snippet?
-   ```
-       " Fn main( ) {	"
-          "let mut dodao_io = (""Do"", 69, ""DAO"", 420);"
-          "println!(""{} "", dodao_io );"
-          "println!(""at 0 index = {} "", gfg.0 );"
-        "} "
-
-  ```"
+##### What would be the output of the following code snippet?
+  ```
+    Fn main( ) {	
+      let mut dodao_io = (""Do"", 69, ""DAO"", 420);
+      println!(""{} "", dodao_io );
+      println!(""at 0 index = {} "", gfg.0 );
+    } 
+  ```
   
 
 - [ ]  ("Do", 69, "DAO", 420) & Do
@@ -407,6 +430,7 @@ Hint: No Hint
          
 Explanation: The first print statement should've had {;?}
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -422,6 +446,7 @@ Hint: NoHint
          
 Explanation: No explantion
 
+Sub Topics: variables
  
 
 ---
@@ -437,6 +462,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -455,6 +481,7 @@ Hint: Solution being Positive or Negative might make a difference
 Explanation: Here, when initialized, 1 is set as unsigned 32 integer u32. In statement A, it works because  1+2=3, and it's positive. But, 1-2=(-1) and as they were unsigned integers, so they cannot hold a negative value, so this statement doesn't compile
 
 
+Sub Topics: value-types
  
 
 ---
@@ -472,6 +499,7 @@ Hint: NoHint
          
 Explanation: 1_000u32 is similar as 100 of u32 type.
 
+Sub Topics: value-types
  
 
 ---
@@ -485,12 +513,14 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: strings
  
 
 ---
 
 ##### What is the output of the following code
-  " ```fn main() {
+  ```
+  fn main() {
     let first_string = "This is some string ".to_string();
     let second_string = "Let's add some Data";
 
@@ -500,8 +530,8 @@ Explanation: No explanation
     println!("Second string is: {}", second_string);
 
     println!("Finally we have: {}", final_string);
-}
-``` "
+  }
+  ```
   
 
 - [ ]  Only 1st print statement shows an output
@@ -513,21 +543,23 @@ Hint: NoHint
          
 Explanation: Syntatical Error in the code snippet
 
+Sub Topics: strings, variables
  
 
 ---
 
 ##### Which of the following operator is used by string slices to reference?  
 
-- [x]  &
-- [ ]  %
-- [ ]  #
-- [ ]  *
+- [x]  `&`
+- [ ]  `%`
+- [ ]  `#`
+- [ ]  `*`
   
 Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: strings
  
 
 ---
@@ -543,6 +575,7 @@ Hint: Nohint
          
 Explanation: No explanation
 
+Sub Topics: strings
  
 
 ---
@@ -558,11 +591,12 @@ Hint: NoHint
          
 Explanation: The memory stack is full and overflows, so a default panic occurs                 and the program crashes
 
+Sub Topics: value-types, variables
  
 
 ---
 
-##### Character literals are specified using double quotes, as opposed to               single quotes which stand for string literals.  
+##### Character literals are specified using double quotes, as opposed to single quotes which stand for string literals.  
 
 - [ ]  True
 - [x]  False
@@ -571,6 +605,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: strings, value-types
  
 
 ---
@@ -584,16 +619,18 @@ Hint: hint
          
 Explanation: explanation
 
+Sub Topics: strings
  
 
 ---
 
-##### "```  fn main() {
-          let mut x = 2.0; 
-      
-          x: i32= 3.0; 
-      }
- ```"
+##### For the following code
+ ```  
+   fn main() {
+     let mut x = 2.0;
+     x: i32= 3.0; 
+   }
+ ```
   
 
 - [ ]  The code compiles without errors
@@ -605,6 +642,7 @@ Hint: type declaration
          
 Explanation: i32 is intialized as a float data type
 
+Sub Topics: value-types, variables
  
 
 ---
@@ -620,6 +658,7 @@ Hint: Statically and Dynamic in nature
          
 Explanation: Vector is a Dynamic nature
 
+Sub Topics: value-types
  
 
 ---
@@ -633,6 +672,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -648,6 +688,7 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: keywords
  
 
 ---
@@ -663,6 +704,7 @@ Hint: NoHint
          
 Explanation: Rest are keywords in rust
 
+Sub Topics: variables, keywords
  
 
 ---
@@ -678,6 +720,7 @@ Hint: hint
          
 Explanation: explanation
 
+Sub Topics: keywords
  
 
 ---
@@ -693,6 +736,7 @@ Hint: hint
          
 Explanation: explanation
 
+Sub Topics: variables
  
 
 ---
@@ -709,6 +753,7 @@ Hint: hint
          
 Explanation: explanation
 
+Sub Topics: value-types
  
 
 ---
@@ -722,4 +767,5 @@ Hint: NoHint
          
 Explanation: No explanation
 
+Sub Topics: typed_language
  
