@@ -1,4 +1,5 @@
 - title: Typed language
+  shortTitle: Typed language
   key: typed_language
   summary: A programming language can be either a Dynamically-typed language or a Staticlly-typed language
   details: |
@@ -15,6 +16,7 @@
       * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.
     - Rust is a Statically-Typed Language
 - title: Value Types
+  shortTitle: Value Types
   key: value-types
   summary: |
     Rust has two major Data Value Types, which include 
@@ -99,6 +101,7 @@
             }
           ```
 - title: Variables
+  shortTitle: Variables
   key: variables
   summary: Variables are used to store the values of a particular data type.
   details: |
@@ -127,6 +130,7 @@
           const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
         ```
 - title: Keywords
+  shortTitle: Keywords
   key: keywords
   summary: |
     Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:
@@ -144,11 +148,13 @@
       * These keywords have special meaning only in certain contexts.
       * For example, it is possible to declare a variable or method with the name `union`.
 - title: Bit Manipulation
+  shortTitle: Bit Manipulation
   key: bit-manupilation
   summary: Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.
   details: |
     - Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.
-- title: strings
+- title: Strings
+  shortTitle: Strings
   key: strings
   summary: "There are two types of strings in Rust: `String` and `&str`."
   details: |
@@ -169,6 +175,7 @@
       * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.
       * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.
 - title: Package Manager
+  shortTitle: Package Manager
   key: package-manager
   summary: |
     - A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner. 

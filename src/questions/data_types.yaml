@@ -642,15 +642,14 @@
 - uuid: 8c7f2429-0db2-4288-bd4a-ef694b39206c
   type: SingleChoice
   content: |
-        "What would be the output of the following code snippet?
-           ```
-               " Fn main( ) {	"
-                  "let mut dodao_io = (""Do"", 69, ""DAO"", 420);"
-                  "println!(""{} "", dodao_io );"
-                  "println!(""at 0 index = {} "", gfg.0 );"
-                "} "
-  
-          ```"
+    What would be the output of the following code snippet?
+      ```
+        Fn main( ) {	
+          let mut dodao_io = (""Do"", 69, ""DAO"", 420);
+          println!(""{} "", dodao_io );
+          println!(""at 0 index = {} "", gfg.0 );
+        } 
+      ```
   hint: No Hint
   explanation: "The first print statement should've had {;?}"
   answerKeys:
@@ -815,7 +814,8 @@
   type: SingleChoice
   content: |
     What is the output of the following code
-      " ```fn main() {
+      ```
+      fn main() {
         let first_string = "This is some string ".to_string();
         let second_string = "Let's add some Data";
     
@@ -825,10 +825,8 @@
         println!("Second string is: {}", second_string);
     
         println!("Finally we have: {}", final_string);
-    }
-    ``` "
-
-
+      }
+      ```
   hint: NoHint
   explanation: Syntatical Error in the code snippet
   answerKeys:
@@ -865,16 +863,16 @@
     - strings
   difficultyLevel: Low
   choices:
-    - content: "&"
+    - content: "`&`"
       key: A
       order: 0
-    - content: "%"
+    - content: "`%`"
       key: B
       order: 1
-    - content: "#"
+    - content: "`#`"
       key: C
       order: 2
-    - content: "*"
+    - content: "`*`"
       key: D
       order: 3
 
@@ -933,7 +931,7 @@
 
 - uuid: 1b152ab5-6524-49e0-b5c0-8bd5153b1ab1
   type: SingleChoice
-  content: Character literals are specified using double quotes, as opposed to               single quotes which stand for string literals.
+  content: Character literals are specified using double quotes, as opposed to single quotes which stand for string literals.
   hint: NoHint
   explanation: No explanation
   answerKeys:
@@ -986,12 +984,13 @@
 - uuid: 504040ac-6167-4304-8d6e-1e559975bac5
   type: SingleChoice
   content: |
-            "```  fn main() {
-                      let mut x = 2.0; 
-                  
-                      x: i32= 3.0; 
-                  }
-             ```"
+     For the following code
+      ```  
+        fn main() {
+          let mut x = 2.0;
+          x: i32= 3.0; 
+        }
+      ```
   hint: type declaration
   explanation: i32 is intialized as a float data type
   answerKeys:

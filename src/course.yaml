@@ -1,14 +1,15 @@
 title: Rust Course
 key: rust-course
 summary: This is a Rust Course
-description:  |
+details:  |
   "Line1" 
   "Line2" 
   "Line3"
 duration: 45 - 60 mins
 topics:
-  - title: Blockchain Basics
-    summary: This chapter explains the basics of blockchian
+  - title: Data Types
+    key: data-types
+    details: This chapter explains the basics of Data Types
     readings: data_types.yaml
     summaries: data_types.yaml
     questions: data_types.yaml

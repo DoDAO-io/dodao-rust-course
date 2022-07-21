@@ -2,12 +2,13 @@
   "key": "rust-course",
   "title": "Rust Course",
   "summary": "This is a Rust Course",
-  "description": "\"Line1\" \n\"Line2\" \n\"Line3\"\n",
+  "details": "\"Line1\" \n\"Line2\" \n\"Line3\"\n",
   "duration": "45 - 60 mins",
   "topics": [
     {
-      "title": "Blockchain Basics",
-      "summary": "This chapter explains the basics of blockchian",
+      "title": "Data Types",
+      "key": "data-types",
+      "details": "This chapter explains the basics of Data Types",
       "order": 0,
       "questions": [
         {
@@ -876,7 +877,7 @@
         {
           "uuid": "8c7f2429-0db2-4288-bd4a-ef694b39206c",
           "type": "SingleChoice",
-          "content": "\"What would be the output of the following code snippet?\n   ```\n       \" Fn main( ) {\t\"\n          \"let mut dodao_io = (\"\"Do\"\", 69, \"\"DAO\"\", 420);\"\n          \"println!(\"\"{} \"\", dodao_io );\"\n          \"println!(\"\"at 0 index = {} \"\", gfg.0 );\"\n        \"} \"\n\n  ```\"\n",
+          "content": "What would be the output of the following code snippet?\n  ```\n    Fn main( ) {\t\n      let mut dodao_io = (\"\"Do\"\", 69, \"\"DAO\"\", 420);\n      println!(\"\"{} \"\", dodao_io );\n      println!(\"\"at 0 index = {} \"\", gfg.0 );\n    } \n  ```\n",
           "hint": "No Hint",
           "explanation": "The first print statement should've had {;?}",
           "answerKeys": [
@@ -1090,7 +1091,7 @@
         {
           "uuid": "923d11ba-5c1c-4d48-8101-87ee08e0fa0e",
           "type": "SingleChoice",
-          "content": "What is the output of the following code\n  \" ```fn main() {\n    let first_string = \"This is some string \".to_string();\n    let second_string = \"Let's add some Data\";\n\n    let final_string = first_string + &second_string;\n\n    println!(\"First string is: {}\", first_string);   \n    println!(\"Second string is: {}\", second_string);\n\n    println!(\"Finally we have: {}\", final_string);\n}\n``` \"\n",
+          "content": "What is the output of the following code\n  ```\n  fn main() {\n    let first_string = \"This is some string \".to_string();\n    let second_string = \"Let's add some Data\";\n\n    let final_string = first_string + &second_string;\n\n    println!(\"First string is: {}\", first_string);   \n    println!(\"Second string is: {}\", second_string);\n\n    println!(\"Finally we have: {}\", final_string);\n  }\n  ```\n",
           "hint": "NoHint",
           "explanation": "Syntatical Error in the code snippet",
           "answerKeys": [
@@ -1141,22 +1142,22 @@
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "&",
+              "content": "`&`",
               "key": "A",
               "order": 0
             },
             {
-              "content": "%",
+              "content": "`%`",
               "key": "B",
               "order": 1
             },
             {
-              "content": "#",
+              "content": "`#`",
               "key": "C",
               "order": 2
             },
             {
-              "content": "*",
+              "content": "`*`",
               "key": "D",
               "order": 3
             }
@@ -1240,7 +1241,7 @@
         {
           "uuid": "1b152ab5-6524-49e0-b5c0-8bd5153b1ab1",
           "type": "SingleChoice",
-          "content": "Character literals are specified using double quotes, as opposed to               single quotes which stand for string literals.",
+          "content": "Character literals are specified using double quotes, as opposed to single quotes which stand for string literals.",
           "hint": "NoHint",
           "explanation": "No explanation",
           "answerKeys": [
@@ -1295,7 +1296,7 @@
         {
           "uuid": "504040ac-6167-4304-8d6e-1e559975bac5",
           "type": "SingleChoice",
-          "content": "\"```  fn main() {\n          let mut x = 2.0; \n      \n          x: i32= 3.0; \n      }\n ```\"\n",
+          "content": "For the following code\n ```  \n   fn main() {\n     let mut x = 2.0;\n     x: i32= 3.0; \n   }\n ```\n",
           "hint": "type declaration",
           "explanation": "i32 is intialized as a float data type",
           "answerKeys": [
@@ -1622,45 +1623,52 @@
       "summaries": [
         {
           "title": "Typed language",
+          "shortTitle": "Typed language",
           "key": "typed_language",
           "summary": "A programming language can be either a Dynamically-typed language or a Staticlly-typed language",
-          "details": "- Dynamically-Typed Languages\n  * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.\n  * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.\n\n- Statically-Typed Languages\n  * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.\n  * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.\n\n- Rust is a Statically-Typed Language\n"
+          "details": "- Dynamically-Typed Languages\n  * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.\n  * Dynamic languages are usually interpreted (with some pre-processing for optimisation) so it is fast to make changes and then immediately run the updated program.\n  * Dynamically-Typed languages allows for Fast Development Cycles and Fast Start-up times.\n  * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.\n- Statically-Typed Languages\n  * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.\n  * Many runtime errors become compile time errors as the compiler ensures that you are writing 'correct' code. This leads to a much smoother development experience.\n  * The execution of the code will be faster compared to the dynamically-typed languages.\n  * The compiler can use the type system to provide language features that are more expressive and succinct.\n  * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.\n- Rust is a Statically-Typed Language\n"
         },
         {
           "title": "Value Types",
+          "shortTitle": "Value Types",
           "key": "value-types",
           "summary": "Rust has two major Data Value Types, which include \n  1. Scalar Types\n  2. Compound ypes\n",
-          "details": "- Scalar Types\n  * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.\n\n  - Integers\n    * An integer is a number without a fractional component.\n    * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.\n    * Integers can be either signed or unsigned. Signed and unsigned refer to whether it’s possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).\n    * Integers can be declared using keyword let, and explicitly defining the variable size and it's type of signed or unsigned integer.\n    * For example, we can declare a 64-bit signed and 32-bit unsigned integer in the following ways respectively :- \n    ```\n        1. let mut x: i64 = -20;\n        2. let mut x: u32 = 20;\n    ```\n    * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.\n    * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.\n    - Integer Overflow\n      * Let’s say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- \n        1. When you’re compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.\n        2. When you’re compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.\n\n  - Floating-Point Types\n    * Floating-Point Types are number with the decimal points.\n    * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.\n    * All the Floating-Point Types are signed.\n    * The default Floating-Point Type is of 64-bit.\n    * The `f32` type is a single-precision float, and `f64` has double precision.\n    * We can declare a float type variable in the following ways:- \n     ```\n        fn main() {\n              let x = 2.0; // f64\n              let y: f32 = 3.0; // f32\n        }\n      ```\n  - Boolean Type\n    * There are two possible constant values:- True & False.\n    * Booleans are one byte in size.\n    * They are declared using the keyword 'bool'.\n\n  - Character Type\n    * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.\n    * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.\n    * We can use many more types of characters in rust, like, Chinese, emojis, etc.\n\n- Compound Data Types\n  * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.\n\n  - Tuples\n    * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.\n    * Tuples have a fixed length: once declared, they cannot grow or shrink in size.\n    * Tuples are created by a comma seperated List.\n    * Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.\n    * For Example:- \n      ```\n        fn main() {\n          let tup: (i32, f64, u8) = (500, 6.4, 1);\n        }\n      ```\n    * We can access a tuple element directly by using a period `(.)` followed by the index of the value we want to access\n    * The tuple without any values has a special name knows as \"unit\".\n    * \"unit's\" value and its corresponding type are both written () and represent an empty value or an empty return type. \n    * Expressions implicitly return the unit value if they don’t return any other value. \n\n  - Arrays\n    * Arrays are a collection of multiple values, stored in a single entity.\n    * Unlike a tuple, every element of an array must have the same data type.\n    * Arrays in Rust have a fixed length, i.e. they are not dynamic in nature by default.\n    * Arrays are useful when you want your data allocated on the stack rather than the memory heap.\n    * For Example:- \n      ```\n        fn main() {\n            let a: [i32; 5] = [1, 2, 3, 4, 5];\n        }\n      ```\n      Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements.\n    *  We can access elements of an array using indexing, like this:\n      ```\n        fn main() {\n            let a = [1, 2, 3, 4, 5];\n        \n            let first = a[0]; // outputs 1\n            let second = a[1]; // outputs 2\n        }\n      ```\n"
+          "details": "- Scalar Types\n  * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.\n  - Integers\n    * An integer is a number without a fractional component.\n    * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.\n    * Integers can be either signed or unsigned. Signed and unsigned refer to whether it’s possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).\n    * Integers can be declared using keyword let, and explicitly defining the variable size and it's type of signed or unsigned integer.\n    * For example, we can declare a 64-bit signed and 32-bit unsigned integer in the following ways respectively :- \n    ```\n        1. let mut x: i64 = -20;\n        2. let mut x: u32 = 20;\n    ```\n    * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.\n    * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.\n    - Integer Overflow\n      * Let’s say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- \n        1. When you’re compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.\n        2. When you’re compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.\n  - Floating-Point Types\n    * Floating-Point Types are number with the decimal points.\n    * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.\n    * All the Floating-Point Types are signed.\n    * The default Floating-Point Type is of 64-bit.\n    * The `f32` type is a single-precision float, and `f64` has double precision.\n    * We can declare a float type variable in the following ways:- \n     ```\n        fn main() {\n              let x = 2.0; // f64\n              let y: f32 = 3.0; // f32\n        }\n      ```\n  - Boolean Type\n    * There are two possible constant values:- True & False.\n    * Booleans are one byte in size.\n    * They are declared using the keyword 'bool'.\n  - Character Type\n    * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.\n    * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.\n    * We can use many more types of characters in rust, like, Chinese, emojis, etc.\n- Compound Data Types\n  * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.\n  - Tuples\n    * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.\n    * Tuples have a fixed length: once declared, they cannot grow or shrink in size.\n    * Tuples are created by a comma seperated List.\n    * Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.\n    * For Example:- \n      ```\n        fn main() {\n          let tup: (i32, f64, u8) = (500, 6.4, 1);\n        }\n      ```\n    * We can access a tuple element directly by using a period `(.)` followed by the index of the value we want to access\n    * The tuple without any values has a special name knows as \"unit\".\n    * \"unit's\" value and its corresponding type are both written () and represent an empty value or an empty return type. \n    * Expressions implicitly return the unit value if they don’t return any other value. \n  - Arrays\n    * Arrays are a collection of multiple values, stored in a single entity.\n    * Unlike a tuple, every element of an array must have the same data type.\n    * Arrays in Rust have a fixed length, i.e. they are not dynamic in nature by default.\n    * Arrays are useful when you want your data allocated on the stack rather than the memory heap.\n    * For Example:- \n      ```\n        fn main() {\n            let a: [i32; 5] = [1, 2, 3, 4, 5];\n        }\n      ```\n      Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements.\n    *  We can access elements of an array using indexing, like this:\n      ```\n        fn main() {\n            let a = [1, 2, 3, 4, 5];\n        \n            let first = a[0]; // outputs 1\n            let second = a[1]; // outputs 2\n        }\n      ```\n"
         },
         {
           "title": "Variables",
+          "shortTitle": "Variables",
           "key": "variables",
           "summary": "Variables are used to store the values of a particular data type.",
           "details": "- Variables and Mutability\n  * In Rust, variables are immutable in nature by default.\n  * When a variable is immutable, once a value is bound to a name, you can’t change that value\n  * To make the variables mutable, we use the keyword:- `mut`.\n  * For Example:-\n    ```\n      fn main() {\n          let mut x = 5;\n          println!(\"The value of x is: {x}\");\n          x = 6;\n          println!(\"The value of x is: {x}\");\n      }\n    ```\n- Constants\n  * Constants are values that are bound to a name and are not allowed to change, i.e. they are also immutable.\n  * Usage of keyword `mut` isn't allowed with constants.\n  * Constants are immutable by default, and also they’re always immutable.\n  * We declare constants using the `const` keyword instead of the `let` keyword, and the type of the value must be annotated.\n  * Constants can be declared in any scope, including the global scope, making them useful for values that many parts of code need to know about.\n  * Constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.\n  * For Example:-\n    ```\n      const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;\n    ```\n"
         },
         {
           "title": "Keywords",
+          "shortTitle": "Keywords",
           "key": "keywords",
           "summary": "Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:\n    1. Strict\n    2. Reserved \n    3. Weak\n",
-          "details": "- Strict Keywords\n  * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.\n  * For Example:- ` mut, break, else, continue, return, impl, etc. ` \n\n- Reserved Variables\n  * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.\n  * For Example:- ` abstract, try, do, final, typeof, etc. `\n\n- Weak Keywords\n  * These keywords have special meaning only in certain contexts.\n  * For example, it is possible to declare a variable or method with the name `union`.\n"
+          "details": "- Strict Keywords\n  * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.\n  * For Example:- ` mut, break, else, continue, return, impl, etc. ` \n- Reserved Variables\n  * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.\n  * For Example:- ` abstract, try, do, final, typeof, etc. `\n- Weak Keywords\n  * These keywords have special meaning only in certain contexts.\n  * For example, it is possible to declare a variable or method with the name `union`.\n"
         },
         {
           "title": "Bit Manipulation",
+          "shortTitle": "Bit Manipulation",
           "key": "bit-manupilation",
           "summary": "Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.",
           "details": "- Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.\n"
         },
         {
-          "title": "strings",
+          "title": "Strings",
+          "shortTitle": "Strings",
           "key": "strings",
           "summary": "There are two types of strings in Rust: `String` and `&str`.",
-          "details": "- String\n  * A String is stored as a vector of bytes `(Vec<u8>)`.\n  * It is guaranteed to always be a valid `UTF-8` sequence. \n  * String is heap allocated, growable and not null terminated.\n\n- &str\n  * `&str` is a slice `(&[u8])` that always points to a valid UTF-8 sequence.\n  * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.\n"
+          "details": "- String\n  * Strings are formed by a list of characters, which is really an \"array of characters\".\n  * A String is stored as a vector of bytes `(Vec<u8>)`.\n  * A String is made up of three components: a pointer to some bytes, a length, and a capacity.\n  * The pointer points to an internal buffer String uses to store its data.\n  * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.\n  * The buffer is always stored on the heap.\n  * It is guaranteed to always be a valid `UTF-8` sequence. \n  * String is heap allocated, growable and not null terminated.\n  * We can create a String from a literal string with `String::from`\n  * We can append a char to a String with the push method, and append a &str with the `push_str` method\n- &str\n  * The str type, also called a ‘string slice’, is the most primitive string type.\n  * A &str is made up of two components: a pointer to some bytes, and a length.\n  * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.\n  * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.\n"
         },
         {
           "title": "Package Manager",
+          "shortTitle": "Package Manager",
           "key": "package-manager",
           "summary": "- A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner. \n",
-          "details": "- Cargo is the Rust package manager. \n"
+          "details": "- Cargo is the Rust package manager.\n"
         }
       ]
     }
