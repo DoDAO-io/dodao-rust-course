@@ -1099,7 +1099,7 @@
   hint: NoHint
   explanation: Rest are keywords in rust
   answerKeys:
-    -D
+    - D
   topic: 01_data_types
   subTopics:
     - variables 

@@ -4,6 +4,13 @@
   "summary": "This is a Rust Course",
   "details": "\"Line1\" \n\"Line2\" \n\"Line3\"\n",
   "duration": "45 - 60 mins",
+  "highlights": [
+    "Explains in Detail",
+    "Summaries for each chapter",
+    "MCQ for each chapter"
+  ],
+  "publishStatus": "Live",
+  "thumbnail": "https://cdn-dfnhb.nitrocdn.com/ncvMSDTJqBfzbhjurpWfVBRIBTRVNXNa/assets/static/optimized/rev-ac80957/wp-content/uploads/2021/08/Services-Page-DeFi-Development.jpg",
   "topics": [
     {
       "title": "Data Types",
@@ -1438,7 +1445,9 @@
           "content": "Which of the following can be used as a variable name in rust?",
           "hint": "NoHint",
           "explanation": "Rest are keywords in rust",
-          "answerKeys": "-D",
+          "answerKeys": [
+            "D"
+          ],
           "topic": "01_data_types",
           "subTopics": [
             "variables",
