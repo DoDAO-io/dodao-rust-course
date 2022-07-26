@@ -1,15 +1,18 @@
 title: Rust Course
 key: rust-course
-summary: This is a Rust Course
+summary: |
+  Smart contracts allow users to implement conditions, rules and policies of the blockchain applications. 
+  In this course you will learn how to write smart contracts and all the features of Rust language.
 details:  |
   "Line1" 
   "Line2" 
   "Line3"
-duration: 45 - 60 mins
+duration: 4 - 6 hours
 highlights:
-  - Explains in Detail
-  - Summaries for each chapter
-  - MCQ for each chapter
+  - Rust smart contracts
+  - All the features of Rust
+  - Advanced Rust concepts
+  - Summaries and questions for each chapter
 publishStatus: Live
 thumbnail: https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/Rust/rust-logo-512x512.png
 topics:

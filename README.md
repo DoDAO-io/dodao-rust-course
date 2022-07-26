@@ -4,7 +4,9 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  ---
 
  ## Rust Course
- This is a Rust Course
+ Smart contracts allow users to implement conditions, rules and policies of the blockchain applications. 
+In this course you will learn how to write smart contracts and all the features of Rust language.
+
  
  ## Description
  "Line1" 
