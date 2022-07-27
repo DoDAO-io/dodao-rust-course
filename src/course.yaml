@@ -16,9 +16,207 @@ highlights:
 publishStatus: Live
 thumbnail: https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/Rust/rust-logo-512x512.png
 topics:
+  - title: Your First Solana Smart Contract
+    key: first-smart-contract
+    details: |
+      This chapter introduces you to the world of solana smart contracts written in rust. Covered topics in this chapter
+       - Introduction to a simple smart contract
+       - Explanation of the whole smart contract
+       - Project Management with Cargo Crates
+          1. Installing Cargo
+          2. Packages and Crates
+          3. toml and Project formats
+          4. Cargo Commands
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
   - title: Data Types
-    key: data-types
-    details: This chapter explains the basics of Data Types
+    key: first-smart-contract
+    details: |
+      This chapter covers all in-depth knowledge about variables, mutability, and the various data types available in rust. Covered topics in this chapter
+       - Variables and Immutability
+          1. How to declare variables
+          2. How mut works
+          3. Constants
+          4. Shadowing
+       - Different Data Types
+          1. Scalar Data Types
+          2. Compound Data Types
+       - Scalar Data Type
+          1. Integer Types
+            a. Signed and Unsigned Integers
+            b. Allowed integer sizes in rust
+            c. Declaration and Rules for Integers
+          2. Floating-Point Types
+            a. Types of Floating-points available
+            b. Declaration and Rules for Floating-Points
+          3. Boolean Types
+            a. Types of booleans
+            b. Declaration and Rules
+          4. Characters
+            a. ASCII vs Unicode Scalar Values
+            b. How character types in rust are different
+        - Compound Data Types
+          1. Arrays
+            a. When and how to use Arrays
+            b. Declaration and general rules for Arrays
+          2. Tuples
+            a. When and how to use Tuples
+            b. Declaration and general rules for Tuples
+            c. Difference between Arrays and Tuples.
+        - Strings
+          1. UTF8 set
+          2. Owned Strings: "String"
+          3. String Slice: "&str"
+          4. Difference between "String" and "&str"
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
+  - title: Control Flow & Functions
+    key: control-flow-functions
+    details: |
+      This chapter talks in-depth about the conditional statements, for and while loops, functions in rust, and Error handling.
+       - Conditional Statements
+          1. If-Else statements
+          2. Nested If-Else, nested If statements
+          3. Match, pattern matching
+       - Loops
+          1. For Loops
+            a. Nested for loops, range-based for loops
+          2. While Loops
+       - Functions
+          1. Parameters, Statements
+          2. Functions with Return Values
+       - Error Handling
+          1. Recoverable Errors
+            a. Option
+            b. Result
+          2. Combinators
+            a. Using combinators on Options and Results
+            b. Conversion between Options and Results
+          3. Early Returns and "?" operator
+          4. Non-recoverable errors
+            a. Panics
+          5. Custom Errors
+
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
+  - title: OOPS(Object Oriented Programming)
+    key: oops
+    details: |
+      This chapter covers all the important object oriented programming concepts with rust.
+       - Structs
+          1. Introduction and Defining a Struct
+          2. Different types of structs
+            a. Classic
+            b. Tuple
+            c. Unit
+          3. Creating new instances of a struct
+          4. Destructing
+       - Enums
+          1. Introduction and Defining Enums
+          2. Declaring Enums using types
+          3. Option and Result type Enums
+            a. Option Enum Advantages over NULL values
+          4. Difference between Enums and Strcuts
+       - Traits
+          1. Introduction and Defining Traits
+          2. Different Types of Traits
+            a. Marker
+            b. Simple
+            c. Generic
+            d. Associated
+            e. Inherited
+          3. Trait Bounds
+            a. Trait Bounds on types
+            b. on generic functions, 
+            c. on impl blocks, 
+            d. ‘+’ to compose trait bounds
+          4. Standard Library Traits
+          5. Polymorphism using trait objects 
+            a. Dispatch
+            b. Trait Objects
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
+  - title: Ownership and Borrowing
+    key: owner-borrow
+    details: |
+      This chapter introduces the high level memory management and safety with ownership and borrowing.
+       - Memory Allocation and Memory Types
+          1. Stacks
+          2. Heaps
+          3. Memory alignment
+          4. Std::mem modules
+       - How Rust’s Memory Mode is different from others
+       - Ownership
+          1. What is Ownership in rust
+          2. What are Scopes
+          3. Move and Copy Semantics
+       - Duplicating Types via Traits
+          1. Copy
+          2. Clone
+       - Ownership and Memory Safety
+          1. Dangling Pointers
+          2. Double Free
+          3. Memory Leaks
+       - Borrowing
+          1. Borrowing rules
+          2. References and multiple references
+          3. Dangling References
+          4. Method types using borrowing
+       - Lifetimes
+          1. Parameters
+          2. Lifetime rules
+          3. Multiple lifetimes
+          4. Lifetime in impl blocks
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
+  - title: Collections
+    key: collections
+    details: |
+      This chapter talks about various pre-written Data Structures that are available in rust.
+       - Vec<T>
+       - HashMap<T>
+       - HashSet<T>
+       - VecDeque<T>
+       - LinkedList<T>
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
+    status: In Progress
+    completionWeek:  July 18
+
+  - title: Pointers and Iterators
+    key: point-iter
+    details: |
+      This chapter explains about pointers and iterators in detail.
+       - Reference type pointers
+       - Raw Pointers
+       - Smart Pointers 
+          1. Types
+          2. Drop
+          3. Deref and DerefMUT
+       - Uses of Interior Mutability
+       - Introduction to Iterators
+       - Uses and advantages of Iterators
     readings: data_types.yaml
     summaries: data_types.yaml
     questions: data_types.yaml
