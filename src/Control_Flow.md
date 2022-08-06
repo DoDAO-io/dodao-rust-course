@@ -199,5 +199,68 @@ This time, the compiler matched to “A” on the left, so it stored the string 
 
 We then used it in the ```println!()``` below the match statement.
 
+---
+
+## Loop
+
+Throughout our application, we will often need to execute sections of code more than once.
+
+Instead of rewriting these sections of code, we can place them in a loop and allow Rust to automatically execute them as many times as we need.
+
+A loop consists of the following:
+
+#### A condition
+A code block containing our execution code
+The compiler will evaluate the condition and based on its results, execute the code. Then, the compiler will start again at the top of the loop code and evaluate the condition again.
+
+This cycle of iterations continue until the condition is false, or we manually stop the loop.
+
+Rust provides us with two types of loops:
+
+* The while loop
+* The for loop
+* The indefinite while loop
 
 
+The while loop will continue to execute code while its condition remains true. Once the condition proves false, the while loop will stop and the compiler will move on to any code below it.
+
+```
+fn main() {
+
+    let mut counter = 0;
+
+    while counter < 10 {
+
+        println!("Counter: {}", counter);
+        counter += 1;
+    }
+}
+```
+
+It may seem a little confusing so let’s take it step by step.
+
+First, we set up a mutable variable called `counter`. This will help us stop the loop. Next, we specify our condition that while the counter variable value is less than 10, the loop should iterate. Inside the while code block, we print out the counter number to the console.
+
+Lastly, we add 1 to our counter variable to indicate that the loop iterated once. When we run the example, the output shows a list of numbers from 1 to 10.
+
+Below is the expected output
+
+```
+Counter: 0
+Counter: 1
+Counter: 2
+Counter: 3
+Counter: 4
+Counter: 5
+Counter: 6
+Counter: 7
+Counter: 8
+Counter: 9
+```
+Every time the compiler goes through the code it prints the ``` mut counter``` and add 1 to it until it is great than 10.  
+
+#### Infinite loops
+
+With the while loop, there is a potential danger that the loop may never stop if we make a mistake. This is known as an infinite loop and it will significantly slow down the system until the application crashes.
+
+Let’s use our earlier example. If we remove the code that increments the counter, the condition will always prove true because the counter will stay at 0 and never get to 10 where it’s told to stop.
