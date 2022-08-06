@@ -57,4 +57,28 @@ Using conditional AND, you can test whether one condition and another are true. 
 
 When AND is used to evaluate multiple conditions, the && operator is used to separate them.
 
+```
+fn main() {
 
+    let a = 5;
+
+    if a > 0 && a < 10 {
+        println!("Both conditions are true");
+    }
+}
+```
+Due to the fact that both of our conditions are true in the example above, the code inside the if code block is executed.
+
+It tests whether one condition or another is true by using the conditional OR. It is not necessary for both conditions to be true in order for the code to run.
+
+The || operator is used to separate multiple conditions with OR.
+```
+fn main() {
+
+    let a = 5;
+
+    if a > 5 || a < 10 {
+        println!("One of the conditions are true");
+    }
+}
+```
