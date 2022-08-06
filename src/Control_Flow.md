@@ -8,6 +8,13 @@ If expressions and loops are the most common constructs in Rust that control exe
 
 In most cases, the computer runs the code in order from the first line in the file to the last line, unless it encounters structures that alter the control flow, such as loops and conditionals.
 
+We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
+
+* if
+* else if
+* else
+* match
+
 ## If Expressions
 You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
 
@@ -37,5 +44,17 @@ $ cargo run
      Running `target/debug/branches`
 condition was true
  ```
+
+If we change the `number` to 17 we get a `condition was false` because it is not less than 5. It is a very straight forward statement.
+
+---
+
+### Multiple if conditions - how to evaluate them?
+
+The two logical operators && and || allow us to evaluate more than one condition in an if statement.
+
+Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
+
+When AND is used to evaluate multiple conditions, the && operator is used to separate them.
 
 
