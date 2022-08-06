@@ -278,3 +278,54 @@ fn main() {
     }
 }
 ```
+#### Repeating Code with loop
+
+The ```loop``` keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+
+As an example, change the src/main.rs file in your loops directory to look like this:
+
+```
+fn main() {
+    loop {
+        println!("again!");
+    }
+}
+```
+
+When we run this program, we’ll see again! printed over and over continuously until we stop the program manually. Most terminals support the keyboard shortcut ctrl-c to interrupt a program that is stuck in a continual loop. Give it a try:
+
+This will be the ouput
+```
+again!
+again!
+again!
+again!
+^Cagain!
+```
+
+The symbol ^C represents where you pressed ctrl-c . You may or may not see the word again! printed after the ^C, depending on where the code was in the loop when it received the interrupt signal.
+
+Fortunately, Rust also provides a way to break out of a loop using code. You can place the break keyword within the loop to tell the program when to stop executing the loop. Recall that we did this in the guessing game in the “Quitting After a Correct Guess” section of Chapter 2 to exit the program when the user won the game by guessing the correct number.
+
+We also used continue in the guessing game, which in a loop tells the program to skip over any remaining code in this iteration of the loop and go to the next iteration.
+
+#### Returning Values from Loops
+
+One of the uses of a loop is to retry an operation you know might fail, such as checking whether a thread has completed its job. You might also need to pass the result of that operation out of the loop to the rest of your code. To do this, you can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it, as shown here:
+
+```
+fn main() {
+    let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+}
+```
+Before the loop, we declare a variable named counter and initialize it to 0. Then we declare a variable named result to hold the value returned from the loop. On every iteration of the loop, we add 1 to the counter variable, and then check whether the counter is equal to 10
