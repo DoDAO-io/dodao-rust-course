@@ -82,3 +82,30 @@ fn main() {
     }
 }
 ```
+---
+### How to nest if, else if and else statements?
+
+Nesting is the process of placing if statements inside other if statements. By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
+
+We nest an if statement by writing it inside the execution code block of another if statement.
+```
+fn main() {
+
+    let number = 5;
+
+    if number < 10 {
+        // if outer condition proves
+        // true evaluate the inner if
+        if number > 0 {
+            println!("Inner if statement");
+        }
+    }
+}
+```
+
+In the example above, our outer if statement condition proves true. The compiler then evaluates the inner if statement and executes its code block if its condition proves true.
+
+Nested if statements are used when we want to evaluate conditions only if other conditions are true.
+
+Note that if you find yourself nesting more than 3 levels deep, you should consider finding a different method. Perhaps a loop.
+
