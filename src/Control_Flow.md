@@ -264,3 +264,17 @@ Every time the compiler goes through the code it prints the ``` mut counter``` a
 With the while loop, there is a potential danger that the loop may never stop if we make a mistake. This is known as an infinite loop and it will significantly slow down the system until the application crashes.
 
 Let’s use our earlier example. If we remove the code that increments the counter, the condition will always prove true because the counter will stay at 0 and never get to 10 where it’s told to stop.
+
+This section of code will cause an infinite loop
+
+```
+fn main() {
+
+    let mut counter = 0;
+
+    while counter < 10 {
+
+        println!("Counter: {}", counter);
+    }
+}
+```
