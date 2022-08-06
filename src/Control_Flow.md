@@ -109,3 +109,95 @@ Nested if statements are used when we want to evaluate conditions only if other 
 
 Note that if you find yourself nesting more than 3 levels deep, you should consider finding a different method. Perhaps a loop.
 
+---
+
+### The conditional match statement
+
+A single value will be compared with a list of values with the match statement. It is a bit tchnical but easy so walk with me. 
+
+The syntax is similar to a switch statement in a language in the C family, though the syntax is different.
+
+Taking it step by step will make it easier to understand what's going on.
+
+1. The match statement returns a value, so we can assign the whole statement to a variable to get the result.
+
+Example:
+
+```  let expression_result =```
+
+2. Now we write the match statement itself. We use the keyword match, followed by the main value we are going to compare any other values to. Finally, we define a code block.
+
+Note that the code block is terminated with a semicolon after the closing curly brace.
+
+Example:
+```
+let expression_result = match main_value {
+
+};
+```
+
+3. Inside the code block we will write the values that we want to try and match with the main value.
+
+First, we specify the value we want to match, followed by a => operator. Then, inside another code block, we specify the execution statements if that value matches with the main value.
+
+Each of these values are separated with a comma, and we can have as many as we need.
+
+The final value to match is simply an underscore. The single, standalone, underscore in a match statement represents a catch-all situation if none of the values matched to the main value. Think of it as an else statement.
+
+Now, let’s see a practical example of the match statement.
+
+Example:
+```
+fn main() {
+
+    let grade = "B";
+
+    let _result = match grade {
+        "A" => { println!("Fantastic, you got an A!"); },
+        "B" => { println!("Great job, you got a B!"); },
+        "C" => { println!("Good job, you got a C"); },
+        "D" => { println!("You got a D, you passed"); },
+        "F" => { println!("Sorry, you failed"); },
+
+        _ => { println!("Unknown grade, please see the teacher"); }
+    };
+}
+```
+In the example above, we give a student a grade and store it in a variable. Then we check to see which grade score in the match statement the student’s score matches.
+
+If the compiler finds a match on the left of the ```=>``` operator, it will execute whatever statement is on the right of the ```=>``` operator.
+
+In this case, it matched to “B” on the left and so it printed the string “Great job, you got a B!”.
+
+Note that we don’t use the result variable in the example above. This is simply because we don’t need to, the execution statement of the match already prints a message.
+
+If we want to return an actual value, we specify the value instead of an action like ```println```.
+
+Example:
+```
+fn main() {
+
+    let grade = "A";
+
+    let result = match grade {
+        "A" => "Excellent!",
+        "B" => "Great!",
+        "C" => "Good",
+        "D" => "You passed",
+        "F" => "Sorry, you failed",
+        _ => "Unknown Grade"
+    };
+
+    println!("Grade: {} - {}", grade, result);
+}
+```
+In the example above, we replaced the ```println!()``` statements with simple string values.
+
+When the compiler finds a match on the left of the``` =>``` operator, it will return the value on the right of the ```=> ```into the result variable.
+
+This time, the compiler matched to “A” on the left, so it stored the string “Excellent!” into the result variable.
+
+We then used it in the ```println!()``` below the match statement.
+
+
+
