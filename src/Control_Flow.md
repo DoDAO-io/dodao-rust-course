@@ -11,9 +11,8 @@ In most cases, the computer runs the code in order from the first line in the fi
 We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
 
 * if
-* else if
-* else
 * match
+* loop
 
 ## If Expressions
 You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
