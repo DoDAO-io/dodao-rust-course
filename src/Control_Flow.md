@@ -379,7 +379,10 @@ Errors are inevitable in software, so Rust has a number of features to help you 
 There are two major categories of errors in Rust: recoverable and unrecoverable. Typically, we want to notify the user of a recoverable error, such as a file not found error, and then retry the operation. The program should be immediately stopped if an unrecoverable error occurs, such as accessing a location beyond the end of an array.
 
 It is common for languages to handle both kinds of errors in the same way, using mechanisms such as exceptions. Rust doesn’t have exceptions. Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error. This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
+## Panic
+
 ### Unrecoverable Errors with panic!
+When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
 
 Let’s try calling panic! in a simple program:
 Filename: src/main.rs
