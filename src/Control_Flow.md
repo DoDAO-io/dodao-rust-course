@@ -10,9 +10,10 @@ In most cases, the computer runs the code in order from the first line in the fi
 
 We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
 
-* if
-* match
-* loop
+* If else
+* Match
+* Loop
+* For loop
 
 ## If Expressions
 You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
@@ -369,7 +370,37 @@ count = 2
 remaining = 10
 End count = 2
 ```
+### For Loop
 
+A for expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator. If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop. If the iterator is empty, the for expression completes.
+
+An example of a for loop over the contents of an array:
+```
+fn main() {
+let v = &["apples", "cake", "coffee"];
+
+for text in v {
+    println!("I like {}.", text);
+}
+}
+```
+An example of a for loop over a series of integers:
+
+
+```
+let mut sum = 0;
+for n in 1..11 {
+    sum += n;
+}
+assert_eq!(sum, 55);
+```
+A for loop is equivalent to a loop expression containing a match expression as follows:
+
+```
+'label: for PATTERN in iter_expr {
+    /* loop body */
+}
+```
 ---
 
 # Error Handling
