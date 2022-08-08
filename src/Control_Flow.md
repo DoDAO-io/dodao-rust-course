@@ -544,3 +544,25 @@ error[E0308]: mismatched types
 For more information about this error, try `rustc --explain E0308`.
 error: could not compile `error-handling` due to previous error
 ```
+#### Propagating Errors
+When a function’s implementation calls something that might fail, instead of handling the error within the function itself, you can return the error to the calling code so that it can decide what to do. This is known as propagating the error and gives more control to the calling code, where there might be more information or logic that dictates how the error should be handled than what you have available in the context of your code.
+A Shortcut for Propagating Errors: the ? Operator
+The code below shows an implementation of read_username_from_file that has the same functionality as in Listing 9-6, but this implementation uses the ? operator.
+
+Filename: src/main.rs
+
+```
+use std::fs::File;
+use std::io;
+use std::io::Read;
+
+fn read_username_from_file() -> Result<String, io::Error> {
+    let mut f = File::open("hello.txt")?;
+    let mut s = String::new();
+    f.read_to_string(&mut s)?;
+    Ok(s)
+}
+```
+This function that returns errors to the calling code using the ? operator
+
+The ? placed after a Result value is defined to work in almost the same way as the match expressions we defined to handle the Result values in Listing 9-6. If the value of the Result is an Ok, the value inside the Ok will get returned from this expression, and the program will continue. If the value is an Err, the Err will be returned from the whole function as if we had used the return keyword so the error value gets propagated to the calling code.
