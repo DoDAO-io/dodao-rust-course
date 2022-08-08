@@ -608,7 +608,18 @@ Another function.
 The lines execute in the order in which they appear in the main function. First, the “Hello, world!” message prints, and then another_function is called and its message is printed.
 
 ##### Function names
-often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions:
+often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions.
+The Rust compiler is very opinionated about what casing and style you use to name things, even giving warnings when you break its rules. You can disable those warnings if you wish. 
+
+Here is a quick overview of the rules:
+
+| Convention | Types that use it |
+| ---------- | ----------------- |
+| `snake_case` | Crates, modules, functions, methods, local variables and parameters, lifetimes. |
+| `CamelCase` | Types (including traits and enums), type parameters in generics. |
+| `SCREAMING_SNAKE_CASE` | Constant and static variables. |
+
+This means that when you have a type name and you want to refer to it in a function name, you have to convert. So YourType will become your_type
 
 | Type name | Text in methods |
 | --------- | --------------- |
@@ -627,3 +638,18 @@ Types that involve notation follow the convention below. There is some overlap o
 | &T | ref |
 
 
+### Function body
+    
+The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the function's block. This means that the tail expression of the block, if evaluated, ends up being returned to the caller. As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.
+
+For example, the function above behaves as if it was written as:
+
+```
+// argument_0 is the actual first argument passed from the caller
+let (value, _) = argument_0;
+return {
+    value
+};
+```
+Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
+    
