@@ -590,7 +590,8 @@ fn another_function() {
     println!("Another function.");
 }
 ```
-We define a function in Rust by entering fn followed by a function name and a set of parentheses. The curly brackets tell the compiler where the function body begins and ends.
+#### Start with Fn
+We define a function in Rust by entering `fn` followed by a function name and a set of parentheses. The curly brackets `{...}` tell the compiler where the function body begins and ends.
 
 We can call any function we’ve defined by entering its name followed by a set of parentheses. Because another_function is defined in the program, it can be called from inside the main function. Note that we defined another_function after the main function in the source code; we could have defined it before as well. Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
 
@@ -606,57 +607,23 @@ Another function.
 ```
 The lines execute in the order in which they appear in the main function. First, the “Hello, world!” message prints, and then another_function is called and its message is printed.
 
-## Parameters
-We can define functions to have parameters, which are special variables that are part of a function’s signature. When a function has parameters, you can provide it with concrete values for those parameters. Technically, the concrete values are called arguments, but in casual conversation, people tend to use the words parameter and argument interchangeably for either the variables in a function’s definition or the concrete values passed in when you call a function.
+##### Function names
+often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions:
 
-In this version of another_function we add a parameter:
+| Type name | Text in methods |
+| --------- | --------------- |
+| String | string |
+| Vec<T> |	vec |
+| YourType | your_type |
+    
+Types that involve notation follow the convention below. There is some overlap on these rules; apply the most specific applicable rule:
 
-Filename: src/main.rs
+| Type name | Text in methods |
+| --------- | --------------- |
+| &str | str |
+| &[T] | slice |
+| &mut [T] | mut_slice |
+| &[u8] | bytes |
+| &T | ref |
 
-```
-fn main() {
-    another_function(5);
-}
 
-fn another_function(x: i32) {
-    println!("The value of x is: {x}");
-}
-```
-Try running this program; you should get the following output:
-
-```
-$ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
-     Running `target/debug/functions`
-The value of x is: 5
-```
-The declaration of another_function has one parameter named x. The type of x is specified as i32. When we pass 5 in to another_function, the println! macro puts 5 where the pair of curly brackets containing x was in the format string.
-
-In function signatures, you must declare the type of each parameter. This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. The compiler is also able to give more helpful error messages if it knows what types the function expects.
-
-When defining multiple parameters, separate the parameter declarations with commas, like this:
-
-Filename: src/main.rs
-
-```
-fn main() {
-    print_labeled_measurement(5, 'h');
-}
-
-fn print_labeled_measurement(value: i32, unit_label: char) {
-    println!("The measurement is: {value}{unit_label}");
-}
-```
-This example creates a function named print_labeled_measurement with two parameters. The first parameter is named value and is an i32. The second is named unit_label and is type char. The function then prints text containing both the value and the unit_label.
-
-Let’s try running this code. Replace the program currently in your functions project’s src/main.rs file with the preceding example and run it using cargo run:
-
-```
-$ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
-     Running `target/debug/functions`
-The measurement is: 5h
-```
-Because we called the function with 5 as the value for value and 'h' as the value for unit_label, the program output contains those values.
