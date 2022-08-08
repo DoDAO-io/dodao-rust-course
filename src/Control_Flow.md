@@ -436,3 +436,111 @@ thread 'main' panicked at 'crash and burn', src/main.rs:2:5
 ```
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 The call to panic! causes the error message contained in the last two lines. The first line shows our panic message and the place in our source code where the panic occurred:
+
+
+### To panic! or Not to panic!
+
+So how do you decide when you should call panic! and when you should return Result? When code panics, there’s no way to recover. You could call panic! for any error situation, whether there’s a possible way to recover or not, but then you’re making the decision that a situation is unrecoverable on behalf of the calling code. When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that’s appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning Result is a good default choice when you’re defining a function that might fail.
+
+#### Option Enum
+
+Option is a predefined enum in the Rust standard library. This enum has two values − Some(data) and None.
+
+Syntax
+```
+enum Option<T> {
+Some(T), //used to return a value
+None // used to return null, as Rust doesn't support
+the null keyword
+}
+```
+Here, the type T represents value of any type.
+
+Rust does not support the null keyword. The value None, in the enumOption, can be used by a function to return a null value. If there is data to return, the function can return Some(data).
+
+Let us understand this with an example −
+
+The program defines a function is_even(), with a return type Option. The function verifies if the value passed is an even number. If the input is even, then a value true is returned, else the function returns None.
+```
+fn main() {
+   let result = is_even(3);
+   println!("{:?}",result);
+   println!("{:?}",is_even(30));
+}
+fn is_even(no:i32)->Option<bool> {
+   if no%2 == 0 {
+      Some(true)
+   } else {
+      None
+   }
+}
+```
+Output
+```
+None
+Some(true)
+```
+When we are not sure whether there is a character at 6th element and you don't want your program to crash, Option comes to the rescue. 
+Here is another example from The Rust Programming Language:
+```
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+let five = Some(5);
+let six = plus_one(five);
+let none = plus_one(None);
+```
+#### Recoverable Errors with Result
+
+Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
+
+Recall from “Handling Potential Failure with the Result Type” in Chapter 2 that the Result enum is defined as having two variants, Ok and Err, as follows:
+```
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+```
+The T and E are generic type parameters. What you need to know right now is that T represents the type of the value that will be returned in a success case within the Ok variant, and E represents the type of the error that will be returned in a failure case within the Err variant. Because Result has these generic type parameters, we can use the Result type and the functions defined on it in many different situations where the successful value and error value we want to return may differ.
+Let’s call a function that returns a Result value because the function could fail. In Listing 9-3 we try to open a file.
+
+Filename: src/main.rs
+
+```
+use std::fs::File;
+
+fn main() {
+    let f = File::open("hello.txt");
+}
+```
+Listing 9-3: Opening a file
+
+How do we know File::open returns a Result? We could look at the standard library API documentation, or we could ask the compiler! If we give f a type annotation that we know is not the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of f is. Let’s try it! We know that the return type of File::open isn’t of type u32, so let’s change the let f statement to this:
+
+This code does not compile!
+```
+    let f: u32 = File::open("hello.txt");
+```    
+Attempting to compile now gives us the following output:
+
+```
+$ cargo run
+   Compiling error-handling v0.1.0 (file:///projects/error-handling)
+error[E0308]: mismatched types
+ --> src/main.rs:4:18
+  |
+4 |     let f: u32 = File::open("hello.txt");
+  |            ---   ^^^^^^^^^^^^^^^^^^^^^^^ expected `u32`, found enum `Result`
+  |            |
+  |            expected due to this
+  |
+  = note: expected type `u32`
+             found enum `Result<File, std::io::Error>`
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `error-handling` due to previous error
+```
