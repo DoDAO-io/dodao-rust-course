@@ -19,7 +19,7 @@ We control the flow of our program with the following statements, in combination
 You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
 
 To explore the if expression, create a new project called branches in your projects directory. Add the following code to src/main.rs:
-```
+```rust
 fn main() {
     let number = 3;
 
@@ -37,7 +37,7 @@ The keyword if follows a condition in all if expressions. Here, the condition ch
 Our program also includes an else expression, which we chose to use here, to provide an alternative block of code in case the condition is false. Unless you provide an else expression, if the condition is false, the program will skip the if block and move on.
 The following output should be seen after running this code:
 
-```
+```rust
 $ cargo run
    Compiling branches v0.1.0 (file:///projects/branches)
     Finished dev [unoptimized + debuginfo] target(s) in 0.31s
@@ -57,7 +57,7 @@ Using conditional AND, you can test whether one condition and another are true. 
 
 When AND is used to evaluate multiple conditions, the && operator is used to separate them.
 
-```
+```rust
 fn main() {
 
     let a = 5;
@@ -72,7 +72,7 @@ Due to the fact that both of our conditions are true in the example above, the c
 It tests whether one condition or another is true by using the conditional OR. It is not necessary for both conditions to be true in order for the code to run.
 
 The || operator is used to separate multiple conditions with OR.
-```
+```rust
 fn main() {
 
     let a = 5;
@@ -88,7 +88,7 @@ fn main() {
 Nesting is the process of placing if statements inside other if statements. By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
 
 We nest an if statement by writing it inside the execution code block of another if statement.
-```
+```rust
 fn main() {
 
     let number = 5;
@@ -130,7 +130,7 @@ Example:
 Note that the code block is terminated with a semicolon after the closing curly brace.
 
 Example:
-```
+```rust
 let expression_result = match main_value {
 
 };
@@ -147,7 +147,7 @@ The final value to match is simply an underscore. The single, standalone, unders
 Now, let’s see a practical example of the match statement.
 
 Example:
-```
+```rust
 fn main() {
 
     let grade = "B";
@@ -174,7 +174,7 @@ Note that we don’t use the result variable in the example above. This is simpl
 If we want to return an actual value, we specify the value instead of an action like ```println```.
 
 Example:
-```
+```rust
 fn main() {
 
     let grade = "A";
@@ -224,7 +224,7 @@ Rust provides us with two types of loops:
 
 The while loop will continue to execute code while its condition remains true. Once the condition proves false, the while loop will stop and the compiler will move on to any code below it.
 
-```
+```rust
 fn main() {
 
     let mut counter = 0;
@@ -245,7 +245,7 @@ Lastly, we add 1 to our counter variable to indicate that the loop iterated once
 
 Below is the expected output
 
-```
+```rust
 Counter: 0
 Counter: 1
 Counter: 2
@@ -267,7 +267,7 @@ Let’s use our earlier example. If we remove the code that increments the count
 
 This section of code will cause an infinite loop
 
-```
+```rust
 fn main() {
 
     let mut counter = 0;
@@ -284,7 +284,7 @@ The ```loop``` keyword tells Rust to execute a block of code over and over again
 
 As an example, change the src/main.rs file in your loops directory to look like this:
 
-```
+```rust
 fn main() {
     loop {
         println!("again!");
@@ -295,7 +295,7 @@ fn main() {
 When we run this program, we’ll see again! printed over and over continuously until we stop the program manually. Most terminals support the keyboard shortcut ctrl-c to interrupt a program that is stuck in a continual loop. Give it a try:
 
 This will be the ouput
-```
+```rust
 again!
 again!
 again!
@@ -313,7 +313,7 @@ We also used continue in the guessing game, which in a loop tells the program to
 
 One of the uses of a loop is to retry an operation you know might fail, such as checking whether a thread has completed its job. You might also need to pass the result of that operation out of the loop to the rest of your code. To do this, you can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it, as shown here:
 
-```
+```rust
 fn main() {
     let mut counter = 0;
 
@@ -333,7 +333,7 @@ Before the loop, we declare a variable named counter and initialize it to 0. The
 Loop Labels to Disambiguate Between Multiple Loops
 If you have loops within loops, break and continue apply to the innermost loop at that point. You can optionally specify a loop label on a loop that we can then use with break or continue to specify that those keywords apply to the labeled loop instead of the innermost loop. Loop labels must begin with a single quote. Here’s an example with two nested loops:
 
-```
+```rust
 fn main() {
     let mut count = 0;
     'counting_up: loop {
@@ -359,7 +359,7 @@ fn main() {
 The outer loop has the label 'counting_up, and it will count up from 0 to 2. The inner loop without a label counts down from 10 to 9. The first break that doesn’t specify a label will exit the inner loop only. The break 'counting_up; statement will exit the outer loop. This code prints:
 
 
-```
+```rust
 count = 0
 remaining = 10
 remaining = 9
@@ -375,7 +375,7 @@ End count = 2
 A for expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator. If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop. If the iterator is empty, the for expression completes.
 
 An example of a for loop over the contents of an array:
-```
+```rust
 fn main() {
 let v = &["apples", "cake", "coffee"];
 
@@ -387,7 +387,7 @@ for text in v {
 An example of a for loop over a series of integers:
 
 
-```
+```rust
 let mut sum = 0;
 for n in 1..11 {
     sum += n;
@@ -396,7 +396,7 @@ assert_eq!(sum, 55);
 ```
 A for loop is equivalent to a loop expression containing a match expression as follows:
 
-```
+```rust
 'label: for PATTERN in iter_expr {
     /* loop body */
 }
@@ -417,7 +417,7 @@ When the panic! macro executes, your program will print a failure message, unwin
 
 Let’s try calling panic! in a simple program:
 Filename: src/main.rs
-```
+```rust
 
 This code panics!
 fn main() {
@@ -427,7 +427,7 @@ fn main() {
 
 If we run this code this is what we get
 
-```
+```rust
 $ cargo run
    Compiling panic v0.1.0 (file:///projects/panic)
     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
@@ -447,7 +447,7 @@ So how do you decide when you should call panic! and when you should return Resu
 Option is a predefined enum in the Rust standard library. This enum has two values − Some(data) and None.
 
 Syntax
-```
+```rust
 enum Option<T> {
 Some(T), //used to return a value
 None // used to return null, as Rust doesn't support
@@ -461,7 +461,7 @@ Rust does not support the null keyword. The value None, in the enumOption, can b
 Let us understand this with an example −
 
 The program defines a function is_even(), with a return type Option. The function verifies if the value passed is an even number. If the input is even, then a value true is returned, else the function returns None.
-```
+```rust
 fn main() {
    let result = is_even(3);
    println!("{:?}",result);
@@ -476,13 +476,13 @@ fn is_even(no:i32)->Option<bool> {
 }
 ```
 Output
-```
+```rust
 None
 Some(true)
 ```
 When we are not sure whether there is a character at 6th element and you don't want your program to crash, Option comes to the rescue. 
 Here is another example from The Rust Programming Language:
-```
+```rust
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
@@ -499,7 +499,7 @@ let none = plus_one(None);
 Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
 
 Handling Potential Failure with the Result Type in Rust language is defined as having two variants, Ok and Err, as follows:
-```
+```rust
 enum Result<T, E> {
     Ok(T),
     Err(E),
@@ -510,7 +510,7 @@ Let’s call a function that returns a Result value because the function could f
 
 Filename: src/main.rs
 
-```
+```rust
 use std::fs::File;
 
 fn main() {
@@ -522,12 +522,12 @@ fn main() {
 How do we know File::open returns a Result? We could look at the standard library API documentation, or we could ask the compiler! If we give f a type annotation that we know is not the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of f is. Let’s try it! We know that the return type of File::open isn’t of type u32, so let’s change the let f statement to this:
 
 This code does not compile!
-```
+```rust
     let f: u32 = File::open("hello.txt");
 ```    
 Attempting to compile now gives us the following output:
 
-```
+```rust
 $ cargo run
    Compiling error-handling v0.1.0 (file:///projects/error-handling)
 error[E0308]: mismatched types
@@ -551,7 +551,7 @@ The code below shows an implementation of read_username_from_file that has the s
 
 Filename: src/main.rs
 
-```
+```rust
 use std::fs::File;
 use std::io;
 use std::io::Read;
@@ -579,7 +579,7 @@ Rust code uses snake case as the conventional style for function and variable na
 
 Filename: src/main.rs
 
-```
+```rust
 fn main() {
     println!("Hello, world!");
 
@@ -596,7 +596,7 @@ We define a function in Rust by entering `fn` followed by a function name and a 
 We can call any function we’ve defined by entering its name followed by a set of parentheses. Because another_function is defined in the program, it can be called from inside the main function. Note that we defined another_function after the main function in the source code; we could have defined it before as well. Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
 
 Let’s start a new binary project named functions to explore functions further. Place the another_function example in src/main.rs and run it. You should see the following output:
-```
+```rust
 
 $ cargo run
    Compiling functions v0.1.0 (file:///projects/functions)
@@ -644,7 +644,7 @@ The block of a function is conceptually wrapped in a block that binds the argume
 
 For example, the function above behaves as if it was written as:
 
-```
+```rust
 // argument_0 is the actual first argument passed from the caller
 let (value, _) = argument_0;
 return {
