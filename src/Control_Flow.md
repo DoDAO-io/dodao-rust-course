@@ -641,15 +641,69 @@ Types that involve notation follow the convention below. There is some overlap o
 ### Function body
     
 The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the function's block. This means that the tail expression of the block, if evaluated, ends up being returned to the caller. As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.
+    
+#### Statements and Expressions
+Function bodies are made up of a series of statements optionally ending in an expression. So far, the functions we’ve covered haven’t included an ending expression, but you have seen an expression as part of a statement. Because Rust is an expression-based language, this is an important distinction to understand. Other languages don’t have the same distinctions, so let’s look at what statements and expressions are and how their differences affect the bodies of functions.
+
+Statements are instructions that perform some action and do not return a value. Expressions evaluate to a resulting value.
 
 For example, the function above behaves as if it was written as:
 
+Filename: src/main.rs
+
 ```rust
-// argument_0 is the actual first argument passed from the caller
-let (value, _) = argument_0;
-return {
-    value
-};
+fn main() {
+    let y = 6;
+}
+```
+Function definitions are also statements; the entire preceding example is a statement in itself.
+
+Statements do not return values. Therefore, you can’t assign a let statement to another variable, as the following code tries to do; you’ll get an error:
+
+
+```rust   
+fn main() {
+    let x = (let y = 6);
+}
+```
+When you run this program, the error you’ll get looks like this:
+
+```rust
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+error: expected expression, found statement (`let`)
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: variable declaration using `let` is a statement
+
+error[E0658]: `let` expressions in this position are experimental
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
+  = help: you can write `matches!(<expr>, <pattern>)` instead of `let <pattern> = <expr>`
+
+warning: unnecessary parentheses around assigned value
+ --> src/main.rs:2:13
+  |
+2 |     let x = (let y = 6);
+  |             ^         ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+  |
+2 -     let x = (let y = 6);
+2 +     let x = let y = 6;
+  | 
+
+For more information about this error, try `rustc --explain E0658`.
+warning: `functions` (bin "functions") generated 1 warning
+error: could not compile `functions` due to 2 previous errors; 1 warning emitted
 ```
 Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
     
@@ -696,3 +750,58 @@ fn get_an_optional_value() -> Option<&str> {
     None
 }
 ```
+    
+### List of Programming arguments
+In programming, a value that is passed between programs, subroutines or functions. Arguments are independent items, or variables, that contain data or codes. When an argument is used to customize a program for a user, it is typically called a "parameter."
+We can define functions to have parameters, which are special variables that are part of a function’s signature. When a function has parameters, you can provide it with concrete values for those parameters. Technically, the concrete values are called arguments, but in casual conversation, people tend to use the words parameter and argument interchangeably for either the variables in a function’s definition or the concrete values passed in when you call a function.
+
+In this version of another_function we add a parameter:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    another_function(5);
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {x}");
+}
+Try running this program; you should get the following output:
+
+```rust
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
+     Running `target/debug/functions`
+The value of x is: 5
+```
+The declaration of `another_function` has one parameter named x. The type of x is specified as i32. When we pass 5 in to another_function, the println! macro puts 5 where the pair of curly brackets containing x was in the format string.
+
+In function signatures, you must declare the type of each parameter. This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. The compiler is also able to give more helpful error messages if it knows what types the function expects.
+
+When defining multiple parameters, separate the parameter declarations with commas, like this:
+
+Filename: src/main.rs
+
+```rust
+fn main() {
+    print_labeled_measurement(5, 'h');
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {value}{unit_label}");
+}
+```
+This example creates a function named print_labeled_measurement with two parameters. The first parameter is named value and is an i32. The second is named unit_label and is type char. The function then prints text containing both the value and the unit_label.
+
+Let’s try running this code. Replace the program currently in your functions project’s src/main.rs file with the preceding example and run it using cargo run:
+
+```rust
+$ cargo run
+   Compiling functions v0.1.0 (file:///projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+     Running `target/debug/functions`
+The measurement is: 5h
+```
+Because we called the function with 5 as the value for value and 'h' as the value for unit_label, the program output contains those values.
