@@ -653,3 +653,46 @@ return {
 ```
 Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
     
+#### Option and Result
+
+Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. Rust skips using both, especially to prevent issues like null pointer exceptions, sensitive data leakages through exceptions and etc. Instead, Rust provides two special generic enums;Option and Result to deal with above cases.
+
+
+As you know,
+
+* An optional value can have either Some value or no value/ None.
+* A result can represent either success/ Ok or failure/ Err
+```rust
+// An output can have either Some value or no value/ None.
+enum Option<T> { // T is a generic and it can contain any type of value.
+    Some(T),
+    None,
+}
+```
+    OR
+    
+```rust
+// A result can represent either success/ Ok or failure/ Err.
+enum Result<T, E> { // T and E are generics. T can contain any type of value, E can be any error.
+    Ok(T),
+    Err(E),
+}
+```
+#### Basic usages of Option
+When writing a function or data type,
+
+* if an argument of the function is optional,
+* If the function is non-void and if the output it returns can be empty,
+* If the value, of a property of the data type can be empty, We have to use their data type as an Option type
+    
+  For example, if the function outputs a &str value and the output can be empty, the return type of the function should set as Option<&str>.
+```rust
+fn get_an_optional_value() -> Option<&str> {
+
+    //if the optional value is not empty
+    return Some("Some value");
+    
+    //else
+    None
+}
+```
