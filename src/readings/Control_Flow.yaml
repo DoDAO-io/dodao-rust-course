@@ -1,1 +1,15 @@
-
+uuid: 44b73ef1-b860-4ecd-b1b7-c2620817c31e
+  title: Control Flow - Rust
+  shortTitle: Introduction to control flow in Rust language
+  type: YoutubeVideo 
+  url: https://www.youtube.com/watch?v=EVruNiwIfzI
+  subTopics:  
+    - "if-else-statement"
+    - "while-loop-statement"
+    - "for-loop-statement"
+  details: | 
+    In this video we're looking how to write control flow in Rust language.
+    This video explains about the use of -
+    * if-else and nested else condition
+    * while loop statement and passing conditions while the statement is true
+    * for loop and iteration 
