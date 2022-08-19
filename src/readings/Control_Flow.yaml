@@ -5,11 +5,29 @@
   url: https://www.youtube.com/watch?v=EVruNiwIfzI
   subTopics:  
     - "if-else-statement"
+    - "Using if in a let Statement"
     - "while-loop-statement"
     - "for-loop-statement"
+   
   details: | 
     In this video we're looking how to write control flow in Rust language.
     This video explains about the use of -
-    * if-else and nested else condition
+    * if-else and nested else condition and using if in a let Statement
+    * while loop statement and passing conditions while the statement is true
+    * for loop and iteration 
+---
+- uuid: 140a5c04-73de-4b0e-ab1b-ba85c119b001
+  title: Control flow
+  shortTitle: Introduction to control flow in Rust language
+  type: Article
+  url: https://doc.rust-lang.org/book/ch03-05-control-flow.html#control-flow
+  subTopics:  
+    - "if-else-statement"
+    - "while-loop-statement"
+    - "for-loop-statement"
+  details: | 
+    In this article we're looking how to write control flow in Rust language.
+    This article explains about the use of -
+    * if-else and nested else condition and using let statement
     * while loop statement and passing conditions while the statement is true
     * for loop and iteration 
