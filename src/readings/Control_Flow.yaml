@@ -50,3 +50,22 @@
     * Rust Function with arguments
     * Rust Function with return
     * Rust Function return with expression (no semi-colon)
+
+
+uuid: ca11e46b-bcbd-4dd7-bf44-965a64863fb2
+  title: Intro to Rust-lang (Error Handling)
+  shortTitle: Introduction to error handing 
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=mhw-x5Q_-z0
+  subTopics:  
+    - "panic!"
+    - "Result option"
+    - "enum options"
+    - "? operation" 
+  details: | 
+    In this video, we look at how we can use the Result and Option Enums to deal with Errors in Rust. 
+    We also look at some of the basic methods that are commonly used in place of pattern match statements to check errors. 
+    * Error handling using Result options
+    * Error handling using Enum options
+    * Error handling using ? operations 
+    * Error handling using Panic!
