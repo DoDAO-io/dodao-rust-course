@@ -31,3 +31,22 @@
     * if-else and nested else condition and using let statement
     * while loop statement and passing conditions while the statement is true
     * for loop and iteration 
+
+
+- uuid: 49b6d99f-9965-42aa-8115-edf28c7735bb
+  title: Rust Lang Tutorial 2021 - Functions
+  shortTitle: Introduction to functions and procedures
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=hSSYwVfzaZM
+  subTopics:  
+    - "Declarating a function"
+    - "How to return a value"
+    - "body of a function"
+    - "arguments" 
+  details: | 
+    In this video we're looking how to write functions in Rust language.
+    This video talks about the use of -
+    * Rust Simple function
+    * Rust Function with arguments
+    * Rust Function with return
+    * Rust Function return with expression (no semi-colon)
