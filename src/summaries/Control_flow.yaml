@@ -14,10 +14,13 @@
 * Loop
 * For loop
 
-## If Expressions
-You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
+-title: If Expressions
+ shortTitle: If-else statement
+ key: if_else_let_statement
+ summary: We use if statement to give conditions to our code. You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
+ details: |
 
-To explore the if expression, create a new project called branches in your projects directory. Add the following code to src/main.rs:
+- To explore the if expression, create a new project called branches in your projects directory. Add the following code to src/main.rs:
 ```rust
 fn main() {
     let number = 3;
@@ -31,10 +34,14 @@ fn main() {
 ```
 ---
 
-The keyword if follows a condition in all if expressions. Here, the condition checks whether the variable number is less than 5. Within curly brackets, we place the code to execute if the condition is true immediately after it.
+- The keyword if follows a condition in all if expressions. 
+- Here, the condition checks whether the variable number is less than 5.
+- Within curly brackets, we place the code to execute if the condition is true immediately after it.
 
-Our program also includes an else expression, which we chose to use here, to provide an alternative block of code in case the condition is false. Unless you provide an else expression, if the condition is false, the program will skip the if block and move on.
-The following output should be seen after running this code:
+- Our program also includes an else expression, which we chose to use here, to provide an alternative block of code in case the condition is false.
+- Unless you provide an else expression, if the condition is false, the program will skip the if block and move on.
+
+- The following output should be seen after running this code:
 
 ```rust
 $ cargo run
@@ -44,17 +51,19 @@ $ cargo run
 condition was true
  ```
 
-If we change the `number` to 17 we get a `condition was false` because it is not less than 5. It is a very straight forward statement.
+- If we change the `number` to 17 we get a `condition was false` because it is not less than 5. It is a very straight forward statement.
 
----
 
-### Multiple if conditions - how to evaluate them?
 
-The two logical operators && and || allow us to evaluate more than one condition in an if statement.
+-title: Multiple if conditions - how to evaluate them?
+ shortTitle: Nested if statement
+ key: Nested_if_statement
+ summary: The two logical operators && and || allow us to evaluate more than one condition in an if statement.
+ details: |
 
-Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
+- Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
 
-When AND is used to evaluate multiple conditions, the && operator is used to separate them.
+- When AND is used to evaluate multiple conditions, the && operator is used to separate them.
 
 ```rust
 fn main() {
@@ -66,11 +75,11 @@ fn main() {
     }
 }
 ```
-Due to the fact that both of our conditions are true in the example above, the code inside the if code block is executed.
+- Due to the fact that both of our conditions are true in the example above, the code inside the if code block is executed.
 
-It tests whether one condition or another is true by using the conditional OR. It is not necessary for both conditions to be true in order for the code to run.
+- It tests whether one condition or another is true by using the conditional OR. It is not necessary for both conditions to be true in order for the code to run.
 
-The || operator is used to separate multiple conditions with OR.
+- The || operator is used to separate multiple conditions with OR.
 ```rust
 fn main() {
 
@@ -82,11 +91,15 @@ fn main() {
 }
 ```
 ---
-### How to nest if, else if and else statements?
+-title:  How to nest if, else if and else statements?
+ shortTitle: Nested if continues
+ key: Nested_if_else_statement
+ details: |
 
-Nesting is the process of placing if statements inside other if statements. By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
+- Nesting is the process of placing if statements inside other if statements. 
+- By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
 
-We nest an if statement by writing it inside the execution code block of another if statement.
+- We nest an if statement by writing it inside the execution code block of another if statement.
 ```rust
 fn main() {
 
@@ -102,18 +115,19 @@ fn main() {
 }
 ```
 
-In the example above, our outer if statement condition proves true. The compiler then evaluates the inner if statement and executes its code block if its condition proves true.
+- In the example above, our outer if statement condition proves true. 
+- The compiler then evaluates the inner if statement and executes its code block if its condition proves true.
 
-Nested if statements are used when we want to evaluate conditions only if other conditions are true.
+- Nested if statements are used when we want to evaluate conditions only if other conditions are true.
+- Note that if you find yourself nesting more than 3 levels deep, you should consider finding a different method. Perhaps a loop.
 
-Note that if you find yourself nesting more than 3 levels deep, you should consider finding a different method. Perhaps a loop.
 
----
+-title: The conditional match statement
+ shortTitle: Match statement
+ key: Match_statement
+ summary: A single value will be compared with a list of values with the match statement. It is a bit tchnical but easy so walk with me. 
 
-### The conditional match statement
-
-A single value will be compared with a list of values with the match statement. It is a bit tchnical but easy so walk with me. 
-
+ details: |
 The syntax is similar to a switch statement in a language in the C family, though the syntax is different.
 
 Taking it step by step will make it easier to understand what's going on.
@@ -199,7 +213,11 @@ This time, the compiler matched to “A” on the left, so it stored the string 
 We then used it in the ```println!()``` below the match statement.
 
 ---
-
+-title:
+ shortTitle:
+ key:
+ summary:
+ details: |
 ## Loop
 
 Throughout our application, we will often need to execute sections of code more than once.
