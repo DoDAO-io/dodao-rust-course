@@ -1,14 +1,13 @@
 
-title: Control Flow
+-title: Control Flow
+ shortTitle: Control flow
+ key: control_flow
+ summary: Many programming languages allow you to run some code depending on whether a condition is true, or run some code repeatedly while a condition is true. If expressions and loops are the most common constructs in Rust that control execution flow.
+ details: |
 
----
+- In most cases, the computer runs the code in order from the first line in the file to the last line, unless it encounters structures that alter the control flow, such as loops and conditionals.
 
-Many programming languages allow you to run some code depending on whether a condition is true, or run some code repeatedly while a condition is true. 
-If expressions and loops are the most common constructs in Rust that control execution flow.
-
-In most cases, the computer runs the code in order from the first line in the file to the last line, unless it encounters structures that alter the control flow, such as loops and conditionals.
-
-We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
+- We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
 
 * If else
 * Match
