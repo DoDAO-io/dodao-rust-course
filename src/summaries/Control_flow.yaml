@@ -312,10 +312,17 @@ fn main() {
     println!("The result is {result}");
 }
 ```
-Before the loop, we declare a variable named counter and initialize it to 0. Then we declare a variable named result to hold the value returned from the loop. On every iteration of the loop, we add 1 to the counter variable, and then check whether the counter is equal to 10. When it is, we use the break keyword with the value counter * 2. After the loop, we use a semicolon to end the statement that assigns the value to result. Finally, we print the value in result, which in this case is 20.
+- Before the loop, we declare a variable named counter and initialize it to 0.
+- Then we declare a variable named result to hold the value returned from the loop.
+- On every iteration of the loop, we add 1 to the counter variable, and then check whether the counter is equal to 10.
+- When it is, we use the break keyword with the value counter * 2.
+- After the loop, we use a semicolon to end the statement that assigns the value to result.
+- Finally, we print the value in result, which in this case is 20.
 
-Loop Labels to Disambiguate Between Multiple Loops
-If you have loops within loops, break and continue apply to the innermost loop at that point. You can optionally specify a loop label on a loop that we can then use with break or continue to specify that those keywords apply to the labeled loop instead of the innermost loop. Loop labels must begin with a single quote. Here’s an example with two nested loops:
+- Loop Labels to Disambiguate Between Multiple Loops
+  - If you have loops within loops, break and continue apply to the innermost loop at that point. 
+  - You can optionally specify a loop label on a loop that we can then use with break or continue to specify that those keywords apply to the labeled loop instead of the innermost loop. Loop labels must begin with a single quote. 
+  - Here’s an example with two nested loops:
 
 ```rust
 fn main() {
@@ -340,9 +347,12 @@ fn main() {
     println!("End count = {count}");
 }
 ```
-The outer loop has the label 'counting_up, and it will count up from 0 to 2. The inner loop without a label counts down from 10 to 9. The first break that doesn’t specify a label will exit the inner loop only. The break 'counting_up; statement will exit the outer loop. This code prints:
+- The outer loop has the label 'counting_up', and it will count up from 0 to 2. 
+- The inner loop without a label counts down from 10 to 9.
+- The first break that doesn’t specify a label will exit the inner loop only.
+- The break 'counting_up; statement will exit the outer loop. 
 
-
+This code prints:
 ```rust
 count = 0
 remaining = 10
@@ -354,9 +364,15 @@ count = 2
 remaining = 10
 End count = 2
 ```
-### For Loop
+-title: For Loop
+ shortTitle: For loop statement
+ key: For_loop_statement
+ summary: A 'for' expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator. 
+ details: |
+ 
+ -If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop.
+ - If the iterator is empty, the 'for' expression completes.
 
-A for expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator. If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop. If the iterator is empty, the for expression completes.
 
 An example of a for loop over the contents of an array:
 ```rust
@@ -386,24 +402,25 @@ A for loop is equivalent to a loop expression containing a match expression as f
 }
 ```
 ---
--title:
- shortTitle:
- key:
- summary:
+-title:  Error Handling
+ shortTitle: Errors
+ key: Error_handling
+ summary: Errors are inevitable in software, so Rust has a number of features to help you deal with them. When an error occurs, Rust requires you to acknowledge it and take action before your code can be compiled. By requiring this requirement, you ensure that you will discover errors before deploying your code to production and that they will be handled appropriately.
  details: |
-# Error Handling
-
-Errors are inevitable in software, so Rust has a number of features to help you deal with them. When an error occurs, Rust requires you to acknowledge it and take action before your code can be compiled. By requiring this requirement, you ensure that you will discover errors before deploying your code to production and that they will be handled appropriately.
-
-There are two major categories of errors in Rust: recoverable and unrecoverable. Typically, we want to notify the user of a recoverable error, such as a file not found error, and then retry the operation. The program should be immediately stopped if an unrecoverable error occurs, such as accessing a location beyond the end of an array.
-
-It is common for languages to handle both kinds of errors in the same way, using mechanisms such as exceptions. Rust doesn’t have exceptions. Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error. This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
-## Panic
-
-### Unrecoverable Errors with panic!
-When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
-
-Let’s try calling panic! in a simple program:
+- There are two major categories of errors in Rust:
+ * recoverable and
+ * unrecoverable. 
+ - Typically, we want to notify the user of a recoverable error, such as a file not found error, and then retry the operation.
+ - The program should be immediately stopped if an unrecoverable error occurs, such as accessing a location beyond the end of an array.
+- It is common for languages to handle both kinds of errors in the same way, using mechanisms such as exceptions. Rust doesn’t have exceptions.
+- Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error.
+- This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
+-title: Panic
+ shortTitle: Unrecoverable Errors with panic!
+ key: Panic_error_catching
+ summary: When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
+ details: |
+  - Let’s try calling panic! in a simple program:
 Filename: src/main.rs
 ```rust
 
@@ -412,9 +429,7 @@ fn main() {
     panic!("crash and burn");
 }
 ```
-
-If we run this code this is what we get
-
+ - If we run this code this is what we get
 ```rust
 $ cargo run
    Compiling panic v0.1.0 (file:///projects/panic)
@@ -423,18 +438,19 @@ $ cargo run
 thread 'main' panicked at 'crash and burn', src/main.rs:2:5
 ```
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-The call to panic! causes the error message contained in the last two lines. The first line shows our panic message and the place in our source code where the panic occurred:
+- The call to panic! causes the error message contained in the last two lines. 
+- The first line shows our panic message and the place in our source code where the panic occurred
 
+- title: To panic! or Not to panic!
+  shortTitle: panic! or Not Panic
+  key: panic_not_panic
+  summary: This covers how do you decide when you should call panic! and when you should return Result? When code panics, there’s no way to recover. You could call panic! for any error situation, whether there’s a possible way to recover or not, but then you’re making the decision that a situation is unrecoverable on behalf of the calling code. When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that’s appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning Result is a good default choice when you’re defining a function that might fail.
+  details: |
 
-### To panic! or Not to panic!
+  - Option Enum
+     * Option is a predefined enum in the Rust standard library. This enum has two values − Some(data) and None.
 
-So how do you decide when you should call panic! and when you should return Result? When code panics, there’s no way to recover. You could call panic! for any error situation, whether there’s a possible way to recover or not, but then you’re making the decision that a situation is unrecoverable on behalf of the calling code. When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that’s appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning Result is a good default choice when you’re defining a function that might fail.
-
-#### Option Enum
-
-Option is a predefined enum in the Rust standard library. This enum has two values − Some(data) and None.
-
-Syntax
+Syntax:
 ```rust
 enum Option<T> {
 Some(T), //used to return a value
@@ -442,13 +458,14 @@ None // used to return null, as Rust doesn't support
 the null keyword
 }
 ```
-Here, the type T represents value of any type.
+- Here, the type T represents value of any type.
+- Rust does not support the null keyword. 
+- The value None, in the enumOption, can be used by a function to return a null value.
+- If there is data to return, the function can return Some(data).
 
-Rust does not support the null keyword. The value None, in the enumOption, can be used by a function to return a null value. If there is data to return, the function can return Some(data).
-
-Let us understand this with an example −
-
-The program defines a function is_even(), with a return type Option. The function verifies if the value passed is an even number. If the input is even, then a value true is returned, else the function returns None.
+- The program defines a function is_even(), with a return type Option. 
+- The function verifies if the value passed is an even number.
+- If the input is even, then a value true is returned, else the function returns None.
 ```rust
 fn main() {
    let result = is_even(3);
@@ -463,12 +480,12 @@ fn is_even(no:i32)->Option<bool> {
    }
 }
 ```
-Output
+Output:
 ```rust
 None
 Some(true)
 ```
-When we are not sure whether there is a character at 6th element and you don't want your program to crash, Option comes to the rescue. 
+- When we are not sure whether there is a character at 6th element and you don"'"t want your program to crash, Option comes to the rescue. 
 Here is another example from The Rust Programming Language:
 ```rust
 fn plus_one(x: Option<i32>) -> Option<i32> {
@@ -482,21 +499,29 @@ let five = Some(5);
 let six = plus_one(five);
 let none = plus_one(None);
 ```
-#### Recoverable Errors with Result
+-title: Recoverable Errors with Result
+ shortTitle: Result option
+ key: Result_option
+ summary: Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
+ details: |
 
-Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
 
-Handling Potential Failure with the Result Type in Rust language is defined as having two variants, Ok and Err, as follows:
+ - Handling Potential Failure with the Result Type in Rust language is defined as having two variants,
+    * Ok and 
+    * Err, 
+ 
 ```rust
 enum Result<T, E> {
     Ok(T),
     Err(E),
 }
 ```
-The T and E are generic type parameters. What you need to know right now is that T represents the type of the value that will be returned in a success case within the Ok variant, and E represents the type of the error that will be returned in a failure case within the Err variant. Because Result has these generic type parameters, we can use the Result type and the functions defined on it in many different situations where the successful value and error value we want to return may differ.
-Let’s call a function that returns a Result value because the function could fail. In Listing 9-3 we try to open a file.
+ - The T and E are generic type parameters. 
+     - What you need to know right now is that T represents the type of the value that will be returned in a success case within the Ok variant, and E represents the type of the error that will be returned in a failure case within the Err variant. 
+     - Because Result has these generic type parameters, we can use the Result type and the functions defined on it in many different situations where the successful value and error value we want to return may differ.
+- Let’s call a function that returns a Result value because the function could fail. 
 
-Filename: src/main.rs
+Filename: src/main.rs:
 
 ```rust
 use std::fs::File;
@@ -505,11 +530,16 @@ fn main() {
     let f = File::open("hello.txt");
 }
 ```
- Opening a file
+ Opening a file:
 
-How do we know File::open returns a Result? We could look at the standard library API documentation, or we could ask the compiler! If we give f a type annotation that we know is not the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of f is. Let’s try it! We know that the return type of File::open isn’t of type u32, so let’s change the let f statement to this:
+- How do we know File::open returns a Result? 
+ - We could look at the standard library API documentation, or we could ask the compiler! 
+ - If we give f a type annotation that we know is not the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. 
+ - The error message will then tell us what the type of f is. 
+ - Let’s try it! We know that the return type of File::open isn’t of type u32, so let’s change the let f statement to this:
 
-This code does not compile!
+example: 
+- This code does not compile!
 ```rust
     let f: u32 = File::open("hello.txt");
 ```    
@@ -532,7 +562,7 @@ error[E0308]: mismatched types
 For more information about this error, try `rustc --explain E0308`.
 error: could not compile `error-handling` due to previous error
 ```
-#### Propagating Errors
+Propagating Errors
 When a function’s implementation calls something that might fail, instead of handling the error within the function itself, you can return the error to the calling code so that it can decide what to do. This is known as propagating the error and gives more control to the calling code, where there might be more information or logic that dictates how the error should be handled than what you have available in the context of your code.
 A Shortcut for Propagating Errors: the ? Operator
 The code below shows an implementation of read_username_from_file that has the same functionality as in Listing 9-6, but this implementation uses the ? operator.
