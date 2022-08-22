@@ -630,201 +630,225 @@
    - The lines execute in the order in which they appear in the main function. 
    - First, the “Hello, world!” message prints, and then another_function is called and its message is printed.
 
-##### Function names
-often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions.
-The Rust compiler is very opinionated about what casing and style you use to name things, even giving warnings when you break its rules. You can disable those warnings if you wish. 
+- title: Function names
+  shortTitle: function name
+  key: function_name
+  summary: often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions.
+  describe: |
+    - The Rust compiler is very opinionated about what casing and style you use to name things, even giving warnings when you break its rules. You can disable those warnings if you wish. 
 
-Here is a quick overview of the rules:
+    - Here is a quick overview of the rules:
 
-| Convention | Types that use it |
-| ---------- | ----------------- |
-| `snake_case` | Crates, modules, functions, methods, local variables and parameters, lifetimes. |
-| `CamelCase` | Types (including traits and enums), type parameters in generics. |
-| `SCREAMING_SNAKE_CASE` | Constant and static variables. |
+      | Convention | Types that use it |
+      | ---------- | ----------------- |
+      | `snake_case` | Crates, modules, functions, methods, local variables and parameters, lifetimes. |
+      | `CamelCase` | Types (including traits and enums), type parameters in generics. |
+      | `SCREAMING_SNAKE_CASE` | Constant and static variables. |
 
-This means that when you have a type name and you want to refer to it in a function name, you have to convert. So YourType will become your_type
+   - This means that when you have a type name and you want to refer to it in a function name, you have to convert. So YourType will become your_type
 
-| Type name | Text in methods |
-| --------- | --------------- |
-| String | string |
-| Vec<T> |	vec |
-| YourType | your_type |
+    | Type name | Text in methods |
+    | --------- | --------------- |
+    | String | string |
+    | Vec<T> |	vec |
+    | YourType | your_type |
     
-Types that involve notation follow the convention below. There is some overlap on these rules; apply the most specific applicable rule:
+    - Types that involve notation follow the convention below. There is some overlap on these rules; apply the most specific applicable rule:
 
-| Type name | Text in methods |
-| --------- | --------------- |
-| &str | str |
-| &[T] | slice |
-| &mut [T] | mut_slice |
-| &[u8] | bytes |
-| &T | ref |
+    | Type name | Text in methods |
+    | --------- | --------------- |
+    | &str | str |
+    | &[T] | slice |
+    | &mut [T] | mut_slice |
+    | &[u8] | bytes |
+    | &T | ref |
 
 
-### Function body
+- title: Function body
+  shortTitle: Statements and Expressions
+  keys: statement_expression
+  summary: The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the functions block.
+  describe: |
+   - The tail expression of the block, if evaluated, ends up being returned to the caller. 
+   - As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.
+   - Function bodies are made up of a series of statements optionally ending in an expression.
+   - So far, the functions we’ve covered haven’t included an ending expression, but you have seen an expression as part of a statement.
+   - Because Rust is an expression-based language, this is an important distinction to understand. 
+   - Other languages don’t have the same distinctions, so let’s look at what statements and expressions are and how their differences affect the bodies of functions.
+   - Statements are instructions that perform some action and do not return a value. Expressions evaluate to a resulting value.
+
+    - For example, the function above behaves as if it was written as:
+     - Filename: src/main.rs
+
+   ```rust
+   fn main() {
+      let y = 6;
+    }
+    ```
+   - Function definitions are also statements; the entire preceding example is a statement in itself.
+   - Statements do not return values. 
+   - Therefore, you can’t assign a let statement to another variable, as the following code tries to do; you’ll get an error
+
+   ```rust   
+   fn main() {
+      let x = (let y = 6);
+   }
+   ```
+   - When you run this program, the error you’ll get looks like this
+
+   ```rust
+   $ cargo run
+     Compiling functions v0.1.0 (file:///projects/functions)
+   error: expected expression, found statement (`let`)
+    --> src/main.rs:2:14
+     |
+   2 |     let x = (let y = 6);
+     |              ^^^^^^^^^
+     |
+     = note: variable declaration using `let` is a statement
+
+    error[E0658]: `let` expressions in this position are experimental
+     --> src/main.rs:2:14
+     |
+   2 |     let x = (let y = 6);
+     |              ^^^^^^^^^
+     |
+     = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
+     = help: you can write `matches!(<expr>, <pattern>)` instead of `let <pattern> = <expr>`
+
+     warning: unnecessary parentheses around assigned value
+     --> src/main.rs:2:13
+     |
+   2 |     let x = (let y = 6);
+     |             ^         ^
+     |
+     = note: `#[warn(unused_parens)]` on by default
+     help: remove these parentheses
+     |
+     2 -     let x = (let y = 6);
+     2 +     let x = let y = 6;
+     | 
+
+    For more information about this error, try `rustc --explain E0658`.
+   warning: `functions` (bin "functions") generated 1 warning
+   error: could not compile `functions` due to 2 previous errors; 1 warning emitted
+   ```
+   - Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
     
-The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the function's block. This means that the tail expression of the block, if evaluated, ends up being returned to the caller. As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.
+- title: Option and Result
+  short: option, result
+  key: Option_result
+  summary: null
+  describe: |
+   - Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. 
+   - Rust skips using both, especially to prevent issues like null pointer exceptions, sensitive data leakages through exceptions and etc. 
+   - Instead, Rust provides two special generic enums;Option and Result to deal with above cases.
+
+      * An optional value can have either Some value or no value/ None.
+      * A result can represent either success/ Ok or failure/ Err
+   ```rust
+     // An output can have either Some value or no value/ None.
+      enum Option<T> { // T is a generic and it can contain any type of value.
+      Some(T),
+       None,
+    }
+   ```
+      OR
     
-#### Statements and Expressions
-Function bodies are made up of a series of statements optionally ending in an expression. So far, the functions we’ve covered haven’t included an ending expression, but you have seen an expression as part of a statement. Because Rust is an expression-based language, this is an important distinction to understand. Other languages don’t have the same distinctions, so let’s look at what statements and expressions are and how their differences affect the bodies of functions.
+   ```rust
+   // A result can represent either success/ Ok or failure/ Err.
+   enum Result<T, E> { // T and E are generics. T can contain any type of value, E can be any error.
+      Ok(T),
+      Err(E),
+   }
+   ```
+- title: Basic usages of Option
+  shortTitle: Option
+  key: options
+  summary: null
+  describe: |
+   - When writing a function or data type,
 
-Statements are instructions that perform some action and do not return a value. Expressions evaluate to a resulting value.
-
-For example, the function above behaves as if it was written as:
-
-Filename: src/main.rs
-
-```rust
-fn main() {
-    let y = 6;
-}
-```
-Function definitions are also statements; the entire preceding example is a statement in itself.
-
-Statements do not return values. Therefore, you can’t assign a let statement to another variable, as the following code tries to do; you’ll get an error:
-
-
-```rust   
-fn main() {
-    let x = (let y = 6);
-}
-```
-When you run this program, the error you’ll get looks like this:
-
-```rust
-$ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-error: expected expression, found statement (`let`)
- --> src/main.rs:2:14
-  |
-2 |     let x = (let y = 6);
-  |              ^^^^^^^^^
-  |
-  = note: variable declaration using `let` is a statement
-
-error[E0658]: `let` expressions in this position are experimental
- --> src/main.rs:2:14
-  |
-2 |     let x = (let y = 6);
-  |              ^^^^^^^^^
-  |
-  = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
-  = help: you can write `matches!(<expr>, <pattern>)` instead of `let <pattern> = <expr>`
-
-warning: unnecessary parentheses around assigned value
- --> src/main.rs:2:13
-  |
-2 |     let x = (let y = 6);
-  |             ^         ^
-  |
-  = note: `#[warn(unused_parens)]` on by default
-help: remove these parentheses
-  |
-2 -     let x = (let y = 6);
-2 +     let x = let y = 6;
-  | 
-
-For more information about this error, try `rustc --explain E0658`.
-warning: `functions` (bin "functions") generated 1 warning
-error: could not compile `functions` due to 2 previous errors; 1 warning emitted
-```
-Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
+     * if an argument of the function is optional,
+     * If the function is non-void and if the output it returns can be empty,
+     * If the value, of a property of the data type can be empty, We have to use their data type as an Option type
     
-#### Option and Result
+    - For example, if the function outputs a &str value and the output can be empty, the return type of the function should set as Option<&str>.
+    ```rust
+     fn get_an_optional_value() -> Option<&str> {
 
-Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. Rust skips using both, especially to prevent issues like null pointer exceptions, sensitive data leakages through exceptions and etc. Instead, Rust provides two special generic enums;Option and Result to deal with above cases.
-
-
-As you know,
-
-* An optional value can have either Some value or no value/ None.
-* A result can represent either success/ Ok or failure/ Err
-```rust
-// An output can have either Some value or no value/ None.
-enum Option<T> { // T is a generic and it can contain any type of value.
-    Some(T),
-    None,
-}
-```
-    OR
+        //if the optional value is not empty
+        return Some("Some value");
     
-```rust
-// A result can represent either success/ Ok or failure/ Err.
-enum Result<T, E> { // T and E are generics. T can contain any type of value, E can be any error.
-    Ok(T),
-    Err(E),
-}
-```
-#### Basic usages of Option
-When writing a function or data type,
-
-* if an argument of the function is optional,
-* If the function is non-void and if the output it returns can be empty,
-* If the value, of a property of the data type can be empty, We have to use their data type as an Option type
+       //else
+       None
+    }
+    ```
     
-  For example, if the function outputs a &str value and the output can be empty, the return type of the function should set as Option<&str>.
-```rust
-fn get_an_optional_value() -> Option<&str> {
+- title: List of Programming arguments
+  shortTitle: Arguments
+  key: Args
+  summary: In programming, a value that is passed between programs, subroutines or functions. 
+  describe: |
+    -  Arguments are independent items, or variables, that contain data or codes.
+    - When an argument is used to customize a program for a user, it is typically called a "parameter."
+    - We can define functions to have parameters, which are special variables that are part of a function’s signature. 
+    - When a function has parameters, you can provide it with concrete values for those parameters.
+    - Technically, the concrete values are called arguments, but in casual conversation, people tend to use the words parameter and argument interchangeably for either the variables in a function’s definition or the concrete values passed in when you call a function.
 
-    //if the optional value is not empty
-    return Some("Some value");
-    
-    //else
-    None
-}
-```
-    
-### List of Programming arguments
-In programming, a value that is passed between programs, subroutines or functions. Arguments are independent items, or variables, that contain data or codes. When an argument is used to customize a program for a user, it is typically called a "parameter."
-We can define functions to have parameters, which are special variables that are part of a function’s signature. When a function has parameters, you can provide it with concrete values for those parameters. Technically, the concrete values are called arguments, but in casual conversation, people tend to use the words parameter and argument interchangeably for either the variables in a function’s definition or the concrete values passed in when you call a function.
+    - In this version of another_function we add a parameter:
 
-In this version of another_function we add a parameter:
+   - Filename: src/main.rs
 
-Filename: src/main.rs
+   ```rust
+    fn main() {
+      another_function(5);
+    }
 
-```rust
-fn main() {
-    another_function(5);
-}
+    fn another_function(x: i32) {
+      println!("The value of x is: {x}");
+   }
+   ```
+   - Try running this program; you should get the following output:
 
-fn another_function(x: i32) {
-    println!("The value of x is: {x}");
-}
-Try running this program; you should get the following output:
+   ```rust
+   $ cargo run
+      Compiling functions v0.1.0 (file:///projects/functions)
+        Finished dev [unoptimized + debuginfo] target(s) in 1.21s
+        Running `target/debug/functions`
+       The value of x is: 5
+    ```
+    - The declaration of `another_function` has one parameter named x.
+    - The type of x is specified as i32. When we pass 5 in to another_function, the println! macro puts 5 where the pair of curly brackets containing x was in the format string.
 
-```rust
-$ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
-     Running `target/debug/functions`
-The value of x is: 5
-```
-The declaration of `another_function` has one parameter named x. The type of x is specified as i32. When we pass 5 in to another_function, the println! macro puts 5 where the pair of curly brackets containing x was in the format string.
+    - In function signatures, you must declare the type of each parameter. 
+    - This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. 
+    - The compiler is also able to give more helpful error messages if it knows what types the function expects.
+    - When defining multiple parameters, separate the parameter declarations with commas, like this:
 
-In function signatures, you must declare the type of each parameter. This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. The compiler is also able to give more helpful error messages if it knows what types the function expects.
+   - Filename: src/main.rs
 
-When defining multiple parameters, separate the parameter declarations with commas, like this:
+   ```rust
+    fn main() {
+      print_labeled_measurement(5, 'h');
+   }
 
-Filename: src/main.rs
+    fn print_labeled_measurement(value: i32, unit_label: char) {
+      println!("The measurement is: {value}{unit_label}");
+   }
+   ```
+   - This example creates a function named print_labeled_measurement with two parameters. 
+   - The first parameter is named value and is an i32. The second is named unit_label and is type char. 
+   - The function then prints text containing both the value and the unit_label.
+   
+   - Let’s try running this code. 
+   - Replace the program currently in your functions project’s src/main.rs file with the preceding example and run it using cargo run:
 
-```rust
-fn main() {
-    print_labeled_measurement(5, 'h');
-}
-
-fn print_labeled_measurement(value: i32, unit_label: char) {
-    println!("The measurement is: {value}{unit_label}");
-}
-```
-This example creates a function named print_labeled_measurement with two parameters. The first parameter is named value and is an i32. The second is named unit_label and is type char. The function then prints text containing both the value and the unit_label.
-
-Let’s try running this code. Replace the program currently in your functions project’s src/main.rs file with the preceding example and run it using cargo run:
-
-```rust
-$ cargo run
-   Compiling functions v0.1.0 (file:///projects/functions)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.31s
-     Running `target/debug/functions`
-The measurement is: 5h
-```
-Because we called the function with 5 as the value for value and 'h' as the value for unit_label, the program output contains those values.
+    ```rust
+      $ cargo run
+      Compiling functions v0.1.0 (file:///projects/functions)
+      Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+       Running `target/debug/functions`
+       The measurement is: 5h
+    ```
+    - Because we called the function with 5 as the value for value and 'h' as the value for unit_label, the program output contains those values.
