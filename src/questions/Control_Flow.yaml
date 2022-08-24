@@ -1,1 +1,27 @@
 
+- uuid: 0111a385-b650-4db6-a8ae-434b6d26c36e
+  type: SingleChoice
+  content: |
+    ________ is a method that allows you to, instead of handling possible errors inside the current function you're writing, to pass the error up to the caller of this function and handle the error there.
+  hint: "Error handling"
+  explanation: "it returns a Return to whoever is calling the function to handle it."
+  answerKeys:
+    - D
+  topic:
+  subTopics:
+    - Errors
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Unwrap and Expect"
+      key: A
+      order: 0
+    - content: "Result<T,E>"
+      key: B
+      order: 1
+    - content: "Panic!"
+      key: C
+      order: 2
+    - content: "Error Propagating"
+      key: D
+      order: 3
