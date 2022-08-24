@@ -7,7 +7,7 @@
   explanation: "it returns a Return to whoever is calling the function to handle it."
   answerKeys:
     - D
-  topic:
+  topic: Error_handling
   subTopics:
     - Errors
   difficultyLevel: Low
@@ -29,18 +29,18 @@
 - uuid: 9dfe3dbe-2f14-4541-8b8f-78441eaa904c
   type: SingleChoice
   content: |
-   
+    If the error is of the unrecoverable nature, the _____ macro is executed
   hint: "Error handling"
-  explanation: ""
+  explanation: "prints an error message to the screen then unwinds"
   answerKeys:
-    - D
-  topic:
+    - C
+  topic: Error_handling
   subTopics:
     - Errors
   difficultyLevel: Low
   choices:
    
-   - content: "Unwrap and Expect"
+   - content: "Not to panic"
       key: A
       order: 0
     - content: "Result<T,E>"
@@ -49,6 +49,363 @@
     - content: "Panic!"
       key: C
       order: 2
-    - content: "Error Propagating"
+    - content: "Error P?"
+      key: D
+      order: 3
+      
+- uuid: 35fe5c1c-58a1-4921-9ff2-ea5ca4c21708
+  type: SingleChoice
+  content: |
+    Rust splits errors into 2 categories, Recoverable errors and
+    
+  hint: "Error handling"
+  explanation: "type of errors"
+  answerKeys:
+    - B
+  topic:
+  subTopics: Error_handling
+    - Errors
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Not important errors"
+      key: A
+      order: 0
+    - content: "Non-Recoverable errors"
+      key: B
+      order: 1
+    - content: "Immediate errors"
+      key: C
+      order: 2
+    - content: "Data Errors"
+      key: D
+      order: 3
+      
+- uuid: 4808c0d4-0ed4-4dcd-aa26-78d3b57063f3
+  type: SingleChoice
+  content: |
+     Errors cannot be handled with
+  hint: "its an output keyword"
+  explanation: "println is to print out"
+  answerKeys:
+    - A
+  topic: Error_handling
+  subTopics:
+    - Error
+  difficultyLevel: Low
+  choices:
+   
+   - content: "println()"
+      key: A
+      order: 0
+    - content: "Panic!"
+      key: B
+      order: 1
+    - content: "enum Result <T,E>"
+      key: C
+      order: 2
+    - content: "Propagating"
+      key: D
+      order: 3
+
+- uuid: 372ec2d3-b8cb-48a2-b9a2-e15628cc89b6
+  type: SingleChoice
+  content: |
+     An 'if' expression is a ________ branch in program control.
+  hint: "if statement"
+  explanation: "A statement that gets checked"
+  answerKeys:
+    - C
+  topic: Control_flow
+  subTopics: 
+    - If else
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Match"
+      key: A
+      order: 0
+    - content: "Method"
+      key: B
+      order: 1
+    - content: "Condition"
+      key: C
+      order: 2
+    - content: "Office"
+      key: D
+      order: 3
+
+- uuid: a48ba4aa-ea0f-4e7e-b040-95d720ea2d72
+  type: SingleChoice
+  content: |
+     The condition operands must have the _______ type.
+  hint: "A data type"
+  explanation: "The condition must be 0 or 1"
+  answerKeys:
+    - B
+  topic: control_flow
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "String"
+      key: A
+      order: 0
+    - content: "Boolean"
+      key: B
+      order: 1
+    - content: "Integer"
+      key: C
+      order: 2
+    - content: "Float"
+      key: D
+      order: 3
+
+- uuid: 8600c9e3-5095-441d-856f-a36e9efcc278
+  type: SingleChoice
+  content: |
+        What is the output?
+        ```rust
+            fn main() {
+               let number = 8;
+
+               if number < 9 {
+                  println!("condition was true");
+                } else {
+                 println!("condition was false");
+                 }
+                }
+          ```
+     
+  hint: "If else"
+  explanation: "The condition of 8 being lesser than 9 is correct"
+  answerKeys:
+    - D
+  topic: control_flow
+  subTopics:
+    - if else
+  difficultyLevel: Low
+  choices:
+   
+   - content: "condition was false"
+      key: A
+      order: 0
+    - content: "number = 8"
+      key: B
+      order: 1
+    - content: "Throws error"
+      key: C
+      order: 2
+    - content: "condition was true"
+      key: D
+      order: 3
+
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
       key: D
       order: 3
