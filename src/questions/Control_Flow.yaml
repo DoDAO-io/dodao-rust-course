@@ -25,3 +25,30 @@
     - content: "Error Propagating"
       key: D
       order: 3
+      
+- uuid: 9dfe3dbe-2f14-4541-8b8f-78441eaa904c
+  type: SingleChoice
+  content: |
+   
+  hint: "Error handling"
+  explanation: ""
+  answerKeys:
+    - D
+  topic:
+  subTopics:
+    - Errors
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Unwrap and Expect"
+      key: A
+      order: 0
+    - content: "Result<T,E>"
+      key: B
+      order: 1
+    - content: "Panic!"
+      key: C
+      order: 2
+    - content: "Error Propagating"
+      key: D
+      order: 3
