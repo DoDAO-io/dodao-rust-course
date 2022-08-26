@@ -433,7 +433,7 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: 97e6a555-4053-432b-ba11-ec6eff3aa491
   type: SingleChoice
   content: |
       What is the output of this?
@@ -500,12 +500,66 @@
       key: D
       order: 3
 
+- uuid: 7f76a44b-5a88-4823-80f9-26ea8bd266f6
+  type: SingleChoice
+  content: |
+     The ____ function(most important function), which is the entry point of many programs.
+  hint: "Function"
+  explanation: "it is the functions of all fuunction"
+  answerKeys:
+    - D
+  topic: function
+  subTopics:
+    - function
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Branch"
+      key: A
+      order: 0
+    - content: "Sub"
+      key: B
+      order: 1
+    - content: "VIP"
+      key: C
+      order: 2
+    - content: "main"
+      key: D
+      order: 3
+
+- uuid: 1ff53709-57e9-4560-9406-89a3e3f01a9c
+  type: SingleChoice
+  content: |
+     Rust code uses snake case as the conventional style for _______ and variable names
+  hint: "Function naming convention"
+  explanation: "letters are lowercase and underscores separate words"
+  answerKeys:
+    - B
+  topic: function
+  subTopics:
+    - function names
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Parameter"
+      key: A
+      order: 0
+    - content: "Function"
+      key: B
+      order: 1
+    - content: "File"
+      key: C
+      order: 2
+    - content: "Object"
+      key: D
+      order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     We define a function in Rust by entering ____ followed by a function name and a set of parentheses.
+  hint: "Declaring a function"
+  explanation: "Thats the Rust keyword"
   answerKeys:
     - C
   topic:
@@ -514,122 +568,84 @@
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Sn"
       key: A
       order: 0
-    - content: ""
+    - content: "func"
       key: B
       order: 1
-    - content: ""
+    - content: "fn"
       key: C
       order: 2
-    - content: ""
+    - content: "function"
       key: D
       order: 3
-- uuid: 
+
+- uuid: 49b77d7b-8230-4d9d-ac53-6eea65859b37
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What is the output?
+     ```rust
+      fn main() {
+         println!("Hello, my name is John.");
+
+         another_function();
+       }
+
+      fn another_function() {
+      println!("Another function.");
+    }
+    ```
+  hint: "Function calling"
+  explanation: "You call function in the main for this example"
   answerKeys:
-    - C
+    - A
   topic:
   subTopics:
     - 
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Hello, my name is John. Another function"
       key: A
       order: 0
-    - content: ""
+    - content: "Another function"
       key: B
       order: 1
-    - content: ""
+    - content: "Hello, my name is John."
       key: C
       order: 2
-    - content: ""
+    - content: " Another function Hello, my name is John."
       key: D
       order: 3
-- uuid: 
+
+- uuid: b4d11d66-dcd6-4e7e-aa09-8e2d40d1763d
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     The _ brackets tell the compiler where the function body begins and ends.
+  hint: "function delaration"
+  explanation: "Declaring every function in a block"
   answerKeys:
-    - C
+    - A
   topic:
   subTopics:
     - 
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Curly"
       key: A
       order: 0
-    - content: ""
+    - content: "Square"
       key: B
       order: 1
-    - content: ""
+    - content: "Angle"
       key: C
       order: 2
-    - content: ""
+    - content: "Parentheses"
       key: D
       order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
