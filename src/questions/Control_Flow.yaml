@@ -272,58 +272,61 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: bb41cdea-73a2-491c-ae08-70002ac30fa2
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     ____ often useful to execute a block of code more than once.
+  hint: "iteration"
+  explanation: "more than one execution"
   answerKeys:
-    - C
-  topic:
+    - A
+  topic: control_flow
   subTopics:
-    - 
+    - loop
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Loop"
       key: A
       order: 0
-    - content: ""
+    - content: "Function"
       key: B
       order: 1
-    - content: ""
+    - content: "Result"
       key: C
       order: 2
-    - content: ""
+    - content: "Print"
       key: D
       order: 3
-- uuid: 
+
+- uuid: 7621c8d3-0d2d-4237-921d-988824ef2736
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     The loop keyword tells Rust to execute a block of code over until you explicitly tell it to stop.
+      What happens if you don't tell it to stop?
+  hint: "Looping out"
+  explanation: "loop are forever"
   answerKeys:
     - C
-  topic:
+  topic: contol_flow
   subTopics:
-    - 
+    - Loop
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "it stop by itself"
       key: A
       order: 0
-    - content: ""
+    - content: "It slow down"
       key: B
       order: 1
-    - content: ""
+    - content: "It loops forever"
       key: C
       order: 2
-    - content: ""
+    - content: " ask you to stop it"
       key: D
       order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
