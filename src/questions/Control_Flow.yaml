@@ -201,58 +201,77 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: 6f2dcef1-b20b-4e02-b2bd-ee0f03ef298d
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What will be the output if we run this code section?
+     ```rust
+     fn main() {
+       let number = 3;
+
+       if number {
+          println!("number was three");
+      }
+    }
+   ```
+  hint: "Data type"
+  explanation: "should be a condition"
   answerKeys:
     - C
+  topic: control_flow
+  subTopics: 
+    - if_else
+  difficultyLevel: Low
+  choices: 
+   
+   - content: "3"
+      key: A
+      order: 0
+    - content: "True"
+      key: B
+      order: 1
+    - content: "error[E0308]: mismatched types"
+      key: C
+      order: 2
+    - content: "number is 3"
+      key: D
+      order: 3
+
+- uuid: 061c992d-0a9f-4283-b82c-ef340ad4b566
+  type: SingleChoice
+  content: |
+      What is the output?
+      ```rust
+      fn main() {
+         let digit = 34;
+          if digit != 0 {
+         println!("number was something other than zero");
+       }
+      }
+      ```
+  hint: "Take note of the !="
+  explanation: "!= is like an exception statement"
+  answerKeys:
+    - D
   topic:
   subTopics:
     - 
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Mismatched type"
       key: A
       order: 0
-    - content: ""
+    - content: "digit error"
       key: B
       order: 1
-    - content: ""
+    - content: "False"
       key: C
       order: 2
-    - content: ""
+    - content: "number was something other than zero"
       key: D
       order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
