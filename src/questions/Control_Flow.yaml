@@ -341,12 +341,12 @@
 
     
   hint: "Looping"
-  explanation: ""
+  explanation: "it just loop forever"
   answerKeys:
     - A
-  topic:
+  topic: loop
   subTopics:
-    - 
+    - Loop statement
   difficultyLevel: Low
   choices:
    
@@ -554,7 +554,7 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: 9a777f39-db37-4840-9286-14fbc43a4385
   type: SingleChoice
   content: |
      We define a function in Rust by entering ____ followed by a function name and a set of parentheses.
@@ -562,9 +562,9 @@
   explanation: "Thats the Rust keyword"
   answerKeys:
     - C
-  topic:
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
@@ -600,9 +600,9 @@
   explanation: "You call function in the main for this example"
   answerKeys:
     - A
-  topic:
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
@@ -627,9 +627,9 @@
   explanation: "Declaring every function in a block"
   answerKeys:
     - A
-  topic:
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
