@@ -327,6 +327,517 @@
       key: D
       order: 3
 
+- uuid: 23291951-39c9-4dcf-9788-ce9dff03bed4
+  type: SingleChoice
+  content: |
+     What will happen if we run this code?
+     ```rust
+     fn main() {
+        loop {
+         println!("again!");
+      }
+    } 
+    ```
+
+    
+  hint: "Looping"
+  explanation: ""
+  answerKeys:
+    - A
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "It prints again forever till you kill the terminal"
+      key: A
+      order: 0
+    - content: "it stops after 100 times"
+      key: B
+      order: 1
+    - content: "Error: couldn't run: no end"
+      key: C
+      order: 2
+    - content: "It end immediately"
+      key: D
+      order: 3
+
+- uuid: 2fc1b82f-e876-4a3f-a6e2-68798ce7888c
+  type: SingleChoice
+  content: |
+     What is the value of result?
+    ```rust
+       fn main() {
+         let mut counter = 0;
+
+         let result = loop {
+           counter += 1;
+
+           if counter == 10 {
+            break counter * 3;
+         }
+       };
+
+         println!("The result is {result}");
+      }
+   ```
+    
+  hint: " watch the declaration of result"
+  explanation: ""
+  answerKeys:
+    - C
+  topic: contol_flow
+  subTopics:
+    - if-let
+  difficultyLevel: Low
+  choices:
+   
+   - content: "100"
+      key: A
+      order: 0
+    - content: "20"
+      key: B
+      order: 1
+    - content: "30"
+      key: C
+      order: 2
+    - content: "40"
+      key: D
+      order: 3
+
+- uuid: 8f76e7b0-db4c-492e-8726-cd2cbd1a18c7
+  type: SingleChoice
+  content: |
+     A program will often need to evaluate a condition within a loop. What keywords is best at checking the condition?
+  hint: "breaking loop"
+  explanation: ""
+  answerKeys:
+    - A
+  topic: control_flow
+  subTopics:
+    - For and while loop
+  difficultyLevel: Low
+  choices:
+   
+   - content: "For and While"
+      key: A
+      order: 0
+    - content: "If and Panic"
+      key: B
+      order: 1
+    - content: "panic and println"
+      key: C
+      order: 2
+    - content: "for and if"
+      key: D
+      order: 3
+
+- uuid: 
+  type: SingleChoice
+  content: |
+      What is the output of this?
+      ```rust
+        fn main() {
+        let mut number = 3;
+         while number != 0 {
+         println!("{number}!");
+
+          number -= 1;
+        }
+
+       println!("LIFTOFF!!!");
+      }
+    ```
+  hint: "Loop while number is not zero yet"
+  explanation: "we looped from 3 down 0 and broke out"
+  answerKeys:
+    - A
+  topic: control_flow
+  subTopics:
+    - While-loop
+  difficultyLevel: Low
+  choices:
+   
+   - content: "3! 2! 1! LIFTOFF!!!"
+      key: A
+      order: 0
+    - content: "1! 2! LIFTOFF!!!"
+      key: B
+      order: 1
+    - content: "error"
+      key: C
+      order: 2
+    - content: "LIFTOFF!!!"
+      key: D
+      order: 3
+
+- uuid: 531159db-111c-423b-9acd-5a6586febccf
+  type: SingleChoice
+  content: |
+      Complete the sentence.
+     The safety and conciseness of _____ make them the most commonly used loop construct in Rust.
+  hint: "A loop statement"
+  explanation: ""
+  answerKeys:
+    - C
+  topic: contol__flow
+  subTopics:
+    - For-loop
+  difficultyLevel: Low
+  choices:
+   
+   - content: "While loop"
+      key: A
+      order: 0
+    - content: "If-else"
+      key: B
+      order: 1
+    - content: "For loop"
+      key: C
+      order: 2
+    - content: "While for"
+      key: D
+      order: 3
+
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+- uuid: 
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - C
+  topic:
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: ""
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
 - uuid: 
   type: SingleChoice
   content: |
