@@ -373,6 +373,8 @@
   details: |
     - If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop.
     - If the iterator is empty, the 'for' expression completes.
+    - The safety and conciseness of for loops make them the most commonly used loop construct in Rust
+    - Using the for loop, you wouldn’t need to remember to change any other code if you changed the number of values in the array,
    - An example of a for loop over the contents of an array:
    ```rust
    fn main() {
