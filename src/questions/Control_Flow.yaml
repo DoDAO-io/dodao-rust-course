@@ -802,58 +802,74 @@
       order: 3
 
 
-- uuid: 
+- uuid: 93d9080c-f484-43ac-ba71-3670a2500a7f
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What part of your code can be evaluate to a resulting value.
+  hint: "Function body"
+  explanation: " They are calculated "
   answerKeys:
     - C
-  topic:
+  topic: function
   subTopics:
-    - 
+    - funcrion body
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Statement"
       key: A
       order: 0
-    - content: ""
+    - content: "Function"
       key: B
       order: 1
-    - content: ""
+    - content: "Expression"
       key: C
       order: 2
-    - content: ""
+    - content: "Methods"
       key: D
       order: 3
-- uuid: 
+
+- uuid: 6b5885d2-91cc-4979-b731-7c1a2e9a907a
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What fragment of code is an expression here?
+     ```rust
+     fn main() {
+       let y = {
+          let x = 3;
+          x + 1
+      };
+
+      println!("The value of y is: {y}");
+    }
+    ```
+
+  hint: "not a statement"
+  explanation: "it should be a computation"
   answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
+    - A
+  topic: function 
+  subTopics: 
+    - function body
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: | "{
+                let x = 3;
+                 x + 1
+                 }"
       key: A
       order: 0
-    - content: ""
+    - content: "let x = 3"
       key: B
       order: 1
-    - content: ""
+    - content: "println!("The value of y is: {y}");"
       key: C
       order: 2
-    - content: ""
+    - content: "fn main() "
       key: D
       order: 3
+      
 - uuid: 
   type: SingleChoice
   content: |
