@@ -686,84 +686,94 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: 23c0f874-10dc-4e32-bd16-fe17a9a5fbad
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     The ____ operator can only be used in functions whose return type is compatible with the value the ? is used on
+  hint: "error handling operator"
+  explanation: "if it is not compatiable it would not work"
+  answerKeys:
+    - A
+  topic: error_handling
+  subTopics:
+    - Operator
+  difficultyLevel: Low
+  choices:
+   
+   - content: "?"
+      key: A
+      order: 0
+    - content: "::"
+      key: B
+      order: 1
+    - content: "<T,E>"
+      key: C
+      order: 2
+    - content: "//"
+      key: D
+      order: 3
+
+- uuid: 5b135105-a416-42f5-965b-76fb9fce5852
+  type: SingleChoice
+  content: |
+      What will happen if we run this code?
+      ```rust
+        fn main() {
+           panic!("crash and burn");
+        }
+       ```
+
+  hint: "Panic first"
+  explanation: "it is not a print function"
   answerKeys:
     - C
-  topic:
+  topic: error_handling
   subTopics:
+    - Panic
+  difficultyLevel: Low
+  choices:
+   
+   - content: "timeout error"
+      key: A
+      order: 0
+    - content: "fails to compile"
+      key: B
+      order: 1
+    - content: "it panic at crash and burn"
+      key: C
+      order: 2
+    - content: "print out crash and burn"
+      key: D
+      order: 3
+
+- uuid: c5df8ee5-f8ed-439b-ab10-605e6b394661
+  type: SingleChoice
+  content: |
+      Complete the sentence
+     Function bodies are made up of a series of ______ optionally ending in an ______
+  hint: "function body"
+  explanation: "They make up a function"
+  answerKeys:
+    - B
+  topic: function
+  subTopics: body of a function
     - 
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Statement and methods"
       key: A
       order: 0
-    - content: ""
+    - content: "Statement and expression"
       key: B
       order: 1
-    - content: ""
+    - content: "Expression and methods"
       key: C
       order: 2
-    - content: ""
+    - content: "Expression and Statement"
       key: D
       order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
