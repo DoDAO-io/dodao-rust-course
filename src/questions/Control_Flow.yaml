@@ -622,7 +622,7 @@
 - uuid: b4d11d66-dcd6-4e7e-aa09-8e2d40d1763d
   type: SingleChoice
   content: |
-     The _ brackets tell the compiler where the function body begins and ends.
+     The ___ brackets tell the compiler where the function body begins and ends.
   hint: "function delaration"
   explanation: "Declaring every function in a block"
   answerKeys:
@@ -870,12 +870,39 @@
       key: D
       order: 3
       
-- uuid: 
+- uuid: f24f175d-7a12-45b8-8f95-b85f6381540e
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     Which is not a control flow method?
+  hint: "which can be use for iteration"
+  explanation: "the odd one is use for error handling"
+  answerKeys:
+    - D
+  topic: control_flow
+  subTopics:
+    - flow methos
+  difficultyLevel: Low
+  choices:
+   
+   - content: "for-loop"
+      key: A
+      order: 0
+    - content: "if-else"
+      key: B
+      order: 1
+    - content: "while-loop"
+      key: C
+      order: 2
+    - content: "panic!"
+      key: D
+      order: 3
+      
+- uuid: d18f8f03-0600-46b5-9fc3-70aecb555379
+  type: SingleChoice
+  content: |
+     Can a loop be inside a loop?
+  hint: "Nested loops"
+  explanation: "you can break and continue with loops"
   answerKeys:
     - C
   topic:
@@ -884,71 +911,47 @@
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "only when you use the Panic! method"
       key: A
       order: 0
-    - content: ""
+    - content: "No"
       key: B
       order: 1
-    - content: ""
+    - content: "Yes, we break and can continue"
       key: C
       order: 2
-    - content: ""
+    - content: "Loop are statement"
       key: D
       order: 3
-- uuid: 
+      
+- uuid: d8e164a6-a3ee-4dd6-a07f-4381fdb5b8c0
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     Functions can return _____ to the code that calls them
+  hint: "returns something important"
+  explanation: "functions have to be called"
   answerKeys:
-    - C
-  topic:
+    - A
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Values"
       key: A
       order: 0
-    - content: ""
+    - content: "function"
       key: B
       order: 1
-    - content: ""
+    - content: "statement"
       key: C
       order: 2
-    - content: ""
+    - content: "numbers"
       key: D
       order: 3
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-- uuid: 
+      
+- uuid:
   type: SingleChoice
   content: |
      
