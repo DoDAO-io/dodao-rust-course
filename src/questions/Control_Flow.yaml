@@ -646,32 +646,46 @@
       key: D
       order: 3
 
-- uuid: 
+- uuid: 66b285ee-16ea-4dc5-9ebf-a71b2f8115b4
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+      What is the output?
+     ```
+      fn main() {
+          let x = 7;
+
+          if x == 5 {
+           println!("x is five!");
+          } else if x == 6 {
+           println!("x is six!");
+          } else {
+           println!("x is not five or six :(");
+          }
+        }
+       ```
+  hint: "Nested if-else statement"
+  explanation: "Find the correct condition"
   answerKeys:
-    - C
-  topic:
+    - B
+  topic: if_statement
   subTopics:
-    - 
+    - nested if else statement
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "x is five!"
       key: A
       order: 0
-    - content: ""
+    - content: "x is not five or six :("
       key: B
       order: 1
-    - content: ""
+    - content: "x is six!"
       key: C
       order: 2
-    - content: ""
+    - content: "x is seven!"
       key: D
       order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
