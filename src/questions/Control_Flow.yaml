@@ -746,6 +746,33 @@
       key: D
       order: 3
 
+- uuid: 084c634a-f438-4ff0-a906-b554018ef18d
+  type: SingleChoice
+  content: |
+     What is a Statement?
+  hint: "Statement"
+  explanation: "instructions only, doesn't do any other thing"
+  answerKeys:
+    - A
+  topic: function
+  subTopics:
+    - statements
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Statements are instructions that perform some action and do not return a value"
+      key: A
+      order: 0
+    - content: "Statement are a library function"
+      key: B
+      order: 1
+    - content: "statements are the core of a program"
+      key: C
+      order: 2
+    - content: "Statements are instructions that perform some action and return a value""
+      key: D
+      order: 3
+
 - uuid: c5df8ee5-f8ed-439b-ab10-605e6b394661
   type: SingleChoice
   content: |
@@ -774,32 +801,7 @@
       key: D
       order: 3
 
-- uuid: 
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - C
-  topic:
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: ""
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
+
 - uuid: 
   type: SingleChoice
   content: |
