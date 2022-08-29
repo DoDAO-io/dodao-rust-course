@@ -951,12 +951,29 @@
       key: D
       order: 3
       
-- uuid:
+- uuid: 95077da8-24ad-4ddf-bc75-9a0387349f62
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     Take a look at this little complex code, what best decribe the output?
+     ```rust
+          fn main() {
+            // `n` will take the values: 1, 2, ..., 100 in each iteration
+             for n in 1..101 {
+               if n % 15 == 0 {
+               println!("fizzbuzz");
+               } else if n % 3 == 0 {
+               println!("fizz");
+               } else if n % 5 == 0 {
+               println!("buzz");
+               } else {
+               println!("{}", n);
+               }
+            }
+          }
+        ```
+
+  hint: "division without reminder"
+  explanation: "from 1 to 101, if the remainder matches a condition it prints its output"
   answerKeys:
     - C
   topic:
@@ -965,16 +982,16 @@
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "it fails completely"
       key: A
       order: 0
-    - content: ""
+    - content: "it prints from 1 to 101"
       key: B
       order: 1
-    - content: ""
+    - content: "It moves from 1 to 101, and test each number against the condition and prints out the first condition output it matches"
       key: C
       order: 2
-    - content: ""
+    - content: "The code ends because nested if statement needs break command"
       key: D
       order: 3
 - uuid: 
