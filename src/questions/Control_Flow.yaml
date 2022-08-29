@@ -1,1 +1,36 @@
+- uuid: 018dde08-4288-4336-97bb-141d6383c693
+  type: SingleChoice
+  content: |
+    What is the output of the following code snippet:
+    
+        ``` 
+            fn main() {
+              let x = 12;
+              println!("The value of x is: {x}");
+              x = 8;
+              println!("The value of x is: {x}");
+            } 
+        ```
 
+  hint: NoHint
+  explanation: "Error would occur, because the variable x isn't set as mutable so it's value can't be changed."
+  answerKeys:
+    - D
+  topic: 01_data_types
+  subTopics:
+    - variables
+  difficultyLevel: Low
+  choices:
+    - content: "The value of x is: 8"
+
+      key: A
+      order: 0
+    - content: "Error: the variable x is mutable"
+      key: B
+      order: 1
+    - content: "The value of x is: 12"
+      key: C
+      order: 2
+    - content: "Error: the variable x is immutable"
+      key: D
+      order: 3
