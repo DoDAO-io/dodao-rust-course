@@ -105,9 +105,9 @@ topics:
             a. Panics
           5. Custom Errors
 
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+    readings: control_flow.yaml
+    summaries: control_flow.yaml
+    questions: control_flow.yaml
     status: In Progress
     completionWeek:  July 18
 
