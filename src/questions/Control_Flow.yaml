@@ -1247,12 +1247,125 @@
       key: D
       order: 3
 
-- uuid:
+- uuid: ded49462-cbf9-422e-9d82-747586e59081
   type: SingleChoice
   content: |
+  	Describe the output(best fit)
+	```rust
+     		fn main() {
+
+		  let mut n = 10;
+
+		  while n!=0 {
+			println!("{}", n);
+			n-=1;
+		   }
+		}
+	```
+  hint: "loop from 10 down"
+  explanation: "Counting from 10 to 1 "
+  answerKeys:
+    - C
+  topic: Control_flow
+  subTopics:
+    - while_loop
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Count up from 1 to 10"
+      key: A
+      order: 0
+    - content: "Print from 1 to 10"
+      key: B
+      order: 1
+    - content: "Print out from 10 to 1"
+      key: C
+      order: 2
+    - content: "Count down from 10 to 1"
+      key: D
+      order: 3
+
+- uuid: 17f6d7a9-a512-477d-af2e-14cfedc74657
+  type: SingleChoice
+  content: |
+  	What is the output?
+	```rust
+	   fn main() {
+		let mut n = 1;
+
+	   while n<=5 {
+		println!("{}", n*2);
+		n+=1;
+	  }
+         }
+	```
+
      
-  hint: ""
-  explanation: ""
+  hint: "multiply by 2, and count to 5"
+  explanation: "while n is less or requal than 5 do something"
+  answerKeys:
+    - A
+  topic: contol_flow
+  subTopics:
+    - while loop
+  difficultyLevel: Low
+  choices:
+   
+   - content: "2 4 6 8 10"
+      key: A
+      order: 0
+    - content: "1 2 3 4 5"
+      key: B
+      order: 1
+    - content: "1 3 6 9 11"
+      key: C
+      order: 2
+    - content: "2 5 "
+      key: D
+      order: 3
+
+- uuid: 3723f90d-ce8a-47cb-809f-c4676150fc4b
+  type: SingleChoice
+  content: |
+     Arguments are passed after function name inside ______
+  hint: "Function parameter"
+  explanation: "very important we put args in a bracket"
+  answerKeys:
+    - A
+  topic: Argument
+  subTopics:
+    - Function
+  difficultyLevel: Low
+  choices:
+   
+   - content: "parenthesis"
+      key: A
+      order: 0
+    - content: "Curtly bracket"
+      key: B
+      order: 1
+    - content: "square bracket
+      key: C
+      order: 2
+    - content: "Block bracket"
+      key: D
+      order: 3
+ 
+- uuid: 802a45f7-6356-4e0e-8abb-12f1da27b68e
+  type: SingleChoice
+  content: |
+     What does the greet function take as argument?
+     ```rust
+     	 fn main() {
+		greet("kushwanthreddy");
+		}
+
+		fn greet(name: &str) {
+		println!("hello {} welcome to geeksforgeeks",name);
+		}
+      ```
+  hint: "The greet function has name args"
+  explanation: "look at the parenthesis
   answerKeys:
     - A
   topic: 
@@ -1261,155 +1374,83 @@
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "name(string)"
       key: A
       order: 0
-    - content: ""
+    - content: "kushwanthreddy"
       key: B
       order: 1
-    - content: ""
+    - content: "name(integer)"
       key: C
       order: 2
-    - content: ""
+    - content: "name(boolean)"
       key: D
       order: 3
 
-- uuid:
+- uuid: 63990083-058f-4bfc-83ca-146c35e725f7
   type: SingleChoice
   content: |
-     
-  hint: ""
+     When a semi-colon is written at the end of an expression, it turns into a ____?
+  hint: "part of a function
   explanation: ""
   answerKeys:
-    - A
-  topic: 
+    - B
+  topic: function
   subTopics:
-    - 
+    - body of a function
   difficultyLevel: Low
   choices:
    
    - content: "Values"
       key: A
       order: 0
-    - content: ""
+    - content: "Statement"
       key: B
       order: 1
-    - content: ""
+    - content: "function"
       key: C
       order: 2
-    - content: ""
+    - content: "Parameter"
       key: D
       order: 3
 
-- uuid:
+- uuid: 2c30a2c4-7a4f-46a7-b460-7216f3ac5b15
   type: SingleChoice
   content: |
-     
-  hint: ""
+     What are the arguments passed in the code below?
+     ```rust
+     	fn main() {
+ 	   print_sum(5, 6);
+	  }
+
+	fn print_sum(x: i32, y: i32) {
+	    println!("sum is: {}", x + y);
+	}
+      ```
+  hint: "parenthesis"
   explanation: ""
   answerKeys:
-    - A
-  topic: 
+    - D
+  topic: function
   subTopics:
-    - 
+    - Arguments
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "x: i32, y: i32"
       key: A
       order: 0
-    - content: ""
+    - content: "x: , y:"
       key: B
       order: 1
-    - content: ""
+    - content: "32, y: i32"
       key: C
       order: 2
-    - content: ""
+    - content: "5, 6"
       key: D
       order: 3
 
-- uuid:
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - A
-  topic: 
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: "Values"
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-
-- uuid:
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - A
-  topic: 
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: "Values"
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-
-- uuid:
-  type: SingleChoice
-  content: |
-     
-  hint: ""
-  explanation: ""
-  answerKeys:
-    - A
-  topic: 
-  subTopics:
-    - 
-  difficultyLevel: Low
-  choices:
-   
-   - content: "Values"
-      key: A
-      order: 0
-    - content: ""
-      key: B
-      order: 1
-    - content: ""
-      key: C
-      order: 2
-    - content: ""
-      key: D
-      order: 3
-
-- uuid:
+- uuid: 21c66e14-e027-4956-8571-00605eb93c1c
   type: SingleChoice
   content: |
      
