@@ -979,7 +979,7 @@
   topic:
   subTopics:
     - 
-  difficultyLevel: Low
+  difficultyLevel: Medium
   choices:
    
    - content: "it fails completely"
@@ -994,21 +994,571 @@
     - content: "The code ends because nested if statement needs break command"
       key: D
       order: 3
-- uuid: 
+
+- uuid: aabc6ca8-307d-4b5e-bbc2-ac8e46a8fb83
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What is the output?
+     fn main() {
+
+	    let strn = "DoDAOCourse";
+	    let fixed_string = "DDC";
+
+
+	    if fixed_string==strn {
+		    println!("Same");
+	    }else{
+	    	println!("Not Same");
+      	}
+      }
+
+  hint: " Data comparision"
+  explanation: "We use if and let statement to compare the strings"
   answerKeys:
-    - C
+    - B
   topic:
   subTopics:
     - 
   difficultyLevel: Low
   choices:
    
-   - content: ""
+   - content: "Same"
+      key: A
+      order: 0
+    - content: "Not Same"
+      key: B
+      order: 1
+    - content: "Error: let is not a keyword"
+      key: C
+      order: 2
+    - content: "DoDAOCourse"
+      key: D
+      order: 3
+
+- uuid: 2a9e9798-a646-4021-8469-6f889ced1e08
+  type: SingleChoice
+  content: |
+    What is the output?
+    ```rust
+     fn main() {
+
+	    let n = 7;
+
+	      if n>10 {
+	    	println!("Greater than 10");
+	        }else{
+	  	println!("Smaller than 10");
+	    }
+    }
+    ```
+     
+  hint: "greater than or less than"
+  explanation: " its simple enough"
+  answerKeys:
+    - A
+  topic: control_flow
+  subTopics:
+    - If_else statement
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Smaller than 10"
+      key: A
+      order: 0
+    - content: "Smaller than 7"
+      key: B
+      order: 1
+    - content: "Greater than 10"
+      key: C
+      order: 2
+    - content: "Greater than 7"
+      key: D
+      order: 3
+      
+- uuid: f0cf97a2-753e-4ec3-8648-3a8205582580
+  type: SingleChoice
+  content: |
+     What is the output?
+     ```rust
+       fn main() {
+
+     	let n = 9;
+
+	    if n>10 {
+	    	println!("Greater than 10");
+	      }else if n==10 {
+	      println!("Equal to 10");
+	      }else {
+		    println!("Smaller than 10");
+	       }
+     }
+    ```
+
+  hint: "Find the conditions that matches"
+  explanation: "Iterate and find the mathematical solution"
+  answerKeys:
+    - D
+  topic: contol_flow
+  subTopics:
+    - Nested else statement
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Equal to 10"
+      key: A
+      order: 0
+    - content: "Greater than 10"
+      key: B
+      order: 1
+    - content: "Greater than 9"
+      key: C
+      order: 2
+    - content: "Smaller than 10"
+      key: D
+      order: 3
+      
+- uuid: f309a64f-591d-4b23-8c86-d5947fc5254b
+  type: SingleChoice
+  content: |
+     What is the output?
+     ```rust
+       use std::fs::File;
+
+        fn main() {
+        	let f = File::open("gfg.txt");
+        println!("{:?}",f);
+        }
+      ```
+
+  hint: "Result error method"
+  explanation: "file gfg.txt was not there"
+  answerKeys:
+    - A
+  topic: Error_handling
+  subTopics:
+    - Recoverable errors
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
+      key: A
+      order: 0
+    - content: "thread 'main' panicked at 'index out of bounds:"
+      key: B
+      order: 1
+    - content: "Null error"
+      key: C
+      order: 2
+    - content: "File has been opened"
+      key: D
+      order: 3
+
+- uuid: be2c74c0-de24-4808-8db7-25335f97e5de
+  type: SingleChoice
+  content: |
+     What is the expected output?
+     ```rust
+      use std::fs::File;
+      fn main() {
+      // file doesn't exist
+      let f = File::open("gfg.txt");/
+      match f {
+      	Ok(file)=> {
+	  	println!("file found {:?}",file);
+      	},
+    	Err(_error)=> {
+		
+		  // replace it with whatever you want
+	  	// to do if file is not found
+	  	println!("file not found \n");
+	    }
+    }
+    }
+   ```
+
+  hint: "Result error when missing an item"
+  explanation: "matches the return type of the result"
+  answerKeys:
+    - B
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Medium
+  choices:
+   
+   - content: "file found "
+      key: A
+      order: 0
+    - content: "file not found "
+      key: B
+      order: 1
+    - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
+      key: C
+      order: 2
+    - content: "Opened file"
+      key: D
+      order: 3
+      
+- uuid: 8b82af20-1400-404d-9012-8561ebb6be27
+  type: SingleChoice
+  content: |
+     What is the output of this code?
+     ```rust
+     fn main(){
+      let result = eligible(13);
+      match result {
+      	Ok(age)=>{
+	    	println!("Person eligible to vote with age={}",age);
+	      },
+	   Err(msg)=>{
+	  	println!("{}",msg);
+	    }
+    }
+   }
+   fn eligible(age:i32)->Result<i32,String> {
+    if age>=18 {
+    	return Ok(age);
+        } else {
+	    return Err("Not Eligible..Wait for some years".to_string());
+      }
+    }
+   ```
+
+  hint: "Compare the age give to the required voting age"
+  explanation: "to produce an error if a person below 18 years tries to apply for voter ID"
+  answerKeys:
+    - A
+  topic: error_handling
+  subTopics:
+    - Recoverable error
+  difficultyLevel: Hard
+  choices:
+   
+   - content: "Not Eligible..Wait for some years"
+      key: A
+      order: 0
+    - content: "Person eligible to vote with 13 years"
+      key: B
+      order: 1
+    - content: "Error: Panicked at Err"
+      key: C
+      order: 2
+    - content: "Failed to compile"
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+
+- uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
+      key: A
+      order: 0
+    - content: ""
+      key: B
+      order: 1
+    - content: ""
+      key: C
+      order: 2
+    - content: ""
+      key: D
+      order: 3
+ 
+ - uuid:
+  type: SingleChoice
+  content: |
+     
+  hint: ""
+  explanation: ""
+  answerKeys:
+    - A
+  topic: 
+  subTopics:
+    - 
+  difficultyLevel: Low
+  choices:
+   
+   - content: "Values"
       key: A
       order: 0
     - content: ""
