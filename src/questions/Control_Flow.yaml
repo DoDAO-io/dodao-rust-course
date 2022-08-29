@@ -1589,56 +1589,62 @@
       key: D
       order: 3
 
-- uuid:
+- uuid: 9d45007e-4c06-4b34-b6db-7a4ab848cc7a
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What will happen when will run this?
+     ```rust
+     	fn main() {
+   	let a = [1,2,3];
+   	a[4];
+	}
+     ```
+  hint: "Panic"
+  explanation: "we trying to call an index of 4 in a array of max:2 index"
   answerKeys:
-    - A
-  topic: 
+    - D
+  topic: error_handling
   subTopics:
-    - 
+    - panic
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "it prints 4"
       key: A
       order: 0
-    - content: ""
+    - content: "nothing happens"
       key: B
       order: 1
-    - content: ""
+    - content: "Panic! error occurs at:> a[4]"
       key: C
       order: 2
-    - content: ""
+    - content: "it prints the array"
       key: D
       order: 3
  
- - uuid:
+ - uuid: d95e6e00-d6fa-4e0b-8558-e3b8d690d30d
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     A function can reduce the number of codes, which saves ____.
+  hint: "Function help reduces size"
+  explanation: "we can import function from anywhere and save size that way"
   answerKeys:
-    - A
-  topic: 
+    - B
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
    - content: "Values"
       key: A
       order: 0
-    - content: ""
+    - content: "Memory"
       key: B
       order: 1
-    - content: ""
+    - content: "Time"
       key: C
       order: 2
-    - content: ""
+    - content: "Money"
       key: D
       order: 3
