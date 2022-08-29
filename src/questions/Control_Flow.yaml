@@ -1453,108 +1453,139 @@
 - uuid: 21c66e14-e027-4956-8571-00605eb93c1c
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     How can a function be called?
+  hint: null
+  explanation: "We call function by its name and arguments"
   answerKeys:
     - A
   topic: 
   subTopics:
-    - 
+    - function calling
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "function_name(argument)"
       key: A
       order: 0
-    - content: ""
+    - content: "call function_name(main)"
       key: B
       order: 1
-    - content: ""
+    - content: "let = function_name(main)"
       key: C
       order: 2
-    - content: ""
+    - content: "function_name(main)::called"
       key: D
       order: 3
 
-- uuid:
+- uuid: 43421be6-7aa1-402a-baaa-d3d88bafc987
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What will happen if we run this program?
+     ```rust
+     	fn main() {
+ 	let number = 5;
+ 	if number % 2 == 1 {
+ 	 if number % 3 == 0 {
+  	 println!("Odd and divisible by 3");
+ 	   }
+ 	  }
+	}
+      ```
+
+  hint: "after the first if, follow to the next"
+  explanation: "null"
   answerKeys:
-    - A
-  topic: 
+    - D
+  topic: function
   subTopics:
-    - 
+    - function
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "it prints : Odd and divisible by 3"
       key: A
       order: 0
-    - content: ""
+    - content: "it print: Odd and divisible by 5"
       key: B
       order: 1
-    - content: ""
+    - content: "Error use one if"
       key: C
       order: 2
-    - content: ""
+    - content: "it prints nothing"
       key: D
       order: 3
 
-- uuid:
+- uuid: 1cac4f25-85c1-4a1f-8daf-9da73252f81b
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+  	What is the output?
+	```rust
+  	   fn main() {
+ 		let number = 9;
+ 		if number % 2 == 1 {
+  		if number % 3 == 0 {
+   		println!("Odd and divisible by 3");
+ 		}
+ 	        }
+		}
+	```
+  hint: "nested if"
+  explanation: "null"
   answerKeys:
     - A
-  topic: 
+  topic: contol_flow
   subTopics:
-    - 
+    - if statement
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "Odd and divisible by 3"
       key: A
       order: 0
-    - content: ""
+    - content: "Odd and divisible by 6"
       key: B
       order: 1
-    - content: ""
+    - content: "Error: else missing"
       key: C
       order: 2
-    - content: ""
+    - content: "compiler error"
       key: D
       order: 3
 
-- uuid:
+- uuid: a56460a0-e567-4970-9e87-0db399dfddbd
   type: SingleChoice
   content: |
-     
-  hint: ""
-  explanation: ""
+     What is the outpur?
+     ```rust
+     fn main() {
+	let check_value= 200;
+	if check_value < 100 {
+	println!("The decision returns true !");
+	}
+	else {
+	println!("The decision returns false!"); }
+	}
+     ```
+  hint: "check the condition"
+  explanation: "xomparing the number we the the greater one"
   answerKeys:
     - A
-  topic: 
+  topic: control_flow
   subTopics:
-    - 
+    - if_let statement
   difficultyLevel: Low
   choices:
    
-   - content: "Values"
+   - content: "The decision returns false!"
       key: A
       order: 0
-    - content: ""
+    - content: "The decision returns true!"
       key: B
       order: 1
-    - content: ""
+    - content: "Failed to compile"
       key: C
       order: 2
-    - content: ""
+    - content: "The decision returns indecisive!"
       key: D
       order: 3
 
