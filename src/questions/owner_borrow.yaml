@@ -7,7 +7,7 @@
     - B
   topic: 05_owner_borrow
   subTopics:
-    - memory allocation
+    - memory-allocation
   difficultyLevel: Low
   choices:
     - content: "2"
@@ -32,7 +32,7 @@
     - B
   topic: 05_owner_borrow
   subTopics:
-    - memory allocation
+    - memory-allocation
   difficultyLevel: Low
   choices:
     - content: "True"
@@ -51,7 +51,7 @@
     - A
   topic: 05_owner_borrow
   subTopics:
-    - memory allocation
+    - memory-allocation
   difficultyLevel: Medium
   choices:
     - content: "2 variables try to free same value as they go out of scope"
@@ -151,7 +151,7 @@
     - D
   topic: 05_owner_borrow
   subTopics:
-    - memory management
+    - memory-allocation
   difficultyLevel: Medium
   choices:
     - content: "by creating references to the value before passing to the function"
@@ -176,7 +176,7 @@
     - C, D
   topic: 05_owner_borrow
   subTopics:
-    - references
+    - ownership
   difficultyLevel: Medium
   choices:
     - content: "borrowed variables can not be mutated"
@@ -255,8 +255,8 @@
     - C
   topic: 05_owner_borrow
   subTopics:
-    - mutable reference
-    - scope
+    - borrowing
+    - variable-scope
   difficultyLevel: High
   choices:
     - content: "Code does not compiles as it is not possible to have 2 mutable references to a variable"
@@ -281,7 +281,7 @@
     - C, D
   topic: 05_owner_borrow
   subTopics:
-    - memory management
+    - memory-allocation
   difficultyLevel: High
   choices:
     - content: "Variables on stack can be moved"

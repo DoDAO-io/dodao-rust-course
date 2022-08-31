@@ -1,6 +1,6 @@
 - title: Memory Allocation
   shortTitle: Memory Allocation
-  key: memory_allocation
+  key: memory-allocation
   summary: Rust has a unique approach towards memory allocation. Data variables are either stored on stack or heap.
   details: |
     - Memory Management Approach
