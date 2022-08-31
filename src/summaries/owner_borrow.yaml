@@ -9,9 +9,11 @@
     - Stack
       * Stacks are last-in first-out and store fixed size variables.
       * Memory management on stacks is easy.
+      [Stack](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_stack.jpg?raw=true)
     - Heap
       * Heap is less organized, when adding a variable on the heap the memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location.
       * Keeping track of what parts of code are using what data on the heap, minimizing the amount of duplicate data on the heap, and cleaning up unused data on the heap so you don’t run out of space are all problems that ownership addresses.
+      [Heap](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_heap.jpg?raw=true)
 
 - title: Variable Scope
   shortTitle: Variable Scope
@@ -54,6 +56,7 @@
         ```
       * After the line let s2 = s1, rust considers s1 as no longer valid. Thus trying to use s1 after s2 is created will not work.
       * While dealing with variables on stack values are not moved, they are rather copied.
+      [Moving Value](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_move.jpg?raw=true)
     - Double Free Error
       * The reason for invalidating the original reference after moving the value is to prevent double free error.
       * Consider both s1 and s2 remain valid after the assignment. When they both go out of scope, they will both try to free the same memory. This is a memory safety bug called double free error. Freeing memory twice can lead to memory corruption which can result in security vulnerability.
@@ -107,6 +110,7 @@
               string_reference.len();
           }
         ```
+        [Reference](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_reference.jpg?raw=true)
       - Mutable Reference
         * References can be easily made mutable:
           ```
