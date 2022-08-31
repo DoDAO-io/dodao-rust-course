@@ -235,3 +235,64 @@
     - content: "False"
       key: B
       order: 1
+
+- uuid: 8a62b57e-decb-4c7c-b93d-2065ba6bd34b
+  type: SingleChoice
+  content: |
+    What is result of compiling code below ?
+    ```
+      let mut s = String::from("hello");
+
+      {
+          let r1 = &mut s;
+      }
+
+      let r2 = &mut s;
+    ```
+  hint: NoHint
+  explanation: "Mutable references to a variable in different scopes do not create compilation issue."
+  answerKeys:
+    - C
+  topic: 05_owner_borrow
+  subTopics:
+    - mutable reference
+    - scope
+  difficultyLevel: High
+  choices:
+    - content: "Code does not compiles as it is not possible to have 2 mutable references to a variable"
+      key: A
+      order: 0
+    - content: "Code compiles but breaks at runtime"
+      key: B
+      order: 1
+    - content: "Code compiles successfully as 2 mutable references have different scope"
+      key: C
+      order: 2
+    - content: "Code does not compile as it is not possible to have a mutable reference to a string value"
+      key: D
+      order: 3
+
+- uuid: 8e6bc92a-b13c-4cd1-9884-69966f5eda50
+  type: MultipleChoice
+  content: Which of the following is true about variables on stack ?
+  hint: NoHint
+  explanation: "Variables on stack are fixed in size and follow copy symantics."
+  answerKeys:
+    - C, D
+  topic: 05_owner_borrow
+  subTopics:
+    - memory management
+  difficultyLevel: High
+  choices:
+    - content: "Variables on stack can be moved"
+      key: A
+      order: 0
+    - content: "Variables on stack have size determined dynamically at runtime"
+      key: B
+      order: 1
+    - content: "Variables on stack are fixed in size"
+      key: C
+      order: 2
+    - content: "Variables on stack are copied"
+      key: D
+      order: 3
