@@ -1,49 +1,48 @@
 - uuid: 44b73ef1-b860-4ecd-b1b7-c2620817c31e
   title: Control Flow - Rust
   shortTitle: Introduction to control flow in Rust language
-  type: YoutubeVideo 
+  type: YoutubeVideo
   url: https://www.youtube.com/watch?v=EVruNiwIfzI
-  subTopics:  
+  subTopics:
     - "if-else-statement"
     - "Using if in a let Statement"
     - "while-loop-statement"
     - "for-loop-statement"
-   
-  details: | 
+
+  details: |
     In this video we're looking how to write control flow in Rust language.
     This video explains about the use of -
     * if-else and nested else condition and using if in a let Statement
     * while loop statement and passing conditions while the statement is true
-    * for loop and iteration 
+    * for loop and iteration
 ---
 - uuid: 140a5c04-73de-4b0e-ab1b-ba85c119b001
   title: Control flow
   shortTitle: Introduction to control flow in Rust language
   type: Article
   url: https://doc.rust-lang.org/book/ch03-05-control-flow.html#control-flow
-  subTopics:  
+  subTopics:
     - "if-else-statement"
     - "while-loop-statement"
     - "for-loop-statement"
-  details: | 
+  details: |
     In this article we're looking how to write control flow in Rust language.
     This article explains about the use of -
     * if-else and nested else condition and using let statement
     * while loop statement and passing conditions while the statement is true
-    * for loop and iteration 
-
+    * for loop and iteration
 
 - uuid: 49b6d99f-9965-42aa-8115-edf28c7735bb
   title: Rust Lang Tutorial 2021 - Functions
   shortTitle: Introduction to functions and procedures
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=hSSYwVfzaZM
-  subTopics:  
+  subTopics:
     - "Declarating a function"
     - "How to return a value"
     - "body of a function"
-    - "arguments" 
-  details: | 
+    - "arguments"
+  details: |
     In this video we're looking how to write functions in Rust language.
     This video talks about the use of -
     * Rust Simple function
@@ -51,18 +50,17 @@
     * Rust Function with return
     * Rust Function return with expression (no semi-colon)
 
-
-uuid: ca11e46b-bcbd-4dd7-bf44-965a64863fb2
+- uuid: ca11e46b-bcbd-4dd7-bf44-965a64863fb2
   title: Intro to Rust-lang (Error Handling)
-  shortTitle: Introduction to error handing 
+  shortTitle: Introduction to error handing
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=mhw-x5Q_-z0
-  subTopics:  
+  subTopics:
     - "panic!"
     - "Result option"
     - "enum options"
-    - "? operation" 
-  details: | 
+    - "? operation"
+  details: |
     In this video, we look at how we can use the Result and Option Enums to deal with Errors in Rust. 
     We also look at some of the basic methods that are commonly used in place of pattern match statements to check errors. 
     * Error handling using Result options
