@@ -15,7 +15,6 @@
     * if-else and nested else condition and using if in a let Statement
     * while loop statement and passing conditions while the statement is true
     * for loop and iteration
----
 - uuid: 140a5c04-73de-4b0e-ab1b-ba85c119b001
   title: Control flow
   shortTitle: Introduction to control flow in Rust language
