@@ -257,7 +257,7 @@ Sub Topics: variables
 
 - [ ]  Arrays & Tuples
 - [ ]  List all the data types
-- [x]  ?Sized
+- [x]  Sized
 - [ ]  Dynamic-Sized variables not supported in rust
   
 Hint: No hint

@@ -6,9 +6,8 @@
   explanation: "it returns a Return to whoever is calling the function to handle it."
   answerKeys:
     - D
-  topic: Error_handling
   subTopics:
-    - Errors
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "Unwrap and Expect"
@@ -32,9 +31,8 @@
   explanation: "prints an error message to the screen then unwinds"
   answerKeys:
     - C
-  topic: Error_handling
   subTopics:
-    - Errors
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "Not to panic"
@@ -59,9 +57,8 @@
   explanation: "type of errors"
   answerKeys:
     - B
-  topic:
-  subTopics: Error_handling
-    - Errors
+  subTopics:
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "Not important errors"
@@ -85,9 +82,8 @@
   explanation: "println is to print out"
   answerKeys:
     - A
-  topic: Error_handling
   subTopics:
-    - Error
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "println()"
@@ -111,9 +107,8 @@
   explanation: "A statement that gets checked"
   answerKeys:
     - C
-  topic: Control_flow
   subTopics:
-    - If else
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "Match"
@@ -137,9 +132,8 @@
   explanation: "The condition must be 0 or 1"
   answerKeys:
     - B
-  topic: control_flow
   subTopics:
-    -
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "String"
@@ -175,9 +169,8 @@
   explanation: "The condition of 8 being lesser than 9 is correct"
   answerKeys:
     - D
-  topic: control_flow
   subTopics:
-    - if else
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "condition was false"
@@ -210,9 +203,8 @@
   explanation: "should be a condition"
   answerKeys:
     - C
-  topic: control_flow
   subTopics:
-    - if_else
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "3"
@@ -244,9 +236,8 @@
   explanation: "!= is like an exception statement"
   answerKeys:
     - D
-  topic:
   subTopics:
-    -
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "Mismatched type"
@@ -270,9 +261,8 @@
   explanation: "more than one execution"
   answerKeys:
     - A
-  topic: control_flow
   subTopics:
-    - loop
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "Loop"
@@ -297,7 +287,6 @@
   explanation: "loop are forever"
   answerKeys:
     - C
-  topic: contol_flow
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -331,9 +320,8 @@
   explanation: "it just loop forever"
   answerKeys:
     - A
-  topic: loop
   subTopics:
-    - Loop statement
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "It prints again forever till you kill the terminal"
@@ -373,9 +361,8 @@
   explanation: ""
   answerKeys:
     - C
-  topic: contol_flow
   subTopics:
-    - if-let
+    - if_else_let_statement
   difficultyLevel: Low
   choices:
     - content: "100"
@@ -399,9 +386,8 @@
   explanation: ""
   answerKeys:
     - A
-  topic: control_flow
   subTopics:
-    - For and while loop
+    - For_loop_statement
   difficultyLevel: Low
   choices:
     - content: "For and While"
@@ -437,9 +423,8 @@
   explanation: "we looped from 3 down 0 and broke out"
   answerKeys:
     - A
-  topic: control_flow
   subTopics:
-    - While-loop
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "3! 2! 1! LIFTOFF!!!"
@@ -464,9 +449,8 @@
   explanation: ""
   answerKeys:
     - C
-  topic: contol__flow
   subTopics:
-    - For-loop
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "While loop"
@@ -490,9 +474,8 @@
   explanation: "it is the functions of all fuunction"
   answerKeys:
     - D
-  topic: function
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Branch"
@@ -516,9 +499,8 @@
   explanation: "letters are lowercase and underscores separate words"
   answerKeys:
     - B
-  topic: function
   subTopics:
-    - function names
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Parameter"
@@ -542,9 +524,8 @@
   explanation: "Thats the Rust keyword"
   answerKeys:
     - C
-  topic: function
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Sn"
@@ -578,9 +559,8 @@
   explanation: "You call function in the main for this example"
   answerKeys:
     - A
-  topic: function
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Hello, my name is John. Another function"
@@ -604,9 +584,9 @@
   explanation: "Declaring every function in a block"
   answerKeys:
     - A
-  topic: function
+
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Curly"
@@ -642,9 +622,9 @@
   explanation: "Find the correct condition"
   answerKeys:
     - B
-  topic: if_statement
+
   subTopics:
-    - nested if else statement
+    - Nested_if_else_statement
   difficultyLevel: Low
   choices:
     - content: "x is five!"
@@ -668,9 +648,9 @@
   explanation: "if it is not compatiable it would not work"
   answerKeys:
     - A
-  topic: error_handling
+
   subTopics:
-    - Operator
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "?"
@@ -700,9 +680,9 @@
   explanation: "it is not a print function"
   answerKeys:
     - C
-  topic: error_handling
+
   subTopics:
-    - Panic
+    - Error_handling
   difficultyLevel: Low
   choices:
     - content: "timeout error"
@@ -726,9 +706,8 @@
   explanation: "instructions only, doesn't do any other thing"
   answerKeys:
     - A
-  topic: function
   subTopics:
-    - statements
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Statements are instructions that perform some action and do not return a value"
@@ -753,9 +732,9 @@
   explanation: "They make up a function"
   answerKeys:
     - B
-  topic: function
-  subTopics: body of a function
-    -
+
+  subTopics:
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Statement and methods"
@@ -779,9 +758,8 @@
   explanation: " They are calculated "
   answerKeys:
     - C
-  topic: function
   subTopics:
-    - funcrion body
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Statement"
@@ -816,9 +794,8 @@
   explanation: "it should be a computation"
   answerKeys:
     - A
-  topic: function
   subTopics:
-    - function body
+    - functions
   difficultyLevel: Low
   choices:
     - content: |
@@ -846,9 +823,9 @@
   explanation: "the odd one is use for error handling"
   answerKeys:
     - D
-  topic: control_flow
+
   subTopics:
-    - flow methos
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "for-loop"
@@ -872,9 +849,8 @@
   explanation: "you can break and continue with loops"
   answerKeys:
     - C
-  topic:
   subTopics:
-    -
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "only when you use the Panic! method"
@@ -898,9 +874,8 @@
   explanation: "functions have to be called"
   answerKeys:
     - A
-  topic: function
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Values"
@@ -941,9 +916,8 @@
   explanation: "from 1 to 101, if the remainder matches a condition it prints its output"
   answerKeys:
     - C
-  topic:
   subTopics:
-    -
+    - Nested_if_else_statement
   difficultyLevel: Medium
   choices:
     - content: "it fails completely"
@@ -977,9 +951,8 @@
   explanation: "We use if and let statement to compare the strings"
   answerKeys:
     - B
-  topic:
   subTopics:
-    -
+    - looping_value
   difficultyLevel: Low
   choices:
     - content: "Same"
@@ -1013,7 +986,7 @@
     - A
   topic: control_flow
   subTopics:
-    - If_else statement
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "Smaller than 10"
@@ -1050,9 +1023,8 @@
   explanation: "Iterate and find the mathematical solution"
   answerKeys:
     - D
-  topic: contol_flow
   subTopics:
-    - Nested else statement
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "Equal to 10"
@@ -1085,9 +1057,9 @@
   explanation: "file gfg.txt was not there"
   answerKeys:
     - A
-  topic: Error_handling
+
   subTopics:
-    - Recoverable errors
+    - Result_option
   difficultyLevel: Low
   choices:
     - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
@@ -1126,9 +1098,9 @@
   explanation: "matches the return type of the result"
   answerKeys:
     - B
-  topic:
+
   subTopics:
-    -
+    - Result_option
   difficultyLevel: Medium
   choices:
     - content: "file found "
@@ -1172,9 +1144,8 @@
   explanation: "to produce an error if a person below 18 years tries to apply for voter ID"
   answerKeys:
     - A
-  topic: error_handling
   subTopics:
-    - Recoverable error
+    - Result_option
   difficultyLevel: Hard
   choices:
     - content: "Not Eligible..Wait for some years"
@@ -1193,7 +1164,7 @@
 - uuid: ded49462-cbf9-422e-9d82-747586e59081
   type: SingleChoice
   content: |
-    escribe the output(best fit)
+    Describe the output(best fit)
     ```rust
     	fn main() {
         let mut n = 10;
@@ -1208,7 +1179,7 @@
     - C
   topic: Control_flow
   subTopics:
-    - while_loop
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "Count up from 1 to 10"
@@ -1244,7 +1215,7 @@
     - A
   topic: contol_flow
   subTopics:
-    - while loop
+    - Loop
   difficultyLevel: Low
   choices:
     - content: "2 4 6 8 10"
@@ -1268,9 +1239,9 @@
   explanation: "very important we put args in a bracket"
   answerKeys:
     - A
-  topic: Argument
+
   subTopics:
-    - Function
+    - Args
   difficultyLevel: Low
   choices:
     - content: "parenthesis"
@@ -1301,9 +1272,8 @@
   explanation: "look at the parenthesis"
   answerKeys:
     - A
-  topic: functiom
   subTopics:
-    - Argument
+    - Args
   difficultyLevel: Low
   choices:
     - content: "name(string)"
@@ -1327,9 +1297,9 @@
   explanation: "no explantion needed"
   answerKeys:
     - B
-  topic: function
+
   subTopics:
-    - body of a function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Values"
@@ -1361,9 +1331,9 @@
   explanation: ""
   answerKeys:
     - D
-  topic: function
+
   subTopics:
-    - Arguments
+    - Args
   difficultyLevel: Low
   choices:
     - content: "x: i32, y: i32"
@@ -1387,9 +1357,8 @@
   explanation: "We call function by its name and arguments"
   answerKeys:
     - A
-  topic:
   subTopics:
-    - function calling
+    - functions
   difficultyLevel: Low
   choices:
     - content: "function_name(argument)"
@@ -1424,9 +1393,9 @@
   explanation: "null"
   answerKeys:
     - D
-  topic: function
+
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "it prints : Odd and divisible by 3"
@@ -1445,7 +1414,7 @@
 - uuid: 1cac4f25-85c1-4a1f-8daf-9da73252f81b
   type: SingleChoice
   content: |
-    hat is the output?
+    What is the output?
     ```rust 
        fn main() {
        let number = 9;
@@ -1459,9 +1428,9 @@
   explanation: "null"
   answerKeys:
     - A
-  topic: contol_flow
+
   subTopics:
-    - if statement
+    - if_statement
   difficultyLevel: Low
   choices:
     - content: "Odd and divisible by 3"
@@ -1480,7 +1449,7 @@
 - uuid: a56460a0-e567-4970-9e87-0db399dfddbd
   type: SingleChoice
   content: |
-    What is the outpur?
+    What is the output?
     ```rust
     fn main() {
     let check_value= 200;
@@ -1493,9 +1462,8 @@
   explanation: "xomparing the number we the the greater one"
   answerKeys:
     - A
-  topic: control_flow
   subTopics:
-    - if_let statement
+    - if_else_let_statement
   difficultyLevel: Low
   choices:
     - content: "The decision returns false!"
@@ -1524,9 +1492,8 @@
   explanation: "we trying to call an index of 4 in a array of max:2 index"
   answerKeys:
     - D
-  topic: error_handling
   subTopics:
-    - panic
+    - panic_not_panic
   difficultyLevel: Low
   choices:
     - content: "it prints 4"
@@ -1550,9 +1517,8 @@
   explanation: "we can import function from anywhere and save size that way"
   answerKeys:
     - B
-  topic: function
   subTopics:
-    - function
+    - functions
   difficultyLevel: Low
   choices:
     - content: "Values"

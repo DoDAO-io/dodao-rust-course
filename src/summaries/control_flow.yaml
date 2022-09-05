@@ -41,7 +41,7 @@
     - If we change the `number` to 17 we get a `condition was false` because it is not less than 5. It is a very straight forward statement.
 - title: Multiple if conditions - how to evaluate them?
   shortTitle: Nested if statement
-  key: Nested_if_statement
+  key: if_statement
   summary: The two logical operators && and || allow us to evaluate more than one condition in an if statement.
   details: |
     - Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
@@ -130,7 +130,7 @@
     - Then we check to see which grade score in the match statement the student’s score matches.
     - If the compiler finds a match on the left of the ```=>``` operator, it will execute whatever statement is on the right of the ```=>``` operator.
     - In this case, it matched to “B” on the left and so it printed the string “Great job, you got a B!”.
-    - Note that we don’t use the result variable in the example above. This is simply because we don’t need to, the execution statement of the match already prints a message.
+    - Note that we don't use the result variable in the example above. This is simply because we don’t need to, the execution statement of the match already prints a message.
     - If we want to return an actual value, we specify the value instead of an action like ```println```.
     Example:
     ```rust
@@ -212,8 +212,8 @@
 
 - title: Repeating Code with loop
   shortTitle: Infinite loops
-  key: Infinite_loops
-  summary: The ```loop``` keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop. And here is how it do
+  key: Infinite_loop_kill
+  summary: The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop. And here is how it do
   details: |
     - showing looping with examples 
     - As an example, change the src/main.rs file in your loops directory to look like this
@@ -224,7 +224,7 @@
        }
       }
     ```
-     - When we run this program, we’ll see again! printed over and over continuously until we stop the program manually.
+     - When we run this program, we'll see again! printed over and over continuously until we stop the program manually.
      - Most terminals support the keyboard shortcut ctrl-c to interrupt a program that is stuck in a continual loop. 
      - This will be the ouput:
     ```rust
@@ -313,7 +313,7 @@
     - If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop.
     - If the iterator is empty, the 'for' expression completes.
     - The safety and conciseness of for loops make them the most commonly used loop construct in Rust
-    - Using the for loop, you wouldn’t need to remember to change any other code if you changed the number of values in the array,
+    - Using the for loop, you wouldn't need to remember to change any other code if you changed the number of values in the array,
     - An example of a for loop over the contents of an array:
     ```rust
      fn main() {
@@ -355,7 +355,7 @@
   key: Panic_error_catching
   summary: When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
   details: |
-    - Let’s try calling panic! in a simple program:
+    - Let's try calling panic! in a simple program:
      Filename: src/main.rs
     ```rust
       This code panics!

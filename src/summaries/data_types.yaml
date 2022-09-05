@@ -38,9 +38,9 @@
         * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.
         * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.
         - Integer Overflow
-          * Let’s say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- 
-            1. When you’re compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
-            2. When you’re compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.
+          * Let's say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- 
+            1. When you're compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
+            2. When you're compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.
       - Floating-Point Types
         * Floating-Point Types are number with the decimal points.
         * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.
@@ -170,7 +170,7 @@
       * We can create a String from a literal string with `String::from`
       * We can append a char to a String with the push method, and append a &str with the `push_str` method
     - &str
-      * The str type, also called a ‘string slice’, is the most primitive string type.
+      * The str type, also called a 'string slice', is the most primitive string type.
       * A &str is made up of two components: a pointer to some bytes, and a length.
       * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.
       * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.
@@ -178,6 +178,6 @@
   shortTitle: Package Manager
   key: package-manager
   summary: |
-    - A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner. 
+    - A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.
   details: |
     - Cargo is the Rust package manager.
