@@ -325,25 +325,25 @@ fn main() {
 - This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
  
  **Panic**        
-- Let's try calling panic! in a simple program:
- Filename: src/main.rs
-```rust
-  This code panics!
-  fn main() {
-  panic!("crash and burn");
+Let's try calling panic! in a simple program:
+Filename: src/main.rs
+ ```rust
+ This code panics!
+   fn main() {
+ panic!("crash and burn");
  }
-```
-- If we run this code this is what we get
-```rust
-$ cargo run
-  Compiling panic v0.1.0 (file:///projects/panic)
-   Finished dev [unoptimized + debuginfo] target(s) in 0.25s
-   Running `target/debug/panic`
-  thread 'main' panicked at 'crash and burn', src/main.rs:2:5
-```
-- note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-- The call to panic! causes the error message contained in the last two lines. 
-- The first line shows our panic message and the place in our source code where the panic occurred
+ ```
+  - If we run this code this is what we get
+ ```rust
+   $ cargo run
+   Compiling panic v0.1.0 (file:///projects/panic)
+     Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+     Running `target/debug/panic`
+    thread 'main' panicked at 'crash and burn', src/main.rs:2:5
+    ```
+    - note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+      - The call to panic! causes the error message contained in the last two lines. 
+    - The first line shows our panic message and the place in our source code where the panic occurred
  
  **To panic! or Not to panic!**        
 - Option Enum

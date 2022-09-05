@@ -4,8 +4,8 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=EVruNiwIfzI
   subTopics:
-    - "For_loop_statement"
-
+    - "if_statement"
+    - "Loop"
   details: |
     In this video we're looking how to write control flow in Rust language.
     This video explains about the use of -
@@ -21,7 +21,6 @@
   subTopics:
     - "functions"
     - "Args"
-
   details: |
     In this video we're looking how to write functions in Rust language.
     This video talks about the use of -
@@ -36,7 +35,9 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=mhw-x5Q_-z0
   subTopics:
+    - "panic_not_panic"
     - "Result_option"
+    - "options"
 
   details: |
     In this video, we look at how we can use the Result and Option Enums to deal with Errors in Rust. 
@@ -51,8 +52,7 @@
   type: Article
   url: https://doc.rust-lang.org/book/ch03-05-control-flow.html#control-flow
   subTopics:
-    - "Loop"
-
+    - "control_flow"
   details: |
     In this article we're looking how to write control flow in Rust language.
     This article explains about the use of -

@@ -355,25 +355,25 @@
   key: Panic_error_catching
   summary: When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
   details: |
-    - Let's try calling panic! in a simple program:
-     Filename: src/main.rs
-    ```rust
-      This code panics!
-      fn main() {
-      panic!("crash and burn");
+    Let's try calling panic! in a simple program:
+    Filename: src/main.rs
+     ```rust
+     This code panics!
+       fn main() {
+     panic!("crash and burn");
      }
-    ```
-    - If we run this code this is what we get
-    ```rust
-    $ cargo run
-      Compiling panic v0.1.0 (file:///projects/panic)
-       Finished dev [unoptimized + debuginfo] target(s) in 0.25s
-       Running `target/debug/panic`
-      thread 'main' panicked at 'crash and burn', src/main.rs:2:5
-    ```
-    - note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-    - The call to panic! causes the error message contained in the last two lines. 
-    - The first line shows our panic message and the place in our source code where the panic occurred
+     ```
+      - If we run this code this is what we get
+     ```rust
+       $ cargo run
+       Compiling panic v0.1.0 (file:///projects/panic)
+         Finished dev [unoptimized + debuginfo] target(s) in 0.25s
+         Running `target/debug/panic`
+        thread 'main' panicked at 'crash and burn', src/main.rs:2:5
+        ```
+        - note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+          - The call to panic! causes the error message contained in the last two lines. 
+        - The first line shows our panic message and the place in our source code where the panic occurred
 - title: To panic! or Not to panic!
   shortTitle: panic! or Not Panic
   key: panic_not_panic

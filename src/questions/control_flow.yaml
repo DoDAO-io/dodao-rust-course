@@ -31,6 +31,7 @@
   explanation: "prints an error message to the screen then unwinds"
   answerKeys:
     - C
+
   subTopics:
     - Error_handling
   difficultyLevel: Low
@@ -84,6 +85,7 @@
     - A
   subTopics:
     - Error_handling
+
   difficultyLevel: Low
   choices:
     - content: "println()"
@@ -108,7 +110,7 @@
   answerKeys:
     - C
   subTopics:
-    - if_statement
+    - control_flow
   difficultyLevel: Low
   choices:
     - content: "Match"
@@ -169,8 +171,10 @@
   explanation: "The condition of 8 being lesser than 9 is correct"
   answerKeys:
     - D
+
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "condition was false"
@@ -205,6 +209,7 @@
     - C
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "3"
@@ -238,6 +243,7 @@
     - D
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "Mismatched type"
@@ -261,6 +267,7 @@
   explanation: "more than one execution"
   answerKeys:
     - A
+
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -320,6 +327,7 @@
   explanation: "it just loop forever"
   answerKeys:
     - A
+
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -361,8 +369,10 @@
   explanation: ""
   answerKeys:
     - C
+
   subTopics:
     - if_else_let_statement
+
   difficultyLevel: Low
   choices:
     - content: "100"
@@ -386,8 +396,10 @@
   explanation: ""
   answerKeys:
     - A
+
   subTopics:
     - For_loop_statement
+
   difficultyLevel: Low
   choices:
     - content: "For and While"
@@ -423,8 +435,10 @@
   explanation: "we looped from 3 down 0 and broke out"
   answerKeys:
     - A
+
   subTopics:
     - Loop
+
   difficultyLevel: Low
   choices:
     - content: "3! 2! 1! LIFTOFF!!!"
@@ -449,6 +463,7 @@
   explanation: ""
   answerKeys:
     - C
+
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -474,8 +489,10 @@
   explanation: "it is the functions of all fuunction"
   answerKeys:
     - D
+
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "Branch"
@@ -499,6 +516,7 @@
   explanation: "letters are lowercase and underscores separate words"
   answerKeys:
     - B
+
   subTopics:
     - functions
   difficultyLevel: Low
@@ -524,6 +542,7 @@
   explanation: "Thats the Rust keyword"
   answerKeys:
     - C
+
   subTopics:
     - functions
   difficultyLevel: Low
@@ -559,8 +578,10 @@
   explanation: "You call function in the main for this example"
   answerKeys:
     - A
+
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "Hello, my name is John. Another function"
@@ -587,6 +608,7 @@
 
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "Curly"
@@ -706,8 +728,10 @@
   explanation: "instructions only, doesn't do any other thing"
   answerKeys:
     - A
+
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "Statements are instructions that perform some action and do not return a value"
@@ -849,6 +873,7 @@
   explanation: "you can break and continue with loops"
   answerKeys:
     - C
+
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -874,6 +899,7 @@
   explanation: "functions have to be called"
   answerKeys:
     - A
+
   subTopics:
     - functions
   difficultyLevel: Low
@@ -916,8 +942,10 @@
   explanation: "from 1 to 101, if the remainder matches a condition it prints its output"
   answerKeys:
     - C
+
   subTopics:
     - Nested_if_else_statement
+
   difficultyLevel: Medium
   choices:
     - content: "it fails completely"
@@ -951,8 +979,10 @@
   explanation: "We use if and let statement to compare the strings"
   answerKeys:
     - B
+
   subTopics:
     - looping_value
+
   difficultyLevel: Low
   choices:
     - content: "Same"
@@ -987,6 +1017,7 @@
   topic: control_flow
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "Smaller than 10"
@@ -1023,8 +1054,10 @@
   explanation: "Iterate and find the mathematical solution"
   answerKeys:
     - D
+
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "Equal to 10"
@@ -1060,6 +1093,7 @@
 
   subTopics:
     - Result_option
+
   difficultyLevel: Low
   choices:
     - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
@@ -1101,6 +1135,7 @@
 
   subTopics:
     - Result_option
+
   difficultyLevel: Medium
   choices:
     - content: "file found "
@@ -1144,8 +1179,10 @@
   explanation: "to produce an error if a person below 18 years tries to apply for voter ID"
   answerKeys:
     - A
+
   subTopics:
     - Result_option
+
   difficultyLevel: Hard
   choices:
     - content: "Not Eligible..Wait for some years"
@@ -1164,22 +1201,23 @@
 - uuid: ded49462-cbf9-422e-9d82-747586e59081
   type: SingleChoice
   content: |
-    Describe the output(best fit)
-    ```rust
+    Describe the output(best fit) 
+         ```rust
     	fn main() {
         let mut n = 10;
         while n!=0 {
         println!("{}", n);
         n-=1;
          }	}
-    ```
+     ```
   hint: "loop from 10 down"
   explanation: "Counting from 10 to 1 "
   answerKeys:
     - C
-  topic: Control_flow
+
   subTopics:
     - Loop
+
   difficultyLevel: Low
   choices:
     - content: "Count up from 1 to 10"
@@ -1213,7 +1251,7 @@
   explanation: "while n is less or requal than 5 do something"
   answerKeys:
     - A
-  topic: contol_flow
+
   subTopics:
     - Loop
   difficultyLevel: Low
@@ -1242,6 +1280,7 @@
 
   subTopics:
     - Args
+
   difficultyLevel: Low
   choices:
     - content: "parenthesis"
@@ -1272,8 +1311,10 @@
   explanation: "look at the parenthesis"
   answerKeys:
     - A
+
   subTopics:
     - Args
+
   difficultyLevel: Low
   choices:
     - content: "name(string)"
@@ -1300,6 +1341,7 @@
 
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "Values"
@@ -1334,6 +1376,7 @@
 
   subTopics:
     - Args
+
   difficultyLevel: Low
   choices:
     - content: "x: i32, y: i32"
@@ -1359,6 +1402,7 @@
     - A
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "function_name(argument)"
@@ -1396,6 +1440,7 @@
 
   subTopics:
     - functions
+
   difficultyLevel: Low
   choices:
     - content: "it prints : Odd and divisible by 3"
@@ -1415,6 +1460,7 @@
   type: SingleChoice
   content: |
     What is the output?
+
     ```rust 
        fn main() {
        let number = 9;
@@ -1431,6 +1477,7 @@
 
   subTopics:
     - if_statement
+
   difficultyLevel: Low
   choices:
     - content: "Odd and divisible by 3"
@@ -1462,8 +1509,10 @@
   explanation: "xomparing the number we the the greater one"
   answerKeys:
     - A
+
   subTopics:
     - if_else_let_statement
+
   difficultyLevel: Low
   choices:
     - content: "The decision returns false!"
@@ -1492,8 +1541,10 @@
   explanation: "we trying to call an index of 4 in a array of max:2 index"
   answerKeys:
     - D
+
   subTopics:
     - panic_not_panic
+
   difficultyLevel: Low
   choices:
     - content: "it prints 4"
@@ -1517,9 +1568,10 @@
   explanation: "we can import function from anywhere and save size that way"
   answerKeys:
     - B
+
   subTopics:
     - functions
-  difficultyLevel: Low
+
   choices:
     - content: "Values"
       key: A

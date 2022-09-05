@@ -1621,11 +1621,7 @@
         {
           "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
           "title": "Introduction to Blockchain Technology",
-<<<<<<< HEAD
-          "shortTitle": "Intro to Blockchain",
-=======
           "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
           "subTopics": [
@@ -3294,11 +3290,7 @@
         {
           "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
           "title": "Introduction to Blockchain Technology",
-<<<<<<< HEAD
-          "shortTitle": "Intro to Blockchain",
-=======
           "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
           "subTopics": [
@@ -3519,7 +3511,7 @@
             "C"
           ],
           "subTopics": [
-            "if_statement"
+            "control_flow"
           ],
           "difficultyLevel": "Low",
           "choices": [
@@ -4737,13 +4729,12 @@
         {
           "uuid": "ded49462-cbf9-422e-9d82-747586e59081",
           "type": "SingleChoice",
-          "content": "Describe the output(best fit)\n```rust\n\tfn main() {\n    let mut n = 10;\n    while n!=0 {\n    println!(\"{}\", n);\n    n-=1;\n     }\t}\n```\n",
+          "content": "Describe the output(best fit) \n     ```rust\n\tfn main() {\n    let mut n = 10;\n    while n!=0 {\n    println!(\"{}\", n);\n    n-=1;\n     }\t}\n ```\n",
           "hint": "loop from 10 down",
           "explanation": "Counting from 10 to 1 ",
           "answerKeys": [
             "C"
           ],
-          "topic": "Control_flow",
           "subTopics": [
             "Loop"
           ],
@@ -4780,7 +4771,6 @@
           "answerKeys": [
             "A"
           ],
-          "topic": "contol_flow",
           "subTopics": [
             "Loop"
           ],
@@ -5027,7 +5017,7 @@
         {
           "uuid": "1cac4f25-85c1-4a1f-8daf-9da73252f81b",
           "type": "SingleChoice",
-          "content": "What is the output?\n```rust \n   fn main() {\n   let number = 9;\n   if number % 2 == 1 {\n   if number % 3 == 0 {\n   \tprintln!(\"Odd and divisible by 3\");\n    }\n     }\t}\n```\n",
+          "content": "What is the output?\n\n```rust \n   fn main() {\n   let number = 9;\n   if number % 2 == 1 {\n   if number % 3 == 0 {\n   \tprintln!(\"Odd and divisible by 3\");\n    }\n     }\t}\n```\n",
           "hint": "nested if",
           "explanation": "null",
           "answerKeys": [
@@ -5144,7 +5134,6 @@
           "subTopics": [
             "functions"
           ],
-          "difficultyLevel": "Low",
           "choices": [
             {
               "content": "Values",
@@ -5171,19 +5160,14 @@
       ],
       "readings": [
         {
-<<<<<<< HEAD
-          "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
-          "title": "Introduction to Blockchain Technology",
-          "shortTitle": "Intro to Blockchain",
-=======
           "uuid": "44b73ef1-b860-4ecd-b1b7-c2620817c31e",
           "title": "Control Flow - Rust",
           "shortTitle": "Intro control flow",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=EVruNiwIfzI",
           "subTopics": [
-            "For_loop_statement"
+            "if_statement",
+            "Loop"
           ],
           "details": "In this video we're looking how to write control flow in Rust language.\nThis video explains about the use of -\n* if-else and nested else condition and using if in a let Statement\n* while loop statement and passing conditions while the statement is true\n* for loop and iteration\n"
         },
@@ -5206,7 +5190,9 @@
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=mhw-x5Q_-z0",
           "subTopics": [
-            "Result_option"
+            "panic_not_panic",
+            "Result_option",
+            "options"
           ],
           "details": "In this video, we look at how we can use the Result and Option Enums to deal with Errors in Rust. \nWe also look at some of the basic methods that are commonly used in place of pattern match statements to check errors. \n* Error handling using Result options\n* Error handling using Enum options\n* Error handling using ? operations \n* Error handling using Panic!\n"
         },
@@ -5217,7 +5203,7 @@
           "type": "Article",
           "url": "https://doc.rust-lang.org/book/ch03-05-control-flow.html#control-flow",
           "subTopics": [
-            "Loop"
+            "control_flow"
           ],
           "details": "In this article we're looking how to write control flow in Rust language.\nThis article explains about the use of -\n* if-else and nested else condition and using let statement\n* while loop statement and passing conditions while the statement is true\n* for loop and iteration\n"
         }
@@ -5304,7 +5290,7 @@
           "shortTitle": "Unrecoverable Errors with panic!",
           "key": "Panic_error_catching",
           "summary": "When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.",
-          "details": "- Let's try calling panic! in a simple program:\n Filename: src/main.rs\n```rust\n  This code panics!\n  fn main() {\n  panic!(\"crash and burn\");\n }\n```\n- If we run this code this is what we get\n```rust\n$ cargo run\n  Compiling panic v0.1.0 (file:///projects/panic)\n   Finished dev [unoptimized + debuginfo] target(s) in 0.25s\n   Running `target/debug/panic`\n  thread 'main' panicked at 'crash and burn', src/main.rs:2:5\n```\n- note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n- The call to panic! causes the error message contained in the last two lines. \n- The first line shows our panic message and the place in our source code where the panic occurred\n"
+          "details": "Let's try calling panic! in a simple program:\nFilename: src/main.rs\n ```rust\n This code panics!\n   fn main() {\n panic!(\"crash and burn\");\n }\n ```\n  - If we run this code this is what we get\n ```rust\n   $ cargo run\n   Compiling panic v0.1.0 (file:///projects/panic)\n     Finished dev [unoptimized + debuginfo] target(s) in 0.25s\n     Running `target/debug/panic`\n    thread 'main' panicked at 'crash and burn', src/main.rs:2:5\n    ```\n    - note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n      - The call to panic! causes the error message contained in the last two lines. \n    - The first line shows our panic message and the place in our source code where the panic occurred\n"
         },
         {
           "title": "To panic! or Not to panic!",
@@ -6986,11 +6972,7 @@
         {
           "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
           "title": "Introduction to Blockchain Technology",
-<<<<<<< HEAD
-          "shortTitle": "Intro to Blockchain",
-=======
           "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
           "subTopics": [
@@ -7105,597 +7087,7 @@
           ],
           "topic": "05_owner_borrow",
           "subTopics": [
-<<<<<<< HEAD
             "memory-allocation"
-=======
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Yes",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "No",
-              "key": "B",
-              "order": 1
-            }
-          ]
-        },
-        {
-          "uuid": "d11a531f-f32f-4764-a60a-2cc5af348245",
-          "type": "SingleChoice",
-          "content": "Select the correct statements for the two String     types(“String” and “&str”).\n \"a. “Strings” are immutable in nature and cannot be modified. \"\n \"b. “&str” is a primitive data type, whereas “String” is implemented in the standard library.\"\n \"c. To read a file into the strings, we use the read_to_string() method.\"\n",
-          "hint": "NoHint",
-          "explanation": "Strings are mutable in nature",
-          "answerKeys": [
-            "C"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Only a",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Both a & b",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Both b & c",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "None of the above",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "9511276a-dd19-47c4-b086-0d1de8cafedb",
-          "type": "SingleChoice",
-          "content": "Which among the following is not an acceptable keyword in rust?",
-          "hint": "NoHint",
-          "explanation": "var is not a keyword in rust",
-          "answerKeys": [
-            "B"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "let",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "var",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "impl",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "mut",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "1ed70de2-99c6-43dd-8793-40ad702d6bff",
-          "type": "SingleChoice",
-          "content": "Which of the following brackets are used as placeholders in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "{}",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "[ ]",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "( )",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "< >",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "7f129510-4d19-4a62-bae1-34109714fa0e",
-          "type": "SingleChoice",
-          "content": "Constants in rust can be defined in which scope?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Global",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Method",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Local",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "All of the above",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "b29fa10c-2efa-478c-8207-2e2a80af8700",
-          "type": "SingleChoice",
-          "content": "Which of the following are the scalar data types present in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "integers, floating-point numbers, booleans, characters",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "integers, signed numbers, unsigned numbers, booleans, characters",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "integers, strings, signed numbers, unsigned numbers, booleans",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "integers, floating-point numbers, strings, booleans",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "775949c1-23b7-42bc-b184-bc755c8d2657",
-          "type": "SingleChoice",
-          "content": "The compound data types supported by rust are-",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Arrays, Lists, Red-Black Trees",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Arrays, Lists, Vectors",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Arrays, Tuples",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "Arrays, Maps",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "7fd341f0-4921-4e6e-aa0c-c3897f91d3b2",
-          "type": "SingleChoice",
-          "content": "Which are valid array declarations in rust? \n``` \n       let mut arr : {i64, 3} = [2,3,5];\n       let mut arr : {3,3};\n       let mut arr = [2,3,5];\n ```\n",
-          "hint": "Look for the wrong declaration format, you may or may not find it",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Both a & b",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Both b & c",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Only a",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "All a, b, & c",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "75d926cd-6f05-4185-916c-fc6c2b90eecd",
-          "type": "SingleChoice",
-          "content": "Which of the following has low memory usage, const or static?",
-          "hint": "How many of these can we update?",
-          "explanation": "Constant doesn't uses any extra heap memory to update",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "const",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "static",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "depends upon the data type",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "both have the same memory usage",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "a7495120-1470-41d4-aeb2-6d9d7ebd876c",
-          "type": "SingleChoice",
-          "content": "To use dynamic-sized variables, which of the following should be used?",
-          "hint": "No hint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Arrays & Tuples",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "List all the data types",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Sized",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "Dynamic-Sized variables not supported in rust",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "4c564a7d-28d3-4fca-a06d-f3f3fc419d13",
-          "type": "SingleChoice",
-          "content": "What is the importance of the “type” keyword in rust?",
-          "hint": "Used for another types.",
-          "explanation": "Sets an alias of another type.",
-          "answerKeys": [
-            "D"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "used for dynamic-sized data type",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "used to create a template",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "used for user-defined data type",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "used to set an alias of another type",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "d677a228-7f5d-4b5f-8bee-9f40052efafb",
-          "type": "SingleChoice",
-          "content": "What is the importance of Cargo in rust?",
-          "hint": "What is npm used for?",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "package-manager"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Collection of rust libraries",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Modules Package manager",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Build system and Package manager",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "Used to create and build UI projects in rust",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "2715ab2c-35b3-4e6a-9697-f244c6e23676",
-          "type": "SingleChoice",
-          "content": "How to print the data type of a variable in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": " `std::any::type_name` ",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": " `variable.type_name()` ",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": " `std::intrisic::type_name` ",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": " `std::variable::type_name` ",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "e326751d-bb65-44e4-a6ce-fa62faa96f94",
-          "type": "SingleChoice",
-          "content": "Which type cast preserves the mathematical value in all cases?",
-          "hint": "NoHint",
-          "explanation": "Because they can handle both signed and unsigned values, and are typecasted in one data type only.",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types",
-            "bit-manupilation"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "i32 as i64",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "i64 as i32",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "usize as u64",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "f64 as f32",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "ffac79fe-2367-42d1-82eb-b6e6127aead5",
-          "type": "SingleChoice",
-          "content": "Which of the following cannot be destructed further into smaller segments?",
-          "hint": "Think of the structures they're built upon ",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Tuples",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "Traits",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "Arrays",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "Structs",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "1b0a3444-3b86-4e09-8021-f4b66cb2ce09",
-          "type": "SingleChoice",
-          "content": "Which comment syntax is not legal?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "<//>",
-              "key": "A",
-              "order": 0
-            },
-            {
-              "content": "/* */",
-              "key": "B",
-              "order": 1
-            },
-            {
-              "content": "//!",
-              "key": "C",
-              "order": 2
-            },
-            {
-              "content": "//",
-              "key": "D",
-              "order": 3
-            }
-          ]
-        },
-        {
-          "uuid": "2f9d0f0d-4670-44d7-b69f-d398ecfb3236",
-          "type": "SingleChoice",
-          "content": "Values of the array can be deleted.",
-          "hint": "NoHint",
-          "explanation": "Values can be updated, but can't be deleted",
-          "answerKeys": [
-            "B"
-          ],
-          "topic": "01_data_types",
-          "subTopics": [
-            "value-types"
->>>>>>> dbd75fe (error fixed)
           ],
           "difficultyLevel": "Low",
           "choices": [
@@ -8075,15 +7467,9 @@
       ],
       "readings": [
         {
-<<<<<<< HEAD
           "uuid": "08415e65-cc8d-4123-bdeb-b9b39cb3a4db",
           "title": "Rust - Ownership and Borrowing",
           "shortTitle": "Ownership",
-=======
-          "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
-          "title": "Introduction to Blockchain Technology",
-          "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=1cZ15uAvWro",
           "subTopics": [
@@ -8113,19 +7499,11 @@
           "details": "- Memory Management Approach\n  * Different languages have different approach towards memory management.\n  * In rust data with known, fixed size is stored on stack, data with an unknown size at compile time or size that can change is stored on heap.\n- Stack\n  * Stacks are last-in first-out and store fixed size variables.\n  * Memory management on stacks is easy.\n  ![Stack](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_stack.jpg?raw=true)\n- Heap\n  * Heap is less organized, when adding a variable on the heap the memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location.\n  * Keeping track of what parts of code are using what data on the heap, minimizing the amount of duplicate data on the heap, and cleaning up unused data on the heap so you don’t run out of space are all problems that ownership addresses.\n  ![Heap](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_heap.jpg?raw=true)\n"
         },
         {
-<<<<<<< HEAD
           "title": "Variable Scope",
           "shortTitle": "Variable Scope",
           "key": "variable-scope",
           "summary": "In Rust a variable is valid only in its scope, as soon as it goes out of scope its memory is freed.",
           "details": "- Scope:\n  * As the variable goes out of scope it is no longer valid, at this point Rust automatically returns the memory used by the variable.\n  * Rust’s approach to memory management is unique by scoping is simple and robust.\n  * Other languages use different approaches like garbage collection where that regularly looks for no-longer used memory as the program runs, some other languages depend on programmers regularly freeing up the memory. These approaches are less efficient.\n    ```\n      fn main() {\n        {\n          let str = “Hello World”; // str is valid from this point onwards\n        }\n        // str goes out of scope\n      }\n    ```\n"
-=======
-          "title": "Value Types",
-          "shortTitle": "Value Types",
-          "key": "value-types",
-          "summary": "Rust has two major Data Value Types, which include \n  1. Scalar Types\n  2. Compound ypes\n",
-          "details": "- Scalar Types\n  * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.\n  - Integers\n    * An integer is a number without a fractional component.\n    * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.\n    * Integers can be either signed or unsigned. Signed and unsigned refer to whether it’s possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).\n    * Integers can be declared using keyword let, and explicitly defining the variable size and it's type of signed or unsigned integer.\n    * For example, we can declare a 64-bit signed and 32-bit unsigned integer in the following ways respectively :- \n    ```\n        1. let mut x: i64 = -20;\n        2. let mut x: u32 = 20;\n    ```\n    * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.\n    * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.\n    - Integer Overflow\n      * Let's say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- \n        1. When you're compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.\n        2. When you're compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.\n  - Floating-Point Types\n    * Floating-Point Types are number with the decimal points.\n    * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.\n    * All the Floating-Point Types are signed.\n    * The default Floating-Point Type is of 64-bit.\n    * The `f32` type is a single-precision float, and `f64` has double precision.\n    * We can declare a float type variable in the following ways:- \n     ```\n        fn main() {\n              let x = 2.0; // f64\n              let y: f32 = 3.0; // f32\n        }\n      ```\n  - Boolean Type\n    * There are two possible constant values:- True & False.\n    * Booleans are one byte in size.\n    * They are declared using the keyword 'bool'.\n  - Character Type\n    * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.\n    * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.\n    * We can use many more types of characters in rust, like, Chinese, emojis, etc.\n- Compound Data Types\n  * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.\n  - Tuples\n    * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.\n    * Tuples have a fixed length: once declared, they cannot grow or shrink in size.\n    * Tuples are created by a comma seperated List.\n    * Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.\n    * For Example:- \n      ```\n        fn main() {\n          let tup: (i32, f64, u8) = (500, 6.4, 1);\n        }\n      ```\n    * We can access a tuple element directly by using a period `(.)` followed by the index of the value we want to access\n    * The tuple without any values has a special name knows as \"unit\".\n    * \"unit's\" value and its corresponding type are both written () and represent an empty value or an empty return type. \n    * Expressions implicitly return the unit value if they don’t return any other value. \n  - Arrays\n    * Arrays are a collection of multiple values, stored in a single entity.\n    * Unlike a tuple, every element of an array must have the same data type.\n    * Arrays in Rust have a fixed length, i.e. they are not dynamic in nature by default.\n    * Arrays are useful when you want your data allocated on the stack rather than the memory heap.\n    * For Example:- \n      ```\n        fn main() {\n            let a: [i32; 5] = [1, 2, 3, 4, 5];\n        }\n      ```\n      Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements.\n    *  We can access elements of an array using indexing, like this:\n      ```\n        fn main() {\n            let a = [1, 2, 3, 4, 5];\n        \n            let first = a[0]; // outputs 1\n            let second = a[1]; // outputs 2\n        }\n      ```\n"
->>>>>>> dbd75fe (error fixed)
         },
         {
           "title": "Ownership",
@@ -8135,40 +7513,11 @@
           "details": "- What is Ownership in rust:\n  * Each value in Rust has an owner\n  * Ownership in Rust strictly follows certain rules, if these rules are violated the program will not compile:\n    - each value in Rust has a owner\n    - there can only be one owner at a time\n    - when the owner goes out of scope, value will be dropped\n  * If any of these rules is violated the program will not compile.\n  * None of these rules slow down the execution at runtime.\n- Moving Data:\n  * When a variable on the heap is assigned to another variable the first one is no longer valid. The ownership of the variable is said to be moved.\n    ```\n      let s1 = String::from(“Hello”);\n      let s2 = s1\n\n      println!(“{}, world!”, s1); // this line gives an error.\n    ```\n  * After the line let s2 = s1, rust considers s1 as no longer valid. Thus trying to use s1 after s2 is created will not work.\n  * While dealing with variables on stack values are not moved, they are rather copied.\n  ![Moving Value](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_move.jpg?raw=true)\n- Double Free Error\n  * The reason for invalidating the original reference after moving the value is to prevent double free error.\n  * Consider both s1 and s2 remain valid after the assignment. When they both go out of scope, they will both try to free the same memory. This is a memory safety bug called double free error. Freeing memory twice can lead to memory corruption which can result in security vulnerability.\n- Functions - Passing and Returning Value\n  * Mechanics of passing and returning value from a function is the same as when assigning value.\n  * Value will be moved or copied depending on whether it is on heap or stack.\n    ```\n      fn main() {\n          let s = String::from(“Hello”);\n          takes_ownership(s); // Function takes ownership of s, so it is no longer valid here\n      }\n\n      fn takes_ownership(some_string: String) {\n          println!(some_string);\n      } // some_string goes out of scope after function call\n    ```\n  * To be able to access the value s after function call we need to return it:\n    ```\n      fn main() {\n        let s1 = String::from(“Hello”);\n        let s2 = takes_and_return_ownership(s1); // Function takes ownership of s1\n      }\n\n      fn takes_and_return_ownership(some_string: String) {\n          println!(some_string);\n          some_string;\n      } // some_string moves back to calling function\n    ```\n"
         },
         {
-<<<<<<< HEAD
           "title": "Borrowing",
           "shortTitle": "Borrowing",
           "key": "borrowing",
           "summary": "The action of creating a reference to a variable is called borrowing.",
           "details": "- What is Borrowing:\n  * Moving a variable on the heap is not always convenient.\n  * Consider a situation like passing a variable on heap to a function call, to be able to use a variable after the function call we need to return it from the function. In such situations we can provide a reference to the variable.\n  * Creating a reference to a variable is called borrowing, references can use variables but not own them.\n- Reference\n  * A reference stores the address of the data and we can follow the reference to access data stored at that address, that data is owned by a different variable.\n  * A reference is always guaranteed to point to a valid value for the life of the referenced value.\n  * The value pointed by the reference is not dropped as the reference goes out of scope as it does not have the ownership.\n  * Ampersands are used to represent references.\n    ```\n      fn main() {\n        let s = String::from(“Hello”);\n        calculate_length(&s); // Function takes reference to s\n      }\n\n      fn calculate_length(string_reference: &String) {\n          string_reference.len();\n      }\n    ```\n    ![Reference](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_reference.jpg?raw=true)\n  - Mutable Reference\n    * References can be easily made mutable:\n      ```\n        fn main() {\n          let mut s = String::from(“Hello”);\n          calculate_length(&mut s); // Function takes reference to s\n        }\n\n        fn calculate_length(string_reference: &mut String) {\n            string_reference.push_str(“, world !”);\n        }\n      ```\n    * At any given time there can be one mutable reference or multiple immutable reference to the variable.\n    * This restriction enables rust to prevent data race at compile time.\n  - Dangling Reference\n    * The Rust compiler ensures that dangling references can never exist. Compiler will guarantee that the data will not go out of scope before the reference to the data.\n"
-=======
-          "title": "Keywords",
-          "shortTitle": "Keywords",
-          "key": "keywords",
-          "summary": "Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:\n    1. Strict\n    2. Reserved \n    3. Weak\n",
-          "details": "- Strict Keywords\n  * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.\n  * For Example:- ` mut, break, else, continue, return, impl, etc. ` \n- Reserved Variables\n  * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.\n  * For Example:- ` abstract, try, do, final, typeof, etc. `\n- Weak Keywords\n  * These keywords have special meaning only in certain contexts.\n  * For example, it is possible to declare a variable or method with the name `union`.\n"
-        },
-        {
-          "title": "Bit Manipulation",
-          "shortTitle": "Bit Manipulation",
-          "key": "bit-manupilation",
-          "summary": "Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.",
-          "details": "- Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.\n"
-        },
-        {
-          "title": "Strings",
-          "shortTitle": "Strings",
-          "key": "strings",
-          "summary": "There are two types of strings in Rust: `String` and `&str`.",
-          "details": "- String\n  * Strings are formed by a list of characters, which is really an \"array of characters\".\n  * A String is stored as a vector of bytes `(Vec<u8>)`.\n  * A String is made up of three components: a pointer to some bytes, a length, and a capacity.\n  * The pointer points to an internal buffer String uses to store its data.\n  * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.\n  * The buffer is always stored on the heap.\n  * It is guaranteed to always be a valid `UTF-8` sequence. \n  * String is heap allocated, growable and not null terminated.\n  * We can create a String from a literal string with `String::from`\n  * We can append a char to a String with the push method, and append a &str with the `push_str` method\n- &str\n  * The str type, also called a 'string slice', is the most primitive string type.\n  * A &str is made up of two components: a pointer to some bytes, and a length.\n  * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.\n  * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.\n"
-        },
-        {
-          "title": "Package Manager",
-          "shortTitle": "Package Manager",
-          "key": "package-manager",
-          "summary": "- A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.\n",
-          "details": "- Cargo is the Rust package manager.\n"
->>>>>>> dbd75fe (error fixed)
         }
       ]
     },
@@ -9780,11 +9129,7 @@
         {
           "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
           "title": "Introduction to Blockchain Technology",
-<<<<<<< HEAD
-          "shortTitle": "Intro to Blockchain",
-=======
           "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
           "subTopics": [
@@ -11453,11 +10798,7 @@
         {
           "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
           "title": "Introduction to Blockchain Technology",
-<<<<<<< HEAD
-          "shortTitle": "Intro to Blockchain",
-=======
           "shortTitle": "Intro Blockchain",
->>>>>>> dbd75fe (error fixed)
           "type": "YoutubeVideo",
           "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
           "subTopics": [

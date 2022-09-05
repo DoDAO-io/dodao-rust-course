@@ -16,7 +16,7 @@ This video explains about the use of -
 * for loop and iteration
     
  
- Sub Topics: For_loop_statement    
+ Sub Topics: if_statement, Loop    
   **Rust Lang Tutorial 2021 - Functions**
  
  [![Rust Lang Tutorial 2021 - Functions](https://img.youtube.com/vi/hSSYwVfzaZM/0.jpg)](https://www.youtube.com/watch?v=hSSYwVfzaZM)     
@@ -42,7 +42,7 @@ We also look at some of the basic methods that are commonly used in place of pat
 * Error handling using Panic!
     
  
- Sub Topics: Result_option    
+ Sub Topics: panic_not_panic, Result_option, options    
   **Introduction to Control flow**
  
  [![Introduction to Control flow](https://img.youtube.com/vi/null/0.jpg)](https://www.youtube.com/watch?v=null)     
@@ -54,5 +54,5 @@ This article explains about the use of -
 * for loop and iteration
     
  
- Sub Topics: Loop    
+ Sub Topics: control_flow    
  

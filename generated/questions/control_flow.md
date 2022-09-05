@@ -88,7 +88,7 @@ Hint: if statement
          
 Explanation: A statement that gets checked
 
-Sub Topics: if_statement
+Sub Topics: control_flow
  
 
 ---
@@ -849,15 +849,15 @@ Sub Topics: Result_option
 
 ---
 
-##### Describe the output(best fit)
-```rust
+##### Describe the output(best fit) 
+     ```rust
 	fn main() {
     let mut n = 10;
     while n!=0 {
     println!("{}", n);
     n-=1;
      }	}
-```
+ ```
   
 
 - [ ]  Count up from 1 to 10
@@ -1028,6 +1028,7 @@ Sub Topics: functions
 ---
 
 ##### What is the output?
+
 ```rust 
    fn main() {
    let number = 9;
