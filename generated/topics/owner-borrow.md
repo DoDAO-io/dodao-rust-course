@@ -36,8 +36,8 @@ This chapter introduces the high level memory management and safety with ownersh
 
 
 ## Links
-[Reading List](./../../generated/readings/data_types.md)
+[Reading List](./../../generated/readings/owner_borrow.md)
 
-[Summary](./../../generated/summaries/data_types.md)
+[Summary](./../../generated/summaries/owner_borrow.md)
 
-[Questions](./../../generated/questions/data_types.md)
+[Questions](./../../generated/questions/owner_borrow.md)

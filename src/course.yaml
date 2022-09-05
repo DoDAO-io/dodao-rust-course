@@ -3,7 +3,7 @@ key: rust-course
 summary: |
   Smart contracts allow users to implement conditions, rules and policies of the blockchain applications. 
   In this course you will learn how to write smart contracts and all the features of Rust language.
-details:  |
+details: |
   "Line1" 
   "Line2" 
   "Line3"
@@ -31,7 +31,7 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: Data Types
     key: first-smart-contract
@@ -76,7 +76,7 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: Control Flow & Functions
     key: control-flow-functions
@@ -109,7 +109,7 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: OOPS(Object Oriented Programming)
     key: oops
@@ -150,7 +150,7 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: Ownership and Borrowing
     key: owner-borrow
@@ -183,11 +183,11 @@ topics:
           2. Lifetime rules
           3. Multiple lifetimes
           4. Lifetime in impl blocks
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+    readings: owner_borrow.yaml
+    summaries: owner_borrow.yaml
+    questions: owner_borrow.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: Collections
     key: collections
@@ -202,7 +202,7 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
 
   - title: Pointers and Iterators
     key: point-iter
@@ -221,4 +221,4 @@ topics:
     summaries: data_types.yaml
     questions: data_types.yaml
     status: In Progress
-    completionWeek:  July 18
+    completionWeek: July 18
