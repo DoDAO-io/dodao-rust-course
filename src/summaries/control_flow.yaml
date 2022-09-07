@@ -67,7 +67,7 @@
     ```
 - title: How to nest if, else if and else statements?
   shortTitle: Nested if continues
-  key: Nested-if-else-statement
+  key: nested-if-else-statement
   details: |
     - Nesting is the process of placing if statements inside other if statements. 
     - By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
@@ -153,7 +153,7 @@
     - We then used it in the ```println!()``` below the match statement.
 - title: Loop statement
   shortTitle: Loop
-  key: Loop
+  key: loop
   summary: Throughout our application, we will often need to execute sections of code more than once. Instead of rewriting these sections of code, we can place them in a loop and allow Rust to automatically execute them as many times as we need.
   details: |
     - loop consists of the following
@@ -352,7 +352,7 @@
     - This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
 - title: Panic
   shortTitle: Unrecoverable Errors with panic!
-  key: Panic_error_catching
+  key: panic-error-catching
   summary: When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit. We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
   details: |
     Let's try calling panic! in a simple program:
@@ -525,7 +525,7 @@
     ```
 - title: Start with Fn
   shortTitle: start with fn
-  key: fn_keyword
+  key: fn-keyword
   summary: We define a function in Rust by entering `fn` followed by a function name and a set of parentheses. The curly brackets `{...}` tell the compiler where the function body begins and ends.
   describe: |
     - We can call any function we've defined by entering its name followed by a set of parentheses. Because another_function is defined in the program, it can be called from inside the main function. Note that we defined another_function after the main function in the source code; we could have defined it before as well.  
