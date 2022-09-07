@@ -1,6 +1,6 @@
 - title: Control Flow
   shortTitle: Control flow
-  key: control_flow
+  key: control-flow
   summary: Many programming languages allow you to run some code depending on whether a condition is true, or run some code repeatedly while a condition is true. If expressions and loops are the most common constructs in Rust that control execution flow.
   details: |
     - In most cases, the computer runs the code in order from the first line in the file to the last line, unless it encounters structures that alter the control flow, such as loops and conditionals.
@@ -11,7 +11,7 @@
       * For loop
 - title: If Expressions
   shortTitle: If-else statement
-  key: if_else_let_statement
+  key: if-else-let-statement
   summary: We use if statement to give conditions to our code. You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
   details: |
     - To explore the if expression with combination with else we can choose to add one more condition with the else statement
@@ -41,7 +41,7 @@
     - If we change the `number` to 17 we get a `condition was false` because it is not less than 5. It is a very straight forward statement.
 - title: Multiple if conditions - how to evaluate them?
   shortTitle: Nested if statement
-  key: if_statement
+  key: if-statement
   summary: The two logical operators && and || allow us to evaluate more than one condition in an if statement.
   details: |
     - Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
@@ -67,7 +67,7 @@
     ```
 - title: How to nest if, else if and else statements?
   shortTitle: Nested if continues
-  key: Nested_if_else_statement
+  key: Nested-if-else-statement
   details: |
     - Nesting is the process of placing if statements inside other if statements. 
     - By performing the evaluations hierarchically, the compiler will start at the outer if statement and work inwards.
@@ -90,7 +90,7 @@
     - Note that if you find yourself nesting more than 3 levels deep, you should consider finding a different method. Perhaps a loop.
 - title: The conditional match statement
   shortTitle: Match statement
-  key: Match_statement
+  key: match-statement
   summary: A single value will be compared with a list of values with the match statement. It is a bit tchnical but easy so walk with me.
   details: |
     - The syntax is similar to a switch statement in a language in the C family, though the syntax is different.
@@ -196,7 +196,7 @@
     - Every time the compiler goes through the code it prints the ``` mut counter``` and add 1 to it until it is great than 10.
 - title: Infinite loops
   shortTitle: Infinite loops
-  key: Infinite_loops
+  key: infinite-loops
   summary: With the while loop, there is a potential danger that the loop may never stop if we make a mistake. This is known as an infinite loop and it will significantly slow down the system until the application crashes.
   details: |
     - Lets use our earlier example. If we remove the code that increments the counter, the condition will always prove true because the counter will stay at 0 and never get to 10 where it’s told to stop.
@@ -212,7 +212,7 @@
 
 - title: Repeating Code with loop
   shortTitle: Infinite loops
-  key: Infinite_loop_kill
+  key: infinite-loop-kill
   summary: The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop. And here is how it do
   details: |
     - showing looping with examples 
@@ -241,7 +241,7 @@
     - We also used continue in the guessing game, which in a loop tells the program to skip over any remaining code in this iteration of the loop and go to the next iteration.
 - title: Returning Values from Loops
   shortTitle: Value from loops
-  key: looping_value
+  key: looping-value
   summary: One of the uses of a loop is to retry an operation you know might fail, such as checking whether a thread has completed its job. You might also need to pass the result of that operation out of the loop to the rest of your code.
   details: |
     - To do this, you can add the value you want returned after the break expression you use to stop the loop; 
@@ -307,7 +307,7 @@
     ```
 - title: For Loop
   shortTitle: For loop statement
-  key: For_loop_statement
+  key: for-loop-statement
   summary: A 'for' expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator.
   details: |
     - If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop.
@@ -339,7 +339,7 @@
     ```
 - title: Error Handling
   shortTitle: Errors
-  key: Error_handling
+  key: error-handling
   summary: Errors are inevitable in software, so Rust has a number of features to help you deal with them. When an error occurs, Rust requires you to acknowledge it and take action before your code can be compiled. By requiring this requirement, you ensure that you will discover errors before deploying your code to production and that they will be handled appropriately.
   details: |
     - There are two major categories of errors in Rust:
@@ -376,7 +376,7 @@
         - The first line shows our panic message and the place in our source code where the panic occurred
 - title: To panic! or Not to panic!
   shortTitle: panic! or Not Panic
-  key: panic_not_panic
+  key: panic-not-panic
   summary: This covers how do you decide when you should call panic! and when you should return Result? When code panics, there’s no way to recover. You could call panic! for any error situation, whether there’s a possible way to recover or not, but then you’re making the decision that a situation is unrecoverable on behalf of the calling code. When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that’s appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. Therefore, returning Result is a good default choice when you’re defining a function that might fail.
   details: |
     - Option Enum
@@ -430,7 +430,7 @@
     ```
 - title: Recoverable Errors with Result
   shortTitle: Result option
-  key: Result_option
+  key: result-option
   summary: Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
   details: |
     - Handling Potential Failure with the Result Type in Rust language is defined as having two variants,
@@ -484,7 +484,7 @@
       ```
 - title: Propagating Errors
   shortTitle: propagating error
-  key: propagating_errors
+  key: propagating-errors
   summary: |
     When a function's implementation calls something that might fail, instead of handling the error within the function itself, you can return the error to the calling code so that it can decide what to do. This is known as propagating the error and gives more control to the calling code, where there might be more information or logic that dictates how the error should be handled than what you have available in the context of your code.
   describe: |
@@ -544,7 +544,7 @@
     - First, the “Hello, world!” message prints, and then another_function is called and its message is printed.
 - title: Function names
   shortTitle: function name
-  key: function_name
+  key: function-name
   summary: often involve type names, the most common example being conversions like as_slice. If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions.
   describe: |
     - The Rust compiler is very opinionated about what casing and style you use to name things, even giving warnings when you break its rules. You can disable those warnings if you wish. 
@@ -571,7 +571,7 @@
     | &T | ref |
 - title: Function body
   shortTitle: Statements and Expressions
-  keys: statement_expression
+  keys: statement-expression
   summary: The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the functions block.
   describe: |
     - The tail expression of the block, if evaluated, ends up being returned to the caller. 
@@ -635,7 +635,7 @@
 
 - title: Option and Result
   short: option, result
-  key: Option_result
+  key: option-result
   summary: null
   describe: |
     - Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. 
@@ -682,7 +682,7 @@
 
 - title: List of Programming arguments
   shortTitle: Arguments
-  key: Args
+  key: args
   summary: In programming, a value that is passed between programs, subroutines or functions.
   describe: |
     -  Arguments are independent items, or variables, that contain data or codes.
