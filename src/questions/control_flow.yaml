@@ -78,7 +78,7 @@
 - uuid: 4808c0d4-0ed4-4dcd-aa26-78d3b57063f3
   type: SingleChoice
   content: |
-    Errors cannot be handled with
+    What method cannot be used to handle Errors?
   hint: "its an output keyword"
   explanation: "println is to print out"
   answerKeys:
