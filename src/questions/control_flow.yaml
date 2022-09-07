@@ -238,7 +238,7 @@
     }
     ```
   hint: "Take note of the !="
-  explanation: "!= is like an exception statement"
+  explanation: "!= is not equal to, so if the digit is not equal to zero, do the next statement"
   answerKeys:
     - D
   subTopics:
@@ -486,7 +486,7 @@
   content: |
     The ____ function(most important function), which is the entry point of many programs.
   hint: "Function"
-  explanation: "it is the functions of all fuunction"
+  explanation: "it is the functions of all function"
   answerKeys:
     - D
 
@@ -965,12 +965,12 @@
   type: SingleChoice
   content: |
     What is the output?
-      ```
-            Fn main( ) {
-             let strn = "DoDAOCourse";
-             let fixed_string = "DDC";
-             if fixed_string == strn {println!("Same");
-              } 
+      ```rust
+         fn main( ) {
+          let strn = "DoDAOCourse";
+          let fixed_string = "DDC";
+          if fixed_string == strn {println!("Same");
+             } 
             else{println!("Not Same");
      	       }
            }   
@@ -1003,10 +1003,11 @@
   content: |
     What is the output?
     ```rust
-     fn main() {  n = 7;
-       if n>10 { println!("Greater than 10");
+       fn main() {  n = 7;
+       if n>10 { 
+        println!("Greater than 10");
          }else{
-         println!("Smaller than 10");}
+           println!("Smaller than 10");}
          }
     ```
 
@@ -1534,13 +1535,13 @@
     What will happen when will run this?
     ```rust
      	fn main() {
-         	  let a = [1,2,3];
+         let a = [1,2,3];
              	  a[4] }
      ```
   hint: "Panic"
   explanation: "we trying to call an index of 4 in a array of max:2 index"
   answerKeys:
-    - D
+    - C
 
   subTopics:
     - panic_not_panic
@@ -1564,10 +1565,10 @@
   type: SingleChoice
   content: |
     A function can reduce the number of codes, which saves ____.
-  hint: "Function help reduces size"
-  explanation: "we can import function from anywhere and save size that way"
+  hint: "Function can be called from different place and we don't have to code them"
+  explanation: "code reusability is important to programmers"
   answerKeys:
-    - B
+    - C
 
   subTopics:
     - functions
