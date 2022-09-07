@@ -213,11 +213,6 @@
        }
     }
     ```
-
-- title: Repeating Code with loop
-  shortTitle: Infinite loops
-  key: infinite-loop-kill
-  details: |
     - The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop. 
     - showing looping with examples 
     - As an example, change the src/main.rs file in your loops directory to look like this
