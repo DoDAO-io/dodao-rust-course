@@ -7,7 +7,7 @@
   answerKeys:
     - D
   subTopics:
-    - Error_handling
+    - error-handling
   difficultyLevel: Low
   choices:
     - content: "Unwrap and Expect"
@@ -33,7 +33,7 @@
     - C
 
   subTopics:
-    - Error_handling
+    - error-handling
   difficultyLevel: Low
   choices:
     - content: "Not to panic"
@@ -59,7 +59,7 @@
   answerKeys:
     - B
   subTopics:
-    - Error_handling
+    - error-handling
   difficultyLevel: Low
   choices:
     - content: "Not important errors"
@@ -84,7 +84,7 @@
   answerKeys:
     - A
   subTopics:
-    - Error_handling
+    - error-handling
 
   difficultyLevel: Low
   choices:
@@ -110,7 +110,7 @@
   answerKeys:
     - C
   subTopics:
-    - control_flow
+    - control-flow
   difficultyLevel: Low
   choices:
     - content: "Match"
@@ -135,7 +135,7 @@
   answerKeys:
     - B
   subTopics:
-    - if_statement
+    - if-statement
   difficultyLevel: Low
   choices:
     - content: "String"
@@ -173,7 +173,7 @@
     - D
 
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -208,7 +208,7 @@
   answerKeys:
     - C
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -242,7 +242,7 @@
   answerKeys:
     - D
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -269,7 +269,7 @@
     - A
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "Loop"
@@ -295,7 +295,7 @@
   answerKeys:
     - C
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "it stop by itself"
@@ -329,7 +329,7 @@
     - A
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "It prints again forever till you kill the terminal"
@@ -371,7 +371,7 @@
     - C
 
   subTopics:
-    - if_else_let_statement
+    - if-else-let-statement
 
   difficultyLevel: Low
   choices:
@@ -398,7 +398,7 @@
     - A
 
   subTopics:
-    - For_loop_statement
+    - for-loop-statement
 
   difficultyLevel: Low
   choices:
@@ -437,7 +437,7 @@
     - A
 
   subTopics:
-    - Loop
+    - loop
 
   difficultyLevel: Low
   choices:
@@ -465,7 +465,7 @@
     - C
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "While loop"
@@ -646,7 +646,7 @@
     - B
 
   subTopics:
-    - Nested_if_else_statement
+    - nested-if-else-statement
   difficultyLevel: Low
   choices:
     - content: "x is five!"
@@ -672,7 +672,7 @@
     - A
 
   subTopics:
-    - Error_handling
+    - error-handling
   difficultyLevel: Low
   choices:
     - content: "?"
@@ -704,7 +704,7 @@
     - C
 
   subTopics:
-    - Error_handling
+    - error-handling
   difficultyLevel: Low
   choices:
     - content: "timeout error"
@@ -849,7 +849,7 @@
     - D
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "for-loop"
@@ -875,7 +875,7 @@
     - C
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "only when you use the Panic! method"
@@ -944,7 +944,7 @@
     - C
 
   subTopics:
-    - Nested_if_else_statement
+    - nested-if-else-statement
 
   difficultyLevel: Medium
   choices:
@@ -981,7 +981,7 @@
     - B
 
   subTopics:
-    - looping_value
+    - looping-value
 
   difficultyLevel: Low
   choices:
@@ -1015,9 +1015,9 @@
   explanation: " its simple enough"
   answerKeys:
     - A
-  topic: control_flow
+ 
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -1057,7 +1057,7 @@
     - D
 
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -1093,7 +1093,7 @@
     - A
 
   subTopics:
-    - Result_option
+    - result-option
 
   difficultyLevel: Low
   choices:
@@ -1135,7 +1135,7 @@
     - B
 
   subTopics:
-    - Result_option
+    - result-option
 
   difficultyLevel: Medium
   choices:
@@ -1182,7 +1182,7 @@
     - A
 
   subTopics:
-    - Result_option
+    - result-option
 
   difficultyLevel: Hard
   choices:
@@ -1217,7 +1217,7 @@
     - C
 
   subTopics:
-    - Loop
+    - loop
 
   difficultyLevel: Low
   choices:
@@ -1254,7 +1254,7 @@
     - A
 
   subTopics:
-    - Loop
+    - loop
   difficultyLevel: Low
   choices:
     - content: "2 4 6 8 10"
@@ -1280,7 +1280,7 @@
     - A
 
   subTopics:
-    - Args
+    - args
 
   difficultyLevel: Low
   choices:
@@ -1314,7 +1314,7 @@
     - A
 
   subTopics:
-    - Args
+    - args
 
   difficultyLevel: Low
   choices:
@@ -1376,7 +1376,7 @@
     - D
 
   subTopics:
-    - Args
+    - args
 
   difficultyLevel: Low
   choices:
@@ -1477,7 +1477,7 @@
     - A
 
   subTopics:
-    - if_statement
+    - if-statement
 
   difficultyLevel: Low
   choices:
@@ -1512,7 +1512,7 @@
     - A
 
   subTopics:
-    - if_else_let_statement
+    - if-else-let-statement
 
   difficultyLevel: Low
   choices:
@@ -1544,7 +1544,7 @@
     - C
 
   subTopics:
-    - panic_not_panic
+    - panic-not-panic
 
   difficultyLevel: Low
   choices:
