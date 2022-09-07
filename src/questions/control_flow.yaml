@@ -12,16 +12,16 @@
   choices:
     - content: "Unwrap and Expect"
       key: A
-      order: 0
+    
     - content: "Result<T,E>"
       key: B
-      order: 1
+   
     - content: "Panic!"
       key: C
-      order: 2
+  
     - content: "Error Propagating"
       key: D
-      order: 3
+   
 
 - uuid: 9dfe3dbe-2f14-4541-8b8f-78441eaa904c
   type: SingleChoice
@@ -38,16 +38,16 @@
   choices:
     - content: "Not to panic"
       key: A
-      order: 0
+ 
     - content: "Result<T,E>"
       key: B
-      order: 1
+     
     - content: "Panic!"
       key: C
-      order: 2
+      
     - content: "Error P?"
       key: D
-      order: 3
+     
 
 - uuid: 35fe5c1c-58a1-4921-9ff2-ea5ca4c21708
   type: SingleChoice
@@ -64,16 +64,16 @@
   choices:
     - content: "Not important errors"
       key: A
-      order: 0
+     
     - content: "Non-Recoverable errors"
       key: B
-      order: 1
+     
     - content: "Immediate errors"
       key: C
-      order: 2
+      
     - content: "Data Errors"
       key: D
-      order: 3
+      
 
 - uuid: 4808c0d4-0ed4-4dcd-aa26-78d3b57063f3
   type: SingleChoice
@@ -90,16 +90,16 @@
   choices:
     - content: "println()"
       key: A
-      order: 0
+ 
     - content: "Panic!"
       key: B
-      order: 1
+   
     - content: "enum Result <T,E>"
       key: C
-      order: 2
+   
     - content: "Propagating"
       key: D
-      order: 3
+     
 
 - uuid: 372ec2d3-b8cb-48a2-b9a2-e15628cc89b6
   type: SingleChoice
@@ -115,16 +115,16 @@
   choices:
     - content: "Match"
       key: A
-      order: 0
+    
     - content: "Method"
       key: B
-      order: 1
+  
     - content: "Condition"
       key: C
-      order: 2
+ 
     - content: "Office"
       key: D
-      order: 3
+      
 
 - uuid: a48ba4aa-ea0f-4e7e-b040-95d720ea2d72
   type: SingleChoice
@@ -140,16 +140,16 @@
   choices:
     - content: "String"
       key: A
-      order: 0
+   
     - content: "Boolean"
       key: B
-      order: 1
+     
     - content: "Integer"
       key: C
-      order: 2
+     
     - content: "Float"
       key: D
-      order: 3
+   
 
 - uuid: 8600c9e3-5095-441d-856f-a36e9efcc278
   type: SingleChoice
@@ -179,16 +179,16 @@
   choices:
     - content: "condition was false"
       key: A
-      order: 0
+    
     - content: "number = 8"
       key: B
-      order: 1
+   
     - content: "Throws error"
       key: C
-      order: 2
+      
     - content: "condition was true"
       key: D
-      order: 3
+     
 
 - uuid: 6f2dcef1-b20b-4e02-b2bd-ee0f03ef298d
   type: SingleChoice
@@ -214,16 +214,16 @@
   choices:
     - content: "3"
       key: A
-      order: 0
+     
     - content: "True"
       key: B
-      order: 1
+    
     - content: "error[E0308]: mismatched types"
       key: C
-      order: 2
+     
     - content: "number is 3"
       key: D
-      order: 3
+     
 
 - uuid: 061c992d-0a9f-4283-b82c-ef340ad4b566
   type: SingleChoice
@@ -248,16 +248,16 @@
   choices:
     - content: "Mismatched type"
       key: A
-      order: 0
+      
     - content: "digit error"
       key: B
-      order: 1
+    
     - content: "False"
       key: C
-      order: 2
+    
     - content: "number was something other than zero"
       key: D
-      order: 3
+  
 
 - uuid: bb41cdea-73a2-491c-ae08-70002ac30fa2
   type: SingleChoice
@@ -274,17 +274,16 @@
   choices:
     - content: "Loop"
       key: A
-      order: 0
+      
     - content: "Function"
       key: B
-      order: 1
+      
     - content: "Result"
       key: C
-      order: 2
+     
     - content: "Print"
       key: D
-      order: 3
-
+      
 - uuid: 7621c8d3-0d2d-4237-921d-988824ef2736
   type: SingleChoice
   content: |
@@ -300,16 +299,16 @@
   choices:
     - content: "it stop by itself"
       key: A
-      order: 0
+     
     - content: "It slow down"
       key: B
-      order: 1
+      
     - content: "It loops forever"
       key: C
-      order: 2
+     
     - content: " ask you to stop it"
       key: D
-      order: 3
+     
 
 - uuid: 23291951-39c9-4dcf-9788-ce9dff03bed4
   type: SingleChoice
@@ -334,16 +333,16 @@
   choices:
     - content: "It prints again forever till you kill the terminal"
       key: A
-      order: 0
+    
     - content: "it stops after 100 times"
       key: B
-      order: 1
+      
     - content: "Error: couldn't run: no end"
       key: C
-      order: 2
+   
     - content: "It end immediately"
       key: D
-      order: 3
+    
 
 - uuid: 2fc1b82f-e876-4a3f-a6e2-68798ce7888c
   type: SingleChoice
@@ -377,16 +376,16 @@
   choices:
     - content: "100"
       key: A
-      order: 0
+   
     - content: "20"
       key: B
-      order: 1
+    
     - content: "30"
       key: C
-      order: 2
+    
     - content: "40"
       key: D
-      order: 3
+  
 
 - uuid: 8f76e7b0-db4c-492e-8726-cd2cbd1a18c7
   type: SingleChoice
@@ -404,16 +403,16 @@
   choices:
     - content: "For and While"
       key: A
-      order: 0
+    
     - content: "If and Panic"
       key: B
-      order: 1
+ 
     - content: "panic and println"
       key: C
-      order: 2
+     
     - content: "for and if"
       key: D
-      order: 3
+      
 
 - uuid: 97e6a555-4053-432b-ba11-ec6eff3aa491
   type: SingleChoice
@@ -443,16 +442,16 @@
   choices:
     - content: "3! 2! 1! LIFTOFF!!!"
       key: A
-      order: 0
+      
     - content: "1! 2! LIFTOFF!!!"
       key: B
-      order: 1
+    
     - content: "error"
       key: C
-      order: 2
+      
     - content: "LIFTOFF!!!"
       key: D
-      order: 3
+     
 
 - uuid: 531159db-111c-423b-9acd-5a6586febccf
   type: SingleChoice
@@ -470,16 +469,16 @@
   choices:
     - content: "While loop"
       key: A
-      order: 0
+     
     - content: "If-else"
       key: B
-      order: 1
+      
     - content: "For loop"
       key: C
-      order: 2
+     
     - content: "While for"
       key: D
-      order: 3
+    
 
 - uuid: 7f76a44b-5a88-4823-80f9-26ea8bd266f6
   type: SingleChoice
@@ -497,16 +496,16 @@
   choices:
     - content: "Branch"
       key: A
-      order: 0
+      
     - content: "Sub"
       key: B
-      order: 1
+      
     - content: "VIP"
       key: C
-      order: 2
+     
     - content: "main"
       key: D
-      order: 3
+      
 
 - uuid: 1ff53709-57e9-4560-9406-89a3e3f01a9c
   type: SingleChoice
@@ -523,16 +522,16 @@
   choices:
     - content: "Parameter"
       key: A
-      order: 0
+     
     - content: "Function"
       key: B
-      order: 1
+     
     - content: "File"
       key: C
-      order: 2
+     
     - content: "Object"
       key: D
-      order: 3
+      
 
 - uuid: 9a777f39-db37-4840-9286-14fbc43a4385
   type: SingleChoice
@@ -549,16 +548,16 @@
   choices:
     - content: "Sn"
       key: A
-      order: 0
+     
     - content: "func"
       key: B
-      order: 1
+      
     - content: "fn"
       key: C
-      order: 2
+     
     - content: "function"
       key: D
-      order: 3
+    
 - uuid: 49b77d7b-8230-4d9d-ac53-6eea65859b37
   type: SingleChoice
   content: |
@@ -586,16 +585,16 @@
   choices:
     - content: "Hello, my name is John. Another function"
       key: A
-      order: 0
+     
     - content: "Another function"
       key: B
-      order: 1
+     
     - content: "Hello, my name is John."
       key: C
-      order: 2
+  
     - content: " Another function Hello, my name is John."
       key: D
-      order: 3
+      
 
 - uuid: b4d11d66-dcd6-4e7e-aa09-8e2d40d1763d
   type: SingleChoice
@@ -613,16 +612,16 @@
   choices:
     - content: "Curly"
       key: A
-      order: 0
+    
     - content: "Square"
       key: B
-      order: 1
+     
     - content: "Angle"
       key: C
-      order: 2
+      
     - content: "Parentheses"
       key: D
-      order: 3
+     
 - uuid: 66b285ee-16ea-4dc5-9ebf-a71b2f8115b4
   type: SingleChoice
   content: |
@@ -651,16 +650,16 @@
   choices:
     - content: "x is five!"
       key: A
-      order: 0
+      
     - content: "x is not five or six :("
       key: B
-      order: 1
+      
     - content: "x is six!"
       key: C
-      order: 2
+     
     - content: "x is seven!"
       key: D
-      order: 3
+     
 
 - uuid: 23c0f874-10dc-4e32-bd16-fe17a9a5fbad
   type: SingleChoice
@@ -677,16 +676,16 @@
   choices:
     - content: "?"
       key: A
-      order: 0
+   
     - content: "::"
       key: B
-      order: 1
+      
     - content: "<T,E>"
       key: C
-      order: 2
+    
     - content: "//"
       key: D
-      order: 3
+      
 
 - uuid: 5b135105-a416-42f5-965b-76fb9fce5852
   type: SingleChoice
@@ -709,16 +708,16 @@
   choices:
     - content: "timeout error"
       key: A
-      order: 0
+    
     - content: "fails to compile"
       key: B
-      order: 1
+      
     - content: "it panic at crash and burn"
       key: C
-      order: 2
+     
     - content: "print out crash and burn"
       key: D
-      order: 3
+      
 
 - uuid: 084c634a-f438-4ff0-a906-b554018ef18d
   type: SingleChoice
@@ -736,16 +735,16 @@
   choices:
     - content: "Statements are instructions that perform some action and do not return a value"
       key: A
-      order: 0
+   
     - content: "Statement are a library function"
       key: B
-      order: 1
+  
     - content: "statements are the core of a program"
       key: C
-      order: 2
+     
     - content: "Statements are instructions that perform some action and return a value"
       key: D
-      order: 3
+      
 
 - uuid: c5df8ee5-f8ed-439b-ab10-605e6b394661
   type: SingleChoice
@@ -763,16 +762,16 @@
   choices:
     - content: "Statement and methods"
       key: A
-      order: 0
+      
     - content: "Statement and expression"
       key: B
-      order: 1
+     
     - content: "Expression and methods"
       key: C
-      order: 2
+     
     - content: "Expression and Statement"
       key: D
-      order: 3
+      
 
 - uuid: 93d9080c-f484-43ac-ba71-3670a2500a7f
   type: SingleChoice
@@ -788,16 +787,15 @@
   choices:
     - content: "Statement"
       key: A
-      order: 0
+      
     - content: "Function"
       key: B
-      order: 1
+      
     - content: "Expression"
       key: C
-      order: 2
+     
     - content: "Methods"
       key: D
-      order: 3
 
 - uuid: 6b5885d2-91cc-4979-b731-7c1a2e9a907a
   type: SingleChoice
@@ -822,22 +820,18 @@
     - functions
   difficultyLevel: Low
   choices:
-    - content: |
-        "{
-           let x = 3;
-            x + 1
-            }"
+    - content:   "{ let x = 3; = x + 1 }"
       key: A
-      order: 0
+      
     - content: "let x = 3"
       key: B
-      order: 1
+      
     - content: "println!(The value of y is: {y});"
       key: C
-      order: 2
+      
     - content: "fn main() "
       key: D
-      order: 3
+      
 
 - uuid: f24f175d-7a12-45b8-8f95-b85f6381540e
   type: SingleChoice
@@ -854,16 +848,16 @@
   choices:
     - content: "for-loop"
       key: A
-      order: 0
+     
     - content: "if-else"
       key: B
-      order: 1
+     
     - content: "while-loop"
       key: C
-      order: 2
+     
     - content: "panic!"
       key: D
-      order: 3
+     
 
 - uuid: d18f8f03-0600-46b5-9fc3-70aecb555379
   type: SingleChoice
@@ -880,16 +874,16 @@
   choices:
     - content: "only when you use the Panic! method"
       key: A
-      order: 0
+      
     - content: "No"
       key: B
-      order: 1
+      
     - content: "Yes, we break and can continue"
       key: C
-      order: 2
+      
     - content: "Loop are statement"
       key: D
-      order: 3
+     
 
 - uuid: d8e164a6-a3ee-4dd6-a07f-4381fdb5b8c0
   type: SingleChoice
@@ -906,16 +900,16 @@
   choices:
     - content: "Values"
       key: A
-      order: 0
+    
     - content: "function"
       key: B
-      order: 1
+    
     - content: "statement"
       key: C
-      order: 2
+     
     - content: "numbers"
       key: D
-      order: 3
+      
 
 - uuid: 95077da8-24ad-4ddf-bc75-9a0387349f62
   type: SingleChoice
@@ -950,16 +944,16 @@
   choices:
     - content: "it fails completely"
       key: A
-      order: 0
+     
     - content: "it prints from 1 to 101"
       key: B
-      order: 1
+     
     - content: "It moves from 1 to 101, and test each number against the condition and prints out the first condition output it matches"
       key: C
-      order: 2
+     
     - content: "The code ends because nested if statement needs break command"
       key: D
-      order: 3
+      
 
 - uuid: aabc6ca8-307d-4b5e-bbc2-ac8e46a8fb83
   type: SingleChoice
@@ -987,16 +981,16 @@
   choices:
     - content: "Same"
       key: A
-      order: 0
+     
     - content: "Not Same"
       key: B
-      order: 1
+      
     - content: "Error: let is not a keyword"
       key: C
-      order: 2
+      
     - content: "DoDAOCourse"
       key: D
-      order: 3
+      
 
 - uuid: 2a9e9798-a646-4021-8469-6f889ced1e08
   type: SingleChoice
@@ -1023,16 +1017,16 @@
   choices:
     - content: "Smaller than 10"
       key: A
-      order: 0
+      
     - content: "Smaller than 7"
       key: B
-      order: 1
+     
     - content: "Greater than 10"
       key: C
-      order: 2
+      
     - content: "Greater than 7"
       key: D
-      order: 3
+      
 
 - uuid: f0cf97a2-753e-4ec3-8648-3a8205582580
   type: SingleChoice
@@ -1063,16 +1057,16 @@
   choices:
     - content: "Equal to 10"
       key: A
-      order: 0
+    
     - content: "Greater than 10"
       key: B
-      order: 1
+      
     - content: "Greater than 9"
       key: C
-      order: 2
+      
     - content: "Smaller than 10"
       key: D
-      order: 3
+     
 
 - uuid: f309a64f-591d-4b23-8c86-d5947fc5254b
   type: SingleChoice
@@ -1099,16 +1093,16 @@
   choices:
     - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
       key: A
-      order: 0
+     
     - content: "thread 'main' panicked at 'index out of bounds:"
       key: B
-      order: 1
+      
     - content: "Null error"
       key: C
-      order: 2
+      
     - content: "File has been opened"
       key: D
-      order: 3
+      
 - uuid: be2c74c0-de24-4808-8db7-25335f97e5de
   type: SingleChoice
   content: |
@@ -1141,16 +1135,16 @@
   choices:
     - content: "file found "
       key: A
-      order: 0
+     
     - content: "file not found "
       key: B
-      order: 1
+      
     - content: "Err(Os { code: 2, kind: NotFound, message: 'No such file or directory' })"
       key: C
-      order: 2
+      
     - content: "Opened file"
       key: D
-      order: 3
+      
 
 - uuid: 8b82af20-1400-404d-9012-8561ebb6be27
   type: SingleChoice
@@ -1188,16 +1182,16 @@
   choices:
     - content: "Not Eligible..Wait for some years"
       key: A
-      order: 0
+     
     - content: "Person eligible to vote with 13 years"
       key: B
-      order: 1
+      
     - content: "Error: Panicked at Err"
       key: C
-      order: 2
+      
     - content: "Failed to compile"
       key: D
-      order: 3
+      
 
 - uuid: ded49462-cbf9-422e-9d82-747586e59081
   type: SingleChoice
@@ -1223,16 +1217,16 @@
   choices:
     - content: "Count up from 1 to 10"
       key: A
-      order: 0
+     
     - content: "Print from 1 to 10"
       key: B
-      order: 1
+      
     - content: "Print out from 10 to 1"
       key: C
-      order: 2
+      
     - content: "Count down from 10 to 1"
       key: D
-      order: 3
+      
 
 - uuid: 17f6d7a9-a512-477d-af2e-14cfedc74657
   type: SingleChoice
@@ -1259,16 +1253,16 @@
   choices:
     - content: "2 4 6 8 10"
       key: A
-      order: 0
+      
     - content: "1 2 3 4 5"
       key: B
-      order: 1
+      
     - content: "1 3 6 9 11"
       key: C
-      order: 2
+      
     - content: "2 5 "
       key: D
-      order: 3
+      
 
 - uuid: 3723f90d-ce8a-47cb-809f-c4676150fc4b
   type: SingleChoice
@@ -1286,16 +1280,16 @@
   choices:
     - content: "parenthesis"
       key: A
-      order: 0
+      
     - content: "Curtly bracket"
       key: B
-      order: 1
+     
     - content: "square bracket"
       key: C
-      order: 2
+      
     - content: "Block bracket"
       key: D
-      order: 3
+     
 
 - uuid: 802a45f7-6356-4e0e-8abb-12f1da27b68e
   type: SingleChoice
@@ -1320,16 +1314,16 @@
   choices:
     - content: "name(string)"
       key: A
-      order: 0
+   
     - content: "kushwanthreddy"
       key: B
-      order: 1
+    
     - content: "name(integer)"
       key: C
-      order: 2
+      
     - content: "name(boolean)"
       key: D
-      order: 3
+      
 
 - uuid: 63990083-058f-4bfc-83ca-146c35e725f7
   type: SingleChoice
@@ -1347,16 +1341,16 @@
   choices:
     - content: "Values"
       key: A
-      order: 0
+      
     - content: "Statement"
       key: B
-      order: 1
+      
     - content: "function"
       key: C
-      order: 2
+     
     - content: "Parameter"
       key: D
-      order: 3
+      
 
 - uuid: 2c30a2c4-7a4f-46a7-b460-7216f3ac5b15
   type: SingleChoice
@@ -1382,16 +1376,16 @@
   choices:
     - content: "x: i32, y: i32"
       key: A
-      order: 0
+     
     - content: "x: , y:"
       key: B
-      order: 1
+     
     - content: "32, y: i32"
       key: C
-      order: 2
+      
     - content: "5, 6"
       key: D
-      order: 3
+      
 
 - uuid: 21c66e14-e027-4956-8571-00605eb93c1c
   type: SingleChoice
@@ -1408,16 +1402,16 @@
   choices:
     - content: "function_name(argument)"
       key: A
-      order: 0
+      
     - content: "call function_name(main)"
       key: B
-      order: 1
+      
     - content: "let = function_name(main)"
       key: C
-      order: 2
+      
     - content: "function_name(main)::called"
       key: D
-      order: 3
+    
 
 - uuid: 43421be6-7aa1-402a-baaa-d3d88bafc987
   type: SingleChoice
@@ -1446,16 +1440,16 @@
   choices:
     - content: "it prints : Odd and divisible by 3"
       key: A
-      order: 0
+      
     - content: "it print: Odd and divisible by 5"
       key: B
-      order: 1
+      
     - content: "Error use one if"
       key: C
-      order: 2
+      
     - content: "it prints nothing"
       key: D
-      order: 3
+      
 
 - uuid: 1cac4f25-85c1-4a1f-8daf-9da73252f81b
   type: SingleChoice
@@ -1475,16 +1469,16 @@
   choices:
     - content: "relational comparison and logical operator"
       key: A
-      order: 0
+      
     - content: "boolean and data type"
       key: B
-      order: 1
+      
     - content: "functions and constructor"
       key: C
-      order: 2
+     
     - content: "compiler and error"
       key: D
-      order: 3
+      
 
 - uuid: a56460a0-e567-4970-9e87-0db399dfddbd
   type: SingleChoice
@@ -1510,16 +1504,16 @@
   choices:
     - content: "The decision returns false!"
       key: A
-      order: 0
+   
     - content: "The decision returns true!"
       key: B
-      order: 1
+      
     - content: "Failed to compile"
       key: C
-      order: 2
+     
     - content: "The decision returns indecisive!"
       key: D
-      order: 3
+      
 
 - uuid: 9d45007e-4c06-4b34-b6db-7a4ab848cc7a
   type: SingleChoice
@@ -1542,16 +1536,16 @@
   choices:
     - content: "it prints 4"
       key: A
-      order: 0
+      
     - content: "nothing happens"
       key: B
-      order: 1
+      
     - content: "Panic! error occurs at:> a[4]"
       key: C
-      order: 2
+      
     - content: "it prints the array"
       key: D
-      order: 3
+      
 
 - uuid: d95e6e00-d6fa-4e0b-8558-e3b8d690d30d
   type: SingleChoice
@@ -1568,13 +1562,13 @@
   choices:
     - content: "Values"
       key: A
-      order: 0
+      
     - content: "Memory"
       key: B
-      order: 1
+     
     - content: "Time"
       key: C
-      order: 2
+      
     - content: "Money"
       key: D
-      order: 3
+     
