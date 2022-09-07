@@ -4,8 +4,8 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=EVruNiwIfzI
   subTopics:
-    - "if_statement"
-    - "Loop"
+    - "if-statement"
+    - "loop"
   details: |
     In this video we're looking how to write control flow in Rust language.
     This video explains about the use of -
@@ -20,7 +20,7 @@
   url: https://www.youtube.com/watch?v=hSSYwVfzaZM
   subTopics:
     - "functions"
-    - "Args"
+    - "args"
   details: |
     In this video we're looking how to write functions in Rust language.
     This video talks about the use of -
@@ -35,8 +35,8 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=mhw-x5Q_-z0
   subTopics:
-    - "panic_not_panic"
-    - "Result_option"
+    - "panic-not-panic"
+    - "result-option"
     - "options"
 
   details: |
@@ -52,7 +52,7 @@
   type: Article
   url: https://doc.rust-lang.org/book/ch03-05-control-flow.html#control-flow
   subTopics:
-    - "control_flow"
+    - "control-flow"
   details: |
     In this article we're looking how to write control flow in Rust language.
     This article explains about the use of -
