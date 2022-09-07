@@ -1460,37 +1460,29 @@
 - uuid: 1cac4f25-85c1-4a1f-8daf-9da73252f81b
   type: SingleChoice
   content: |
-    What is the output?
+    We create control flow by using if,for,while statement in combination with ______ and _____
 
-    ```rust 
-       fn main() {
-       let number = 9;
-       if number % 2 == 1 {
-       if number % 3 == 0 {
-       	println!("Odd and divisible by 3");
-        }
-         }	}
-    ```
-  hint: "nested if"
+    
+  hint: "creating flow requires conditions and conditions are statement and reasonings"
   explanation: "null"
   answerKeys:
     - A
 
   subTopics:
-    - if-statement
+    - control-flow
 
   difficultyLevel: Low
   choices:
-    - content: "Odd and divisible by 3"
+    - content: "relational comparison and logical operator"
       key: A
       order: 0
-    - content: "Odd and divisible by 6"
+    - content: "boolean and data type"
       key: B
       order: 1
-    - content: "Error: else missing"
+    - content: "functions and constructor"
       key: C
       order: 2
-    - content: "compiler error"
+    - content: "compiler and error"
       key: D
       order: 3
 
