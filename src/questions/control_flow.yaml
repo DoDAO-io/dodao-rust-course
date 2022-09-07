@@ -1371,7 +1371,7 @@
            }
      ```
   hint: "parenthesis"
-  explanation: ""
+  explanation: "we pass args inside a bracket to call them"
   answerKeys:
     - D
 
