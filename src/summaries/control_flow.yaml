@@ -14,7 +14,7 @@
   key: if_else_let_statement
   summary: We use if statement to give conditions to our code. You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. In the event that the condition is not met, the compiler says to the machine “do not run this block."
   details: |
-    - To explore the if expression, create a new project called branches in your projects directory. Add the following code to src/main.rs:
+    - To explore the if expression with combination with else we can choose to add one more condition with the else statement
     ```rust
     fn main() {
      let number = 3;
