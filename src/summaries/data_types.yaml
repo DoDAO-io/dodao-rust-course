@@ -1,7 +1,6 @@
 - title: Typed language
   shortTitle: Typed language
   key: typed_language
-  summary: A programming language can be either a Dynamically-typed language or a Staticlly-typed language
   details: |
     - Dynamically-Typed Languages
       * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.
@@ -18,11 +17,10 @@
 - title: Value Types
   shortTitle: Value Types
   key: value-types
-  summary: |
-    Rust has two major Data Value Types, which include 
-      1. Scalar Types
-      2. Compound ypes
   details: |
+    - Rust has two major Data Value Types, which include 
+        1. Scalar Types
+        2. Compound ypes
     - Scalar Types
       * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.
       - Integers
@@ -103,8 +101,8 @@
 - title: Variables
   shortTitle: Variables
   key: variables
-  summary: Variables are used to store the values of a particular data type.
   details: |
+    - Variables are used to store the values of a particular data type
     - Variables and Mutability
       * In Rust, variables are immutable in nature by default.
       * When a variable is immutable, once a value is bound to a name, you can’t change that value
@@ -132,12 +130,11 @@
 - title: Keywords
   shortTitle: Keywords
   key: keywords
-  summary: |
-    Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:
+  details: |
+    - Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:
         1. Strict
         2. Reserved 
         3. Weak
-  details: |
     - Strict Keywords
       * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.
       * For Example:- ` mut, break, else, continue, return, impl, etc. ` 
@@ -150,14 +147,14 @@
 - title: Bit Manipulation
   shortTitle: Bit Manipulation
   key: bit-manupilation
-  summary: Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.
   details: |
+    - Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.
     - Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.
 - title: Strings
   shortTitle: Strings
   key: strings
-  summary: "There are two types of strings in Rust: `String` and `&str`."
   details: |
+    - There are two types of strings in Rust: `String` and `&str`.
     - String
       * Strings are formed by a list of characters, which is really an "array of characters".
       * A String is stored as a vector of bytes `(Vec<u8>)`.
@@ -177,7 +174,6 @@
 - title: Package Manager
   shortTitle: Package Manager
   key: package-manager
-  summary: |
-    - A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.
   details: |
+    - A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.
     - Cargo is the Rust package manager.

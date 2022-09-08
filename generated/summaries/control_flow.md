@@ -338,7 +338,7 @@ fn main() {
 - Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error.
 - This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
  
- **Panic**        
+ **Unrecoverable Errors with panic!**        
 - When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit.
 - We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
 - Let's try calling panic! in a simple program:
@@ -551,7 +551,7 @@ fn another_function() {
 | &[u8] | bytes |
 | &T | ref |
  
- **Function body**        
+ **Statements and Expressions**        
 - The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the functions block.
 - The tail expression of the block, if evaluated, ends up being returned to the caller. 
 - As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.

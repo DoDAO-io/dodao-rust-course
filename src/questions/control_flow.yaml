@@ -1250,7 +1250,7 @@
     - A
 
   subTopics:
-    - args
+    - arguments
 
   difficultyLevel: Low
   choices:
@@ -1285,7 +1285,7 @@
     - A
 
   subTopics:
-    - args
+    - arguments
 
   difficultyLevel: Low
   choices:
@@ -1347,7 +1347,7 @@
     - D
 
   subTopics:
-    - args
+    - arguments
 
   difficultyLevel: Low
   choices:

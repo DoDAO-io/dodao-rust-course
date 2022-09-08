@@ -20,7 +20,7 @@
   url: https://www.youtube.com/watch?v=hSSYwVfzaZM
   subTopics:
     - "functions"
-    - "args"
+    - "arguments"
   details: |
     In this video we're looking how to write functions in Rust language.
     This video talks about the use of -

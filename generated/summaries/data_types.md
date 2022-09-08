@@ -20,6 +20,9 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 - Rust is a Statically-Typed Language
  
  **Value Types**        
+- Rust has two major Data Value Types, which include 
+    1. Scalar Types
+    2. Compound ypes
 - Scalar Types
   * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.
   - Integers
@@ -99,6 +102,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
       ```
  
  **Variables**        
+- Variables are used to store the values of a particular data type
 - Variables and Mutability
   * In Rust, variables are immutable in nature by default.
   * When a variable is immutable, once a value is bound to a name, you can’t change that value
@@ -125,6 +129,10 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
     ```
  
  **Keywords**        
+- Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:
+    1. Strict
+    2. Reserved 
+    3. Weak
 - Strict Keywords
   * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.
   * For Example:- ` mut, break, else, continue, return, impl, etc. ` 
@@ -136,9 +144,11 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * For example, it is possible to declare a variable or method with the name `union`.
  
  **Bit Manipulation**        
+- Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.
 - Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.
  
  **Strings**        
+- There are two types of strings in Rust: `String` and `&str`.
 - String
   * Strings are formed by a list of characters, which is really an "array of characters".
   * A String is stored as a vector of bytes `(Vec<u8>)`.
@@ -157,6 +167,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.
  
  **Package Manager**        
+- A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.
 - Cargo is the Rust package manager.
  
  

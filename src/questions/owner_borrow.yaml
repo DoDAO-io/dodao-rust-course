@@ -5,23 +5,18 @@
   explanation: "Every value in Rust has exactly 1 owner."
   answerKeys:
     - B
-  topic: 05_owner_borrow
   subTopics:
     - memory-allocation
   difficultyLevel: Low
   choices:
     - content: "2"
       key: A
-      order: 0
     - content: "1"
       key: B
-      order: 1
     - content: "variable value"
       key: C
-      order: 2
     - content: "value on heap has no owner"
       key: D
-      order: 3
 
 - uuid: 7b6d2b15-bec7-4740-9083-322f44349d74
   type: SingleChoice
@@ -30,17 +25,14 @@
   explanation: "Variable can never be accessed outside its scope."
   answerKeys:
     - B
-  topic: 05_owner_borrow
   subTopics:
     - memory-allocation
   difficultyLevel: Low
   choices:
     - content: "True"
       key: A
-      order: 0
     - content: "False"
       key: B
-      order: 1
 
 - uuid: 918fdd9d-9870-4f28-9dde-c542f07882b0
   type: SingleChoice
@@ -49,23 +41,18 @@
   explanation: "Double free error can occur in theory if 2 variable point to same value and try to free it as they go out of scope."
   answerKeys:
     - A
-  topic: 05_owner_borrow
   subTopics:
     - memory-allocation
   difficultyLevel: Medium
   choices:
     - content: "2 variables try to free same value as they go out of scope"
       key: A
-      order: 0
     - content: "Program free memory used by a variable on heap while it is in scope"
       key: B
-      order: 1
     - content: "An out of scope variable is assigned a value again"
       key: c
-      order: 2
     - content: "Same variable is used in different scopes"
       key: D
-      order: 3
 
 - uuid: ad736f97-44d9-4ccc-a6fe-b0fb67c0ea17
   type: SingleChoice
@@ -74,23 +61,18 @@
   explanation: "A variable can have any number of immutable references."
   answerKeys:
     - C
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
   difficultyLevel: Medium
   choices:
     - content: "1"
       key: A
-      order: 0
     - content: "2"
       key: B
-      order: 1
     - content: "a variable can have any number of immutable references"
       key: C
-      order: 2
     - content: "less than 10"
       key: D
-      order: 3
 
 - uuid: e635a225-452c-459b-ab44-c52afad1a793
   type: SingleChoice
@@ -99,23 +81,18 @@
   explanation: "A variable can have once 1 mutable reference, this saves it from data race condition."
   answerKeys:
     - A
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
   difficultyLevel: Medium
   choices:
     - content: "1"
       key: A
-      order: 0
     - content: "2"
       key: B
-      order: 1
     - content: "a variable can have any number of mutable references"
       key: C
-      order: 2
     - content: "references can not be mutable"
       key: D
-      order: 3
 
 - uuid: c8dea1c7-41e0-4b9a-afef-e3dd72a37222
   type: MultipleChoice
@@ -124,23 +101,18 @@
   explanation: "Variables are moved or copied while passing to a function depending on whether they are on heap or stack respectively."
   answerKeys:
     - B, C
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
   difficultyLevel: Medium
   choices:
     - content: "variable passed to a function are always cloned"
       key: A
-      order: 0
     - content: "variables on stack are copied when passed to function"
       key: B
-      order: 1
     - content: "variables on heap are moved when passed to function"
       key: C
-      order: 2
     - content: "variable passed to a function are always copied"
       key: D
-      order: 3
 
 - uuid: a1aab277-a2b0-42e1-9811-19fba895f78f
   type: SingleChoice
@@ -149,23 +121,18 @@
   explanation: "When a value is returned from a function it is again moved to calling scope."
   answerKeys:
     - D
-  topic: 05_owner_borrow
   subTopics:
     - memory-allocation
   difficultyLevel: Medium
   choices:
     - content: "by creating references to the value before passing to the function"
       key: A
-      order: 0
     - content: "a value moved to another function can never be used not in parent function"
       key: B
-      order: 1
     - content: "By creating a copy of the value before passing it to function"
       key: C
-      order: 2
     - content: "by returning value from function and assigning to a new variable"
       key: D
-      order: 3
 
 - uuid: c8fdd1df-4c7b-459f-b47a-b45a798ea393
   type: MutipleChoice
@@ -174,23 +141,18 @@
   explanation: "Borrowing can be used to create mutable or immutable references to variable without changing their scope."
   answerKeys:
     - C, D
-  topic: 05_owner_borrow
   subTopics:
     - ownership
   difficultyLevel: Medium
   choices:
     - content: "borrowed variables can not be mutated"
       key: A
-      order: 0
     - content: "borrowing can be used to increase scope of the variable"
       key: B
-      order: 1
     - content: "borrowing does not changes the ownership of the variable"
       key: C
-      order: 2
     - content: "borrowing creates reference to variable whithout changing its scope"
       key: D
-      order: 3
 
 - uuid: d816e66d-3e8c-4894-8f20-045504865f24
   type: SingleChoice
@@ -199,23 +161,18 @@
   explanation: "Rust does not allow creating dangling references."
   answerKeys:
     - A
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
   difficultyLevel: Medium
   choices:
     - content: "it is not possible to create dangling references in rust"
       key: A
-      order: 0
     - content: "it is created when a references value goes out of scope"
       key: B
-      order: 1
     - content: "it is created when a references value if moved"
       key: C
-      order: 2
     - content: "it is created when value of a reference is incremented to next memory location"
       key: D
-      order: 3
 
 - uuid: ccf096f4-a771-4abe-b784-04db290e2b8e
   type: SingleChoice
@@ -224,17 +181,14 @@
   explanation: "It is not possible to create invalid references in Rust."
   answerKeys:
     - A
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
   difficultyLevel: Medium
   choices:
     - content: "True"
       key: A
-      order: 0
     - content: "False"
       key: B
-      order: 1
 
 - uuid: 8a62b57e-decb-4c7c-b93d-2065ba6bd34b
   type: SingleChoice
@@ -253,7 +207,6 @@
   explanation: "Mutable references to a variable in different scopes do not create compilation issue."
   answerKeys:
     - C
-  topic: 05_owner_borrow
   subTopics:
     - borrowing
     - variable-scope
@@ -261,16 +214,12 @@
   choices:
     - content: "Code does not compiles as it is not possible to have 2 mutable references to a variable"
       key: A
-      order: 0
     - content: "Code compiles but breaks at runtime"
       key: B
-      order: 1
     - content: "Code compiles successfully as 2 mutable references have different scope"
       key: C
-      order: 2
     - content: "Code does not compile as it is not possible to have a mutable reference to a string value"
       key: D
-      order: 3
 
 - uuid: 8e6bc92a-b13c-4cd1-9884-69966f5eda50
   type: MultipleChoice
@@ -279,20 +228,15 @@
   explanation: "Variables on stack are fixed in size and follow copy symantics."
   answerKeys:
     - C, D
-  topic: 05_owner_borrow
   subTopics:
     - memory-allocation
   difficultyLevel: High
   choices:
     - content: "Variables on stack can be moved"
       key: A
-      order: 0
     - content: "Variables on stack have size determined dynamically at runtime"
       key: B
-      order: 1
     - content: "Variables on stack are fixed in size"
       key: C
-      order: 2
     - content: "Variables on stack are copied"
       key: D
-      order: 3

@@ -896,7 +896,7 @@ Hint: Function parameter
          
 Explanation: very important we put args in a bracket
 
-Sub Topics: args
+Sub Topics: arguments
  
 
 ---
@@ -921,7 +921,7 @@ Hint: The greet function has name args
          
 Explanation: look at the parenthesis
 
-Sub Topics: args
+Sub Topics: arguments
  
 
 ---
@@ -963,7 +963,7 @@ Hint: parenthesis
          
 Explanation: we pass args inside a bracket to call them
 
-Sub Topics: args
+Sub Topics: arguments
  
 
 ---

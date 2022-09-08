@@ -29,7 +29,7 @@ This video talks about the use of -
 * Rust Function return with expression (no semi-colon)
     
  
- Sub Topics: functions, args    
+ Sub Topics: functions, arguments    
   **Intro to Rust-lang (Error Handling)**
  
  [![Intro to Rust-lang (Error Handling)](https://img.youtube.com/vi/mhw-x5Q_-z0/0.jpg)](https://www.youtube.com/watch?v=mhw-x5Q_-z0)     

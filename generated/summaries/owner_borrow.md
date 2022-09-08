@@ -6,6 +6,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  ## Ownership and Borrowing
  
  **Memory Allocation**        
+- Rust has a unique approach towards memory allocation. Data variables are either stored on stack or heap.
 - Memory Management Approach
   * Different languages have different approach towards memory management.
   * In rust data with known, fixed size is stored on stack, data with an unknown size at compile time or size that can change is stored on heap.
@@ -19,6 +20,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   ![Heap](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_heap.jpg?raw=true)
  
  **Variable Scope**        
+- In Rust a variable is valid only in its scope, as soon as it goes out of scope its memory is freed.
 - Scope:
   * As the variable goes out of scope it is no longer valid, at this point Rust automatically returns the memory used by the variable.
   * Rust’s approach to memory management is unique by scoping is simple and robust.
@@ -33,6 +35,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
     ```
  
  **Ownership**        
+- Each variable in Rust has an Owner.
 - What is Ownership in rust:
   * Each value in Rust has an owner
   * Ownership in Rust strictly follows certain rules, if these rules are violated the program will not compile:
@@ -82,6 +85,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
     ```
  
  **Borrowing**        
+- The action of creating a reference to a variable is called borrowing.
 - What is Borrowing:
   * Moving a variable on the heap is not always convenient.
   * Consider a situation like passing a variable on heap to a function call, to be able to use a variable after the function call we need to return it from the function. In such situations we can provide a reference to the variable.

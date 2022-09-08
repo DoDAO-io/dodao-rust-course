@@ -351,8 +351,8 @@
     - It is common for languages to handle both kinds of errors in the same way, using mechanisms such as exceptions. Rust doesn’t have exceptions.
     - Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error.
     - This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
-- title: Panic
-  shortTitle: Unrecoverable Errors with panic!
+- title: Unrecoverable Errors with panic!
+  shortTitle: Panic
   key: panic-error-catching
   details: |
     - When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit.
@@ -578,9 +578,9 @@
     | &mut [T] | mut_slice |
     | &[u8] | bytes |
     | &T | ref |
-- title: Function body
-  shortTitle: Statements and Expressions
-  keys: statement-expression
+- title: Statements and Expressions
+  shortTitle: Function body
+  key: statement-expression
   details: |
     - The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the functions block.
     - The tail expression of the block, if evaluated, ends up being returned to the caller. 
@@ -643,7 +643,7 @@
     - Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
 
 - title: Option and Result
-  short: option, result
+  shortTitle: Option and Result
   key: option-result
   details: |
     - Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. 
@@ -689,7 +689,7 @@
 
 - title: List of Programming arguments
   shortTitle: Arguments
-  key: args
+  key: arguments
   details: |
     - In programming, a value that is passed between programs, subroutines or functions
     - Arguments are independent items, or variables, that contain data or codes.
