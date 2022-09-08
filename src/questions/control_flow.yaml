@@ -1368,7 +1368,7 @@
   type: SingleChoice
   content: |
     How can a function be called?
-  hint: null
+  hint: noHint
   explanation: "We call function by its name and arguments"
   answerKeys:
     - A
@@ -1504,7 +1504,7 @@
           a[4] 
         }
      ```
-  hint: "Panic"
+  hint: "Error Handling - Panic"
   explanation: "we trying to call an index of 4 in a array of max:2 index"
   answerKeys:
     - C
@@ -1533,6 +1533,7 @@
     A function can reduce the number of codes, which saves ____.
   hint: "Function can be called from different place and we don't have to code them"
   explanation: "code reusability is important to programmers"
+  difficultyLevel: Low
   answerKeys:
     - C
 

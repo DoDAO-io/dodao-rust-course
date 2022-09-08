@@ -976,7 +976,7 @@ Sub Topics: arguments
 - [ ]  let = function_name(main)
 - [ ]  function_name(main)::called
   
-Hint: null
+Hint: noHint
          
 Explanation: We call function by its name and arguments
 
@@ -1070,7 +1070,7 @@ Sub Topics: if-else-let-statement
 - [x]  Panic! error occurs at:> a[4]
 - [ ]  it prints the array
   
-Hint: Panic
+Hint: Error Handling - Panic
          
 Explanation: we trying to call an index of 4 in a array of max:2 index
 

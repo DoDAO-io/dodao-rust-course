@@ -772,7 +772,7 @@
 - uuid: b49785fb-dd24-43b5-9f5a-e7dedc98cc5f
   type: SingleChoice
   content: Strings size is not known at compile time
-  hint: hint
+  hint: noHint
   explanation: explanation
   answerKeys:
     - A
@@ -906,7 +906,7 @@
 - uuid: 853bbf17-ceb6-4a7c-9a32-c05f048a9ce6
   type: SingleChoice
   content: Identify the wrong set of rust keywords
-  hint: hint
+  hint: noHint
   explanation: explanation
   answerKeys:
     - D
@@ -926,7 +926,7 @@
 - uuid: 118287fb-f962-4c6a-b7bb-f774e36f02bf
   type: SingleChoice
   content: Rust variable names can start with
-  hint: hint
+  hint: noHint
   explanation: explanation
   answerKeys:
     - A
@@ -947,7 +947,7 @@
   type: SingleChoice
   content: |
     q What is the result of the following calculation in rust "1.0/0.0"
-  hint: hint
+  hint: noHint
   explanation: explanation
   answerKeys:
     - B
@@ -967,7 +967,7 @@
 - uuid: e8c7d69e-3899-43aa-aaec-e45870a32a3f
   type: SingleChoice
   content: In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.
-  hint: NoHint
+  hint: noHint
   explanation: No explanation
   answerKeys:
     - A

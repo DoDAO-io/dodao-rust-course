@@ -1113,7 +1113,7 @@
           "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
           "type": "SingleChoice",
           "content": "Strings size is not known at compile time",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -1291,7 +1291,7 @@
           "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
           "type": "SingleChoice",
           "content": "Identify the wrong set of rust keywords",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -1323,7 +1323,7 @@
           "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
           "type": "SingleChoice",
           "content": "Rust variable names can start with",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -1355,7 +1355,7 @@
           "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
           "type": "SingleChoice",
           "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "B"
@@ -1387,7 +1387,7 @@
           "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
           "type": "SingleChoice",
           "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "NoHint",
+          "hint": "noHint",
           "explanation": "No explanation",
           "answerKeys": [
             "A"
@@ -2566,7 +2566,7 @@
           "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
           "type": "SingleChoice",
           "content": "Strings size is not known at compile time",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -2744,7 +2744,7 @@
           "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
           "type": "SingleChoice",
           "content": "Identify the wrong set of rust keywords",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -2776,7 +2776,7 @@
           "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
           "type": "SingleChoice",
           "content": "Rust variable names can start with",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -2808,7 +2808,7 @@
           "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
           "type": "SingleChoice",
           "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "B"
@@ -2840,7 +2840,7 @@
           "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
           "type": "SingleChoice",
           "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "NoHint",
+          "hint": "noHint",
           "explanation": "No explanation",
           "answerKeys": [
             "A"
@@ -4305,7 +4305,7 @@
           "uuid": "21c66e14-e027-4956-8571-00605eb93c1c",
           "type": "SingleChoice",
           "content": "How can a function be called?\n",
-          "hint": null,
+          "hint": "noHint",
           "explanation": "We call function by its name and arguments",
           "answerKeys": [
             "A"
@@ -4433,7 +4433,7 @@
           "uuid": "9d45007e-4c06-4b34-b6db-7a4ab848cc7a",
           "type": "SingleChoice",
           "content": "What will happen when will run this?\n```rust\n \tfn main() {\n      let a = [1,2,3];\n      a[4] \n    }\n ```\n",
-          "hint": "Panic",
+          "hint": "Error Handling - Panic",
           "explanation": "we trying to call an index of 4 in a array of max:2 index",
           "answerKeys": [
             "C"
@@ -4467,6 +4467,7 @@
           "content": "A function can reduce the number of codes, which saves ____.\n",
           "hint": "Function can be called from different place and we don't have to code them",
           "explanation": "code reusability is important to programmers",
+          "difficultyLevel": "Low",
           "answerKeys": [
             "C"
           ],
@@ -5772,7 +5773,7 @@
           "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
           "type": "SingleChoice",
           "content": "Strings size is not known at compile time",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -5950,7 +5951,7 @@
           "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
           "type": "SingleChoice",
           "content": "Identify the wrong set of rust keywords",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -5982,7 +5983,7 @@
           "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
           "type": "SingleChoice",
           "content": "Rust variable names can start with",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -6014,7 +6015,7 @@
           "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
           "type": "SingleChoice",
           "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "B"
@@ -6046,7 +6047,7 @@
           "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
           "type": "SingleChoice",
           "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "NoHint",
+          "hint": "noHint",
           "explanation": "No explanation",
           "answerKeys": [
             "A"
@@ -7677,7 +7678,7 @@
           "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
           "type": "SingleChoice",
           "content": "Strings size is not known at compile time",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -7855,7 +7856,7 @@
           "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
           "type": "SingleChoice",
           "content": "Identify the wrong set of rust keywords",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -7887,7 +7888,7 @@
           "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
           "type": "SingleChoice",
           "content": "Rust variable names can start with",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -7919,7 +7920,7 @@
           "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
           "type": "SingleChoice",
           "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "B"
@@ -7951,7 +7952,7 @@
           "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
           "type": "SingleChoice",
           "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "NoHint",
+          "hint": "noHint",
           "explanation": "No explanation",
           "answerKeys": [
             "A"
@@ -9130,7 +9131,7 @@
           "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
           "type": "SingleChoice",
           "content": "Strings size is not known at compile time",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -9308,7 +9309,7 @@
           "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
           "type": "SingleChoice",
           "content": "Identify the wrong set of rust keywords",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "D"
@@ -9340,7 +9341,7 @@
           "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
           "type": "SingleChoice",
           "content": "Rust variable names can start with",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "A"
@@ -9372,7 +9373,7 @@
           "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
           "type": "SingleChoice",
           "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "hint",
+          "hint": "noHint",
           "explanation": "explanation",
           "answerKeys": [
             "B"
@@ -9404,7 +9405,7 @@
           "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
           "type": "SingleChoice",
           "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "NoHint",
+          "hint": "noHint",
           "explanation": "No explanation",
           "answerKeys": [
             "A"
