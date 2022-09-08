@@ -7,6 +7,8 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  
  **Control Flow**        
 - In most cases, the computer runs the code in order from the first line in the file to the last line, unless it encounters structures that alter the control flow, such as loops and conditionals.
+- Many programming languages allow you to run some code depending on whether a condition is true, or run some code repeatedly while a condition is true. 
+- If expressions and loops are the most common constructs in Rust that control execution flow.
 - We control the flow of our program with the following statements, in combination with relational comparison and logical operators.
   * If else
   * Match
@@ -14,7 +16,9 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * For loop
  
  **If Expressions**        
-- To explore the if expression, create a new project called branches in your projects directory. Add the following code to src/main.rs:
+- To explore the if expression with combination with else we can choose to add one more condition with the else statement
+- We use if statement to give conditions to our code. You can branch your code based on conditions using an if expression. A condition is given and then a block of code is run if the condition is met. 
+- In the event that the condition is not met, the compiler says to the machine “do not run this block."
 ```rust
 fn main() {
  let number = 3;
@@ -43,6 +47,7 @@ condition was true
  **Multiple if conditions - how to evaluate them?**        
 - Using conditional AND, you can test whether one condition and another are true. Before the code can be executed, both conditions must be met.
 - When AND is used to evaluate multiple conditions, the && operator is used to separate them.
+- The two logical operators && and || allow us to evaluate more than one condition in an if statement.
 ```rust
 fn main() {
  let a = 5;
@@ -86,6 +91,7 @@ fn main() {
  
  **The conditional match statement**        
 - The syntax is similar to a switch statement in a language in the C family, though the syntax is different.
+- A single value will be compared with a list of values with the match statement. It is a bit technical but easy so walk with me.
 - Taking it step by step will make it easier to understand what's going on.
   1. The match statement returns a value, so we can assign the whole statement to a variable to get the result.
     Example:
@@ -145,6 +151,8 @@ Example:
 - We then used it in the ```println!()``` below the match statement.
  
  **Loop statement**        
+- Throughout our application, we will often need to execute sections of code more than once. 
+- Instead of rewriting these sections of code, we can place them in a loop and allow Rust to automatically execute them as many times as we need.
 - loop consists of the following
  * A condition
      - A code block containing our execution code
@@ -185,6 +193,8 @@ Example:
 - Every time the compiler goes through the code it prints the ``` mut counter``` and add 1 to it until it is great than 10.
  
  **Infinite loops**        
+- With the while loop, there is a potential danger that the loop may never stop if we make a mistake. 
+- This is known as an infinite loop and it will significantly slow down the system until the application crashes.
 - Lets use our earlier example. If we remove the code that increments the counter, the condition will always prove true because the counter will stay at 0 and never get to 10 where it’s told to stop.
 - This section of code will cause an infinite loop
 ```rust
@@ -195,8 +205,7 @@ Example:
    }
 }
 ```
- 
- **Repeating Code with loop**        
+- The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop. 
 - showing looping with examples 
 - As an example, change the src/main.rs file in your loops directory to look like this
 ```rust
@@ -223,6 +232,8 @@ fn main() {
 - We also used continue in the guessing game, which in a loop tells the program to skip over any remaining code in this iteration of the loop and go to the next iteration.
  
  **Returning Values from Loops**        
+- One of the uses of a loop is to retry an operation you know might fail, such as checking whether a thread has completed its job. 
+- You might also need to pass the result of that operation out of the loop to the rest of your code.
 - To do this, you can add the value you want returned after the break expression you use to stop the loop; 
 - that value will be returned out of the loop so you can use it, as shown here:
 ```rust
@@ -286,6 +297,7 @@ fn main() {
 ```
  
  **For Loop**        
+- A 'for' expression is a syntactic construct for looping over elements provided by an implementation of std::iter::IntoIterator.
 - If the iterator yields a value, that value is matched against the irrefutable pattern, the body of the loop is executed, and then control returns to the head of the for loop.
 - If the iterator is empty, the 'for' expression completes.
 - The safety and conciseness of for loops make them the most commonly used loop construct in Rust
@@ -315,6 +327,8 @@ fn main() {
 ```
  
  **Error Handling**        
+- Errors are inevitable in software, so Rust has a number of features to help you deal with them. When an error occurs, Rust requires you to acknowledge it and take action before your code can be compiled. 
+- By requiring this requirement, you ensure that you will discover errors before deploying your code to production and that they will be handled appropriately.
 - There are two major categories of errors in Rust:
   * recoverable and
   * unrecoverable. 
@@ -325,8 +339,10 @@ fn main() {
 - This chapter covers calling panic! first and then talks about returning Result<T, E> values. Additionally, we’ll explore considerations when deciding whether to try to recover from an error or to stop execution.
  
  **Panic**        
-Let's try calling panic! in a simple program:
-Filename: src/main.rs
+- When the panic! macro executes, your program will print a failure message, unwind and clean up the stack, and then quit.
+- We’ll commonly invoke a panic when a bug of some kind has been detected and it’s not clear how to handle the problem at the time we’re writing our program.
+- Let's try calling panic! in a simple program:
+  Filename: src/main.rs
  ```rust
  This code panics!
    fn main() {
@@ -346,6 +362,9 @@ Filename: src/main.rs
     - The first line shows our panic message and the place in our source code where the panic occurred
  
  **To panic! or Not to panic!**        
+- This covers how do you decide when you should call panic! and when you should return Result? When code panics, there’s no way to recover. 
+- You could call panic! for any error situation, whether there’s a possible way to recover or not, but then you’re making the decision that a situation is unrecoverable on behalf of the calling code. When you choose to return a Result value, you give the calling code options. The calling code could choose to attempt to recover in a way that’s appropriate for its situation, or it could decide that an Err value in this case is unrecoverable, so it can call panic! and turn your recoverable error into an unrecoverable one. 
+- Therefore, returning Result is a good default choice when you’re defining a function that might fail.
 - Option Enum
    * Option is a predefined enum in the Rust standard library. This enum has two values − Some(data) and None.
 - Syntax:
@@ -397,6 +416,8 @@ let none = plus_one(None);
 ```
  
  **Recoverable Errors with Result**        
+- Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to.
+- For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
 - Handling Potential Failure with the Result Type in Rust language is defined as having two variants,
    * Ok and 
    * Err 
@@ -448,19 +469,242 @@ fn main() {
   ```
  
  **Propagating Errors**        
-undefined 
+- When a function's implementation calls something that might fail, instead of handling the error within the function itself, you can return the error to the calling code so that it can decide what to do. 
+- This is known as propagating the error and gives more control to the calling code, where there might be more information or logic that dictates how the error should be handled than what you have available in the context of your code.
+- A Shortcut for Propagating Errors: the ? Operator
+- The code below shows an implementation of read_username_from_file that has the same functionality as in Listing 9-6, but this implementation uses the ? operator.
+- Filename: src/main.rs
+```rust
+ use std::fs::File;
+ use std::io;
+ use std::io::Read;
+ fn read_username_from_file() -> Result<String, io::Error> {
+   let mut f = File::open("hello.txt")?;
+   let mut s = String::new();
+   f.read_to_string(&mut s)?;
+  Ok(s)
+ }
+```
+- This function that returns errors to the calling code using the ? operator
+- The ? placed after a Result value is defined to work in almost the same way as the match expressions we defined to handle the Result values in Listing 9-6. If the value of the Result is an Ok, the value inside the Ok will get returned from this expression, and the program will continue. If the value is an Err, the Err will be returned from the whole function as if we had used the return keyword so the error value gets propagated to the calling code.
+- The ? operator eliminates a lot of boilerplate and makes this function’s implementation simpler.
+- The ? operator can only be used in functions whose return type is compatible with the value the ? is used on. This is because the ? operator is defined to perform an early return of a value out of the function.
+ 
  **Functions**        
-undefined 
+- Functions are prevalent in Rust code. You've already seen one of the most important functions in the language. 
+- The main function, which is the entry point of many programs. 
+- You've also seen the fn keyword, which allows you to declare new functions.
+- Rust code uses snake case as the conventional style for function and variable names, in which all letters are lowercase and underscores separate words.
+- Here's a program that contains an example function definition:
+- Filename: src/main.rs
+```rust
+fn main() {
+    println!("Hello, world!");
+   another_function();
+}
+fn another_function() {
+   println!("Another function.");
+ }
+```
+ 
  **Start with Fn**        
-undefined 
+- We define a function in Rust by entering `fn` followed by a function name and a set of parentheses. 
+- The curly brackets `{...}` tell the compiler where the function body begins and ends.
+- We can call any function we've defined by entering its name followed by a set of parentheses. Because another_function is defined in the program, it can be called from inside the main function. Note that we defined another_function after the main function in the source code; we could have defined it before as well.  
+- Rust doesn't care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
+- Let's start a new binary project named functions to explore functions further.
+- Place the another_function example in src/main.rs (see above)and run it. You should see the following output:
+```rust
+ $ cargo run
+    Compiling functions v0.1.0 (file:///projects/functions)
+     Finished dev [unoptimized + debuginfo] target(s) in 0.28s
+     Running `target/debug/functions`
+ Hello, world!
+ Another function.
+ ```
+- The lines execute in the order in which they appear in the main function. 
+- First, the “Hello, world!” message prints, and then another_function is called and its message is printed.
+ 
  **Function names**        
-undefined 
+- Often involve type names, the most common example being conversions like as_slice. 
+- If the type has a purely textual name (ignoring parameters), it is straightforward to convert between type conventions and function conventions.
+- The Rust compiler is very opinionated about what casing and style you use to name things, even giving warnings when you break its rules. You can disable those warnings if you wish. 
+- Here is a quick overview of the rules:
+  | Convention | Types that use it |
+  | ---------- | ----------------- |
+  | `snake_case` | Crates, modules, functions, methods, local variables and parameters, lifetimes. |
+  | `CamelCase` | Types (including traits and enums), type parameters in generics. |
+  | `SCREAMING_SNAKE_CASE` | Constant and static variables. |
+- This means that when you have a type name and you want to refer to it in a function name, you have to convert. So YourType will become your_type
+| Type name | Text in methods |
+| --------- | --------------- |
+| String | string |
+| Vec<T> |	vec |
+| YourType | your_type |
+
+- Types that involve notation follow the convention below. There is some overlap on these rules; apply the most specific applicable rule:
+| Type name | Text in methods |
+| --------- | --------------- |
+| &str | str |
+| &[T] | slice |
+| &mut [T] | mut_slice |
+| &[u8] | bytes |
+| &T | ref |
+ 
  **Function body**        
-undefined 
+- The block of a function is conceptually wrapped in a block that binds the argument patterns and then returns the value of the functions block.
+- The tail expression of the block, if evaluated, ends up being returned to the caller. 
+- As usual, an explicit return expression within the body of the function will short-cut that implicit return, if reached.
+- Function bodies are made up of a series of statements optionally ending in an expression.
+- So far, the functions we’ve covered haven’t included an ending expression, but you have seen an expression as part of a statement.
+- Because Rust is an expression-based language, this is an important distinction to understand. 
+- Other languages don’t have the same distinctions, so let’s look at what statements and expressions are and how their differences affect the bodies of functions.
+- Statements are instructions that perform some action and do not return a value. Expressions evaluate to a resulting value.
+ - For example, the function above behaves as if it was written as:
+  - Filename: src/main.rs
+```rust
+fn main() {
+   let y = 6;
+ }
+ ```
+- Function definitions are also statements; the entire preceding example is a statement in itself.
+- Statements do not return values. 
+- Therefore, you can’t assign a let statement to another variable, as the following code tries to do; you’ll get an error
+```rust   
+fn main() {
+   let x = (let y = 6);
+}
+```
+- When you run this program, the error you’ll get looks like this
+```rust
+$ cargo run
+  Compiling functions v0.1.0 (file:///projects/functions)
+error: expected expression, found statement (`let`)
+ --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: variable declaration using `let` is a statement
+ error[E0658]: `let` expressions in this position are experimental
+  --> src/main.rs:2:14
+  |
+2 |     let x = (let y = 6);
+  |              ^^^^^^^^^
+  |
+  = note: see issue #53667 <https://github.com/rust-lang/rust/issues/53667> for more information
+  = help: you can write `matches!(<expr>, <pattern>)` instead of `let <pattern> = <expr>`
+  warning: unnecessary parentheses around assigned value
+  --> src/main.rs:2:13
+  |
+2 |     let x = (let y = 6);
+  |             ^         ^
+  |
+  = note: `#[warn(unused_parens)]` on by default
+  help: remove these parentheses
+  |
+  2 -     let x = (let y = 6);
+  2 +     let x = let y = 6;
+  | 
+ For more information about this error, try `rustc --explain E0658`.
+warning: `functions` (bin "functions") generated 1 warning
+error: could not compile `functions` due to 2 previous errors; 1 warning emitted
+```
+- Functions without a body block are terminated with a semicolon. This form may only appear in a trait or external block.
+ 
  **Option and Result**        
-undefined 
+- Many languages use null\ nil\ undefined types to represent empty outputs, and Exceptions to handle errors. 
+- Rust skips using both, especially to prevent issues like null pointer exceptions, sensitive data leakages through exceptions and etc. 
+- Instead, Rust provides two special generic enums;Option and Result to deal with above cases.
+   * An optional value can have either Some value or no value/ None.
+   * A result can represent either success/ Ok or failure/ Err
+```rust
+  // An output can have either Some value or no value/ None.
+   enum Option<T> { // T is a generic and it can contain any type of value.
+   Some(T),
+    None,
+ }
+```
+   OR
+ 
+```rust
+// A result can represent either success/ Ok or failure/ Err.
+enum Result<T, E> { // T and E are generics. T can contain any type of value, E can be any error.
+   Ok(T),
+   Err(E),
+}
+```
+ 
  **Basic usages of Option**        
-undefined 
+- When writing a function or data type,
+  * if an argument of the function is optional,
+  * If the function is non-void and if the output it returns can be empty,
+  * If the value, of a property of the data type can be empty, We have to use their data type as an Option type
+ 
+ - For example, if the function outputs a &str value and the output can be empty, the return type of the function should set as Option<&str>.
+ ```rust
+  fn get_an_optional_value() -> Option<&str> {
+     //if the optional value is not empty
+     return Some("Some value");
+ 
+    //else
+    None
+ }
+ ```
+ 
  **List of Programming arguments**        
-undefined 
+- In programming, a value that is passed between programs, subroutines or functions
+- Arguments are independent items, or variables, that contain data or codes.
+- When an argument is used to customize a program for a user, it is typically called a "parameter."
+- We can define functions to have parameters, which are special variables that are part of a function’s signature. 
+- When a function has parameters, you can provide it with concrete values for those parameters.
+- Technically, the concrete values are called arguments, but in casual conversation, people tend to use the words parameter and argument interchangeably for either the variables in a function’s definition or the concrete values passed in when you call a function.
+- In this version of another_function we add a parameter:
+- Filename: src/main.rs
+```rust
+ fn main() {
+  another_function(5);
+}
+fn another_function(x: i32) {
+  println!("The value of x is: {x}");
+}
+```
+- Try running this program; you should get the following output:
+```rust
+  $ cargo run
+  Compiling functions v0.1.0 (file:///projects/functions)
+    Finished dev [unoptimized + debuginfo] target(s) in 1.21s
+    Running `target/debug/functions`
+   The value of x is: 5
+```
+- The declaration of `another_function` has one parameter named x.
+- The type of x is specified as i32. When we pass 5 in to another_function, the println! macro puts 5 where the pair of curly brackets containing x was in the format string.
+- In function signatures, you must declare the type of each parameter. 
+- This is a deliberate decision in Rust’s design: requiring type annotations in function definitions means the compiler almost never needs you to use them elsewhere in the code to figure out what type you mean. 
+- The compiler is also able to give more helpful error messages if it knows what types the function expects.
+- When defining multiple parameters, separate the parameter declarations with commas, like this:
+- Filename: src/main.rs
+```rust
+fn main() {
+  print_labeled_measurement(5, 'h');
+}
+ fn print_labeled_measurement(value: i32, unit_label: char) {
+  println!("The measurement is: {value}{unit_label}");
+}
+```
+- This example creates a function named print_labeled_measurement with two parameters. 
+- The first parameter is named value and is an i32. The second is named unit_label and is type char. 
+- The function then prints text containing both the value and the unit_label.
+
+- Let's try running this code. 
+- Replace the program currently in your functions project's src/main.rs file with the preceding example and run it using cargo run:
+```rust
+  $ cargo run
+  Compiling functions v0.1.0 (file:///projects/functions)
+  Finished dev [unoptimized + debuginfo] target(s) in 0.31s
+   Running `target/debug/functions`
+   The measurement is: 5h
+```
+- Because we called the function with 5 as the value for value and 'h' as the value for unit_label, the program output contains those values.
+ 
  

@@ -16,7 +16,7 @@ This video explains about the use of -
 * for loop and iteration
     
  
- Sub Topics: if_statement, Loop    
+ Sub Topics: if-statement, loop    
   **Rust Lang Tutorial 2021 - Functions**
  
  [![Rust Lang Tutorial 2021 - Functions](https://img.youtube.com/vi/hSSYwVfzaZM/0.jpg)](https://www.youtube.com/watch?v=hSSYwVfzaZM)     
@@ -29,7 +29,7 @@ This video talks about the use of -
 * Rust Function return with expression (no semi-colon)
     
  
- Sub Topics: functions, Args    
+ Sub Topics: functions, args    
   **Intro to Rust-lang (Error Handling)**
  
  [![Intro to Rust-lang (Error Handling)](https://img.youtube.com/vi/mhw-x5Q_-z0/0.jpg)](https://www.youtube.com/watch?v=mhw-x5Q_-z0)     
@@ -42,7 +42,7 @@ We also look at some of the basic methods that are commonly used in place of pat
 * Error handling using Panic!
     
  
- Sub Topics: panic_not_panic, Result_option, options    
+ Sub Topics: panic-not-panic, result-option, options    
   **Introduction to Control flow**
  
  [![Introduction to Control flow](https://img.youtube.com/vi/null/0.jpg)](https://www.youtube.com/watch?v=null)     
@@ -54,5 +54,5 @@ This article explains about the use of -
 * for loop and iteration
     
  
- Sub Topics: control_flow    
+ Sub Topics: control-flow    
  

@@ -18,7 +18,33 @@ This video explains about
  Sub Topics: memory-allocation    
   **Rust - Ownership and Borrowing**
  
- [![Rust - Ownership and Borrowing](https://img.youtube.com/vi/Tw5Xr68GUSk, https://www.youtube.com/watch/0.jpg)](https://www.youtube.com/watch?v=Tw5Xr68GUSk, https://www.youtube.com/watch)     
+ [![Rust - Ownership and Borrowing](https://img.youtube.com/vi/Tw5Xr68GUSk/0.jpg)](https://www.youtube.com/watch?v=Tw5Xr68GUSk)     
+ 
+ Ownership and scope in Rust, writing memory safe code using borrowing.
+This video explains about
+* Ownership and Scope
+* Writing code using borrowing
+* Immutable and mutable references
+* Rules for borrowing
+    
+ 
+ Sub Topics: variable-scope, borrowing    
+  **Rust - Ownership and Borrowing**
+ 
+ [![Rust - Ownership and Borrowing](https://img.youtube.com/vi/k_WmestbBYw/0.jpg)](https://www.youtube.com/watch?v=k_WmestbBYw)     
+ 
+ Ownership and scope in Rust, writing memory safe code using borrowing.
+This video explains about
+* Ownership and Scope
+* Writing code using borrowing
+* Immutable and mutable references
+* Rules for borrowing
+    
+ 
+ Sub Topics: variable-scope, borrowing    
+  **Rust - Ownership and Borrowing**
+ 
+ [![Rust - Ownership and Borrowing](https://img.youtube.com/vi/6eCV-Q-kjX4/0.jpg)](https://www.youtube.com/watch?v=6eCV-Q-kjX4)     
  
  Ownership and scope in Rust, writing memory safe code using borrowing.
 This video explains about

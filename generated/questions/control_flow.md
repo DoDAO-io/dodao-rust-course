@@ -20,7 +20,7 @@ Hint: Error handling
          
 Explanation: it returns a Return to whoever is calling the function to handle it.
 
-Sub Topics: Error_handling
+Sub Topics: error-handling
  
 
 ---
@@ -37,7 +37,7 @@ Hint: Error handling
          
 Explanation: prints an error message to the screen then unwinds
 
-Sub Topics: Error_handling
+Sub Topics: error-handling
  
 
 ---
@@ -54,24 +54,7 @@ Hint: Error handling
          
 Explanation: type of errors
 
-Sub Topics: Error_handling
- 
-
----
-
-##### Errors cannot be handled with
-  
-
-- [x]  println()
-- [ ]  Panic!
-- [ ]  enum Result <T,E>
-- [ ]  Propagating
-  
-Hint: its an output keyword
-         
-Explanation: println is to print out
-
-Sub Topics: Error_handling
+Sub Topics: error-handling
  
 
 ---
@@ -88,7 +71,7 @@ Hint: if statement
          
 Explanation: A statement that gets checked
 
-Sub Topics: control_flow
+Sub Topics: control-flow
  
 
 ---
@@ -105,7 +88,7 @@ Hint: A data type
          
 Explanation: The condition must be 0 or 1
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
@@ -113,14 +96,14 @@ Sub Topics: if_statement
 ##### What is the output?
 ```rust
     fn main() {
-       let number = 8;
+      let number = 8;
 
-       if number < 9 {
-          println!("condition was true");
-        } else {
-         println!("condition was false");
-         }
-        }
+      if number < 9 {
+        println!("condition was true");
+      } else {
+        println!("condition was false");
+      }
+    }
   ```
   
 
@@ -133,20 +116,20 @@ Hint: If else
          
 Explanation: The condition of 8 being lesser than 9 is correct
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
 
 ##### What will be the output if we run this code section?
 ```rust
-fn main() {
-  let number = 3;
+  fn main() {
+    let number = 3;
 
-  if number {
-     println!("number was three");
- }
-}
+    if number {
+      println!("number was three");
+    }
+  }
 ```
   
 
@@ -159,19 +142,19 @@ Hint: Data type
          
 Explanation: should be a condition
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
 
 ##### What is the output?
 ```rust
-fn main() {
-   let digit = 34;
+  fn main() {
+    let digit = 34;
     if digit != 0 {
-   println!("number was something other than zero");
- }
-}
+      println!("number was something other than zero");
+    }
+  }
 ```
   
 
@@ -182,9 +165,9 @@ fn main() {
   
 Hint: Take note of the !=
          
-Explanation: != is like an exception statement
+Explanation: != is not equal to, so if the digit is not equal to zero, do the next statement
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
@@ -201,7 +184,7 @@ Hint: iteration
          
 Explanation: more than one execution
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -219,18 +202,18 @@ Hint: Looping out
          
 Explanation: loop are forever
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
 
 ##### What will happen if we run this code?
 ```rust
-fn main() {
-   loop {
-    println!("again!");
- }
- } 
+  fn main() {
+    loop {
+      println!("again!");
+    }
+  } 
 ```
   
 
@@ -243,7 +226,7 @@ Hint: Looping
          
 Explanation: it just loop forever
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -257,12 +240,12 @@ Sub Topics: Loop
       counter += 1;
 
       if counter == 10 {
-       break counter * 3;
-    }
-  };
+        break counter * 3;
+      }
+    };
 
     println!("The result is {result}");
- }
+  }
 ```
   
 
@@ -275,7 +258,7 @@ Hint:  watch the declaration of result
          
 Explanation: 
 
-Sub Topics: if_else_let_statement
+Sub Topics: if-else-let-statement
  
 
 ---
@@ -292,7 +275,7 @@ Hint: breaking loop
          
 Explanation: 
 
-Sub Topics: For_loop_statement
+Sub Topics: for-loop-statement
  
 
 ---
@@ -300,15 +283,13 @@ Sub Topics: For_loop_statement
 ##### What is the output of this?
 ```rust
   fn main() {
-  let mut number = 3;
-   while number != 0 {
-   println!("{number}!");
-
-    number -= 1;
+    let mut number = 3;
+    while number != 0 {
+      println!("{number}!");
+      number -= 1;
+    }
+    println!("LIFTOFF!!!");
   }
-
- println!("LIFTOFF!!!");
-}
 ```
   
 
@@ -321,7 +302,7 @@ Hint: Loop while number is not zero yet
          
 Explanation: we looped from 3 down 0 and broke out
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -339,7 +320,7 @@ Hint: A loop statement
          
 Explanation: 
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -354,7 +335,7 @@ Sub Topics: Loop
   
 Hint: Function
          
-Explanation: it is the functions of all fuunction
+Explanation: it is the functions of all function
 
 Sub Topics: functions
  
@@ -397,15 +378,15 @@ Sub Topics: functions
 
 ##### What is the output?
 ```rust
- fn main() {
-    println!("Hello, my name is John.");
+   fn main() {
+     println!("Hello, my name is John.");
 
-    another_function();
-  }
+     another_function();
+   }
 
- fn another_function() {
- println!("Another function.");
-}
+   fn another_function() {
+      println!("Another function.");
+   }
 ```
   
 
@@ -444,13 +425,12 @@ Sub Topics: functions
  ```
   fn main() {
     let x = 7;
-
     if x == 5 {
-     println!("x is five!");
+      println!("x is five!");
     } else if x == 6 {
-     println!("x is six!");
+      println!("x is six!");
     } else {
-     println!("x is not five or six :(");
+      println!("x is not five or six :(");
     }
   }
  ```
@@ -465,7 +445,7 @@ Hint: Nested if-else statement
          
 Explanation: Find the correct condition
 
-Sub Topics: Nested_if_else_statement
+Sub Topics: nested-if-else-statement
  
 
 ---
@@ -482,7 +462,7 @@ Hint: error handling operator
          
 Explanation: if it is not compatiable it would not work
 
-Sub Topics: Error_handling
+Sub Topics: error-handling
  
 
 ---
@@ -504,7 +484,7 @@ Hint: Panic first
          
 Explanation: it is not a print function
 
-Sub Topics: Error_handling
+Sub Topics: error-handling
  
 
 ---
@@ -563,22 +543,18 @@ Sub Topics: functions
 
 ##### What fragment of code is an expression here?
 ```rust
-fn main() {
-  let y = {
-     let x = 3;
-     x + 1
- };
+  fn main() {
+    let y = {
+      let x = 3;
+      x + 1
+    };
 
- println!("The value of y is: {y}");
-}
+    println!("The value of y is: {y}");
+  }
 ```
   
 
-- [x]  "{
-   let x = 3;
-    x + 1
-    }"
-
+- [x]  { let x = 3; = x + 1 }
 - [ ]  let x = 3
 - [ ]  println!(The value of y is: {y});
 - [ ]  fn main() 
@@ -604,7 +580,7 @@ Hint: which can be use for iteration
          
 Explanation: the odd one is use for error handling
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -621,7 +597,7 @@ Hint: Nested loops
          
 Explanation: you can break and continue with loops
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -649,13 +625,13 @@ Sub Topics: functions
        // `n` will take the values: 1, 2, ..., 100 in each iteration
         for n in 1..101 {
           if n % 15 == 0 {
-          println!("fizzbuzz");
+            println!("fizzbuzz");
           } else if n % 3 == 0 {
-          println!("fizz");
+            println!("fizz");
           } else if n % 5 == 0 {
-          println!("buzz");
+            println!("buzz");
           } else {
-          println!("{}", n);
+            println!("{}", n);
           }
        }
      }
@@ -671,21 +647,22 @@ Hint: division without reminder
          
 Explanation: from 1 to 101, if the remainder matches a condition it prints its output
 
-Sub Topics: Nested_if_else_statement
+Sub Topics: nested-if-else-statement
  
 
 ---
 
 ##### What is the output?
-  ```
-        Fn main( ) {
-         let strn = "DoDAOCourse";
-         let fixed_string = "DDC";
-         if fixed_string == strn {println!("Same");
-          } 
-        else{println!("Not Same");
- 	       }
-       }   
+  ```rust
+    fn main( ) {
+      let strn = "DoDAOCourse";
+      let fixed_string = "DDC";
+      if fixed_string == strn {
+        println!("Same");
+      } else {
+        println!("Not Same");
+ 	  }
+    }   
  ```
   
 
@@ -698,18 +675,21 @@ Hint:  Data comparision
          
 Explanation: We use if and let statement to compare the strings
 
-Sub Topics: looping_value
+Sub Topics: looping-value
  
 
 ---
 
 ##### What is the output?
 ```rust
- fn main() {  n = 7;
-   if n>10 { println!("Greater than 10");
-     }else{
-     println!("Smaller than 10");}
-     }
+  fn main() {  
+    n = 7;
+    if n>10 { 
+      println!("Greater than 10");
+    } else {
+      println!("Smaller than 10");
+    }
+  }
 ```
   
 
@@ -722,7 +702,7 @@ Hint: greater than or less than
          
 Explanation:  its simple enough
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
@@ -730,15 +710,15 @@ Sub Topics: if_statement
 ##### What is the output?
 ```rust
   fn main() {
-
-	let n = 9;
- if n>10 {	println!("Greater than 10");
-   }else if n==10 {
-   println!("Equal to 10"); 
-    }else { 
-    println!("Smaller than 10");
-       }   
-    }
+    let n = 9;
+    if n>10 {
+      println!("Greater than 10");
+    } else if n==10 {
+      println!("Equal to 10"); 
+    } else { 
+      println!("Smaller than 10");
+    }   
+  }
 ```
   
 
@@ -751,7 +731,7 @@ Hint: Find the conditions that matches
          
 Explanation: Iterate and find the mathematical solution
 
-Sub Topics: if_statement
+Sub Topics: if-statement
  
 
 ---
@@ -760,10 +740,10 @@ Sub Topics: if_statement
 ```rust
   use std::fs::File;
 
-   fn main() {
-   	let f = File::open("gfg.txt");
-   println!("{:?}",f);
-   }
+  fn main() {
+    let f = File::open("gfg.txt");
+    println!("{:?}",f);
+  }
  ```
   
 
@@ -776,26 +756,28 @@ Hint: Result error method
          
 Explanation: file gfg.txt was not there
 
-Sub Topics: Result_option
+Sub Topics: result-option
  
 
 ---
 
 ##### What is the expected output?
 ```rust
- use std::fs::File;
- fn main() {
- // file doesn't exist
- let f = File::open("gfg.txt");/
- match f {
- 	Ok(file)=> {	println!("file found {:?}",file);
- 	},
-   Err(_error)=> {
-   // replace it with whatever you want
-   // to do if file is not found
-   println!("file not found \n"); 
-     }
-   }
+  use std::fs::File;
+  fn main() {
+    // file doesn't exist
+    let f = File::open("gfg.txt");
+    match f {
+ 	  Ok(file) => {	
+        println!("file found {:?}",file);
+ 	  },
+      Err(_error) => {
+        // replace it with whatever you want
+        // to do if file is not found
+        println!("file not found \n"); 
+      }
+    }
+  }
 ```
   
 
@@ -808,31 +790,32 @@ Hint: Result error when missing an item
          
 Explanation: matches the return type of the result
 
-Sub Topics: Result_option
+Sub Topics: result-option
  
 
 ---
 
 ##### What is the output of this code?
 ```rust
-fn main(){
- let result = eligible(13);
- match result {
- 	Ok(age)=>{
-   	println!("Person eligible to vote with age={}",age);
-        },
-        Err(msg)=>{
-        println!("{}",msg);
-        }}
-         }
-       fn eligible(age:i32)->Result<i32,String> {
-        if age>=18 {
-        	return Ok(age);
-           } else {
-           return Err("Not Eligible..Wait for some years".to_string());
-   }
-   }
-   ```
+  fn main() {
+    let result = eligible(13);
+    match result {
+      Ok(age) => {
+        println!("Person eligible to vote with age={}", age);
+      }
+      Err(msg) => {
+        println!("{}", msg);
+      }
+    }
+  }
+  fn eligible(age: i32) -> Result<i32, String> {
+    if age >= 18 {
+      return Ok(age);
+    } else {
+      return Err("Not Eligible..Wait for some years".to_string());
+    }
+  }
+```
   
 
 - [x]  Not Eligible..Wait for some years
@@ -844,20 +827,21 @@ Hint: Compare the age give to the required voting age
          
 Explanation: to produce an error if a person below 18 years tries to apply for voter ID
 
-Sub Topics: Result_option
+Sub Topics: result-option
  
 
 ---
 
 ##### Describe the output(best fit) 
-     ```rust
-	fn main() {
-    let mut n = 10;
-    while n!=0 {
-    println!("{}", n);
-    n-=1;
-     }	}
- ```
+  ```rust
+    fn main() {
+      let mut n = 10;
+      while n != 0 {
+        println!("{}", n);
+        n -= 1;
+      }
+    }
+  ```
   
 
 - [ ]  Count up from 1 to 10
@@ -869,20 +853,20 @@ Hint: loop from 10 down
          
 Explanation: Counting from 10 to 1 
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
 
 ##### hat is the output?
 ```rust
- fn main() {
- 	let mut n = 1;
-   while n<=5 {
-   println!("{}", n*2);
-   n+=1;
-   }
-   }
+  fn main() {
+    let mut n = 1;
+    while n <= 5 {
+      println!("{}", n * 2);
+      n += 1;
+    }
+  }
 ```
   
 
@@ -895,7 +879,7 @@ Hint: multiply by 2, and count to 5
          
 Explanation: while n is less or requal than 5 do something
 
-Sub Topics: Loop
+Sub Topics: loop
  
 
 ---
@@ -912,18 +896,19 @@ Hint: Function parameter
          
 Explanation: very important we put args in a bracket
 
-Sub Topics: Args
+Sub Topics: args
  
 
 ---
 
 ##### What does the greet function take as argument?
 ```rust
-	 fn main() {
-  greet("kushwanthreddy"); }
-  fn greet(name: &str) {
-  println!("hello {} welcome to geeksforgeeks",name);
-  }
+    fn main() {
+      greet("kushwanthreddy");
+    }
+    fn greet(name: &str) {
+       println!("hello {} welcome to geeksforgeeks", name);
+    }
 ```
   
 
@@ -936,7 +921,7 @@ Hint: The greet function has name args
          
 Explanation: look at the parenthesis
 
-Sub Topics: Args
+Sub Topics: args
  
 
 ---
@@ -961,11 +946,11 @@ Sub Topics: functions
 ##### What are the arguments passed in the code below?
 ```rust
 	fn main() {
-   print_sum(5, 6);
-   }
+      print_sum(5, 6);
+    }
    	fn print_sum(x: i32, y: i32) {
        println!("sum is: {}", x + y);
-       }
+    }
  ```
   
 
@@ -976,9 +961,9 @@ Sub Topics: functions
   
 Hint: parenthesis
          
-Explanation: 
+Explanation: we pass args inside a bracket to call them
 
-Sub Topics: Args
+Sub Topics: args
  
 
 ---
@@ -1003,13 +988,13 @@ Sub Topics: functions
 ##### What will happen if we run this program?
 ```rust
 	fn main() {
- 	let number = 5;
-   	if number % 2 == 1 {
-      if number % 3 == 0 {
-       println!("Odd and divisible by 3");
+ 	  let number = 5;
+   	  if number % 2 == 1 {
+        if number % 3 == 0 {
+          println!("Odd and divisible by 3");
         }
-         }
-         }
+      }
+    }
  ```
   
 
@@ -1027,41 +1012,33 @@ Sub Topics: functions
 
 ---
 
-##### What is the output?
-
-```rust 
-   fn main() {
-   let number = 9;
-   if number % 2 == 1 {
-   if number % 3 == 0 {
-   	println!("Odd and divisible by 3");
-    }
-     }	}
-```
+##### We create control flow by using if,for,while statement in combination with ______ and _____
   
 
-- [x]  Odd and divisible by 3
-- [ ]  Odd and divisible by 6
-- [ ]  Error: else missing
-- [ ]  compiler error
+- [x]  relational comparison and logical operator
+- [ ]  boolean and data type
+- [ ]  functions and constructor
+- [ ]  compiler and error
   
-Hint: nested if
+Hint: creating flow requires conditions and conditions are statement and reasonings
          
 Explanation: null
 
-Sub Topics: if_statement
+Sub Topics: control-flow
  
 
 ---
 
 ##### What is the output?
 ```rust
-fn main() {
-let check_value= 200;
-if check_value < 100 {
-println!("The decision returns true !"); }
-else {
-println!("The decision returns false!"); } }
+  fn main() {
+    let check_value= 200;
+    if check_value < 100 {
+      println!("The decision returns true !"); 
+    } else {
+      println!("The decision returns false!"); 
+    } 
+  }
 ```
   
 
@@ -1074,7 +1051,7 @@ Hint: check the condition
          
 Explanation: xomparing the number we the the greater one
 
-Sub Topics: if_else_let_statement
+Sub Topics: if-else-let-statement
  
 
 ---
@@ -1082,21 +1059,22 @@ Sub Topics: if_else_let_statement
 ##### What will happen when will run this?
 ```rust
  	fn main() {
-     	  let a = [1,2,3];
-         	  a[4] }
+      let a = [1,2,3];
+      a[4] 
+    }
  ```
   
 
 - [ ]  it prints 4
 - [ ]  nothing happens
-- [ ]  Panic! error occurs at:> a[4]
-- [x]  it prints the array
+- [x]  Panic! error occurs at:> a[4]
+- [ ]  it prints the array
   
 Hint: Panic
          
 Explanation: we trying to call an index of 4 in a array of max:2 index
 
-Sub Topics: panic_not_panic
+Sub Topics: panic-not-panic
  
 
 ---
@@ -1105,13 +1083,13 @@ Sub Topics: panic_not_panic
   
 
 - [ ]  Values
-- [x]  Memory
-- [ ]  Time
+- [ ]  Memory
+- [x]  Time
 - [ ]  Money
   
-Hint: Function help reduces size
+Hint: Function can be called from different place and we don't have to code them
          
-Explanation: we can import function from anywhere and save size that way
+Explanation: code reusability is important to programmers
 
 Sub Topics: functions
  
