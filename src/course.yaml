@@ -192,15 +192,13 @@ topics:
   - title: Collections
     key: collections
     details: |
-      This chapter talks about various pre-written Data Structures that are available in rust.
+      This chapter talks about various popular pre-written Data Structures that are available in rust.
        - Vec<T>
-       - HashMap<T>
-       - HashSet<T>
-       - VecDeque<T>
-       - LinkedList<T>
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+       - String
+       - HashMap<K, V>
+    readings: collections.yaml
+    summaries: collections.yaml
+    questions: collections.yaml
     status: In Progress
     completionWeek: July 18
 
