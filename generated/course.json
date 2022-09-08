@@ -3520,7 +3520,7 @@
         {
           "uuid": "8600c9e3-5095-441d-856f-a36e9efcc278",
           "type": "SingleChoice",
-          "content": "What is the output?\n```rust\n    fn main() {\n      let number = 8;\n\n      if number < 9 {\n        println!(\"condition was true\");\n      } else {\n        println!(\"condition was false\");\n      }\n    }\n  ```\n",
+          "content": "What is the output?\n```rust\n    fn main() {\n      let number = 8;\n\n      if number < 9 {\n        println!(\"condition was true\");\n      } else {\n        println!(\"condition was false\");\n      }\n    }\n```\n",
           "hint": "If else",
           "explanation": "The condition of 8 being lesser than 9 is correct",
           "answerKeys": [
@@ -4000,7 +4000,7 @@
         {
           "uuid": "66b285ee-16ea-4dc5-9ebf-a71b2f8115b4",
           "type": "SingleChoice",
-          "content": "What is the output?\n ```\n  fn main() {\n    let x = 7;\n    if x == 5 {\n      println!(\"x is five!\");\n    } else if x == 6 {\n      println!(\"x is six!\");\n    } else {\n      println!(\"x is not five or six :(\");\n    }\n  }\n ```\n",
+          "content": "What is the output?\n ```rust\n    fn main() {\n      let x = 7;\n      if x == 5 {\n        println!(\"x is five!\");\n      } else if x == 6 {\n        println!(\"x is six!\");\n      } else {\n        println!(\"x is not five or six :(\");\n      }\n    }\n ```\n",
           "hint": "Nested if-else statement",
           "explanation": "Find the correct condition",
           "answerKeys": [

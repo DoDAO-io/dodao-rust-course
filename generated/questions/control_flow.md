@@ -104,7 +104,7 @@ Sub Topics: if-statement
         println!("condition was false");
       }
     }
-  ```
+```
   
 
 - [ ]  condition was false
@@ -422,17 +422,17 @@ Sub Topics: functions
 ---
 
 ##### What is the output?
- ```
-  fn main() {
-    let x = 7;
-    if x == 5 {
-      println!("x is five!");
-    } else if x == 6 {
-      println!("x is six!");
-    } else {
-      println!("x is not five or six :(");
+ ```rust
+    fn main() {
+      let x = 7;
+      if x == 5 {
+        println!("x is five!");
+      } else if x == 6 {
+        println!("x is six!");
+      } else {
+        println!("x is not five or six :(");
+      }
     }
-  }
  ```
   
 

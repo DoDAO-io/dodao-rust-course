@@ -137,7 +137,7 @@
             println!("condition was false");
           }
         }
-      ```
+    ```
 
   hint: "If else"
   explanation: "The condition of 8 being lesser than 9 is correct"
@@ -596,17 +596,17 @@
   type: SingleChoice
   content: |
     What is the output?
-     ```
-      fn main() {
-        let x = 7;
-        if x == 5 {
-          println!("x is five!");
-        } else if x == 6 {
-          println!("x is six!");
-        } else {
-          println!("x is not five or six :(");
+     ```rust
+        fn main() {
+          let x = 7;
+          if x == 5 {
+            println!("x is five!");
+          } else if x == 6 {
+            println!("x is six!");
+          } else {
+            println!("x is not five or six :(");
+          }
         }
-      }
      ```
   hint: "Nested if-else statement"
   explanation: "Find the correct condition"
