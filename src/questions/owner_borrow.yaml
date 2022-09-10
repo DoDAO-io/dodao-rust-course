@@ -56,7 +56,7 @@
 
 - uuid: ad736f97-44d9-4ccc-a6fe-b0fb67c0ea17
   type: SingleChoice
-  content: How manu immutable references can a variable have ?
+  content: How many immutable references can a variable have ?
   hint: NoHint
   explanation: "A variable can have any number of immutable references."
   answerKeys:
@@ -76,7 +76,7 @@
 
 - uuid: e635a225-452c-459b-ab44-c52afad1a793
   type: SingleChoice
-  content: How manu mutable references can a variable have ?
+  content: How many mutable references can a variable have ?
   hint: NoHint
   explanation: "A variable can have once 1 mutable reference, this saves it from data race condition."
   answerKeys:
@@ -239,4 +239,752 @@
     - content: "Variables on stack are fixed in size"
       key: C
     - content: "Variables on stack are copied"
+      key: D
+
+- uuid: 31de05d1-4f7c-48a5-a992-16dd3d0fe97d
+  type: SingleChoice
+  content: The action of creating a reference to a variable is called, what?
+  hint: NoHint
+  explanation: "No much explanation needed"
+  answerKeys:
+    - B
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "Reverting"
+      key: A
+    - content: "Borrowing"
+      key: B
+    - content: "Ownership"
+      key: c
+    - content: "Reference"
+      key: D
+
+- uuid: 62a1c9c1-53cb-48e3-84cd-c8124e224bd6
+  type: SingleChoice
+  content: _____ enables Rust to make memory safety guarantees without needing a garbage collector
+  hint: NoHint
+  explanation: "Memory needs to belong to somewhere"
+  answerKeys:
+    - A
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "Ownership"
+      key: A
+    - content: "Borrower"
+      key: B
+    - content: "Validator"
+      key: c
+    - content: "Static memory"
+      key: D
+
+- uuid: 1edea51c-a9f7-4ef7-a243-c96f29daff52
+  type: SingleChoice
+  content: In Rust, memory is managed through a system of ownership and rules that the compiler checks. If any of the rules are violated, what will happen to the program?
+  hint: No memory, no calculation
+  explanation: "Memory works hand to hand with the machine"
+  answerKeys:
+    - D
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "Prints the calcalution"
+      key: A
+    - content: "Ask for memory"
+      key: B
+    - content: "Memory is automatic assigned"
+      key: c
+    - content: "program will fail to compile"
+      key: D
+
+- uuid: 17324731-55d5-4026-b268-0b79031fe113
+  type: SingleChoice
+  content: Ownership rules, There can only be ____ owner/s at a time
+  hint: NoHint
+  explanation: "Ownership belongs to an entity"
+  answerKeys:
+    - c
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "0"
+      key: A
+    - content: "2"
+      key: B
+    - content: "1"
+      key: c
+    - content: "3"
+      key: D
+
+- uuid: a86625dd-2eba-4808-87c0-30cde8cf7c2d
+  type: SingleChoice
+  content: |
+    Complete the sentence
+    When the owner goes out of _____, the value will be ______.
+  hint: NoHint
+  explanation: "Owners have right and if they abandon the right it get dropped"
+  answerKeys:
+    - A
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "scope, dropped"
+      key: A
+    - content: "dropped, scope"
+      key: B
+    - content: "revert, opened"
+      key: c
+    - content: "scope, opened"
+      key: D
+
+- uuid: e539b827-cbf2-4b35-8fcc-af16c8d0c375
+  type: SingleChoice
+  content: which statement best desribe reference?
+  hint: pointer
+  explanation: "point to valid value"
+  answerKeys:
+    - B
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "a set of rules that governs how a Rust program manages memory"
+      key: A
+    - content: "a reference is guaranteed to point to a valid value of a particular type for the life of that reference."
+      key: B
+    - content: "new concept for many programmers, it does take some time to get used to"
+      key: c
+    - content: "the range within a program for which an item is valid"
+      key: D
+
+- uuid: 3661c275-8559-40e4-b5dd-ac138e3c5be9
+  type: SingleChoice
+  content: The action of creating a reference to a variable is called ____
+  hint: NoHint
+  explanation: "creation of reference is pointer to a variable"
+  answerKeys:
+    - D
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "Referencing"
+      key: A
+    - content: "Ownership"
+      key: B
+    - content: "Heaping"
+      key: c
+    - content: "Borrowing"
+      key: D
+
+- uuid: 434bc0ff-02a9-4287-a469-e74c3b673f70
+  type: SingleChoice
+  content: What is a Scope?
+  hint:
+  explanation: ""
+  answerKeys:
+    - A
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "the range within a program for which an item is valid"
+      key: A
+    - content: "the range within a program for which an item is invalid"
+      key: B
+    - content: "the range within a program"
+      key: c
+    - content: "None of the above"
+      key: D
+
+- uuid: 896206c4-09f5-4c46-8cfd-6f5597df0c02
+  type: SingleChoice
+  content: When your code calls a function, the values passed into the function are pushed into
+  hint: not a first in first out
+  explanation: "function are pushed in and dont have to leave first"
+  answerKeys:
+    - B
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Stack"
+      key: A
+    - content: "Heap"
+      key: B
+    - content: "Memory"
+      key: c
+    - content: "calldata"
+      key: D
+
+- uuid: 762de2f4-3e2f-42a3-ba93-770ab7a833dc
+  type: SingleChoice
+  content: The function's local variables get pushed onto
+  hint: FIFO
+  explanation: "pushed accordingly"
+  answerKeys:
+    - D
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Heap"
+      key: A
+    - content: "Calldata"
+      key: B
+    - content: "Function"
+      key: c
+    - content: "Stack"
+      key: D
+
+- uuid: aa969d59-a963-442d-b13b-d83ee2f65f28
+  type: SingleChoice
+  content: When the function is over, those values get_______ the stack.
+  hint: correct term for memory allocation
+  explanation: "The right term is pop out"
+  answerKeys:
+    - B
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "pushed in"
+      key: A
+    - content: "popped out"
+      key: B
+    - content: "popped off"
+      key: c
+    - content: "pushed out"
+      key: D
+
+- uuid: 2fe49404-ebe4-4183-a243-510840dbfdcc
+  type: SingleChoice
+  content: A problem that ownership addresses have is .
+  hint: heap
+  explanation: "Not cleaning up the heap data"
+  answerKeys:
+    - A
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "You can run out of space"
+      key: A
+    - content: "You code get erased"
+      key: B
+    - content: "You get hacked"
+      key: c
+    - content: "Ownership can be change by outsider"
+      key: D
+
+- uuid: 9972494a-e831-4aa0-a4f7-b622712091e6
+  type: SingleChoice
+  content: The main purpose of ownership is to manage ___ data
+  hint: memory
+  explanation: "heaping data means its not organized and ownership is one way to know what data is which"
+  answerKeys:
+    - B
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Method"
+      key: A
+    - content: "Heap"
+      key: B
+    - content: "Stack"
+      key: c
+    - content: "Variable"
+      key: D
+
+- uuid: d76e6b94-aecc-4b31-949b-2c0f108b3080
+  type: SingleChoice
+  content: |
+    What line mark the end of the scope of s?
+    ```rust
+        fn main() {
+         {                      // line 1
+          let s = "hello";   // line 2
+          // do stuff with s // line 3
+          }                      // line 4
+        }
+    ```
+  hint: No longer in use
+  explanation: "The program is done and no longer needs s"
+  answerKeys:
+    - D
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Line 1"
+      key: A
+    - content: "line 2"
+      key: B
+    - content: "line 3"
+      key: c
+    - content: "line 4"
+      key: D
+
+- uuid: 4531ae97-640b-4f5c-9c59-4d00633a3f9c
+  type: SingleChoice
+  content: What is the special annotation in Rust that we can place on types that are stored on the stack, as integers
+  hint: Stack-Only Data
+  explanation: "variables that use it do not move, but rather are trivially copied,"
+  answerKeys:
+    - B
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Clone"
+      key: A
+    - content: "Copy trait"
+      key: B
+    - content: "Boolean type"
+      key: c
+    - content: "Validators"
+      key: D
+
+- uuid: 5d433566-2c51-42c5-b657-146233caab85
+  type: SingleChoice
+  content: |
+    what is the output?
+    ```rust
+         fn main() {
+           let s1 = String::from("hello");
+           let len = calculate_length(&s1);
+           println!("The length of '{}' is {}.", s1, len);
+          }
+         fn calculate_length(s: &String) -> usize {
+           s.len()
+          }
+     ```
+  hint: length of string
+  explanation: "calculate_length function have a reference to an object as a parameter instead of taking ownership of the value"
+  answerKeys:
+    - B
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "The length of 'hello' is 6"
+      key: A
+    - content: "The length of 'hello' is 5"
+      key: B
+    - content: "The length of 'string' is 6"
+      key: c
+    - content: "None of the above"
+      key: D
+
+- uuid: 7734c792-0965-4178-8ae7-10b738ee188f
+  type: SingleChoice
+  content: The opposite of referencing?
+  hint: uses of *
+  explanation: "It does the opposite of referencing"
+  answerKeys:
+    - D
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "Borrowing"
+      key: A
+    - content: "Ownership"
+      key: B
+    - content: "non-referencing"
+      key: c
+    - content: "dereferencing"
+      key: D
+
+- uuid: e3e934bf-a32f-44da-a226-85c31729ee84
+  type: SingleChoice
+  content: |
+    The result of the program below is
+    ```rust
+        fn main() {
+         let s = String::from("hello");
+         change(&s);
+        }
+        fn change(some_string: &String) {
+           some_string.push_str(", world");
+        }
+    ```
+  hint: tried to borrow
+  explanation: "some_string` has a `&` reference"
+  answerKeys:
+    - A
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "Error: cannot borrow"
+      key: A
+    - content: "hello world"
+      key: B
+    - content: "Ownership denied"
+      key: c
+    - content: "Borrowed data is too big"
+      key: D
+
+- uuid: ec602e41-7fbd-444f-952f-87ca3cfa1825
+  type: SingleChoice
+  content: The reason for invalidating the original reference after moving the value is to prevent ____
+  hint: Nohint
+  explanation: "self explanatory"
+  answerKeys:
+    - B
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: " double error."
+      key: A
+    - content: " double free error."
+      key: B
+    - content: " free error."
+      key: c
+    - content: " moving error."
+      key: D
+
+- uuid: 90d823a2-3784-4ea0-902f-d4553b20bc41
+  type: SingleChoice
+  content: How many strict rules does ownership follow and what happen when they are violated?
+  hint: violation of these rules confuse the compiler
+  explanation: "fail to follow the rules, compiler fails simple"
+  answerKeys:
+    - D
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "There are 2 rules and it ignore them"
+      key: A
+    - content: "There are 3 rules and it ignore them"
+      key: B
+    - content: "There are 2 rules, compiler fails when they are violated"
+      key: c
+    - content: "There are 3 rules, compiler fails when they are violated"
+      key: D
+
+- uuid: e277ba2e-a7e5-440c-a5c9-8486d5122235
+  type: SingleChoice
+  content: At any given time, you can have either _____ reference or ______ references.
+  hint: mutable reference
+  explanation: ""
+  answerKeys:
+    - B
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "two mutable, any number of immutable"
+      key: A
+    - content: "one mutable, any number of immutable "
+      key: B
+    - content: "any number of mutable, one immutable"
+      key: c
+    - content: "one immutable, any amount of mutable"
+      key: D
+
+- uuid: 50af9486-3b6b-4ea4-8c62-71316ea58a57
+  type: SingleChoice
+  content: What is a dangling pointer?
+  hint: dangling reference
+  explanation: "No explanation"
+  answerKeys:
+    - A
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "a pointer that references a location in memory that may have been given to someone else"
+      key: A
+    - content: " a pointer in that it’s an address we can follow to access the data stored at that address"
+      key: B
+    - content: "Both definitions are correct"
+      key: c
+    - content: "None of the above"
+      key: D
+
+- uuid: 9003ccce-600e-410f-818c-40d4f86693f5
+  type: SingleChoice
+  content: The ownership system is a prime example of a _____
+  hint: Rust has a focus on safety and speed.
+  explanation: "abstractions cost as little as possible in order to make them work"
+  answerKeys:
+    - D
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "discounted-cost abstraction"
+      key: A
+    - content: "paid-cost abstraction"
+      key: B
+    - content: "cheap-cost abstraction"
+      key: c
+    - content: "zero-cost abstraction"
+      key: D
+
+- uuid: 89d85806-f2dd-40ee-b2dd-04be4511f666
+  type: SingleChoice
+  content: A stack follows a __________ order
+  hint: Nohint
+  explanation: "like a can of pringles"
+  answerKeys:
+    - B
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "first in first out"
+      key: A
+    - content: "last in first out"
+      key: B
+    - content: "last in last out"
+      key: c
+    - content: "first in last out"
+      key: D
+
+- uuid: 63146d8e-47fa-4bd9-a597-be5a709e5390
+  type: SingleChoice
+  content: |
+    The exact size of such a string cannot be determined at compile time
+    This implies what?
+  hint: Nohint
+  explanation: "string are not scalar"
+  answerKeys:
+    - A
+  subTopics:
+    - memory-allocation
+  difficultyLevel: low
+  choices:
+    - content: "Heap allocation are best fit for string"
+      key: A
+    - content: "Stack allocation works best"
+      key: B
+    - content: "we wait for compiler to decide"
+      key: c
+    - content: "we can store on both"
+      key: D
+
+- uuid: 13d28afb-df44-48b8-92a8-f18f9fb4c339
+  type: SingleChoice
+  content: which is not a way to transfer ownership?
+  hint: Nohint
+  explanation: "Each data can have only one owner at a time."
+  answerKeys:
+    - D
+  subTopics:
+    - ownership
+  difficultyLevel: low
+  choices:
+    - content: "Passing value to a function."
+      key: A
+    - content: "Returning value from a function."
+      key: B
+    - content: "Assigning value of one variable to another variable"
+      key: c
+    - content: " calling the owner's Id and claiming it"
+      key: D
+
+- uuid: 30d49afb-80bf-46af-b8df-6235a3e3b497
+  type: SingleChoice
+  content: |
+    What is the output?
+    ```rust
+        fn main(){
+        // a list of nos
+        let v = vec![10,20,30];
+        print_vector(&v); 
+        println!("Printing the value from main() v[0]={}",v[0]);
+        }
+        fn print_vector(x:&Vec<i32>){
+         println!("Inside print_vector function {:?}",x);
+        }
+    ```
+  hint: passing reference
+  explanation: "No explantion, follow the code"
+  answerKeys:
+    - B
+  subTopics:
+    - borrowing
+  difficultyLevel: low
+  choices:
+    - content: "Inside print_vector function [20, 30]
+        Printing the value from main() v[0] = 10 "
+      key: A
+    - content: "Inside print_vector function [10, 20, 30]
+        Printing the value from main() v[0] = 10"
+      key: B
+    - content: "The compilations fails"
+      key: c
+    - content: "Error occurs at line 3"
+      key: D
+
+- uuid: a27262ee-2c3d-4f30-a8f6-c02433a85073
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: 64c7c3db-6cfb-4e43-ad66-70ad1ea5a423
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: a74bdf3f-0591-4635-bc21-fa45842feedf
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: 7f8afe28-9836-4b25-a11b-ad614065f0ba
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: 3a288b4c-f4e1-4ceb-a397-59fb6ff8e09c
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: 6aec742c-ec38-4c6d-bf00-df9edba36e7f
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: e9c849c6-3807-4fdc-9c45-e6add01c666a
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
+      key: D
+
+- uuid: e6b050d1-22fe-4375-bdcb-91a90f6c2385
+  type: SingleChoice
+  content:
+  hint:
+  explanation: ""
+  answerKeys:
+    -
+  subTopics:
+    -
+  difficultyLevel: low
+  choices:
+    - content: ""
+      key: A
+    - content: ""
+      key: B
+    - content: ""
+      key: c
+    - content: ""
       key: D
