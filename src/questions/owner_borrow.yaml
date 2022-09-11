@@ -831,160 +831,160 @@
 
 - uuid: a27262ee-2c3d-4f30-a8f6-c02433a85073
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: Functions can also modify borrowed variables using ____ to them, before returning ownership.
+  hint: Nohint
+  explanation: "following the borrowing and referencing structure"
   answerKeys:
-    -
+    - A
   subTopics:
-    -
+    - borrowing
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "mutable references "
       key: A
-    - content: ""
+    - content: "immutable references "
       key: B
-    - content: ""
+    - content: "* operand"
       key: c
-    - content: ""
+    - content: "None of the above"
       key: D
 
 - uuid: 64c7c3db-6cfb-4e43-ad66-70ad1ea5a423
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: ___ is the property of a program where memory pointers always used to point to valid memory of the correct type and size.
+  hint: nohint
+  explanation: "It is important you understand the concept of ownership or you might create an unsafe memory"
   answerKeys:
-    -
+    - D
   subTopics:
-    -
+    - memory-allocation
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "Ownership safety"
       key: A
-    - content: ""
+    - content: "memory validation"
       key: B
-    - content: ""
+    - content: "Ownership validation"
       key: c
-    - content: ""
+    - content: "Memory safety"
       key: D
 
 - uuid: a74bdf3f-0591-4635-bc21-fa45842feedf
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: An unsafe memory may lead to a crash, unexpected output and _____
+  hint: reduce security
+  explanation: "it lead to leakage of values because it points to invalid address"
   answerKeys:
-    -
+    - B
   subTopics:
-    -
+    - memory-allocation
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "compiler shutdown"
       key: A
-    - content: ""
+    - content: "Data leakage"
       key: B
-    - content: ""
+    - content: "Memory crashes"
       key: c
-    - content: ""
+    - content: "Nonr of the above"
       key: D
 
 - uuid: 7f8afe28-9836-4b25-a11b-ad614065f0ba
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: A mutable reference is prefixed with
+  hint: mut and an operand
+  explanation: "none"
   answerKeys:
-    -
+    - A
   subTopics:
-    -
+    - borrowing
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "&mut"
       key: A
-    - content: ""
+    - content: "*mut"
       key: B
-    - content: ""
+    - content: "+mut"
       key: c
-    - content: ""
+    - content: "&%mut"
       key: D
 
 - uuid: 3a288b4c-f4e1-4ceb-a397-59fb6ff8e09c
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: Rust is a ____ programming language, so how values are stored is essential to how the language behaves.
+  hint: Nohint
+  explanation: "it is not an object oriented language"
   answerKeys:
-    -
+    - D
   subTopics:
-    -
+    - memory-allocation
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "Object"
       key: A
-    - content: ""
+    - content: "Model"
       key: B
-    - content: ""
+    - content: "Static"
       key: c
-    - content: ""
+    - content: "system"
       key: D
 
 - uuid: 6aec742c-ec38-4c6d-bf00-df9edba36e7f
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: Rust uses a -_____ to enforce its ownership rules and ensure that programs are memory safe.
+  hint: A checker
+  explanation: "RUst needs an enforcer to verify all rules are followed"
   answerKeys:
-    -
+    - B
   subTopics:
-    -
+    - ownership
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "data checker"
       key: A
-    - content: ""
+    - content: "borrow checker"
       key: B
-    - content: ""
+    - content: "Check warner"
       key: c
-    - content: ""
+    - content: "Compiler"
       key: D
 
 - uuid: e9c849c6-3807-4fdc-9c45-e6add01c666a
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: If a reference is invalid the data can be dropped using a construct called _____.
+  hint: how long a variable exists
+  explanation: "start on variable creation and end on variable destruction"
   answerKeys:
-    -
+    - A
   subTopics:
-    -
+    - borrowing
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "lifetimes"
       key: A
-    - content: ""
+    - content: "runtimes"
       key: B
-    - content: ""
+    - content: "borrow checker"
       key: c
-    - content: ""
+    - content: "FIFO"
       key: D
 
 - uuid: e6b050d1-22fe-4375-bdcb-91a90f6c2385
   type: SingleChoice
-  content:
-  hint:
-  explanation: ""
+  content: What kind of error does violating an ownership rules gives
+  hint: it confuses the compiler
+  explanation: "No explanation"
   answerKeys:
-    -
+    - D
   subTopics:
-    -
+    - ownership
   difficultyLevel: low
   choices:
-    - content: ""
+    - content: "Compiler error"
       key: A
-    - content: ""
+    - content: "Runtime error"
       key: B
-    - content: ""
+    - content: "Lifetimes error"
       key: c
-    - content: ""
+    - content: "Panic error"
       key: D
