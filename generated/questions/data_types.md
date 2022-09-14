@@ -257,7 +257,7 @@ Sub Topics: variables
 
 - [ ]  Arrays & Tuples
 - [ ]  List all the data types
-- [x]  ?Sized
+- [x]  Sized
 - [ ]  Dynamic-Sized variables not supported in rust
   
 Hint: No hint
@@ -615,7 +615,7 @@ Sub Topics: strings, value-types
 - [x]  True
 - [ ]  False
   
-Hint: hint
+Hint: noHint
          
 Explanation: explanation
 
@@ -716,7 +716,7 @@ Sub Topics: variables, keywords
 - [ ]  union, dyn, try, abstract
 - [x]  become, box, do, incur
   
-Hint: hint
+Hint: noHint
          
 Explanation: explanation
 
@@ -732,7 +732,7 @@ Sub Topics: keywords
 - [ ]  Underscore, digits
 - [ ]  All of the above
   
-Hint: hint
+Hint: noHint
          
 Explanation: explanation
 
@@ -749,7 +749,7 @@ Sub Topics: variables
 - [ ]  An unsigned number
 - [ ]  None of the above
   
-Hint: hint
+Hint: noHint
          
 Explanation: explanation
 
@@ -763,7 +763,7 @@ Sub Topics: value-types
 - [x]  True
 - [ ]  False
   
-Hint: NoHint
+Hint: noHint
          
 Explanation: No explanation
 

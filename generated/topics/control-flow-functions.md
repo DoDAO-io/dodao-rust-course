@@ -31,8 +31,8 @@ This chapter talks in-depth about the conditional statements, for and while loop
 
 
 ## Links
-[Reading List](./../../generated/readings/data_types.md)
+[Reading List](./../../generated/readings/control_flow.md)
 
-[Summary](./../../generated/summaries/data_types.md)
+[Summary](./../../generated/summaries/control_flow.md)
 
-[Questions](./../../generated/questions/data_types.md)
+[Questions](./../../generated/questions/control_flow.md)
