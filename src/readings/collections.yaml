@@ -4,8 +4,8 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=tTUFl8c_Z0w
   subTopics:
-    - Vector
-    - Strings
+    - collection_vector
+    - collection_strings
   details: |
     Introduction to popular collection types in Rust
     * Vec<T>
@@ -20,7 +20,7 @@
   type: YoutubeVideo
   url: https://www.youtube.com/watch?v=yAw3cpqIXtg
   subTopics:
-    - Vector
-    - HashMap
+    - collection_vector
+    - collection_hashmap
   details: |
     Demo of code written using Collection Data Structures in Rust

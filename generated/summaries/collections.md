@@ -1,0 +1,237 @@
+## Header
+This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
+
+ ---
+ 
+ ## Collections
+ 
+ **Introduction**        
+- Collections can contain multiple values
+- Collections are stored on Heap and are dynamically sized, their size is not required to be known at compile time
+- Rust collections can be grouped into 4 major categories:
+  * Sequences - Vec, VecDeque, LinkedList
+  * Maps - HashMap, BTreeMap
+  * sets: HashSet, BTreeSet
+  * Misc: BinaryHeap
+- 3 of most common collections are:
+  * Vector
+  * String
+  * HashMap
+ 
+ **Vector**        
+- Vector has multiple items of same time stored next to each other in memory.
+- Creating a vector
+  * creating an empty vector
+    ```
+    let v: Vec<i32> = Vec::new();
+    ```
+  * creating vector using vec! macro
+    ```
+    let v = vec![1, 2, 3];
+    ```
+- Adding a value of a vector
+  * Value can be added to vector using method `push`
+    ```
+    let mut v = Vec::new();
+
+    v.push(10);
+    v.push(20);
+    v.push(30);
+    ```
+- Reading elements of a vector
+  * There are 2 ways to read elements in vector - indexing, using get method
+  * Indexing
+    ```
+    let v = Vec![1,2,3,4,5];
+    let third = &v[2];
+
+    println!(“The third element is {}”, third);
+
+    ```
+  * Using get method
+    ```
+    let v = Vec![1,2,3,4,5];
+    let third = v.get(2);
+
+    println!(“The third element is {}”, third);
+    ```
+  * If user access a value outside the vector, if using indexing it will panic, if `get` method it will return None.
+  * According to borrow checker rule, if there is a reference created to an element in the vector, vector can not be modified.
+- Iterating over vector
+  * For loop can be used to iterate over vector
+    ```
+    let v = Vec![1,2,3,4,5];
+    for i in &v {
+        println!(“{}”, i);
+    }
+    ```
+  * To mutate a vector while iterating
+    ```
+    let mut v = Vec![1,2,3,4,5];
+    for i in &mut v {
+        *i += 50;
+        println!(“{}”, i);
+    }
+    ```
+- Useful method in vector
+  * len `vec.len()`: gives length of the vector
+  * capacity `vec.capacity()`: gives total capacity of the vector in bytes
+  * contains `vec.contains(v)`: check if a vector contains the element
+  * remove `vec.remove(index)`: remove an element from specified index in the vector
+  * pop `vec.pop()`: remove an element from end of the vector
+  * push `vec.push(v)`: adds an element to the end of the vector
+ 
+ **Strings**        
+- Strings are collection of bytes that support UTF-8 encoded text.
+- Thus different characters of most languages can be represented in Rust.
+- Creating a string:
+  * Empty string can be created as
+    ```
+    let mut s = String::new();
+    ```
+  * Creating a string with initial value
+    ```
+    let s = “initial_value”.to_string();
+    or
+    let s = String::from(“initial_value”);
+    ```
+- Updating a string:
+  * Text can be appended to string using `push_str` and `push` methods.
+    * `push_str` ethod can be used to append a string to another.
+    * Signature of `push_str` is `pub fn push_str(&mut self, string: &str)`
+    * `push_str` does not take ownership of the string passed.
+      ```
+      let mut s = String::from(“Hello, ”);
+      s.push_str(“world”);
+      ```
+    * `push` method can be used to append single character to string:
+      ```
+      let mut s = String::from(“Ca”);
+      s.push(“t”);
+      ```
+  * Strings can be concatenated using + macro
+    ```
+    let s1 = “Hello, “;
+    let s2 = “world!“;
+
+    let s3 = s1 + &s2;
+    ```
+    * + macro uses a method whose signature is `fn add(self, s: &str) -> string`
+    * in above example string s1 is moved and is not accessible after concatenation while reference to string &s2 is appended to it.
+  * For a more complicated string combining format! macro can be used:
+    ```
+    let s1 = “tic”;
+    let s1 = “tac”;
+    let s1 = “toe”;
+
+    let s = format!(“{}-{}-{}”, s1, s2, s3);
+    ```
+- Rust does not allow indexing strings. This limitation comes from the way strings are implemented in rust. Strings are internally array of bytes.
+- Iterating over string:
+  * A string can be tokenized on while space or any character token:
+    ```
+    for s in str.split_whitespace {
+        println!(“{}”, found);
+    }
+
+    for s in str.split(‘,’) {
+        println!(“{}”, found);
+    }
+    ```
+  * It is also possible to iterate over characters or bytes of string:
+    ```
+    for c in “Зд”.chars() {
+        println!(c);
+    }
+    // above will print
+    // 3
+    // д
+    ```
+
+    ```
+    for c in “Зд”.bytes() {
+        println!(c);
+    }
+
+    // Will print:
+    // 208
+    // 151
+    // 208
+    // 180
+    ```
+- Other useful string methods include:
+  * len `str.len()`: gives length of the string
+  * capacity `str.capacity()`: gives total capacity of the string in bytes
+  * contains `str.contains(v)`: find a substring in the parent string
+  * replace `str.replace("replace_str1", "replace_str2")`: replace a substring in the parent string
+  * trim `str.trim()`: trim a string
+ 
+ **HashMap**        
+- The type HashMap<K, V> stores a mapping of keys of type K to values of type V
+- Mapping from key K to value V is done using hashing that determines how these values are placed in memory.
+- Keys in hashMap can be of any type but all the kes should be of same type, similarly all the values should also be of same type.
+- Creating a HashMap:
+  * HashMap needs to be explicitly included in the scope.
+  * Also, there is no support of macro for creating HashMap.
+  * HashMap can be created as follows:
+    ```
+    use std::collections::HashMap;
+
+    let mut scores = HashMap::New();
+
+    scores.insert(String::from(“Blue”), 10);
+    scores.insert(String::from(“Yellow”), 20);
+    ```
+- Accessing values in HashMap
+  * values in HashMap can be accessed using `get` function:
+    ```
+    use std::collections::HashMap;
+
+    let mut scores = HashMap::New();
+
+    scores.insert(String::from(“Blue”), 10);
+    scores.insert(String::from(“Yellow”), 20);
+
+    let team_name = String::from(“Blue”);
+    const score = scores.get(team_name);
+    ```
+  * It is also possible to iterate over values of a HashMap:
+    ```
+    use std::collections::HashMap;
+
+    let mut scores = HashMap::New();
+
+    scores.insert(String::from(“Blue”), 10);
+    scores.insert(String::from(“Yellow”), 20);
+
+      for (key, value) in & scores {
+          println!(“{}, {}”, key, value);
+      }
+    ```
+  * Updating a HashMap
+    - A value in HashMap can be overridden by inserting the kay again.
+      ```
+      use std::collections::HashMap;
+
+      let mut scores = HashMap::New();
+
+      scores.insert(String::from(“Blue”), 10);
+      scores.insert(String::from(“Blue”), 20);
+
+      println!(“{:?}”, scores); // this will print {“Blue”: 20}
+      ```
+    - Function `or_insert` can be used to add a key if it is not already present:
+      ```
+      use std::collections::HashMap;
+
+      let mut scores = HashMap::New();
+      scores.insert(String::from(“Blue”), 10);
+
+
+      scores.entry(String::from(“Yello”)).or_insert(20);
+      scores.entry(String::from(“Blue”)).or_insert(50);
+
+      println!(“{:?}”, scores); // this will print {“Yellow”: 20, “Blue”: 10}
+      ```
+ 
+ 
