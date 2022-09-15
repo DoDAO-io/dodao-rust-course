@@ -1,36 +1,272 @@
-- uuid: 01d4c798-5729-423b-9a11-566c29838d77
+- uuid: 1469d4ec-d02a-4a3c-83a6-cbe9f2fb7fe7
+  type: SingleChoice
+  content: |
+    Where in the mempry are colections stored
+  hint: NoHint
+  explanation: "Collections are dynamically sized ans tored on heap."
+  answerKeys:
+    - C
+  topic: collections
+  subTopics:
+    - collection_introduction
+  difficultyLevel: Low
+  choices:
+    - content: "Stack"
+      key: A
+      order: 0
+    - content: "Program Area"
+      key: B
+      order: 1
+    - content: "Heap"
+      key: C
+      order: 2
+
+- uuid: 671ebf9a-bafe-4b27-a98f-acd14f0b1dc1
   type: SingleChoice
   content: |
     What is the output of the following code snippet:
      
         ``` 
-            fn main() {
-              let x = 12;
-              println!("The value of x is: {x}");
-              x = 8;
-              println!("The value of x is: {x}");
-            } 
-        ```
+            let v = Vec![1,2,3,4,5];
+            let third = &v[10];
 
+            println!(“The third element is {}”, third);
+        ```
   hint: NoHint
-  explanation: "Error would occur, because the variable x isn't set as mutable so it's value can't be changed."
+  explanation: "Trying to index vector outside it boundries result in panic."
   answerKeys:
     - D
-  topic: 01_data_types
+  topic: collections
   subTopics:
-    - variables
+    - collection_vector
   difficultyLevel: Low
   choices:
-    - content: "The value of x is: 8"
-
+    - content: "It prints None"
       key: A
       order: 0
-    - content: "Error: the variable x is mutable"
+    - content: "It does not print anything"
       key: B
       order: 1
-    - content: "The value of x is: 12"
+    - content: "It prints 5"
       key: C
       order: 2
-    - content: "Error: the variable x is immutable"
+    - content: "It will resume in panic"
+      key: D
+      order: 3
+
+- uuid: 87b313aa-61ae-4f6f-b251-95028a5eea9d
+  type: SingleChoice
+  content: |
+    What is the output of the following code snippet:
+     
+        ``` 
+            let v = Vec![1,2,3,4,5];
+            let third = v.get(2);
+
+            println!(“The third element is {}”, third);
+        ```
+  hint: NoHint
+  explanation: "Trying to index vector outside it boundries result in panic."
+  answerKeys:
+    - A
+  topic: collections
+  subTopics:
+    - collection_vector
+  difficultyLevel: Low
+  choices:
+    - content: "It prints None"
+      key: A
+      order: 0
+    - content: "It does not print anything"
+      key: B
+      order: 1
+    - content: "It prints 5"
+      key: C
+      order: 2
+    - content: "It will resume in panic"
+      key: D
+      order: 3
+
+- uuid: 776ca2cf-bfe1-4fbf-83a2-65432535d6e9
+  type: SingleChoice
+  content: |
+    Strings in Rust support which encoding:
+  hint: NoHint
+  explanation: "Strings in Rust support UTF-8 encoding."
+  answerKeys:
+    - A
+  topic: collections
+  subTopics:
+    - collection_strings
+  difficultyLevel: Low
+  choices:
+    - content: "UTF-8"
+      key: A
+      order: 0
+    - content: "Unicode"
+      key: B
+      order: 1
+    - content: "ASCII"
+      key: C
+      order: 2
+    - content: "UTF-32"
+      key: D
+      order: 3
+
+- uuid: a57b1b01-84cb-4a59-8eb7-d22440e8b6d5
+  type: SingleChoice
+  content: |
+    What is the output of the following code snippet:
+     
+        ``` 
+            let s1 = “Hello, “;
+            let s2 = “world!“;
+            let s3 = s1 + &s2;
+
+            println!(s1 is {}”, s1);
+        ```
+  hint: NoHint
+  explanation: "When using + macro first argument is moved and not accessible after that."
+  answerKeys:
+    - A
+  topic: collections
+  subTopics:
+    - collection_strings
+  difficultyLevel: Low
+  choices:
+    - content: "Program will not compile"
+      key: A
+      order: 0
+    - content: "It prints Hello, "
+      key: B
+      order: 1
+    - content: "It prints Hello, world!"
+      key: C
+      order: 2
+    - content: "It prints None"
+      key: D
+      order: 3
+
+- uuid: 08f69431-88dd-4e54-91ea-6e462181a4b3
+  type: SingleChoice
+  content: |
+    How can strings be indexed in Rust ?
+  hint: NoHint
+  explanation: "String indexing is not allowed in Rust."
+  answerKeys:
+    - B
+  topic: collections
+  subTopics:
+    - collection_strings
+  difficultyLevel: Low
+  choices:
+    - content: "`str[1]`"
+      key: A
+      order: 0
+    - content: "String indexing does not works in Rust"
+      key: B
+      order: 1
+    - content: "`str.1`"
+      key: C
+      order: 2
+    - content: "`str.get(1)`"
+      key: D
+      order: 3
+
+- uuid: 96c4703a-812b-4428-b211-945ef8bdc46f
+  type: SingleChoice
+  content: |
+    Which hashmap method can be used to add an entry to map only if it does not already exists ?
+  hint: NoHint
+  explanation: "`or_insert` will insert an entry into HashMap only if it does not already exist."
+  answerKeys:
+    - C
+  topic: collections
+  subTopics:
+    - collection_hashmap
+  difficultyLevel: Low
+  choices:
+    - content: "`insert`"
+      key: A
+      order: 0
+    - content: "`push`"
+      key: B
+      order: 1
+    - content: "`or_insert`"
+      key: C
+      order: 2
+    - content: "`insert_or`"
+      key: D
+      order: 3
+
+- uuid: d74074f8-3849-4c74-aa6b-3cbddb0ad97d
+  type: MultipleChoice
+  content: |
+    Which of the following are methods available on Vectors ?
+  hint: NoHint
+  explanation: "Methods `len` and `push` are available on Vectors."
+  answerKeys:
+    - A, D
+  topic: collections
+  subTopics:
+    - collection_vector
+  difficultyLevel: Low
+  choices:
+    - content: "`len`"
+      key: A
+      order: 0
+    - content: "`length`"
+      key: B
+      order: 1
+    - content: "`replace`"
+      key: C
+      order: 2
+    - content: "`push`"
+      key: D
+      order: 3
+
+- uuid: e5f0e3b1-e56b-4fd3-9211-86b2ad57a078
+  type: SingleChoice
+  content: |
+    Vectors and HashMap needs to be explicitly included in the scope.
+  hint: NoHint
+  explanation: "Only HashMap need to be explicitly included in the scope."
+  answerKeys:
+    - A
+  topic: collections
+  subTopics:
+    - collection_vector
+  difficultyLevel: Low
+  choices:
+    - content: "True"
+      key: A
+      order: 0
+    - content: "False"
+      key: B
+      order: 1
+
+- uuid: af1c8fe0-c248-4b59-b0f5-bab0975fc93e
+  type: MultipleChoice
+  content: |
+    Which of the following are methods available on Strings ?
+  hint: NoHint
+  explanation: "Methods `contains` and `trim` are available on Strings."
+  answerKeys:
+    - C, D
+  topic: collections
+  subTopics:
+    - collection_vector
+  difficultyLevel: Low
+  choices:
+    - content: "`index`"
+      key: A
+      order: 0
+    - content: "`length`"
+      key: B
+      order: 1
+    - content: "`contains`"
+      key: C
+      order: 2
+    - content: "`trim`"
       key: D
       order: 3
