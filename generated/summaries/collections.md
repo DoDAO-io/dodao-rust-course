@@ -6,6 +6,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  ## Collections
  
  **Introduction**        
+- Collections are useful data structure in Rust that can contain multiple values.
 - Collections can contain multiple values
 - Collections are stored on Heap and are dynamically sized, their size is not required to be known at compile time
 - Rust collections can be grouped into 4 major categories:
@@ -19,6 +20,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * HashMap
  
  **Vector**        
+- Vector allow to store more than 1 value in single data structure.
 - Vector has multiple items of same time stored next to each other in memory.
 - Creating a vector
   * creating an empty vector
@@ -82,6 +84,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * push `vec.push(v)`: adds an element to the end of the vector
  
  **Strings**        
+- Strings in Rust are a collection of bytes.
 - Strings are collection of bytes that support UTF-8 encoded text.
 - Thus different characters of most languages can be represented in Rust.
 - Creating a string:
@@ -167,6 +170,7 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
   * trim `str.trim()`: trim a string
  
  **HashMap**        
+- HashMap stores a mapping of keys to value.
 - The type HashMap<K, V> stores a mapping of keys of type K to values of type V
 - Mapping from key K to value V is done using hashing that determines how these values are placed in memory.
 - Keys in hashMap can be of any type but all the kes should be of same type, similarly all the values should also be of same type.

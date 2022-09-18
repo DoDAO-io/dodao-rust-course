@@ -1,8 +1,8 @@
 - title: Introduction
   shortTitle: Introduction
   key: collection_introduction
-  summary: Collections are useful data structure in Rust that can contain multiple values.
   details: |
+    - Collections are useful data structure in Rust that can contain multiple values.
     - Collections can contain multiple values
     - Collections are stored on Heap and are dynamically sized, their size is not required to be known at compile time
     - Rust collections can be grouped into 4 major categories:
@@ -18,8 +18,8 @@
 - title: Vector
   shortTitle: Vector
   key: collection_vector
-  summary: Vector allow to store more than 1 value in single data structure.
   details: |
+    - Vector allow to store more than 1 value in single data structure.
     - Vector has multiple items of same time stored next to each other in memory.
     - Creating a vector
       * creating an empty vector
@@ -85,8 +85,8 @@
 - title: Strings
   shortTitle: Strings
   key: collection_strings
-  summary: Strings in Rust are a collection of bytes.
   details: |
+    - Strings in Rust are a collection of bytes.
     - Strings are collection of bytes that support UTF-8 encoded text.
     - Thus different characters of most languages can be represented in Rust.
     - Creating a string:
@@ -174,8 +174,8 @@
 - title: HashMap
   shortTitle: HashMap
   key: collection_hashmap
-  summary: HashMap stores a mapping of keys to value.
   details: |
+    - HashMap stores a mapping of keys to value.
     - The type HashMap<K, V> stores a mapping of keys of type K to values of type V
     - Mapping from key K to value V is done using hashing that determines how these values are placed in memory.
     - Keys in hashMap can be of any type but all the kes should be of same type, similarly all the values should also be of same type.
