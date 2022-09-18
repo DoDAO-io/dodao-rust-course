@@ -1,0 +1,26 @@
+- uuid: 037554bd-80e3-40bd-8bb5-60633cffef7d
+  title: Rust - Collections
+  shortTitle: Collections
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=tTUFl8c_Z0w
+  subTopics:
+    - collection_vector
+    - collection_strings
+  details: |
+    Introduction to popular collection types in Rust
+    * Vec<T>
+    * HashMap<K, V>
+    * HashSet<T>
+    * VecDeque<T>
+    * LinkedList<T>
+
+- uuid: 9d8a8dbd-3dd4-44aa-8d79-8e10dddb23fe
+  title: Rust - Collections Demo
+  shortTitle: Collections Demo
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=yAw3cpqIXtg
+  subTopics:
+    - collection_vector
+    - collection_hashmap
+  details: |
+    Demo of code written using Collection Data Structures in Rust
