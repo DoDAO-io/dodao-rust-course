@@ -1,0 +1,1203 @@
+- uuid: 942b0b68-a5ae-44bb-9dfc-88010ae3284b
+  type: SingleChoice
+  content: |
+    The difference in struct with comparism to tuples is naming data so
+  hint: "Naming clear up any misunderstanding"
+  explanation: "None needed"
+  answerKeys:
+    - A
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "it's clear what the values mean."
+      key: A
+
+    - content: "it's clear what the function mean."
+      key: B
+
+    - content: "it's clear what the struct mean."
+      key: C
+
+    - content: "it's clear what the tuples mean."
+      key: D
+
+- uuid: 1f2d87c2-2fcc-4246-9f24-122f6755eb51
+  type: SingleChoice
+  content: |
+    To define a struct, we enter the keyword
+  hint: Nohint
+  explanation: "The standard keyword"
+  answerKeys:
+    - B
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "tuples"
+      key: A
+
+    - content: "struct"
+      key: B
+
+    - content: "StruTs"
+      key: C
+
+    - content: "fn"
+      key: D
+
+- uuid: c6e8a655-ffa7-4c44-a85c-b8bac238556a
+  type: SingleChoice
+  content: |
+    To get a specific value from a struct, we use
+  hint: Nohint
+  explanation: "to access our struct"
+  answerKeys:
+    - C
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: plot notation"
+      key: A
+
+    - content: "not notation"
+      key: B
+
+    - content: "dot notation"
+      key: C
+
+    - content: "rot notation"
+      key: D
+
+- uuid: cdb615dd-42eb-4e94-a393-6c5fe3abf981
+  type: SingleChoice
+  content: |
+    Rust also supports structs that look similar to tuples, and they are called
+  hint: Nohint
+  explanation: "none"
+  answerKeys:
+    - B
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "structs"
+      key: A
+
+    - content: "tuple structs"
+      key: B
+
+    - content: "Major struct"
+      key: C
+
+    - content: "Named structs"
+      key: D
+
+- uuid: 4964a468-beec-47dd-9c31-ccabe918008f
+  type: SingleChoice
+  content: |
+    _____  are a way of creating more complex data types
+  hint: Nohint
+  explanation: "simple definition"
+  answerKeys:
+    - D
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "Methos"
+      key: A
+
+    - content: "Function"
+      key: B
+
+    - content: "Array"
+      key: C
+
+    - content: "Structs"
+      key: D
+
+- uuid: dd32b17c-32db-4624-b02c-24e4fe7858a7
+  type: SingleChoice
+  content: |
+    What is the output?
+    ```rust
+        struct Point {
+           x: i32,
+           y: i32,
+          }
+
+        fn main() {
+             let origin = Point { x: 1, y: 0 }; // origin: Point
+
+             println!("The origin is at ({}, {})", origin.x, origin.y);
+        }
+    ```
+
+  hint: "We call structs like parameter"
+  explanation: "structs can be called into function"
+  answerKeys:
+    - C
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: " Point { x: 1, y: 0 }"
+      key: A
+
+    - content: "  x: 1, y: 0 "
+      key: B
+
+    - content: "The origin is at (0, 1)"
+      key: C
+
+    - content: "The origin is at (1, 0)"
+      key: D
+
+- uuid: 9dc7a324-25bd-4a6a-8ade-d45de1112c28
+  type: SingleChoice
+  content: |
+    By convention, structs begin with a ____
+  hint: Nohint
+  explanation: "naming convention"
+  answerKeys:
+    - A
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "capital letter"
+      key: A
+
+    - content: "small letter"
+      key: B
+
+    - content: "underscore"
+      key: C
+
+    - content: "digit"
+      key: D
+
+- uuid: b678a8a3-8baa-4a6a-81ae-af64abf54f02
+  type: SingleChoice
+  content: |
+    To edit a data in struct we make them mutable via
+  hint: "Immutable data can become editable"
+  explanation: "None needed"
+  answerKeys:
+    - A
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "using the keyword mut"
+      key: A
+
+    - content: "editing them on console"
+      key: B
+
+    - content: "Using tuples"
+      key: C
+
+    - content: "Freezing the cargo"
+      key: D
+
+- uuid: 0e1eeed5-b5bf-4f25-ad43-d7069a28de7e
+  type: SingleChoice
+  content: |
+    What is the output?
+    ```rust
+      struct Point {
+           x: i32,
+           y: i32,
+            }
+
+      fn main() {
+      let mut point = Point { x: 0, y: 0 };
+
+         point.x = 5;
+
+        println!("The point is at ({}, {})", point.x, point.y);
+      }
+    ```
+  hint: "The values in structs are immutable by default"
+  explanation: "we make them mutable and can now alter as we please"
+  answerKeys:
+    - D
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "compilation error"
+      key: A
+
+    - content: "The point is at (5)"
+      key: B
+
+    - content: "The point is at (0, 5)"
+      key: C
+
+    - content: "The point is at (5, 0)"
+      key: D
+
+- uuid: 15836f6c-9374-49fb-a268-5a45c8fbfbbb
+  type: SingleChoice
+  content: |
+    A struct can include __ to indicate that you want to use a copy of some other struct for some of the values
+  hint: "Update syntax"
+  explanation: "it points to same values of other data when you change a one "
+  answerKeys:
+    - B
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "[]"
+      key: A
+
+    - content: ".."
+      key: B
+
+    - content: "??"
+      key: C
+
+    - content: "{}"
+      key: D
+
+- uuid: 84ed7927-1414-4b7a-8e9c-00ce3286217a
+  type: SingleChoice
+  content: |
+    what is the output?
+    ```rust
+       struct Rectangle {
+          width: u32,
+          height: u32,
+       }
+
+        fn main() {
+          let rect1 = Rectangle {
+             width: 30,
+             height: 10,
+            };
+
+           println!(
+             "The area of the rectangle is {} square pixels.",
+              area(&rect1)
+          );
+        }
+
+        fn area(rectangle: &Rectangle) -> u32 {
+         rectangle.width * rectangle.height
+       }
+
+    ```
+
+  hint: "simple area of a rectangular but with structs"
+  explanation: "we create a struct to store values of the rectangle and called it later"
+  answerKeys:
+    - D
+  subTopics:
+    - structs
+  difficultyLevel: Low
+  choices:
+    - content: "The area of the rectangle is 1500 square pixels."
+      key: A
+
+    - content: "The area of the rectangle is 10 square pixels."
+      key: B
+
+    - content: "The area of the rectangle is 30 square pixels."
+      key: C
+
+    - content: "The area of the rectangle is 300 square pixels."
+      key: D
+
+- uuid: 05015d77-954d-4907-9f77-4b9b3166bb2f
+  type: SingleChoice
+  content: |
+    Which of the following is not a type of struct?
+  hint: "Type of struct"
+  explanation: "null"
+  answerKeys:
+    - C
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "Unit structs"
+      key: A
+
+    - content: "tuples structs"
+      key: B
+
+    - content: " Method structs"
+      key: C
+
+    - content: "Regular/classic structs"
+      key: D
+
+- uuid: d8e80d3e-272c-4deb-a291-4b936d0c16af
+  type: SingleChoice
+  content: |
+    The most common type of structs is
+  hint: Nohint
+  explanation: "None"
+  answerKeys:
+    - A
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "Regular/classic"
+      key: A
+
+    - content: "Regulated"
+      key: B
+
+    - content: "Rectangle"
+      key: C
+
+    - content: "Tuples"
+      key: D
+
+- uuid: 72a2990e-e515-4556-82de-01baaaae74e9
+  type: SingleChoice
+  content: |
+    To make a struct public, we can add ___ keyword
+  hint: "to make it accessible to the public"
+  explanation: "none"
+  answerKeys:
+    - C
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "Public"
+      key: A
+
+    - content: "Pub"
+      key: B
+
+    - content: "pub"
+      key: C
+
+    - content: "publi"
+      key: D
+
+- uuid: d217a052-4cd3-4c0e-9233-21bd41f57e15
+  type: SingleChoice
+  content: |
+    Which type of struct has it's field as anonymous?
+  hint: "it's variable are nameless"
+  explanation: "none"
+  answerKeys:
+    - D
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "Unit"
+      key: A
+
+    - content: "Regular"
+      key: B
+
+    - content: "tuplet"
+      key: C
+
+    - content: "tuples"
+      key: D
+
+- uuid: 8a30a85e-b583-4dd3-b1aa-d0c5c25e4a60
+  type: SingleChoice
+  content: |
+    What kind of struct is declared below?
+    ```rust
+        struct Electron;
+
+        fn main() {
+           let x = Electron;
+         }
+    ```
+  hint: " it's like an empty tuple"
+  explanation: "none"
+  answerKeys:
+    - B
+  subTopics:
+    - type-structs
+  difficultyLevel: Low
+  choices:
+    - content: "Regular"
+      key: A
+
+    - content: "Unit"
+      key: B
+
+    - content: "Tuples"
+      key: C
+
+    - content: "Array"
+      key: D
+
+- uuid: 685b7bb8-5d31-4195-8e19-e20e27f137f2
+  type: SingleChoice
+  content: |
+    How can i destruct a tuples?
+  hint: "breaking down item"
+  explanation: "naming each fiels since its anonymous"
+  answerKeys:
+    - A
+  subTopics:
+    - destruct
+  difficultyLevel: Low
+  choices:
+    - content: "assign variable names to fields"
+      key: A
+
+    - content: "assign already declared names to fields"
+      key: B
+
+    - content: "seperate with names and comma"
+      key: C
+
+    - content: "Create a struct and call it"
+      key: D
+
+- uuid: add26dd6-b772-436c-9c48-10b62694d605
+  type: SingleChoice
+  content: |
+    To destruct struct we ____
+  hint: Nohint
+  explanation: "null"
+  answerKeys:
+    - A
+  subTopics:
+    - destruct
+  difficultyLevel: Low
+  choices:
+    - content: "use the field names"
+      key: A
+
+    - content: "call the field names"
+      key: B
+
+    - content: "declare the field names"
+      key: C
+
+    - content: "asign the field names"
+      key: D
+
+- uuid: e729ead8-8940-4f24-8cc4-ea171e5fa10a
+  type: SingleChoice
+  content: |
+    The ___ operator can be used to ignore some fields when destructuring:
+  hint: "patial destructing"
+  explanation: "it helps create a more clearn code and other advantages"
+  answerKeys:
+    - B
+  subTopics:
+    - destruct
+  difficultyLevel: Low
+  choices:
+    - content: "?"
+      key: A
+
+    - content: ".."
+      key: B
+
+    - content: "::"
+      key: C
+
+    - content: "{}"
+      key: D
+
+- uuid: b12e0955-60f5-4bed-b0c6-1cafdc586f2a
+  type: SingleChoice
+  content: |
+    ____ allows the creation of a type which may be one of a few different variants.
+  hint: Nohint
+  explanation: "Any variant which is valid as a struct is also valid as an enum"
+  answerKeys:
+    - B
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "structur"
+      key: A
+
+    - content: "enums"
+      key: B
+
+    - content: "methods"
+      key: C
+
+    - content: "tuples"
+      key: D
+
+- uuid: eb6e5869-5d42-4a06-b17f-1d9e4cb98ada
+  type: SingleChoice
+  content: |
+    An enum constructor can also be used like a ____?
+  hint: "constructors"
+  explanation: "none"
+  answerKeys:
+    - A
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "Function"
+      key: A
+
+    - content: "Structs"
+      key: B
+
+    - content: "Methods"
+      key: C
+
+    - content: "Array"
+      key: D
+
+- uuid: 930e2d75-5ae2-4da3-ac9f-83938c3182f3
+  type: SingleChoice
+  content: |
+    Rewrite the code below using enum constructor
+    ```rust
+          fn main() {
+           enum Message {
+               Write(String),
+                }
+          fn foo(x: String) -> Message {
+             Message::Write(x)
+          }
+
+           let x = foo("Hello, world".to_string());
+          }
+    ```
+  hint: Nohint
+  explanation: "enums create instances of each variants thereby shorten the code"
+  answerKeys:
+    - D
+  subTopics:
+    - enums
+  difficultyLevel: High
+  choices:
+    - content: "Not possible"
+      key: A
+
+    - content: "let m = Message::Write('Hello, world'.to_string());"
+      key: B
+
+    - content: "need to add enum to the end"
+      key: C
+
+    - content: " fn main() { enum Message { Write(String), } let m = Message::Write( 'Hello, world'.to_string()); }"
+      key: D
+
+- uuid: bd089b3e-58cb-49e9-a0ea-728322d0e89c
+  type: SingleChoice
+  content: |
+    We Use an `enum` when you want one thing __ another thing.
+  hint: "Logical operator"
+  explanation: "null"
+  answerKeys:
+    - B
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "AND"
+      key: A
+
+    - content: "OR"
+      key: B
+
+    - content: "NOT"
+      key: C
+
+    - content: "WITH"
+      key: D
+
+- uuid: de34dc7b-8e47-4a6e-a0b8-bc2cca480693
+  type: SingleChoice
+  content: |
+    in Rust language, we can use enums to fulfil what ____ feature does in other languages
+  hint: "null feature is replaced with a sub-enums feature in Rust"
+  explanation: "It's a standard library"
+  answerKeys:
+    - D
+  subTopics:
+    - option-enums
+  difficultyLevel: Low
+  choices:
+    - content: "Compile"
+      key: A
+
+    - content: "Calldata"
+      key: B
+
+    - content: "struct"
+      key: C
+
+    - content: "null"
+      key: D
+
+- uuid: 7d50de8d-62bd-4432-baa4-a59d8f5a47a1
+  type: SingleChoice
+  content: |
+    Which keyword below is used as an enums null feature in Rust?
+  hint: Nohint
+  explanation: "Basic"
+  answerKeys:
+    - C
+  subTopics:
+    - option-enums
+  difficultyLevel: Low
+  choices:
+    - content: "None(T)"
+      key: A
+
+    - content: "enums-opt<T>"
+      key: B
+
+    - content: "Option<T>"
+      key: C
+
+    - content: "option<t>"
+      key: D
+
+- uuid: c627573e-4d09-4319-af37-73f906198f71
+  type: SingleChoice
+  content: |
+    An enums with no varians is called
+  hint: Nohint
+  explanation: "none needed"
+  answerKeys:
+    - A
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "zero-variant enums"
+      key: A
+
+    - content: "none-variant enums"
+      key: B
+
+    - content: "no-variant enums"
+      key: C
+
+    - content: "null-variant enums"
+      key: D
+
+- uuid: 8416ebd5-b70b-4920-950c-2e9e0cbf4f7f
+  type: SingleChoice
+  content: |
+    Below is the syntax of enums
+    ```rust
+        Enums name_of_enum{
+          variant_1,
+          variant_2,
+          .
+          .
+          variant_n
+        }
+    ```
+  hint: "enums syntax"
+  explanation: "You can have many variants and also follow the proper naming style"
+  answerKeys:
+    - B
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "True"
+      key: A
+
+    - content: "False"
+      key: B
+
+    # - content: ""
+    #  key: C
+
+    # - content: ""
+    #   key: D
+
+- uuid: e078c272-7ef5-4d45-b681-92d53c8c83f0
+  type: SingleChoice
+  content: |
+    An enum is sometimes called a sum type because
+  hint: Nohint
+  explanation: "the set of possible values of the enum is the sum of the sets of possible values for each variant."
+  answerKeys:
+    - B
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "it is better than struct"
+      key: A
+
+    - content: "A value of the enum can match any of the variants"
+      key: B
+
+    - content: "it contain many different variants"
+      key: C
+
+    - content: "can be used as functions"
+      key: D
+
+- uuid: 3f455d3d-6ef0-49af-9ef7-c43a90376b8f
+  type: SingleChoice
+  content: |
+    What is the output?
+    ```rust
+          enum Month_name {
+            January,
+            February,
+            March,
+            April,
+            }
+          fn main() {
+            let apr = Month_name :: January;
+            let feb = Month_name :: February;
+            let mar = Month_name :: March;
+            let jan = Month_name :: April;
+
+             println!("{:?}",jan);
+          }
+    ```
+  hint: "showing how enums are declared and called"
+  explanation: "none needed"
+  answerKeys:
+    - D
+  subTopics:
+    - enums
+  difficultyLevel: Low
+  choices:
+    - content: "January"
+      key: A
+
+    - content: "Feburary"
+      key: B
+
+    - content: "March"
+      key: C
+
+    - content: "April"
+      key: D
+
+- uuid: 00d43344-66e9-4fae-9e96-cbb2732d737d
+  type: SingleChoice
+  content: |
+    A ____ is a collection of methods defined for an unknown type: Self
+  hint: Nohint
+  explanation: "simple definition"
+  answerKeys:
+    - B
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "Enums"
+      key: A
+
+    - content: "trait"
+      key: B
+
+    - content: "tuples"
+      key: C
+
+    - content: "structs"
+      key: D
+
+- uuid: ba474b08-3be8-4652-a773-deb5cb995374
+  type: SingleChoice
+  content: |
+    Traits can be implemented for ____ data type.
+  hint: "application is easy and friendly"
+  explanation: "none needed"
+  answerKeys:
+    - D
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "private"
+      key: A
+
+    - content: "immutable"
+      key: B
+
+    - content: "mutable"
+      key: C
+
+    - content: "any"
+      key: D
+
+- uuid: f47ec2be-f896-4c82-b82b-d3fc618c0d24
+  type: SingleChoice
+  content: |
+    what is the output?
+     ```rust
+         struct Dog {
+             name: String,
+             age: u32, 
+             owner: String
+             }
+
+
+         // Implementing an in-built trait ToString on the Dog struct
+         impl ToString for Dog {
+           fn to_string(&self) -> String{
+             return format!("{} is a {} year old dog who belongs to {}.", self.name, self.age, self.owner);
+             }
+           }
+
+         fn main() {
+            let dog = Dog{name: "Fred".to_string(), age: 3, owner: "Mary".to_string()};
+               println!("{}", dog.to_string());
+             }
+     ```
+  hint: "Implementing a trait and inbuilt ToString method"
+  explanation: "implemented on the dog struct"
+  answerKeys:
+    - B
+  subTopics:
+    - trait
+  difficultyLevel: Medium
+  choices:
+    - content: "Fred is a dog who belongs to Mary."
+      key: A
+
+    - content: "Fred is a 3 year old dog who belongs to Mary."
+      key: B
+
+    - content: "compilation error"
+      key: C
+
+    - content: "Mary dog is 3 years old"
+      key: D
+
+- uuid: 3c752253-1019-4f90-8d03-72693e380883
+  type: SingleChoice
+  content: |
+    _____ is a special keyword that is only available within type definitions, trait definitions, and impl blocks
+  hint: Nohint
+  explanation: "none"
+  answerKeys:
+    - A
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "self"
+      key: A
+
+    - content: "impl"
+      key: B
+
+    - content: "Tostring"
+      key: C
+
+    - content: "All of the above"
+      key: D
+
+- uuid: e48e73cd-d564-45c5-a77d-e6c932724a79
+  type: SingleChoice
+  content: |
+    To implement a trait we use the keyword _____
+  hint: Nohint
+  explanation: "implementation keyword"
+  answerKeys:
+    - A
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "impl"
+      key: A
+
+    - content: "trait"
+      key: B
+
+    - content: "tup"
+      key: C
+
+    - content: "pub"
+      key: D
+
+- uuid: 1c24de10-db5d-44a8-a82c-86a7ef7f9570
+  type: SingleChoice
+  content: |
+    What trait lets us customize what happens when a value is about to go out of scope?
+  hint: Nohint
+  explanation: "it's functionality is almost always used when implementing a smart pointer"
+  answerKeys:
+    - D
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "supertrait"
+      key: A
+
+    - content: "iterator"
+      key: B
+
+    - content: "Clone"
+      key: C
+
+    - content: "Drop"
+      key: D
+
+- uuid: cf8f7447-c3fc-4c6a-852a-3da6eed7633d
+  type: SingleChoice
+  content: |
+    Aside trait which other feature provide to restrict types and liferimes to be used as parameters.
+  hint: Nohint
+  explanation: "bounds restriction are standard"
+  answerKeys:
+    - B
+  subTopics:
+    - trait-bounds
+  difficultyLevel: Low
+  choices:
+    - content: "impl"
+      key: A
+
+    - content: "lifetime bounds"
+      key: B
+
+    - content: "struct"
+      key: C
+
+    - content: "supertraits"
+      key: D
+
+- uuid: b793c0b8-93b7-4679-9bc2-066c10f4a56a
+  type: SingleChoice
+  content: |
+    In a generic function, methods from Trait can be called on
+  hint: Nohint
+  explanation: "its the rule"
+  answerKeys:
+    - A
+  subTopics:
+    - trait-bounds
+  difficultyLevel: Low
+  choices:
+    - content: "Ty values"
+      key: A
+
+    - content: "Trait values"
+      key: B
+
+    - content: "option values"
+      key: C
+
+    - content: "assosiated values"
+      key: D
+
+- uuid: fe23d116-a047-4c0a-bd9a-e45ab98426af
+  type: SingleChoice
+  content: |
+    Which of the following is not a bound?
+  hint: "type of bounds"
+  explanation: "its not a bound"
+  answerKeys:
+    - D
+  subTopics:
+    - trait-bounds
+  difficultyLevel: Low
+  choices:
+    - content: "Copy"
+      key: A
+
+    - content: "Clone"
+      key: B
+
+    - content: "Sized"
+      key: C
+
+    - content: "tuples"
+      key: D
+
+- uuid: 6ed42e0e-0b4f-4bcb-9427-7d5bf314db11
+  type: SingleChoice
+  content: |
+    ? is only used alongside _____ bound to relax the implicit
+  hint: Nohint
+  explanation: "by definition"
+  answerKeys:
+    - A
+  subTopics:
+    - trait-bounds
+  difficultyLevel: Low
+  choices:
+    - content: "Sized trait"
+      key: A
+
+    - content: "Sized struct"
+      key: B
+
+    - content: "clone trait"
+      key: C
+
+    - content: "copy trait"
+      key: D
+
+- uuid: d64d4576-30e5-47a1-9d24-331299f6a72c
+  type: SingleChoice
+  content: |
+    The code below is
+    ```rust
+        #![allow(unused_variables)]
+        fn main() {
+            pub trait Summarizable {
+                fn summary(&self) -> String;
+         }
+        }
+    ```
+  hint: "definiting a trait"
+  explanation: "define is different from implementation"
+  answerKeys:
+    - A
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "A definition of a Summarize trait "
+      key: A
+
+    - content: "Implemantation of Summarize trait"
+      key: B
+
+    - content: "Calling of Summarize trait"
+      key: C
+
+    - content: "Summarize trait method"
+      key: D
+
+- uuid: 90fcb73d-ed3c-4f7b-b2b2-bf9f572256da
+  type: SingleChoice
+  content: |
+    ______ gives us the ability to present a single interface for potentially many different concrete types.
+  hint: Nohint
+  explanation: "to create more flexible APIs and more control"
+  answerKeys:
+    - B
+  subTopics:
+    - polymorphism
+  difficultyLevel: Low
+  choices:
+    - content: "polymorphism"
+      key: A
+
+    - content: "tuples"
+      key: B
+
+    - content: "trait"
+      key: C
+
+    - content: "lifetimes"
+      key: D
+
+- uuid: 1c8ab3b2-46fc-48d5-ac85-45efdb1183f1
+  type: SingleChoice
+  content: |
+    What options for polymorphism exist in Rust?
+  hint: Nohint
+  explanation: "none needed"
+  answerKeys:
+    - C
+  subTopics:
+    - polymorphism
+  difficultyLevel: Low
+  choices:
+    - content: "Copy and clone"
+      key: A
+
+    - content: "Static and clone"
+      key: B
+
+    - content: "Static and Dynamic"
+      key: C
+
+    - content: "Clone and dynamic"
+      key: D
+
+- uuid: 77c7fd04-6148-4c45-8260-02a372183e30
+  type: SingleChoice
+  content: |
+    While static dispatch choses to create copies of all functions, dynamic dispatch choses to store _____
+  hint: Nohint
+  explanation: "It store as a dynamic feature"
+  answerKeys:
+    - B
+  subTopics:
+    - polymorphism
+  difficultyLevel: Low
+  choices:
+    - content: "two copies"
+      key: A
+
+    - content: "only a single copy"
+      key: B
+
+    - content: "copies that are public"
+      key: C
+
+    - content: "dynamic copies"
+      key: D
+
+- uuid: 25e99a74-7792-451b-855f-19ab02c3d96b
+  type: SingleChoice
+  content: |
+    gives us the ability to present a single interface for potentially many different concrete types
+  hint: Nohint
+  explanation: "simple definition"
+  answerKeys:
+    - C
+  subTopics:
+    - polymorphism
+  difficultyLevel: Low
+  choices:
+    - content: "Clone"
+      key: A
+
+    - content: "Trait"
+      key: B
+
+    - content: "polymorphism"
+      key: C
+
+    - content: "Maker"
+      key: D
+
+- uuid: c56550ab-fdf2-49e8-a013-67d4e83ec1e9
+  type: SingleChoice
+  content: |
+    What is a trait to another trait called?
+
+  hint: "one trait act like a parent"
+  explanation: "none needed"
+  answerKeys:
+    - B
+  subTopics:
+    - trait
+  difficultyLevel: Low
+  choices:
+    - content: "subclass"
+      key: A
+
+    - content: "Subtraits"
+      key: B
+
+    - content: "mintrait"
+      key: C
+
+    - content: "Traitpointer"
+      key: D
