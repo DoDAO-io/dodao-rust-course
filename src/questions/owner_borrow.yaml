@@ -386,8 +386,10 @@
 - uuid: 434bc0ff-02a9-4287-a469-e74c3b673f70
   type: SingleChoice
   content: What is a Scope?
+
   hint: nohint
   explanation: "It is like the life of an item"
+
   answerKeys:
     - A
   subTopics:
@@ -425,9 +427,11 @@
 
 - uuid: 762de2f4-3e2f-42a3-ba93-770ab7a833dc
   type: SingleChoice
+
   content: A function's local variables are saved into a ____
   hint: FIFO
   explanation: "pushed into the stack as they are created"
+
   answerKeys:
     - D
   subTopics:
@@ -469,7 +473,7 @@
 - uuid: 2fe49404-ebe4-4183-a243-510840dbfdcc
   type: SingleChoice
   content: A problem that ownership addresses have is .
-  hint: heap
+  hint: heap data
   explanation: "Not cleaning up the heap data"
   answerKeys:
     - A

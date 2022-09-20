@@ -327,7 +327,7 @@ Sub Topics: borrowing
 - [ ]  the range within a program
 - [ ]  None of the above
   
-Hint: null
+Hint: noHint
          
 Explanation: 
 
@@ -359,7 +359,7 @@ Sub Topics: memory-allocation
 - [ ]  Function
 - [x]  Stack
   
-Hint: FIFO
+Hint: First in First Out
          
 Explanation: pushed accordingly
 
@@ -391,7 +391,7 @@ Sub Topics: memory-allocation
 - [ ]  You get hacked
 - [ ]  Ownership can be change by outsider
   
-Hint: heap
+Hint: heap data
          
 Explanation: Not cleaning up the heap data
 

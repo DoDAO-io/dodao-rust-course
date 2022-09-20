@@ -6729,7 +6729,7 @@
           "uuid": "434bc0ff-02a9-4287-a469-e74c3b673f70",
           "type": "SingleChoice",
           "content": "What is a Scope?",
-          "hint": null,
+          "hint": "noHint",
           "explanation": "",
           "answerKeys": [
             "A"
@@ -6793,7 +6793,7 @@
           "uuid": "762de2f4-3e2f-42a3-ba93-770ab7a833dc",
           "type": "SingleChoice",
           "content": "The function's local variables get pushed onto",
-          "hint": "FIFO",
+          "hint": "First in First Out",
           "explanation": "pushed accordingly",
           "answerKeys": [
             "D"
@@ -6857,7 +6857,7 @@
           "uuid": "2fe49404-ebe4-4183-a243-510840dbfdcc",
           "type": "SingleChoice",
           "content": "A problem that ownership addresses have is .",
-          "hint": "heap",
+          "hint": "heap data",
           "explanation": "Not cleaning up the heap data",
           "answerKeys": [
             "A"
@@ -7701,84 +7701,272 @@
     {
       "title": "Collections",
       "key": "collections",
-      "details": "This chapter talks about various pre-written Data Structures that are available in rust.\n - Vec<T>\n - HashMap<T>\n - HashSet<T>\n - VecDeque<T>\n - LinkedList<T>\n",
+      "details": "This chapter talks about various popular pre-written Data Structures that are available in rust.\n - Vec<T>\n - String\n - HashMap<K, V>\n",
       "order": 5,
       "questions": [
         {
-          "uuid": "ab88a2ab-c80b-49f5-9ea0-b5ed8e4933b1",
+          "uuid": "1469d4ec-d02a-4a3c-83a6-cbe9f2fb7fe7",
           "type": "SingleChoice",
-          "content": "What is the output of the following code snippet:\n \n    ``` \n        fn main() {\n          let x = 12;\n          println!(\"The value of x is: {x}\");\n          x = 8;\n          println!(\"The value of x is: {x}\");\n        } \n    ```\n",
+          "content": "Where in the mempry are colections stored\n",
           "hint": "NoHint",
-          "explanation": "Error would occur, because the variable x isn't set as mutable so it's value can't be changed.",
+          "explanation": "Collections are dynamically sized ans tored on heap.",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "collection_introduction"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Stack",
+              "key": "A"
+            },
+            {
+              "content": "Program Area",
+              "key": "B"
+            },
+            {
+              "content": "Heap",
+              "key": "C"
+            }
+          ]
+        },
+        {
+          "uuid": "671ebf9a-bafe-4b27-a98f-acd14f0b1dc1",
+          "type": "SingleChoice",
+          "content": "What is the output of the following code snippet:\n \n    ``` \n        let v = Vec![1,2,3,4,5];\n        let third = &v[10];\n\n        println!(“The third element is {}”, third);\n    ```\n",
+          "hint": "NoHint",
+          "explanation": "Trying to index vector outside it boundries result in panic.",
           "answerKeys": [
             "D"
           ],
           "subTopics": [
-            "variables"
+            "collection_vector"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "The value of x is: 8",
+              "content": "It prints None",
               "key": "A"
             },
             {
-              "content": "Error: the variable x is mutable",
+              "content": "It does not print anything",
               "key": "B"
             },
             {
-              "content": "The value of x is: 12",
+              "content": "It prints 5",
               "key": "C"
             },
             {
-              "content": "Error: the variable x is immutable",
+              "content": "It will resume in panic",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "23a0e9e5-6c47-4512-98a5-4cd3ab6eff25",
+          "uuid": "87b313aa-61ae-4f6f-b251-95028a5eea9d",
           "type": "SingleChoice",
-          "content": "Space taken by a Character data type in rust is",
-          "hint": "It doesn't use ASCII values",
-          "explanation": "Rust's char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.",
+          "content": "What is the output of the following code snippet:\n \n    ``` \n        let v = Vec![1,2,3,4,5];\n        let third = v.get(2);\n\n        println!(“The third element is {}”, third);\n    ```\n",
+          "hint": "NoHint",
+          "explanation": "Trying to index vector outside it boundries result in panic.",
           "answerKeys": [
-            "B"
+            "A"
           ],
           "subTopics": [
-            "value-types"
+            "collection_vector"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "1 byte",
+              "content": "It prints None",
               "key": "A"
             },
             {
-              "content": "4 bytes",
+              "content": "It does not print anything",
               "key": "B"
             },
             {
-              "content": "8 bytes",
+              "content": "It prints 5",
               "key": "C"
             },
             {
-              "content": "16 bytes",
+              "content": "It will resume in panic",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "39385b22-7604-492f-9c2e-aaae409c6b79",
+          "uuid": "776ca2cf-bfe1-4fbf-83a2-65432535d6e9",
           "type": "SingleChoice",
-          "content": "Rust is a Dynamically typed language.",
-          "hint": "Does the compiler need to know the data type at compile time?",
-          "explanation": "It is statically typed",
+          "content": "Strings in Rust support which encoding:\n",
+          "hint": "NoHint",
+          "explanation": "Strings in Rust support UTF-8 encoding.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "collection_strings"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "UTF-8",
+              "key": "A"
+            },
+            {
+              "content": "Unicode",
+              "key": "B"
+            },
+            {
+              "content": "ASCII",
+              "key": "C"
+            },
+            {
+              "content": "UTF-32",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "a57b1b01-84cb-4a59-8eb7-d22440e8b6d5",
+          "type": "SingleChoice",
+          "content": "What is the output of the following code snippet:\n \n    ``` \n        let s1 = “Hello, “;\n        let s2 = “world!“;\n        let s3 = s1 + &s2;\n\n        println!(s1 is {}”, s1);\n    ```\n",
+          "hint": "NoHint",
+          "explanation": "When using + macro first argument is moved and not accessible after that.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "collection_strings"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Program will not compile",
+              "key": "A"
+            },
+            {
+              "content": "It prints Hello, ",
+              "key": "B"
+            },
+            {
+              "content": "It prints Hello, world!",
+              "key": "C"
+            },
+            {
+              "content": "It prints None",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "08f69431-88dd-4e54-91ea-6e462181a4b3",
+          "type": "SingleChoice",
+          "content": "How can strings be indexed in Rust ?\n",
+          "hint": "NoHint",
+          "explanation": "String indexing is not allowed in Rust.",
           "answerKeys": [
             "B"
           ],
           "subTopics": [
-            "typed_language"
+            "collection_strings"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "`str[1]`",
+              "key": "A"
+            },
+            {
+              "content": "String indexing does not works in Rust",
+              "key": "B"
+            },
+            {
+              "content": "`str.1`",
+              "key": "C"
+            },
+            {
+              "content": "`str.get(1)`",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "96c4703a-812b-4428-b211-945ef8bdc46f",
+          "type": "SingleChoice",
+          "content": "Which hashmap method can be used to add an entry to map only if it does not already exists ?\n",
+          "hint": "NoHint",
+          "explanation": "`or_insert` will insert an entry into HashMap only if it does not already exist.",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "collection_hashmap"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "`insert`",
+              "key": "A"
+            },
+            {
+              "content": "`push`",
+              "key": "B"
+            },
+            {
+              "content": "`or_insert`",
+              "key": "C"
+            },
+            {
+              "content": "`insert_or`",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "d74074f8-3849-4c74-aa6b-3cbddb0ad97d",
+          "type": "MultipleChoice",
+          "content": "Which of the following are methods available on Vectors ?\n",
+          "hint": "NoHint",
+          "explanation": "Methods `len` and `push` are available on Vectors.",
+          "answerKeys": [
+            "A, D"
+          ],
+          "subTopics": [
+            "collection_vector"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "`len`",
+              "key": "A"
+            },
+            {
+              "content": "`length`",
+              "key": "B"
+            },
+            {
+              "content": "`replace`",
+              "key": "C"
+            },
+            {
+              "content": "`push`",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "e5f0e3b1-e56b-4fd3-9211-86b2ad57a078",
+          "type": "SingleChoice",
+          "content": "Vectors and HashMap needs to be explicitly included in the scope.\n",
+          "hint": "NoHint",
+          "explanation": "Only HashMap need to be explicitly included in the scope.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "collection_vector"
           ],
           "difficultyLevel": "Low",
           "choices": [
@@ -7793,1361 +7981,88 @@
           ]
         },
         {
-          "uuid": "6b844c24-f769-4662-a591-83c0a5f8c6c3",
-          "type": "SingleChoice",
-          "content": "Select the incorrect declaration statement",
+          "uuid": "af1c8fe0-c248-4b59-b0f5-bab0975fc93e",
+          "type": "MultipleChoice",
+          "content": "Which of the following are methods available on Strings ?\n",
           "hint": "NoHint",
-          "explanation": "It is declared as an unsigned integer, but the value is negative",
+          "explanation": "Methods `contains` and `trim` are available on Strings.",
           "answerKeys": [
-            "C"
+            "C, D"
           ],
           "subTopics": [
-            "variables"
+            "collection_vector"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "let mut x: u32 = 20;",
+              "content": "`index`",
               "key": "A"
             },
             {
-              "content": "let mut x: i32 = -20;",
+              "content": "`length`",
               "key": "B"
             },
             {
-              "content": "let mut x: u32 = -20;",
+              "content": "`contains`",
               "key": "C"
             },
             {
-              "content": "let mut x = 20;",
+              "content": "`trim`",
               "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "6f2cb4ae-db4d-4c04-bfd4-37669695dab0",
-          "type": "SingleChoice",
-          "content": "Suppose you declared a variable as u8 and then assigned it a value of \"257\". What would be the output if it’s compiled with a \"`“--release” flag?`\"",
-          "hint": "NoHint",
-          "explanation": "After 255 the digits start rolling back to 0, 1 and so on",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "bit-manupilation"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "257",
-              "key": "A"
-            },
-            {
-              "content": "Error: Integer Overflow",
-              "key": "B"
-            },
-            {
-              "content": "0",
-              "key": "C"
-            },
-            {
-              "content": "1",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "0708f185-46b5-45ee-ac47-3e7e1ca611b3",
-          "type": "SingleChoice",
-          "content": "Are Tuples in rust dynamic in nature?\n\"Eg:-\" \n``` \n  let tup: (i32, f64, bool) = (500, 6.4, true); \n```\n",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Yes",
-              "key": "A"
-            },
-            {
-              "content": "No",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "d11a531f-f32f-4764-a60a-2cc5af348245",
-          "type": "SingleChoice",
-          "content": "Select the correct statements for the two String     types(“String” and “&str”).\n \"a. “Strings” are immutable in nature and cannot be modified. \"\n \"b. “&str” is a primitive data type, whereas “String” is implemented in the standard library.\"\n \"c. To read a file into the strings, we use the read_to_string() method.\"\n",
-          "hint": "NoHint",
-          "explanation": "Strings are mutable in nature",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Only a",
-              "key": "A"
-            },
-            {
-              "content": "Both a & b",
-              "key": "B"
-            },
-            {
-              "content": "Both b & c",
-              "key": "C"
-            },
-            {
-              "content": "None of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "9511276a-dd19-47c4-b086-0d1de8cafedb",
-          "type": "SingleChoice",
-          "content": "Which among the following is not an acceptable keyword in rust?",
-          "hint": "NoHint",
-          "explanation": "var is not a keyword in rust",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "let",
-              "key": "A"
-            },
-            {
-              "content": "var",
-              "key": "B"
-            },
-            {
-              "content": "impl",
-              "key": "C"
-            },
-            {
-              "content": "mut",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "1ed70de2-99c6-43dd-8793-40ad702d6bff",
-          "type": "SingleChoice",
-          "content": "Which of the following brackets are used as placeholders in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "{}",
-              "key": "A"
-            },
-            {
-              "content": "[ ]",
-              "key": "B"
-            },
-            {
-              "content": "( )",
-              "key": "C"
-            },
-            {
-              "content": "< >",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "7f129510-4d19-4a62-bae1-34109714fa0e",
-          "type": "SingleChoice",
-          "content": "Constants in rust can be defined in which scope?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Global",
-              "key": "A"
-            },
-            {
-              "content": "Method",
-              "key": "B"
-            },
-            {
-              "content": "Local",
-              "key": "C"
-            },
-            {
-              "content": "All of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "b29fa10c-2efa-478c-8207-2e2a80af8700",
-          "type": "SingleChoice",
-          "content": "Which of the following are the scalar data types present in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "integers, floating-point numbers, booleans, characters",
-              "key": "A"
-            },
-            {
-              "content": "integers, signed numbers, unsigned numbers, booleans, characters",
-              "key": "B"
-            },
-            {
-              "content": "integers, strings, signed numbers, unsigned numbers, booleans",
-              "key": "C"
-            },
-            {
-              "content": "integers, floating-point numbers, strings, booleans",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "775949c1-23b7-42bc-b184-bc755c8d2657",
-          "type": "SingleChoice",
-          "content": "The compound data types supported by rust are-",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Arrays, Lists, Red-Black Trees",
-              "key": "A"
-            },
-            {
-              "content": "Arrays, Lists, Vectors",
-              "key": "B"
-            },
-            {
-              "content": "Arrays, Tuples",
-              "key": "C"
-            },
-            {
-              "content": "Arrays, Maps",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "7fd341f0-4921-4e6e-aa0c-c3897f91d3b2",
-          "type": "SingleChoice",
-          "content": "Which are valid array declarations in rust? \n``` \n       let mut arr : {i64, 3} = [2,3,5];\n       let mut arr : {3,3};\n       let mut arr = [2,3,5];\n ```\n",
-          "hint": "Look for the wrong declaration format, you may or may not find it",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Both a & b",
-              "key": "A"
-            },
-            {
-              "content": "Both b & c",
-              "key": "B"
-            },
-            {
-              "content": "Only a",
-              "key": "C"
-            },
-            {
-              "content": "All a, b, & c",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "75d926cd-6f05-4185-916c-fc6c2b90eecd",
-          "type": "SingleChoice",
-          "content": "Which of the following has low memory usage, const or static?",
-          "hint": "How many of these can we update?",
-          "explanation": "Constant doesn't uses any extra heap memory to update",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "const",
-              "key": "A"
-            },
-            {
-              "content": "static",
-              "key": "B"
-            },
-            {
-              "content": "depends upon the data type",
-              "key": "C"
-            },
-            {
-              "content": "both have the same memory usage",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "a7495120-1470-41d4-aeb2-6d9d7ebd876c",
-          "type": "SingleChoice",
-          "content": "To use dynamic-sized variables, which of the following should be used?",
-          "hint": "No hint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Arrays & Tuples",
-              "key": "A"
-            },
-            {
-              "content": "List all the data types",
-              "key": "B"
-            },
-            {
-              "content": "Sized",
-              "key": "C"
-            },
-            {
-              "content": "Dynamic-Sized variables not supported in rust",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "4c564a7d-28d3-4fca-a06d-f3f3fc419d13",
-          "type": "SingleChoice",
-          "content": "What is the importance of the “type” keyword in rust?",
-          "hint": "Used for another types.",
-          "explanation": "Sets an alias of another type.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "used for dynamic-sized data type",
-              "key": "A"
-            },
-            {
-              "content": "used to create a template",
-              "key": "B"
-            },
-            {
-              "content": "used for user-defined data type",
-              "key": "C"
-            },
-            {
-              "content": "used to set an alias of another type",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d677a228-7f5d-4b5f-8bee-9f40052efafb",
-          "type": "SingleChoice",
-          "content": "What is the importance of Cargo in rust?",
-          "hint": "What is npm used for?",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "package-manager"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Collection of rust libraries",
-              "key": "A"
-            },
-            {
-              "content": "Modules Package manager",
-              "key": "B"
-            },
-            {
-              "content": "Build system and Package manager",
-              "key": "C"
-            },
-            {
-              "content": "Used to create and build UI projects in rust",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2715ab2c-35b3-4e6a-9697-f244c6e23676",
-          "type": "SingleChoice",
-          "content": "How to print the data type of a variable in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": " `std::any::type_name` ",
-              "key": "A"
-            },
-            {
-              "content": " `variable.type_name()` ",
-              "key": "B"
-            },
-            {
-              "content": " `std::intrisic::type_name` ",
-              "key": "C"
-            },
-            {
-              "content": " `std::variable::type_name` ",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "e326751d-bb65-44e4-a6ce-fa62faa96f94",
-          "type": "SingleChoice",
-          "content": "Which type cast preserves the mathematical value in all cases?",
-          "hint": "NoHint",
-          "explanation": "Because they can handle both signed and unsigned values, and are typecasted in one data type only.",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "bit-manupilation"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "i32 as i64",
-              "key": "A"
-            },
-            {
-              "content": "i64 as i32",
-              "key": "B"
-            },
-            {
-              "content": "usize as u64",
-              "key": "C"
-            },
-            {
-              "content": "f64 as f32",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "ffac79fe-2367-42d1-82eb-b6e6127aead5",
-          "type": "SingleChoice",
-          "content": "Which of the following cannot be destructed further into smaller segments?",
-          "hint": "Think of the structures they're built upon ",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Tuples",
-              "key": "A"
-            },
-            {
-              "content": "Traits",
-              "key": "B"
-            },
-            {
-              "content": "Arrays",
-              "key": "C"
-            },
-            {
-              "content": "Structs",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "1b0a3444-3b86-4e09-8021-f4b66cb2ce09",
-          "type": "SingleChoice",
-          "content": "Which comment syntax is not legal?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "<//>",
-              "key": "A"
-            },
-            {
-              "content": "/* */",
-              "key": "B"
-            },
-            {
-              "content": "//!",
-              "key": "C"
-            },
-            {
-              "content": "//",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2f9d0f0d-4670-44d7-b69f-d398ecfb3236",
-          "type": "SingleChoice",
-          "content": "Values of the array can be deleted.",
-          "hint": "NoHint",
-          "explanation": "Values can be updated, but can't be deleted",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "d2af3b88-9912-4729-9673-4101b7ec4765",
-          "type": "SingleChoice",
-          "content": "How do you initialize every element of an array of size 5 with 0?",
-          "hint": "Look at the declarations, don't get confused by the order while declaring",
-          "explanation": "The first argument is the integer you want to initialize an element with, and the second argument tells the end posistion till where you want to pre-initialize.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "`let mut arr : {i32;5} = {5;0};`",
-              "key": "A"
-            },
-            {
-              "content": "`let mut arr : {i32;5} = {0;5};`",
-              "key": "B"
-            },
-            {
-              "content": "`let mut arr : {5;i32} = {5;0};`",
-              "key": "C"
-            },
-            {
-              "content": "`let mut arr : {5;i32} = {0;5};`",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "93c0673c-a86b-4bbb-82b0-3bb77bddab67",
-          "type": "SingleChoice",
-          "content": "Tuples in rust are",
-          "hint": "NoHint",
-          "explanation": "They can handle and store different data types",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "finite heterogeneous compound data types",
-              "key": "A"
-            },
-            {
-              "content": "finite homogeneous compound data types",
-              "key": "B"
-            },
-            {
-              "content": "infinite heterogeneous compound data types",
-              "key": "C"
-            },
-            {
-              "content": "infinite homogeneous compound data types",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "8c7f2429-0db2-4288-bd4a-ef694b39206c",
-          "type": "SingleChoice",
-          "content": "What would be the output of the following code snippet?\n  ```\n    Fn main( ) {\t\n      let mut dodao_io = (\"\"Do\"\", 69, \"\"DAO\"\", 420);\n      println!(\"\"{} \"\", dodao_io );\n      println!(\"\"at 0 index = {} \"\", gfg.0 );\n    } \n  ```\n",
-          "hint": "No Hint",
-          "explanation": "The first print statement should've had {;?}",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "(\"Do\", 69, \"DAO\", 420) & Do",
-              "key": "A"
-            },
-            {
-              "content": "(\"Do\", 69, \"DAO\", 420) only",
-              "key": "B"
-            },
-            {
-              "content": "Compilation Error",
-              "key": "C"
-            },
-            {
-              "content": "(\"Do\", 69, \"DAO\", 420) & “Do”",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2f6ce66c-3d34-4fa0-b6f6-188b7aa052b9",
-          "type": "SingleChoice",
-          "content": "What is the process of temporarily making a variable mutable known as?",
-          "hint": "NoHint",
-          "explanation": "No explantion",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Pseudo-mutability",
-              "key": "A"
-            },
-            {
-              "content": "Foreshadowing",
-              "key": "B"
-            },
-            {
-              "content": "Shadowing",
-              "key": "C"
-            },
-            {
-              "content": "Overshadowing",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d8a49f56-5da8-4b71-b18c-e745d5913dee",
-          "type": "SingleChoice",
-          "content": "Which of the following is an example of suffix annotation?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "let a_int: i64 = 20;",
-              "key": "A"
-            },
-            {
-              "content": "let a_int = i6420;",
-              "key": "B"
-            },
-            {
-              "content": "let a_int = 20i64;",
-              "key": "C"
-            },
-            {
-              "content": "None of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "419058bf-87e9-4c18-9b8e-3f96c3c820b3",
-          "type": "SingleChoice",
-          "content": "A. println!(\"1 + 2 = {}\", 1u32 + 2);\nB. println!(\"1 - 2 = {}\", 1u32 + 2);\n",
-          "hint": "Solution being Positive or Negative might make a difference",
-          "explanation": "Here, when initialized, 1 is set as unsigned 32 integer u32. In statement A, it works because  1+2=3, and it's positive. But, 1-2=(-1) and as they were unsigned integers, so they cannot hold a negative value, so this statement doesn't compile\n",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Only A compiles",
-              "key": "A"
-            },
-            {
-              "content": "Only B compiles",
-              "key": "B"
-            },
-            {
-              "content": "Both A & B compile",
-              "key": "C"
-            },
-            {
-              "content": "None of them complies",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d97fc146-6c06-4a5c-a738-93a00cf7214e",
-          "type": "SingleChoice",
-          "content": "What is the output of the following code\n\"``` println!(\"{}\", 1_00u32 + 2_0); ```\"\n",
-          "hint": "NoHint",
-          "explanation": "1_000u32 is similar as 100 of u32 type.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Compilation Error",
-              "key": "A"
-            },
-            {
-              "content": "Runtime Error",
-              "key": "B"
-            },
-            {
-              "content": "3",
-              "key": "C"
-            },
-            {
-              "content": "120",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2448d741-4c38-46f3-b681-c3ffb44e54ac",
-          "type": "SingleChoice",
-          "content": "String in standard library has more functionalities coded into it than string slice?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "923d11ba-5c1c-4d48-8101-87ee08e0fa0e",
-          "type": "SingleChoice",
-          "content": "What is the output of the following code\n  ```\n  fn main() {\n    let first_string = \"This is some string \".to_string();\n    let second_string = \"Let's add some Data\";\n\n    let final_string = first_string + &second_string;\n\n    println!(\"First string is: {}\", first_string);   \n    println!(\"Second string is: {}\", second_string);\n\n    println!(\"Finally we have: {}\", final_string);\n  }\n  ```\n",
-          "hint": "NoHint",
-          "explanation": "Syntatical Error in the code snippet",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "strings",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Only 1st print statement shows an output",
-              "key": "A"
-            },
-            {
-              "content": "Only 1st and 2nd print statement shows an output",
-              "key": "B"
-            },
-            {
-              "content": "All the 3 string statements show an output",
-              "key": "C"
-            },
-            {
-              "content": "Error occurs",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "ec5e9c9b-cafa-484e-8feb-51db5a0b7a33",
-          "type": "SingleChoice",
-          "content": "Which of the following operator is used by string slices to reference?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "`&`",
-              "key": "A"
-            },
-            {
-              "content": "`%`",
-              "key": "B"
-            },
-            {
-              "content": "`#`",
-              "key": "C"
-            },
-            {
-              "content": "`*`",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d0b24301-eda6-49d7-bf45-88777b13e15f",
-          "type": "SingleChoice",
-          "content": "Select the incorrect statement from the following",
-          "hint": "Nohint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Once you get a string slice from a string, then you cannot really                 modify that String anymore",
-              "key": "A"
-            },
-            {
-              "content": "Using slices to work with Strings allows us to add an extra                       security measure.",
-              "key": "B"
-            },
-            {
-              "content": "If you attempt to create a string slice in the middle of a                        multibyte character, your program will exit with an error",
-              "key": "C"
-            },
-            {
-              "content": "String Slice mutably borrows the String itself",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "ef79a0da-3da6-445e-92b5-1d0e17799db6",
-          "type": "SingleChoice",
-          "content": "What will happen at the runtime if overflow occurs?",
-          "hint": "NoHint",
-          "explanation": "The memory stack is full and overflows, so a default panic occurs                 and the program crashes",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Panic and crashes the program",
-              "key": "A"
-            },
-            {
-              "content": "Garbage values will be output",
-              "key": "B"
-            },
-            {
-              "content": "Those values are ignored and the output is as expected",
-              "key": "C"
-            },
-            {
-              "content": "Overflow is handled already by rust, so it doesn’t occur",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "1b152ab5-6524-49e0-b5c0-8bd5153b1ab1",
-          "type": "SingleChoice",
-          "content": "Character literals are specified using double quotes, as opposed to single quotes which stand for string literals.",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "strings",
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
-          "type": "SingleChoice",
-          "content": "Strings size is not known at compile time",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "504040ac-6167-4304-8d6e-1e559975bac5",
-          "type": "SingleChoice",
-          "content": "For the following code\n ```  \n   fn main() {\n     let mut x = 2.0;\n     x: i32= 3.0; \n   }\n ```\n",
-          "hint": "type declaration",
-          "explanation": "i32 is intialized as a float data type",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "The code compiles without errors",
-              "key": "A"
-            },
-            {
-              "content": "The code has errors because of immutability",
-              "key": "B"
-            },
-            {
-              "content": "The code has errors because of illegal type conversion",
-              "key": "C"
-            },
-            {
-              "content": "The code has errors because of no print and return statements",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "b0ef2f16-b79d-433a-af54-dc218060ef13",
-          "type": "SingleChoice",
-          "content": "If you want to store boolean values with the provision of adding more             values at runtime, the most suitable way would be to use",
-          "hint": "Statically and Dynamic in nature",
-          "explanation": "Vector is a Dynamic nature",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Arrays",
-              "key": "A"
-            },
-            {
-              "content": "Tuples",
-              "key": "B"
-            },
-            {
-              "content": "Vectors",
-              "key": "C"
-            },
-            {
-              "content": "bool type Variables",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "c731455f-5296-4b1f-9aee-46a4f77c25c1",
-          "type": "SingleChoice",
-          "content": "BOOLEAN is a type of data type that basically gives a tautology or                fallacy.",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "f8497eb4-2e55-4e70-98c9-b395f254f412",
-          "type": "SingleChoice",
-          "content": "What are the categories in which keywords are divided in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Weak",
-              "key": "A"
-            },
-            {
-              "content": "Strict",
-              "key": "B"
-            },
-            {
-              "content": "Reserved",
-              "key": "C"
-            },
-            {
-              "content": "All of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "836ae5f7-8e1d-41ad-a0b9-e0ce810cbf93",
-          "type": "SingleChoice",
-          "content": "Which of the following can be used as a variable name in rust?",
-          "hint": "NoHint",
-          "explanation": "Rest are keywords in rust",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "variables",
-            "keywords"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "crate",
-              "key": "A"
-            },
-            {
-              "content": "match",
-              "key": "B"
-            },
-            {
-              "content": "await",
-              "key": "C"
-            },
-            {
-              "content": "tuple",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
-          "type": "SingleChoice",
-          "content": "Identify the wrong set of rust keywords",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "async, await, where, use",
-              "key": "A"
-            },
-            {
-              "content": "Move, return, mut, while",
-              "key": "B"
-            },
-            {
-              "content": "union, dyn, try, abstract",
-              "key": "C"
-            },
-            {
-              "content": "become, box, do, incur",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
-          "type": "SingleChoice",
-          "content": "Rust variable names can start with",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Letter, underscore",
-              "key": "A"
-            },
-            {
-              "content": "Letter, digits",
-              "key": "B"
-            },
-            {
-              "content": "Underscore, digits",
-              "key": "C"
-            },
-            {
-              "content": "All of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
-          "type": "SingleChoice",
-          "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "A positive number",
-              "key": "A"
-            },
-            {
-              "content": "A negative number",
-              "key": "B"
-            },
-            {
-              "content": "An unsigned number",
-              "key": "C"
-            },
-            {
-              "content": "None of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
-          "type": "SingleChoice",
-          "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "noHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "typed_language"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
             }
           ]
         }
       ],
       "readings": [
         {
-          "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
-          "title": "Introduction to Blockchain Technology",
-          "shortTitle": "Intro Blockchain",
+          "uuid": "037554bd-80e3-40bd-8bb5-60633cffef7d",
+          "title": "Rust - Collections",
+          "shortTitle": "Collections",
           "type": "YoutubeVideo",
-          "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
+          "url": "https://www.youtube.com/watch?v=tTUFl8c_Z0w",
           "subTopics": [
-            "variables"
+            "collection_vector",
+            "collection_strings"
           ],
-          "details": "This video explains about\n* Point 1\n* Point 2\n"
+          "details": "Introduction to popular collection types in Rust\n* Vec<T>\n* HashMap<K, V>\n* HashSet<T>\n* VecDeque<T>\n* LinkedList<T>\n"
+        },
+        {
+          "uuid": "9d8a8dbd-3dd4-44aa-8d79-8e10dddb23fe",
+          "title": "Rust - Collections Demo",
+          "shortTitle": "Collections Demo",
+          "type": "YoutubeVideo",
+          "url": "https://www.youtube.com/watch?v=yAw3cpqIXtg",
+          "subTopics": [
+            "collection_vector",
+            "collection_hashmap"
+          ],
+          "details": "Demo of code written using Collection Data Structures in Rust\n"
         }
       ],
       "summaries": [
         {
-          "title": "Typed language",
-          "shortTitle": "Typed language",
-          "key": "typed_language",
-          "details": "- Dynamically-Typed Languages\n  * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.\n  * Dynamic languages are usually interpreted (with some pre-processing for optimisation) so it is fast to make changes and then immediately run the updated program.\n  * Dynamically-Typed languages allows for Fast Development Cycles and Fast Start-up times.\n  * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.\n- Statically-Typed Languages\n  * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.\n  * Many runtime errors become compile time errors as the compiler ensures that you are writing 'correct' code. This leads to a much smoother development experience.\n  * The execution of the code will be faster compared to the dynamically-typed languages.\n  * The compiler can use the type system to provide language features that are more expressive and succinct.\n  * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.\n- Rust is a Statically-Typed Language\n"
+          "title": "Introduction",
+          "shortTitle": "Introduction",
+          "key": "collection_introduction",
+          "details": "- Collections are useful data structure in Rust that can contain multiple values.\n- Collections can contain multiple values\n- Collections are stored on Heap and are dynamically sized, their size is not required to be known at compile time\n- Rust collections can be grouped into 4 major categories:\n  * Sequences - Vec, VecDeque, LinkedList\n  * Maps - HashMap, BTreeMap\n  * sets: HashSet, BTreeSet\n  * Misc: BinaryHeap\n- 3 of most common collections are:\n  * Vector\n  * String\n  * HashMap\n"
         },
         {
-          "title": "Value Types",
-          "shortTitle": "Value Types",
-          "key": "value-types",
-          "details": "- Rust has two major Data Value Types, which include \n    1. Scalar Types\n    2. Compound ypes\n- Scalar Types\n  * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.\n  - Integers\n    * An integer is a number without a fractional component.\n    * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.\n    * Integers can be either signed or unsigned. Signed and unsigned refer to whether it’s possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).\n    * Integers can be declared using keyword let, and explicitly defining the variable size and it's type of signed or unsigned integer.\n    * For example, we can declare a 64-bit signed and 32-bit unsigned integer in the following ways respectively :- \n    ```\n        1. let mut x: i64 = -20;\n        2. let mut x: u32 = 20;\n    ```\n    * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.\n    * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.\n    - Integer Overflow\n      * Let's say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- \n        1. When you're compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.\n        2. When you're compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.\n  - Floating-Point Types\n    * Floating-Point Types are number with the decimal points.\n    * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.\n    * All the Floating-Point Types are signed.\n    * The default Floating-Point Type is of 64-bit.\n    * The `f32` type is a single-precision float, and `f64` has double precision.\n    * We can declare a float type variable in the following ways:- \n     ```\n        fn main() {\n              let x = 2.0; // f64\n              let y: f32 = 3.0; // f32\n        }\n      ```\n  - Boolean Type\n    * There are two possible constant values:- True & False.\n    * Booleans are one byte in size.\n    * They are declared using the keyword 'bool'.\n  - Character Type\n    * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.\n    * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.\n    * We can use many more types of characters in rust, like, Chinese, emojis, etc.\n- Compound Data Types\n  * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.\n  - Tuples\n    * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.\n    * Tuples have a fixed length: once declared, they cannot grow or shrink in size.\n    * Tuples are created by a comma seperated List.\n    * Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.\n    * For Example:- \n      ```\n        fn main() {\n          let tup: (i32, f64, u8) = (500, 6.4, 1);\n        }\n      ```\n    * We can access a tuple element directly by using a period `(.)` followed by the index of the value we want to access\n    * The tuple without any values has a special name knows as \"unit\".\n    * \"unit's\" value and its corresponding type are both written () and represent an empty value or an empty return type. \n    * Expressions implicitly return the unit value if they don’t return any other value. \n  - Arrays\n    * Arrays are a collection of multiple values, stored in a single entity.\n    * Unlike a tuple, every element of an array must have the same data type.\n    * Arrays in Rust have a fixed length, i.e. they are not dynamic in nature by default.\n    * Arrays are useful when you want your data allocated on the stack rather than the memory heap.\n    * For Example:- \n      ```\n        fn main() {\n            let a: [i32; 5] = [1, 2, 3, 4, 5];\n        }\n      ```\n      Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements.\n    *  We can access elements of an array using indexing, like this:\n      ```\n        fn main() {\n            let a = [1, 2, 3, 4, 5];\n        \n            let first = a[0]; // outputs 1\n            let second = a[1]; // outputs 2\n        }\n      ```\n"
-        },
-        {
-          "title": "Variables",
-          "shortTitle": "Variables",
-          "key": "variables",
-          "details": "- Variables are used to store the values of a particular data type\n- Variables and Mutability\n  * In Rust, variables are immutable in nature by default.\n  * When a variable is immutable, once a value is bound to a name, you can’t change that value\n  * To make the variables mutable, we use the keyword:- `mut`.\n  * For Example:-\n    ```\n      fn main() {\n          let mut x = 5;\n          println!(\"The value of x is: {x}\");\n          x = 6;\n          println!(\"The value of x is: {x}\");\n      }\n    ```\n- Constants\n  * Constants are values that are bound to a name and are not allowed to change, i.e. they are also immutable.\n  * Usage of keyword `mut` isn't allowed with constants.\n  * Constants are immutable by default, and also they’re always immutable.\n  * We declare constants using the `const` keyword instead of the `let` keyword, and the type of the value must be annotated.\n  * Constants can be declared in any scope, including the global scope, making them useful for values that many parts of code need to know about.\n  * Constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.\n  * For Example:-\n    ```\n      const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;\n    ```\n"
-        },
-        {
-          "title": "Keywords",
-          "shortTitle": "Keywords",
-          "key": "keywords",
-          "details": "- Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:\n    1. Strict\n    2. Reserved \n    3. Weak\n- Strict Keywords\n  * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.\n  * For Example:- ` mut, break, else, continue, return, impl, etc. ` \n- Reserved Variables\n  * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.\n  * For Example:- ` abstract, try, do, final, typeof, etc. `\n- Weak Keywords\n  * These keywords have special meaning only in certain contexts.\n  * For example, it is possible to declare a variable or method with the name `union`.\n"
-        },
-        {
-          "title": "Bit Manipulation",
-          "shortTitle": "Bit Manipulation",
-          "key": "bit-manupilation",
-          "details": "- Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.\n- Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.\n"
+          "title": "Vector",
+          "shortTitle": "Vector",
+          "key": "collection_vector",
+          "details": "- Vector allow to store more than 1 value in single data structure.\n- Vector has multiple items of same time stored next to each other in memory.\n- Creating a vector\n  * creating an empty vector\n    ```\n    let v: Vec<i32> = Vec::new();\n    ```\n  * creating vector using vec! macro\n    ```\n    let v = vec![1, 2, 3];\n    ```\n- Adding a value of a vector\n  * Value can be added to vector using method `push`\n    ```\n    let mut v = Vec::new();\n\n    v.push(10);\n    v.push(20);\n    v.push(30);\n    ```\n- Reading elements of a vector\n  * There are 2 ways to read elements in vector - indexing, using get method\n  * Indexing\n    ```\n    let v = Vec![1,2,3,4,5];\n    let third = &v[2];\n\n    println!(“The third element is {}”, third);\n\n    ```\n  * Using get method\n    ```\n    let v = Vec![1,2,3,4,5];\n    let third = v.get(2);\n\n    println!(“The third element is {}”, third);\n    ```\n  * If user access a value outside the vector, if using indexing it will panic, if `get` method it will return None.\n  * According to borrow checker rule, if there is a reference created to an element in the vector, vector can not be modified.\n- Iterating over vector\n  * For loop can be used to iterate over vector\n    ```\n    let v = Vec![1,2,3,4,5];\n    for i in &v {\n        println!(“{}”, i);\n    }\n    ```\n  * To mutate a vector while iterating\n    ```\n    let mut v = Vec![1,2,3,4,5];\n    for i in &mut v {\n        *i += 50;\n        println!(“{}”, i);\n    }\n    ```\n- Useful method in vector\n  * len `vec.len()`: gives length of the vector\n  * capacity `vec.capacity()`: gives total capacity of the vector in bytes\n  * contains `vec.contains(v)`: check if a vector contains the element\n  * remove `vec.remove(index)`: remove an element from specified index in the vector\n  * pop `vec.pop()`: remove an element from end of the vector\n  * push `vec.push(v)`: adds an element to the end of the vector\n"
         },
         {
           "title": "Strings",
           "shortTitle": "Strings",
-          "key": "strings",
-          "details": "- There are two types of strings in Rust: `String` and `&str`.\n- String\n  * Strings are formed by a list of characters, which is really an \"array of characters\".\n  * A String is stored as a vector of bytes `(Vec<u8>)`.\n  * A String is made up of three components: a pointer to some bytes, a length, and a capacity.\n  * The pointer points to an internal buffer String uses to store its data.\n  * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.\n  * The buffer is always stored on the heap.\n  * It is guaranteed to always be a valid `UTF-8` sequence. \n  * String is heap allocated, growable and not null terminated.\n  * We can create a String from a literal string with `String::from`\n  * We can append a char to a String with the push method, and append a &str with the `push_str` method\n- &str\n  * The str type, also called a 'string slice', is the most primitive string type.\n  * A &str is made up of two components: a pointer to some bytes, and a length.\n  * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.\n  * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.\n"
+          "key": "collection_strings",
+          "details": "- Strings in Rust are a collection of bytes.\n- Strings are collection of bytes that support UTF-8 encoded text.\n- Thus different characters of most languages can be represented in Rust.\n- Creating a string:\n  * Empty string can be created as\n    ```\n    let mut s = String::new();\n    ```\n  * Creating a string with initial value\n    ```\n    let s = “initial_value”.to_string();\n    or\n    let s = String::from(“initial_value”);\n    ```\n- Updating a string:\n  * Text can be appended to string using `push_str` and `push` methods.\n    * `push_str` ethod can be used to append a string to another.\n    * Signature of `push_str` is `pub fn push_str(&mut self, string: &str)`\n    * `push_str` does not take ownership of the string passed.\n      ```\n      let mut s = String::from(“Hello, ”);\n      s.push_str(“world”);\n      ```\n    * `push` method can be used to append single character to string:\n      ```\n      let mut s = String::from(“Ca”);\n      s.push(“t”);\n      ```\n  * Strings can be concatenated using + macro\n    ```\n    let s1 = “Hello, “;\n    let s2 = “world!“;\n\n    let s3 = s1 + &s2;\n    ```\n    * + macro uses a method whose signature is `fn add(self, s: &str) -> string`\n    * in above example string s1 is moved and is not accessible after concatenation while reference to string &s2 is appended to it.\n  * For a more complicated string combining format! macro can be used:\n    ```\n    let s1 = “tic”;\n    let s1 = “tac”;\n    let s1 = “toe”;\n\n    let s = format!(“{}-{}-{}”, s1, s2, s3);\n    ```\n- Rust does not allow indexing strings. This limitation comes from the way strings are implemented in rust. Strings are internally array of bytes.\n- Iterating over string:\n  * A string can be tokenized on while space or any character token:\n    ```\n    for s in str.split_whitespace {\n        println!(“{}”, found);\n    }\n\n    for s in str.split(‘,’) {\n        println!(“{}”, found);\n    }\n    ```\n  * It is also possible to iterate over characters or bytes of string:\n    ```\n    for c in “Зд”.chars() {\n        println!(c);\n    }\n    // above will print\n    // 3\n    // д\n    ```\n\n    ```\n    for c in “Зд”.bytes() {\n        println!(c);\n    }\n\n    // Will print:\n    // 208\n    // 151\n    // 208\n    // 180\n    ```\n- Other useful string methods include:\n  * len `str.len()`: gives length of the string\n  * capacity `str.capacity()`: gives total capacity of the string in bytes\n  * contains `str.contains(v)`: find a substring in the parent string\n  * replace `str.replace(\"replace_str1\", \"replace_str2\")`: replace a substring in the parent string\n  * trim `str.trim()`: trim a string\n"
         },
         {
-          "title": "Package Manager",
-          "shortTitle": "Package Manager",
-          "key": "package-manager",
-          "details": "- A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.\n- Cargo is the Rust package manager.\n"
+          "title": "HashMap",
+          "shortTitle": "HashMap",
+          "key": "collection_hashmap",
+          "details": "- HashMap stores a mapping of keys to value.\n- The type HashMap<K, V> stores a mapping of keys of type K to values of type V\n- Mapping from key K to value V is done using hashing that determines how these values are placed in memory.\n- Keys in hashMap can be of any type but all the kes should be of same type, similarly all the values should also be of same type.\n- Creating a HashMap:\n  * HashMap needs to be explicitly included in the scope.\n  * Also, there is no support of macro for creating HashMap.\n  * HashMap can be created as follows:\n    ```\n    use std::collections::HashMap;\n\n    let mut scores = HashMap::New();\n\n    scores.insert(String::from(“Blue”), 10);\n    scores.insert(String::from(“Yellow”), 20);\n    ```\n- Accessing values in HashMap\n  * values in HashMap can be accessed using `get` function:\n    ```\n    use std::collections::HashMap;\n\n    let mut scores = HashMap::New();\n\n    scores.insert(String::from(“Blue”), 10);\n    scores.insert(String::from(“Yellow”), 20);\n\n    let team_name = String::from(“Blue”);\n    const score = scores.get(team_name);\n    ```\n  * It is also possible to iterate over values of a HashMap:\n    ```\n    use std::collections::HashMap;\n\n    let mut scores = HashMap::New();\n\n    scores.insert(String::from(“Blue”), 10);\n    scores.insert(String::from(“Yellow”), 20);\n\n      for (key, value) in & scores {\n          println!(“{}, {}”, key, value);\n      }\n    ```\n  * Updating a HashMap\n    - A value in HashMap can be overridden by inserting the kay again.\n      ```\n      use std::collections::HashMap;\n\n      let mut scores = HashMap::New();\n\n      scores.insert(String::from(“Blue”), 10);\n      scores.insert(String::from(“Blue”), 20);\n\n      println!(“{:?}”, scores); // this will print {“Blue”: 20}\n      ```\n    - Function `or_insert` can be used to add a key if it is not already present:\n      ```\n      use std::collections::HashMap;\n\n      let mut scores = HashMap::New();\n      scores.insert(String::from(“Blue”), 10);\n\n\n      scores.entry(String::from(“Yello”)).or_insert(20);\n      scores.entry(String::from(“Blue”)).or_insert(50);\n\n      println!(“{:?}”, scores); // this will print {“Yellow”: 20, “Blue”: 10}\n      ```\n"
         }
       ]
     },
