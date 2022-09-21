@@ -1,0 +1,5 @@
+- title: Memory Allocation
+  shortTitle: Memory Allocation
+  key: memory-allocation
+  details: |
+    - Rust has a unique approach towards memory allocation. Data variables are either stored on stack or heap.
