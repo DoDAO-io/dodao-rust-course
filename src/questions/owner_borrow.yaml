@@ -50,7 +50,7 @@
     - content: "Program free memory used by a variable on heap while it is in scope"
       key: B
     - content: "An out of scope variable is assigned a value again"
-      key: c
+      key: C
     - content: "Same variable is used in different scopes"
       key: D
 
@@ -257,7 +257,7 @@
     - content: "Borrowing"
       key: B
     - content: "Ownership"
-      key: c
+      key: C
     - content: "Reference"
       key: D
 
@@ -277,15 +277,15 @@
     - content: "Borrower"
       key: B
     - content: "Validator"
-      key: c
+      key: C
     - content: "Static memory"
       key: D
 
 - uuid: 1edea51c-a9f7-4ef7-a243-c96f29daff52
   type: SingleChoice
   content: In Rust, memory is managed through a system of ownership and rules that the compiler checks. If any of the rules are violated, what will happen to the program?
-  hint: No memory, no calculation
-  explanation: "Memory works hand to hand with the machine"
+  hint: Compilation rules are not to be broken
+  explanation: "Memory works hand to hand with the machine and it obeys the rules set by it"
   answerKeys:
     - D
   subTopics:
@@ -297,7 +297,7 @@
     - content: "Ask for memory"
       key: B
     - content: "Memory is automatic assigned"
-      key: c
+      key: C
     - content: "program will fail to compile"
       key: D
 
@@ -317,7 +317,7 @@
     - content: "2"
       key: B
     - content: "1"
-      key: c
+      key: C
     - content: "3"
       key: D
 
@@ -325,9 +325,9 @@
   type: SingleChoice
   content: |
     Complete the sentence
-    When the owner goes out of _____, the value will be ______.
+    Each value in Rust has an owner. There can only be one owner at a time. When the owner goes out of _____, the value will be ______.
   hint: NoHint
-  explanation: "Owners have right and if they abandon the right it get dropped"
+  explanation: "Owners have the rights to a value within its scope but if they abandon the right it get dropped"
   answerKeys:
     - A
   subTopics:
@@ -339,7 +339,7 @@
     - content: "dropped, scope"
       key: B
     - content: "revert, opened"
-      key: c
+      key: C
     - content: "scope, opened"
       key: D
 
@@ -359,15 +359,15 @@
     - content: "a reference is guaranteed to point to a valid value of a particular type for the life of that reference."
       key: B
     - content: "new concept for many programmers, it does take some time to get used to"
-      key: c
+      key: C
     - content: "the range within a program for which an item is valid"
       key: D
 
 - uuid: 3661c275-8559-40e4-b5dd-ac138e3c5be9
   type: SingleChoice
-  content: The action of creating a reference to a variable is called ____
+  content: The action of creating a reference is called ____
   hint: NoHint
-  explanation: "creation of reference is pointer to a variable"
+  explanation: "functions can have references as parameters and we don't need to return them because we never owned it"
   answerKeys:
     - D
   subTopics:
@@ -379,15 +379,17 @@
     - content: "Ownership"
       key: B
     - content: "Heaping"
-      key: c
+      key: C
     - content: "Borrowing"
       key: D
 
 - uuid: 434bc0ff-02a9-4287-a469-e74c3b673f70
   type: SingleChoice
   content: What is a Scope?
-  hint: noHint
-  explanation: ""
+
+  hint: nohint
+  explanation: "It is like the life of an item"
+
   answerKeys:
     - A
   subTopics:
@@ -399,15 +401,15 @@
     - content: "the range within a program for which an item is invalid"
       key: B
     - content: "the range within a program"
-      key: c
+      key: C
     - content: "None of the above"
       key: D
 
 - uuid: 896206c4-09f5-4c46-8cfd-6f5597df0c02
   type: SingleChoice
-  content: When your code calls a function, the values passed into the function are pushed into
-  hint: not a first in first out
-  explanation: "function are pushed in and dont have to leave first"
+  content: The _____ is less organized and memory allocator will always find space that is big enough
+  hint: it uses a tree property
+  explanation: "heap is a non linear data structure."
   answerKeys:
     - B
   subTopics:
@@ -419,15 +421,17 @@
     - content: "Heap"
       key: B
     - content: "Memory"
-      key: c
+      key: C
     - content: "calldata"
       key: D
 
 - uuid: 762de2f4-3e2f-42a3-ba93-770ab7a833dc
   type: SingleChoice
-  content: The function's local variables get pushed onto
-  hint: First in First Out
-  explanation: "pushed accordingly"
+
+  content: A function's local variables are saved into a ____
+  hint: FIFO
+  explanation: "pushed into the stack as they are created"
+
   answerKeys:
     - D
   subTopics:
@@ -439,7 +443,7 @@
     - content: "Calldata"
       key: B
     - content: "Function"
-      key: c
+      key: C
     - content: "Stack"
       key: D
 
@@ -447,7 +451,10 @@
   type: SingleChoice
   content: When the function is over, those values get_______ the stack.
   hint: correct term for memory allocation
-  explanation: "The right term is pop out"
+  explanation:
+    - "Well, when a function gets called, some memory gets allocated for all of its local variables and some other information. This is called a ‘stack frame’, and for the purpose of this tutorial, we’re going to ignore the extra information and only consider the local variables we’re allocating.
+      So in this case, when main() is run, we’ll allocate a single 32-bit integer for our stack frame. This is automatically handled for you, as you can see; we didn’t have to write any special Rust code or anything.
+      When the function exits, its stack frame gets deallocated. This happens automatically as well."
   answerKeys:
     - B
   subTopics:
@@ -458,8 +465,8 @@
       key: A
     - content: "popped out"
       key: B
-    - content: "popped off"
-      key: c
+    - content: "pushed off"
+      key: C
     - content: "pushed out"
       key: D
 
@@ -479,7 +486,7 @@
     - content: "You code get erased"
       key: B
     - content: "You get hacked"
-      key: c
+      key: C
     - content: "Ownership can be change by outsider"
       key: D
 
@@ -499,7 +506,7 @@
     - content: "Heap"
       key: B
     - content: "Stack"
-      key: c
+      key: C
     - content: "Variable"
       key: D
 
@@ -528,15 +535,16 @@
     - content: "line 2"
       key: B
     - content: "line 3"
-      key: c
+      key: C
     - content: "line 4"
       key: D
 
 - uuid: 4531ae97-640b-4f5c-9c59-4d00633a3f9c
   type: SingleChoice
-  content: What is the special annotation in Rust that we can place on types that are stored on the stack, as integers
+  content: |
+    What special annotation can be placed on types that are stored as integers in a stack?
   hint: Stack-Only Data
-  explanation: "variables that use it do not move, but rather are trivially copied,"
+  explanation: "variables that use the annotation do not move, but rather are trivially copied,"
   answerKeys:
     - B
   subTopics:
@@ -548,7 +556,7 @@
     - content: "Copy trait"
       key: B
     - content: "Boolean type"
-      key: c
+      key: C
     - content: "Validators"
       key: D
 
@@ -579,7 +587,7 @@
     - content: "The length of 'hello' is 5"
       key: B
     - content: "The length of 'string' is 6"
-      key: c
+      key: C
     - content: "None of the above"
       key: D
 
@@ -599,7 +607,7 @@
     - content: "Ownership"
       key: B
     - content: "non-referencing"
-      key: c
+      key: C
     - content: "dereferencing"
       key: D
 
@@ -629,7 +637,7 @@
     - content: "hello world"
       key: B
     - content: "Ownership denied"
-      key: c
+      key: C
     - content: "Borrowed data is too big"
       key: D
 
@@ -649,7 +657,7 @@
     - content: " double free error."
       key: B
     - content: " free error."
-      key: c
+      key: C
     - content: " moving error."
       key: D
 
@@ -669,7 +677,7 @@
     - content: "There are 3 rules and it ignore them"
       key: B
     - content: "There are 2 rules, compiler fails when they are violated"
-      key: c
+      key: C
     - content: "There are 3 rules, compiler fails when they are violated"
       key: D
 
@@ -689,7 +697,7 @@
     - content: "one mutable, any number of immutable "
       key: B
     - content: "any number of mutable, one immutable"
-      key: c
+      key: C
     - content: "one immutable, any amount of mutable"
       key: D
 
@@ -709,7 +717,7 @@
     - content: " a pointer in that it’s an address we can follow to access the data stored at that address"
       key: B
     - content: "Both definitions are correct"
-      key: c
+      key: C
     - content: "None of the above"
       key: D
 
@@ -729,7 +737,7 @@
     - content: "paid-cost abstraction"
       key: B
     - content: "cheap-cost abstraction"
-      key: c
+      key: C
     - content: "zero-cost abstraction"
       key: D
 
@@ -749,7 +757,7 @@
     - content: "last in first out"
       key: B
     - content: "last in last out"
-      key: c
+      key: C
     - content: "first in last out"
       key: D
 
@@ -771,7 +779,7 @@
     - content: "Stack allocation works best"
       key: B
     - content: "we wait for compiler to decide"
-      key: c
+      key: C
     - content: "we can store on both"
       key: D
 
@@ -791,7 +799,7 @@
     - content: "Returning value from a function."
       key: B
     - content: "Assigning value of one variable to another variable"
-      key: c
+      key: C
     - content: " calling the owner's Id and claiming it"
       key: D
 
@@ -825,7 +833,7 @@
         Printing the value from main() v[0] = 10"
       key: B
     - content: "The compilations fails"
-      key: c
+      key: C
     - content: "Error occurs at line 3"
       key: D
 
@@ -845,7 +853,7 @@
     - content: "immutable references "
       key: B
     - content: "* operand"
-      key: c
+      key: C
     - content: "None of the above"
       key: D
 
@@ -865,7 +873,7 @@
     - content: "memory validation"
       key: B
     - content: "Ownership validation"
-      key: c
+      key: C
     - content: "Memory safety"
       key: D
 
@@ -885,7 +893,7 @@
     - content: "Data leakage"
       key: B
     - content: "Memory crashes"
-      key: c
+      key: C
     - content: "Nonr of the above"
       key: D
 
@@ -905,7 +913,7 @@
     - content: "*mut"
       key: B
     - content: "+mut"
-      key: c
+      key: C
     - content: "&%mut"
       key: D
 
@@ -925,7 +933,7 @@
     - content: "Model"
       key: B
     - content: "Static"
-      key: c
+      key: C
     - content: "system"
       key: D
 
@@ -945,7 +953,7 @@
     - content: "borrow checker"
       key: B
     - content: "Check warner"
-      key: c
+      key: C
     - content: "Compiler"
       key: D
 
@@ -965,7 +973,7 @@
     - content: "runtimes"
       key: B
     - content: "borrow checker"
-      key: c
+      key: C
     - content: "FIFO"
       key: D
 
@@ -973,7 +981,7 @@
   type: SingleChoice
   content: What kind of error does violating an ownership rules gives
   hint: it confuses the compiler
-  explanation: "No explanation"
+  explanation: "Ownership is a set of rules that governs how a Rust program manages memory.It is a must"
   answerKeys:
     - D
   subTopics:
@@ -985,6 +993,6 @@
     - content: "Runtime error"
       key: B
     - content: "Lifetimes error"
-      key: c
+      key: C
     - content: "Panic error"
       key: D
