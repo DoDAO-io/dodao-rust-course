@@ -245,9 +245,9 @@ Sub Topics: ownership
 - [ ]  Memory is automatic assigned
 - [x]  program will fail to compile
   
-Hint: No memory, no calculation
+Hint: Compilation rules are not to be broken
          
-Explanation: Memory works hand to hand with the machine
+Explanation: Memory works hand to hand with the machine and it obeys the rules set by it
 
 Sub Topics: ownership
  
@@ -258,7 +258,7 @@ Sub Topics: ownership
 
 - [ ]  0
 - [ ]  2
-- [x]  1
+- [ ]  1
 - [ ]  3
   
 Hint: NoHint
@@ -271,7 +271,7 @@ Sub Topics: ownership
 ---
 
 ##### Complete the sentence
-When the owner goes out of _____, the value will be ______.
+Each value in Rust has an owner. There can only be one owner at a time. When the owner goes out of _____, the value will be ______.
   
 
 - [x]  scope, dropped
@@ -281,7 +281,7 @@ When the owner goes out of _____, the value will be ______.
   
 Hint: NoHint
          
-Explanation: Owners have right and if they abandon the right it get dropped
+Explanation: Owners have the rights to a value within its scope but if they abandon the right it get dropped
 
 Sub Topics: ownership
  
@@ -304,7 +304,7 @@ Sub Topics: borrowing
 
 ---
 
-##### The action of creating a reference to a variable is called ____  
+##### The action of creating a reference is called ____  
 
 - [ ]  Referencing
 - [ ]  Ownership
@@ -313,7 +313,7 @@ Sub Topics: borrowing
   
 Hint: NoHint
          
-Explanation: creation of reference is pointer to a variable
+Explanation: functions can have references as parameters and we don't need to return them because we never owned it
 
 Sub Topics: borrowing
  
@@ -327,41 +327,41 @@ Sub Topics: borrowing
 - [ ]  the range within a program
 - [ ]  None of the above
   
-Hint: noHint
+Hint: nohint
          
-Explanation: 
+Explanation: It is like the life of an item
 
 Sub Topics: memory-allocation
  
 
 ---
 
-##### When your code calls a function, the values passed into the function are pushed into  
+##### The _____ is less organized and memory allocator will always find space that is big enough  
 
 - [ ]  Stack
 - [x]  Heap
 - [ ]  Memory
 - [ ]  calldata
   
-Hint: not a first in first out
+Hint: it uses a tree property
          
-Explanation: function are pushed in and dont have to leave first
+Explanation: heap is a non linear data structure.
 
 Sub Topics: memory-allocation
  
 
 ---
 
-##### The function's local variables get pushed onto  
+##### A function's local variables are saved into a ____  
 
 - [ ]  Heap
 - [ ]  Calldata
 - [ ]  Function
 - [x]  Stack
   
-Hint: First in First Out
+Hint: FIFO
          
-Explanation: pushed accordingly
+Explanation: pushed into the stack as they are created
 
 Sub Topics: memory-allocation
  
@@ -372,12 +372,12 @@ Sub Topics: memory-allocation
 
 - [ ]  pushed in
 - [x]  popped out
-- [ ]  popped off
+- [ ]  pushed off
 - [ ]  pushed out
   
 Hint: correct term for memory allocation
          
-Explanation: The right term is pop out
+Explanation: Well, when a function gets called, some memory gets allocated for all of its local variables and some other information. This is called a ‘stack frame’, and for the purpose of this tutorial, we’re going to ignore the extra information and only consider the local variables we’re allocating. So in this case, when main() is run, we’ll allocate a single 32-bit integer for our stack frame. This is automatically handled for you, as you can see; we didn’t have to write any special Rust code or anything. When the function exits, its stack frame gets deallocated. This happens automatically as well.
 
 Sub Topics: memory-allocation
  
@@ -441,7 +441,8 @@ Sub Topics: memory-allocation
 
 ---
 
-##### What is the special annotation in Rust that we can place on types that are stored on the stack, as integers  
+##### What special annotation can be placed on types that are stored as integers in a stack?
+  
 
 - [ ]  Clone
 - [x]  Copy trait
@@ -450,7 +451,7 @@ Sub Topics: memory-allocation
   
 Hint: Stack-Only Data
          
-Explanation: variables that use it do not move, but rather are trivially copied,
+Explanation: variables that use the annotation do not move, but rather are trivially copied,
 
 Sub Topics: memory-allocation
  
@@ -805,7 +806,7 @@ Sub Topics: borrowing
   
 Hint: it confuses the compiler
          
-Explanation: No explanation
+Explanation: Ownership is a set of rules that governs how a Rust program manages memory.It is a must
 
 Sub Topics: ownership
  
