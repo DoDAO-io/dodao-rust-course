@@ -2,313 +2,280 @@
   shortTitle: ownership
   key: ownership
   details: |
-    - Ownership is Rust’s most unique feature, and it enables Rust to make memory safety guarantees without needing a garbage collector.
-    - Rust’s central feature is ownership. All programs have to manage the way they use a computer’s memory while running.
-    - Some languages have garbage collection that constantly looks for no longer used memory as the program runs; in other languages, the programmer must explicitly allocate and free the memory.
-    - Rust uses a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks at compile time.
+    - In Rust, ownership is the most unique feature and allows memory safety to be guaranteed without the use of garbage collectors.
+    - Ownership is Rust's defining characteristic. A computer's memory must be managed by all programs while they run.
+    - A computer's memory must be managed by all programs while they run.
+    - A third approach is used by Rust: memory ownership is governed by a set of rules that the compiler checks during compile.A third approach is used by Rust: memory ownership is governed by a set of rules that the compiler checks during compile.
     - None of the ownership features slow down your program while it’s running.
-    - The Rust compiler checks if a program obeys the ownership rules at compile time. If the program follows these rules, it can run. If it doesn’t, the compiler refuses to produce an executable.
-    - Rust verifies the ownership rules using the borrow checker. The borrow checker verifies the ownership model and decides if a value in memory (stack or heap) is out of scope or not.
-    - If a value is out of its scope, it’s not accessible to other parts of the program unless it’s borrowed.
-    - When you understand ownership, you’ll have a solid foundation for understanding the features that make Rust unique.
+    - A Rust program's ownership rules are checked at compile time by the Rust compiler. These rules must be followed for the program to run. These rules must be followed for the program to run.
+    - The borrow checker is used by Rust to verify ownership rules. In Rust, ownership rules are verified using the borrow checker. By checking the ownership model, the borrow checker determines whether a value in memory (stack or heap) is within scope.
+    - Out-of-scope values cannot be accessed by other parts of the program unless they are borrowed.
+    - Understanding ownership will give you a solid understanding of Rust's features.Understanding ownership will give you a solid understanding of Rust's features.
     - The Ownership Rules
-      - In Rust, every variable owns the value it’s initialized with, and there can only be one owner.
-      - Once the owner is out of scope, the value is dropped. It’s important to understand the details of the ownership rules.
-      - let’s take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:
-          - The first ownership rule is that every variable owns its initialized value.
-            ```rust
-                let owner = String::from("one");
-            ```
-          - The owner variable above owns the string one and, unlike languages such as Python and Go, that value will be dropped on variable reassignment.
-
-          - The second ownership rule is that two variables cannot point to the same memory location; every value can have only one owner.
-            ```rust
-                let new_owner = owner;
-            ```
-          - The new_owner variable now owns the value stored at the memory location of the owner variable.
-          - If you try to use the owner variable, the compiler will panic, and it will refuse to generate an executable.
-          - The third ownership rule is that once a variable is out of the declared scope, the value gets dropped, and memory is deallocated.
-           ```rust
-              // a variable in a separate scope
-              {
-              let example = String::from("Here's a new scope");
-                }
-
-              print!("{}", example)
-          ```
-          - You cannot access the example variable outside its scope; trying to do so will cause the compiler to panic.
-    - Ownership in Functions
-    - When you pass a value to a function as an argument, the function can access that variable even though it wasn’t declared in its scope:
+    - It is the responsibility of every variable to own the value it was initialized with, and a variable can only have one owner.
+    - As soon as the owner is removed from scope, the value is lost.
+    - Understanding the rules of ownership is important.
+    - Let's examine the ownership rules. While we look at the examples that illustrate these rules, keep them in mind:
+    - Every variable owns its initial value, so that is the first ownership rule.
+       ```rust
+           let owner = String::from("one");
+       ```
+    - In contrast to Python and Go, when the owner variable is reassigned, the string value will be dropped.
+    - Second rule, no two variables can point to the same memory location; each value has only one owner.
       ```rust
-          fn printer(value: String) -> String {
-          return value
-          }
+          let new_owner = owner;
+      ```
+    -  At the memory location where the owner variable was stored, the new_owner variable now owns it.
+    -  Using the owner variable will cause the compiler to panic, preventing the executable from being generated.
+    -  The three ownership rule states that a variable gets dropped once it leaves its declared scope, and its memory is deallocated.
+      ```rust
+         // a variable in a separate scope
+         {
+         let example = String::from("Here's a new scope");
+           }
+             print!("{}", example)
+     ```
+    - This example variable cannot be accessed outside its scope; attempting to do so will cause the compiler to panic.
+    - Ownership in Functions
+      - Even though a variable wasn't declared in the function's scope, it can be accessed as an argument:
+    ```rust
+        fn printer(value: String)  > String {
+                     return value
+           }
 
-          fn main() {
-          let x = String::from("Prints a value"); // x owns the string value
+         fn main() {
+           let x = String::from("Prints a value"); // x owns the string value
 
            // ownership is moved to the printer function here
-           print!("{} The Result of Printing X is that it -:", printer(x));
+            print!("{} The Result of Printing X is that it  :", printer(x));
+        }
+    ```
+    Rust moves ownership of that variable to the function at compile time, so the function can access it.
+    Return Values and Scope
+    Returning values can also transfer ownership. 
+    ```rust
+      fn main() {
+         let s1 = gives_ownership(); // gives_ownership moves its return
+          // value into s1
+         let s2 = String::from("hello"); // s2 comes into scope
+         let s3 = takes_and_gives_back(s2); // s2 is moved into
+         // takes_and_gives_back, which also
+         // moves its return value into s3
+            } // Here, s3 goes out of scope and is dropped. s2 goes out of scope but was
+        // moved, so nothing happens. s1 goes out of scope and is dropped.
+      fn gives_ownership()  > String { // gives_ownership will move its
+        // return value into the function
+        // that calls it
+          let some_string = String::from("hello"); // some_string comes into scope
+          some_string // some_string is returned and
+            // moves out to the calling
+            // function
+          }
+        // takes_and_gives_back will take a String and return one
+      fn takes_and_gives_back(a_string: String)  > String { // a_string comes into
+      // scope
+        a_string // a_string is returned and moves out to the calling function
+        }
+      ```
+    - Assignment of a value to another variable always moves the ownership of a variable. 
+    - Variables that contain heap data will be dropped when they go out of scope, unless the data has been moved to another variable. With each function, you need to take ownership and return ownership. 
+    - Is it possible to let a function use a value, but not take ownership of it? As well as any data resulting from the body of the function that we might want to return, anything we pass in also needs to be passed back in order to use it again.
+
+    - Returning ownership of parameters
+
+      ```rust
+        fn main() {
+          let s1 = String::from("hello");
+          let (s2, len) = calculate_length(s1);
+          println!("The length of '{}' is {}.", s2, len);
+        }
+         fn calculate_length(s: String)  > (String, usize) {
+          let length = s.len(); // len() returns the length of a String
+          (s, length)
           }
       ```
-    - The function can access that variable because Rust moves ownership of it to the function at compile time.
-    - Return Values and Scope
-    - Returning values can also transfer ownership. 
-    ```rust
-        fn main() {
-          let s1 = gives_ownership(); // gives_ownership moves its return
-            // value into s1
-          let s2 = String::from("hello"); // s2 comes into scope
-          let s3 = takes_and_gives_back(s2); // s2 is moved into
-          // takes_and_gives_back, which also
-          // moves its return value into s3
-            } // Here, s3 goes out of scope and is dropped. s2 goes out of scope but was
-          // moved, so nothing happens. s1 goes out of scope and is dropped.
-        fn gives_ownership() -> String { // gives_ownership will move its
-          // return value into the function
-          // that calls it
-          let some_string = String::from("hello"); // some_string comes into scope
-            some_string // some_string is returned and
-              // moves out to the calling
-              // function
-            }
-          // takes_and_gives_back will take a String and return one
-        fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
-        // scope
-          a_string // a_string is returned and moves out to the calling function
-          }
-        ```
-        - The ownership of a variable follows the same pattern every time: assigning
-        - a value to another variable moves it. When a variable that includes data
-        - on the heap goes out of scope, the value will be cleaned up by drop unless
-        - the data has been moved to be owned by another variable.
-        - Taking ownership and then returning ownership with every function is
-        - a bit tedious. What if we want to let a function use a value but not take ownership?
-        - It’s quite annoying that anything we pass in also needs to be passed
-        - back if we want to use it again, in addition to any data resulting from the
-        - body of the function that we might want to return as well.
-        - Returning ownership of parameters
-        ```rust
-          fn main() {
-            let s1 = String::from("hello");
-            let (s2, len) = calculate_length(s1);
-            println!("The length of '{}' is {}.", s2, len);
-          }
-        fn calculate_length(s: String) -> (String, usize) {
-            let length = s.len(); // len() returns the length of a String
-            (s, length)
-          }
-        - But this is too much ceremony and a lot of work for a concept that should
-        - be common. Luckily for us, Rust has a feature for this concept, called references. Which we will touch soon.
-        - Rust Prioritizes Code Reusability
-        - Code reusability is an essential practice, but to practice code reusability you need to understand Rust’s ownership rules.
-        - Rust is a very flexible programming language. It provides concepts like borrowing, moving, copying, and cloning ownership for variable reusability.
+    - This is too much ceremony and work for a concept that should be commonplace. This concept is fortunately supported by Rust's references feature. Which we will touch soon.
+    - Rust Prioritizes Code Reusability
+    - The practice of code reusability is an essential skill, but you must understand Rust's ownership rules to be able to practice it.
+    - Rust is one of the most flexible programming languages available. In order to make variables reusable, it provides concepts such as borrowing, moving, copying, and cloning ownership.
 
 - title: Reference and Borrowing
   shortTitle: Borrowing
   key: borrowing
   details: |
-    - The issue with the tuple code in our last section is that we have to return the
-    - String to the calling function so we can still use the String after the call to
-    - calculate_length, because the String was moved into calculate_length.
-    - Here is how you would define and use a calculate_length function that
-    - has a reference to an object as a parameter instead of taking ownership of
-    - the value:
-    ```rust
-      fn main() {
+    - In our previous section, we had to return the String to the calling function so that we could use it after we called calculate_length, because the String had been moved into it.
+    - Instead of taking ownership of the value, here is how you would define and use a calculate_length function that takes a reference to an object as a parameter:
+
+       ```rust
+        fn main() {
          let s1 = String::from("hello");
          let len = calculate_length(&s1);
          println!("The length of '{}' is {}.", s1, len);
-      }
-     fn calculate_length(s: &String) -> usize {
+        }
+        fn calculate_length(s: &String)  > usize {
         s.len()
       }
-    ```
-    - First, notice that all the tuple code in the variable declaration and
-    - the function return value is gone. Second, note that we pass &s1 into
-    - calculate_length and, in its definition, we take &String rather than String.
-    - These ampersands are references, and they allow you to refer to some
-    - value without taking ownership of it.
-    - The opposite of referencing by using & is dereferencing, which is accomplished with
-    - the dereference operator, *.
+       ```
+    - Note that all tuple codes in the variable declaration and function return value have been removed. Secondly, we pass &s1 to calculate_length and use &String instead of String in its definition. By using these ampersands, you can refer to some value without owning it.
+    - Referencing is accomplished by using &, while dereference is accomplished with *. - 
     - Let’s take a closer look at the function call here:
-    ```rust
-      let s1 = String::from("hello");
-      let len = calculate_length(&s1);
-    ```
-    - The &s1 syntax lets us create a reference that refers to the value of s1 but
-    - does not own it. Because it does not own it, the value it points to will not be
-    - dropped when the reference goes out of scope.
-    - Likewise, the signature of the function uses & to indicate that the type of the parameter s is a reference.
-    - The scope in which the variable s is valid is the same as any function
-    - parameter’s scope, but we don’t drop what the reference points to when it
-    - goes out of scope because we don’t have ownership. When functions have
-    - references as parameters instead of the actual values, we don’t need to return
-    - the values in order to give back ownership, because we never had ownership.
-    - We call having references as function parameters borrowing. As in real
-    - life, if a person owns something, you can borrow it from them. When you’re
-    - done, you have to give it back. Lets try to modify something we are borrowing below
-    ```rust
-        fn main() {
-            let s = String::from("hello");
-            change(&s);
-        }
-        fn change(some_string: &String) {
-            some_string.push_str(", world");
-        }
-    ```
-    - Here’s the error:
-    ```rust
+      ```rust
+        let s1 = String::from("hello");
+        let len = calculate_length(&s1);
+      ```
+    - By using the &s1 syntax, we can create a reference to s1 that does not own it. When the reference goes out of scope, the value it points to won't be dropped because it doesn't own it. As well, the function signature uses & to indicate that the parameter s is a reference. When the variable s goes out of scope, we don't drop what the reference points to since we don't have ownership over it. We don't need to return ownership when functions have references as parameters instead of the actual values, since we never owned them.    - 
+    - Borrowing is what we call having references as function parameters.
+    - If a person owns something, it can be borrowed just like in real life. When finished, it must be returned. Lets try to modify something we are borrowing below
+      ```rust
+          fn main() {
+              let s = String::from("hello");
+              change(&s);
+          }
+          fn change(some_string: &String) {
+              some_string.push_str(", world");
+          }
+      ```
+    -  Here’s the error:
+       ```rust
         error[E0596]: cannot borrow immutable borrowed content `*some_string` as
         mutable
-        --> error.rs:8:5
+          > error.rs:8:5
          |
        7 | fn change(some_string: &String) {
-         | ------- use `&mut String` here to make mutable
+         |         use `&mut String` here to make mutable
        8 | some_string.push_str(", world");
          | ^^^^^^^^^^^ cannot borrow as Mutable
       ```
-      - Just as variables are immutable by default, so are references. We’re not
-      - allowed to modify something we have a reference to.
-      - Mutable reference
-      - we can fix the issue above via mutable reference
-        ```rust
-          fn main() {
-            let mut s = String::from("hello");
-            change(&mut s);
-          }
-          fn change(some_string: &mut String) {
-            some_string.push_str(", world");
-          }
-        ```
-        - First, we had to change s to be mut. Then we had to create a mutable
-        - reference with &mut s and accept a mutable reference with some_string:
-        - &mut String.
-        - But mutable references have one big restriction: you can have only one
-        - mutable reference to a particular piece of data in a particular scope. This
-        - code will fail:
-        ```rust
-          let mut s = String::from("hello");
-          let r1 = &mut s;
-          let r2 = &mut s;
-          println!("{}, {}", r1, r2);
-        - Here’s the error:
-        ```rust
-          error[E0499]: cannot borrow `s` as mutable more than once at a time
-            --> src/main.rs:5:14
-             |
-           4 |  let r1 = &mut s;
-             |          ------ first mutable borrow occurs here
-           5 |  let r2 = &mut s;
-             |          ^^^^^^ second mutable borrow occurs here
-           6 |
-           7 |    println!("{}, {}", r1, r2);
-             |              -- first borrow later used here
-        ```rust
-        - This restriction allows for mutation but in a very controlled fashion. It’s
-        - something that new Rustaceans struggle with, because most languages let
-        - you mutate whenever you’d like.
-        - The benefit of having this restriction is that Rust can prevent data races
-        - at compile time. A data race is similar to a race condition and happens when
-        - these three behaviors occur:
-            • Two or more pointers access the same data at the same time.
-            • At least one of the pointers is being used to write to the data.
-            • There’s no mechanism being used to synchronize access to the data.
-        - Data races cause undefined behavior and can be difficult to diagnose
-        - and fix when you’re trying to track them down at runtime; Rust prevents
-        - this problem from happening because it won’t even compile code with
-        - data races!
-        - As always, we can use curly brackets to create a new scope, allowing for
-        - multiple mutable references, just not simultaneous ones:
-        ```rust
-         let mut s = String::from("hello");
-          {
-            let r1 = &mut s;
-            } // r1 goes out of scope here, so we can make a new reference with no
-          // problems.
-            let r2 = &mut s;
-        ```
-        - A similar rule exists for combining mutable and immutable references.
-        - This code results in an error:
-        ```rust 
-           let mut s = String::from("hello");
-           let r1 = &s; // no problem
-           let r2 = &s; // no problem
-           let r3 = &mut s; // BIG PROBLEM
-              println!("{}, {}, and {}", r1, r2, r3);
-        ```
-        - And this will lead to an Error
-        ```rust
-          error[E0502]: cannot borrow `s` as mutable because it is also borrowed as
-            immutable
-          --> 6:14
-           |
-         4 | let r1 = &s; // no problem
-           | -- immutable borrow occurs here
-         5 | let r2 = &s; // no problem
-         6 | let r3 = &mut s; // BIG PROBLEM
-           |        ^^^^^^ mutable borrow occurs here
-         7 |
-         8 | println!("{}, {}, and {}", r1, r2, r3);
-           |                  -- immutable borrow later used here  
-      ```
-    - We also cannot have a mutable reference while we have an immutable one.
-    - Users of an immutable reference don’t expect the values to suddenly change out from under them! However, multiple immutable references are okay because no one who is just reading the data has the
-    - ability to affect anyone else’s reading of the data.
-    - Dangling References
-      - In languages with pointers, it’s easy to erroneously create a dangling pointer,
-      - a pointer that references a location in memory that may have been given to
-      - someone else, by freeing some memory while preserving a pointer to that
-      - memory. In Rust, by contrast, the compiler guarantees that references will
-      - never be dangling references: if you have a reference to some data, the compiler
-      - will ensure that the data will not go out of scope before the reference
-      - to the data does.
-      - Let’s try to create a dangling reference, which Rust will prevent with a
-      - compile-time error:
+    - Variables and references are immutable by default, so it is impossible to change what you are referencing.
+
+    - Mutable reference
+    - we can fix the issue above via mutable reference
       ```rust
         fn main() {
-          let reference_to_nothing = dangle();
-          }
-          fn dangle() -> &String {
-            let s = String::from("hello");
-            &s
-          }
+          let mut s = String::from("hello");
+          change(&mut s);
+        }
+        fn change(some_string: &mut String) {
+          some_string.push_str(", world");
+        }
       ```
-      - The error we get is
+
+    - First, I had to bravely change. Then I had to create a mutable reference with &mut and accept a mutable reference with some_string .
+    - &mut string.
+    - However, mutable references have one major limitation.
+    - You can have only one mutable reference to a given data item within a given scope.
+    - This code will fail:
       ```rust
-        error[E0106]: missing lifetime specifier
-          --> main.rs:5:16
-           |
-         5 | fn dangle() -> &String {
-           |                ^expected lifetime parameter
-           |
-           = help: this function's return type contains a borrowed value, but there is
-            no value for it to be borrowed from
-           = help: consider giving it a 'static lifetime
+        let mut s = String::from("hello");
+        let r1 = &mut s;
+        let r2 = &mut s;
+        println!("{}, {}", r1, r2);
       ```
-      - This error message refers to a feature we haven’t covered yet: lifetimes
-      - The Rules of References
-      - Let’s recap what we’ve discussed about references:
-        • At any given time, you can have either but not both of the following: one
-          mutable reference or any number of immutable references.
-        • References must always be valid.
-      - Let's look at kind of reference: slices.
-      - The Slice Type
-      - Another data type that does not have ownership is the slice. Slices let you
-      - reference a contiguous sequence of elements in a collection rather than the whole collection.
-      - Here’s a small programming problem: write a function that takes a string
-      - and returns the first word it finds in that string. If the function doesn’t find
-      - a space in the string, the whole string must be one word, so the entire string
-      - should be returned.
-      - Let’s think about the signature of this function:
+    - Here’s the error:
+       ```rust
+         error[E0499]: cannot borrow `s` as mutable more than once at a time
+             > src/main.rs:5:14
+            |
+          4 |  let r1 = &mut s;
+            |                 first mutable borrow occurs here
+          5 |  let r2 = &mut s;
+            |          ^^^^^^ second mutable borrow occurs here
+          6 |
+          7 |    println!("{}, {}", r1, r2);
+            |                 first borrow later used here
+       ```
+    - This restriction allows modification, but in a very controlled manner. And new Rustaceans will struggle with it. As most languages ​​allow mutation at any time. The advantage of this limit is that Rust can prevent compile-time data races. A data race is similar to a race condition and happens when these three behaviors occur:
+     • Two or more pointers access similar data simultaneously.
+     • At least one of the pointers is being used to write to the data.
+     • There's no mechanism being used to synchronize access to the data.
+    - Data races cause undefined behavior and can be difficult to troubleshoot or fix when you're trying to find them down at runtime.
+    - Rust has an advantage here because once it spots a code with data races it wouldn’t compile it.
+    - We use curly brackets to create a new scope, allowing for multiple mutable references, just not simultaneous ones:
+
       ```rust
-        fn first_word(s: &String) -> ?
+       let mut s = String::from("hello");
+        {
+          let r1 = &mut s;
+          } // r1 goes out of scope here, so we can make a new reference with no
+        // problems.
+          let r2 = &mut s;
       ```
-      - The function has a &string as a parameter, no ownership of it. which is fine. But what shouls we return?
-      - We don’t really have a way to talk about part of a string. However, we could return the index of the end of the word.
-      - Let’s try that
+        A similar rule exists for combining mutable and immutable references.
+        This code results in an error:
+      ```rust 
+         let mut s = String::from("hello");
+         let r1 = &s; // no problem
+         let r2 = &s; // no problem
+         let r3 = &mut s; // BIG PROBLEM
+            println!("{}, {}, and {}", r1, r2, r3);
+      ```
+        And this will lead to an Error
       ```rust
-        fn first_word(s: &String) -> usize {
+        error[E0502]: cannot borrow `s` as mutable because it is also borrowed as
+          immutable
+          > 6:14
+         |
+       4 | let r1 = &s; // no problem
+         |    immutable borrow occurs here
+       5 | let r2 = &s; // no problem
+       6 | let r3 = &mut s; // BIG PROBLEM
+         |        ^^^^^^ mutable borrow occurs here
+       7 |
+       8 | println!("{}, {}, and {}", r1, r2, r3);
+         |                     immutable borrow later used here  
+    ```
+
+    - We also cannot have a mutable reference while we have an immutable reference.
+    - Users of immutable references don't expect values ​​to suddenly change with them! However, multiple immutable references are acceptable because no one is just reading the data potentially affecting someone else reading the data.
+
+    -  Dangling References
+
+    - In pointer languages, it is easy to mistakenly create a hanging pointer, a pointer that refers to a location in memory that may have been allocated to someone else, freeing the memory while preserving the pointer to it. this memory. In Rust, on the other hand, the compiler guarantees that no references are made.
+
+    - Let’s try to create a dangling reference, which Rust will prevent with a compile time error:
+    ```rust
+      fn main() {
+        let reference_to_nothing = dangle();
+        }
+        fn dangle()  > &String {
+          let s = String::from("hello");
+          &s
+        }
+    ```
+      The error we get is
+    ```rust
+      error[E0106]: missing lifetime specifier
+          > main.rs:5:16
+         |
+       5 | fn dangle()  > &String {
+         |                ^expected lifetime parameter
+         |
+         = help: this function's return type contains a borrowed value, but there is
+          no value for it to be borrowed from
+         = help: consider giving it a 'static lifetime
+    ```
+    - This error message refers to a feature we haven’t covered yet: lifetimes
+    - The Rules of References
+    - Let’s recap what we’ve discussed about references
+      • At any time, you can have either, but not both, of the following:
+        - mutable references or any number of immutable references.
+      • References should always be valid. 
+    -  Let's look at a kind of reference: slices.
+     
+    - The Slice Type
+
+    - Another data type that has no attributes is Slice. Slices allow you to refer to a sequence of contiguous items in a collection rather than the entire collection.
+    - Here's a little programming problem:
+    - write a function that takes a string and returns the first word it finds in that string. If the function does not find a space in the string, then the entire string must consist of a single word, so the entire string must be returned.
+    - Let’s think about the signature of this function:
+     ```rust
+       fn first_word(s: &String)  > ?
+     ```
+    - The function has a &string as a parameter, no ownership of it. which is fine. But what shouls we return?
+    - We don’t really have a way to talk about part of a string. However, we could return the index of the end of the word.
+    - Let’s try that
+      ```rust
+         fn first_word(s: &String)  > usize {
              let bytes = s.as_bytes();
              for (i, &item)v in bytes.iter()w.enumerate() {
                    if item == b' ' {
@@ -317,89 +284,84 @@
                s.len()
                }
       ```
-      - The first_word function that returns a byte index value into the String parameter
-      - we dont have to go deep in explaining. As it can beyoond the scope of this chapter.
-      - String Slice
-      - A string slice is a reference to part of a String, and it looks like this:
+    - The first_word function returns the byte index value in the String parameter which we don't have to explain in depth.
+    - As this may be beyond the scope of this chapter.
+    - String Slice
+    - A string slice is a reference to part of a String, and it looks like this:
       ```rust  
         let s = String::from("hello world");
         let hello = &s[0..5];
         let world = &s[6..11];
       ```
-      - This is similar to taking a reference to the whole String but with the
-      - extra [0..5] bit. Rather than a reference to the entire String, it’s a reference to a portion of the String.
-      - We can create slices using a range within brackets by specifying
-      - [starting index..ending_index], where starting_index is the first position in
-      - the slice and ending_index is one more than the last position in the slice.
-      - String Literals Are Slices
-      - Recall that we talked about string literals being stored inside the binary.
-      - Now that we know about slices, we can properly understand string literals:
-      ```rust
-         let s = "Hello, world!";
-      ```
-      - The type of s here is &str: it’s a slice pointing to that specific point of
-      - the binary. This is also why string literals are immutable; &str is an immutable reference.
-      - String Slices as Parameters
-      - Knowing that you can take slices of literals and String values leads us to one more improvement on first_word, and that’s its signature:
-      ```rust
-        fn first_word(s: &String) -> &str {
-      ```
-    - A more experienced Rustacean would write the signature shown in below instead because it allows us to use the same function on both
-    - String and &str values.
-    ```rust
-      fn first_word(s: &str) -> &str {
-    ```
-    - The concepts of ownership, borrowing, and slices ensure memory safety in Rust programs at compile time.
-    - The Rust language gives you control over your memory usage in the same way as other systems programming languages,
-    - but having the owner of data automatically clean up that data when
-    - the owner goes out of scope means you don’t have to write and debug extra code to get this control.
+    - This is equivalent to getting a reference to the entire string but with the extra bit [0..5]. Instead of a reference to the entire string, this is a reference to a portion of the string. We can create slices using a range in parentheses by specifying [starting index..ending_index], where start_index is the first position in the slice and end_index is one more position than the other. the last position in a moment
+    - String Literals Are Slices
+    - Recall that we talked about string literals being stored inside the binary. Now that we know about slices, we can properly understand string literals:
+          ```rust
+             let s = "Hello, world!";
+          ```
+    - The type of s here is &str:
+    - it is a slice pointing to that particular point in the binary. This is also why string characters are immutable; & str is an immutable reference.
+    - String Slices as Parameters
+    - Knowing that you can take slices of literals and String values leads us to one more improvement on first_word, and that’s its signature:
+          ```rust
+            fn first_word(s: &String)  > &str {
+          ```
+    -  A more experienced Rustacean would write the signature shown in below instead because it allows us to use the same function on both
+    -  String and &str values.
+        ```rust
+          fn first_word(s: &str)  > &str {
+        ```
+
+    - The concepts of ownership, borrowing, and slicing ensure compile-time memory security for Rust programs.
+    - The Rust language allows you to control memory usage just like any other system programming language.
+    - However, if the owner of the data automatically sanitizes that data
+    - Having the owner out of scope means that you don't have to write and debug additional code to gain control of it.
 
 - title: Memory Allocation
   shortTitle: Memory Allocation
-  key: memory-allocation
+  key: memory allocation
   details: |
-    - The items of a program are those functions, modules, and types that have their value calculated at compile-time and stored uniquely in the memory image of the rust process.
-    - Items are neither dynamically allocated nor freed.
-    - The heap is a general term that describes boxes. The lifetime of an allocation in the heap depends on the lifetime of the box values pointing to it.
-    - Since box values may themselves be passed in and out of frames, or stored in the heap, heap allocations may outlive the frame they are allocated within.
-    - An allocation in the heap is guaranteed to reside at a single location in the heap for the whole lifetime of the allocation 
-    - it will never be relocated as a result of moving a box value.
-    - Each Rust program process is allocated some virtual memory by the Operating System(OS), this is the total memory that the process has access to.
-        ![process virtual memory](https://i.imgur.com/mUOasWj.png)
-    - This is quite simple compared to the memory structure we saw in the previous chapters for JVM, V8 and Go.
-    - As you can see there is no generational memory or any complex substructures since Garbage Collection(GC) is not involved.
-    - Different memory in rust are
-    - Heap
-    - This is where all dynamic data(any data for which size cannot be calculated at compile time) is stored.
-    - This is the biggest block of memory and the part managed by Rust’s Ownership model.
-    - Box: The Box type is an abstraction for a heap-allocated value in Rust.
-    - Heap memory is allocated when Box::new is called. A Box<T> holds the smart-pointer to the heap memory allocated for type T and the reference is saved on the Stack.
+    - Program elements are functions, modules, and types whose values ​​are computed at compile time and stored uniquely in the Rust process' memory dump.
+    - Items are not dynamically allocated or deallocated.
+    - A heap is a generic term for a box. The lifetime of an allocation in the heap depends on the lifetime of the boxed value that references it.
+    - Box values ​​themselves may move in and out of frames, or be stored on the heap, so heap allocations can live in the frame in which they were allocated.
+    - Allocations within the heap are guaranteed to reside in one location within the heap for the lifetime of the allocation.
+    - It doesn't shift when the box value shifts.
+    - Each Rust program process is allocated virtual memory by the operating system "OS". This is the total memory accessible to the process.
+       ![process virtual memory](https://i.imgur.com/mUOasWj.png)
+    - This is very simple compared to the JVM, V8 and Go memory structures we saw in the previous chapter.
+    - As you can see, there is no garbage collection (GC) involved, so there is no generational memory or complex substructures. Various storage in the great
+    - heap
+    - This is where all dynamic data (all data whose size cannot be calculated at compile time) is stored.
+    - This is the largest block of memory and the part managed by Rust's ownership model.
+    - Box: Boxed types are Rust's abstraction for heap-allocated values.
+    - Heap memory is allocated when Box::new is called. A Box<T>contains a smart pointer to heap memory allocated for type T , and the reference is saved on the stack.
     - Stack
-    - This is the Stack memory area and there is one Stack per thread.
-    - This is where static values are allocated by default.
-    - Static data(data size known at compile time) includes function frames, primitive values, Structs and pointers to dynamic data in Heap.
-    - In the case of a string literal, we know the contents at compile time, so
-    - the text is hardcoded directly into the final executable. This is why string literals are fast and efficient. 
-    - But these properties only come from the string literal’s immutability. 
-    - Unfortunately, we can’t put a blob of memory into the binary for each piece of text whose size is unknown at compile time and whose size might change while running the program.
-    - With the String type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the heap, unknown at
-    - compile time, to hold the contents. 
-    - This means:
-      • The memory must be requested from the operating system at runtime.
-      • We need a way of returning this memory to the operating system when
-    - we’re done with our String.
-    - That first part is done by us: when we call String::from, its implementation requests the memory it needs.
-    - This is pretty much universal in programming languages.
-    - However, the second part is different. In languages with a garbage collector (GC), the GC keeps track and cleans up memory that isn’t being used anymore, and we don’t need to think about it.
-    - Without a GC, it’s our responsibility to identify when memory is no longer being used and call code to
-    - explicitly return it, just as we did to request it.
-    - Doing this correctly has historically been a difficult programming problem. If we forget, we’ll waste memory.
-    - If we do it too early, we’ll have an invalid variable. If we do it twice, that’s a bug too.
-    - We need to pair exactly one allocate with exactly one free.
-    - Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope.
-    - Variable Scope
-    - We’ve walked through an example of a Rust program already in a previous section.
-    - Now that we’re past basic syntax, we won’t include all the `fn main() {` code in examples,
-    - so if you’re following along, you’ll have to put the following
-    - examples inside a main function manually.
-    - As a result, our examples will be a bit more concise, letting us focus on the details rather than boilerplate code
+    - This is the stack memory area, with one stack per thread.
+    - By default a static value is assigned here.
+    - Static data (data size known at compile time) includes function frames, primitives, structures, and pointers to dynamic data in the heap. For string literals, the contents are known at compile time.
+    - The text is hardcoded directly into the final executable. Because of this, string literals are fast and efficient.
+    - But these properties come only from the immutability of string literals.
+    - Unfortunately, chunks of memory cannot be inserted into the binary for every piece of text whose size is unknown at compile time and whose size may change during program execution.
+    - The String type needs to allocate an unknown amount of memory on the heap to support mutable and extensible text
+    - Compile time to preserve content. this means:
+
+      • Memory must be claimed by the operating system at runtime.
+      • There must be a way to return this memory to the operating system.
+    - The string is now complete.
+    - The first part of this is done by us:
+    - Calling a String looks like this:: Request the required memory for that implementation.
+    - This is pretty universal in programming languages.
+    - The second part is different, however. When you are using a language with a garbage collector (GC), you don't have to worry about it because the GC tracks and cleans up memory when you are not using it.
+    - Without GC, it's our responsibility to detect when memory is unused and call our code
+    - Please return expressly as we requested.
+    - Getting this right has been a difficult programming problem in the past. Forgetting is a waste of memory.
+    - Do it too early and you'll end up with invalid variables. If you do it twice, it's also wrong. Exactly one allocation must be merged into exactly one free allocation.
+    - Rust takes a different approach:
+    - When the variable that owns the storage goes out of scope, the storage is automatically returned.
+    - variable range
+    - We have already seen an example Rust program in the previous section.
+    - I'm done with the basic syntax, so I won't include all the 'fn main() {' code in the example.
+    - So if you want to follow, you should include
+    - Example manually in the main function.
+    - As a result, the samples are a bit more concise, allowing us to focus on the details rather than the standard code.
