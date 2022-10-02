@@ -331,24 +331,67 @@
        ![process virtual memory](https://i.imgur.com/mUOasWj.png)
     - This is very simple compared to the JVM, V8 and Go memory structures we saw in the previous chapter.
     - As you can see, there is no garbage collection (GC) involved, so there is no generational memory or complex substructures. Various storage in the great
-    - heap
-    - This is where all dynamic data (all data whose size cannot be calculated at compile time) is stored.
+    - Heap
+    - This is where all dynamic data (all data whose size cannot be calculated at compile time) is stored. This gives us flexibility when we are dealing with a data type that can grow, e.g strings
+    - Basically anything that can't be of fixed size must be on the heap.
+    - LIke in stack memory are automatically recaptured when they are out of scope but in Heap it's more specific when the OWNER goes out of scope.
+    ```rust
+      let heap_vector: Vec<i8> = Vec::new();
+      let heap_string: String = String::from("Hello world");
+      let heap_i8: Box<i8> = Box::new(30);
+    ```
     - This is the largest block of memory and the part managed by Rust's ownership model.
+    - Because heap are expensive borrowing play a huge part in rust and set it unique from most languages.
+    - We can also clone a data if we dont want to borrow and changing one value doesnt affect the other.
+    - But cloning is expensive as well. 
     - Box: Boxed types are Rust's abstraction for heap-allocated values.
     - Heap memory is allocated when Box::new is called. A Box<T>contains a smart pointer to heap memory allocated for type T , and the reference is saved on the stack.
     - Stack
-    - This is the stack memory area, with one stack per thread.
-    - By default a static value is assigned here.
+    - This is the stack memory area, with one stack per thread. Rust uses the stack by default for its memory needs Stack variables are used for fast memory creation and fetching and result in a faster program.
+    - Once a variable goes out of scope it is automatically captured back by into the memory by the programs.
+    - Variables with a fixed size can be on the stack, and if it is a growable data type it can't be on stack.
+    ```rust
+        let stack_i8: i8 =10;
+        let stack_f32: f32 = 40;
+        let stack_bool: bool = true;
+    ```
+    - The above code are datatypes with fixed size. They are placed onto each other in the memory hence the name stack. This makes it easier and dont require searching for the next data.
+    - By default a static value is assigned here. Also note that stack copies are cheap compare to heap
     - Static data (data size known at compile time) includes function frames, primitives, structures, and pointers to dynamic data in the heap. For string literals, the contents are known at compile time.
     - The text is hardcoded directly into the final executable. Because of this, string literals are fast and efficient.
     - But these properties come only from the immutability of string literals.
     - Unfortunately, chunks of memory cannot be inserted into the binary for every piece of text whose size is unknown at compile time and whose size may change during program execution.
+    - Borrowing on heap help us retain temporary ownership and although it is the same in stack. it is unnecessary. let's illustrate 
+    ```rust
+        fn main(){
+        let stack_f64: f64 =1.;
+        let heap_f64: Box<64> = Box::new(2.);
+        
+        stack_procedure(stack_f64);
+        println!("in main stack{}", stack_f64);
+
+        stack_procedure(&heap_f64);
+        println!("in main heap{}", &heap_f64);
+
+        }
+
+        fn stack_procedure(mut param: f64){
+        param +=9:
+        println!("in stack procedure with param {}", param);
+        }
+
+        fn heap_procedure(param: &Box<f64>){
+         println!("in heap procedure with param {}", param);
+        }
+      ```
+    - Notice that we couldnt have called the heap without using the & to borrow. But stack is doing fine.
+    - This illustrates how borrowing works well with heap and help us avoid compiler errors.
     - The String type needs to allocate an unknown amount of memory on the heap to support mutable and extensible text
-    - Compile time to preserve content. this means:
+    - Compile time to preserve content. this means: 
 
       • Memory must be claimed by the operating system at runtime.
       • There must be a way to return this memory to the operating system.
-    - The string is now complete.
+    - The string is now complete. in other language two variables can point to the same memory which can lead to concurrency such as race conditions
     - The first part of this is done by us:
     - Calling a String looks like this:: Request the required memory for that implementation.
     - This is pretty universal in programming languages.
