@@ -429,7 +429,7 @@
   type: SingleChoice
 
   content: A function's local variables are saved into a ____
-  hint: FIFO
+  hint: Fist In First Out
   explanation: "pushed into the stack as they are created"
 
   answerKeys:
