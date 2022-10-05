@@ -451,10 +451,8 @@
   type: SingleChoice
   content: When the function is over, those values get_______ the stack.
   hint: correct term for memory allocation
-  explanation:
-    - "Well, when a function gets called, some memory gets allocated for all of its local variables and some other information. This is called a 'stack frame', and for the purpose of this tutorial, we're going to ignore the extra information and only consider the local variables we're allocating.
-      So in this case, when main() is run, we'll allocate a single 32-bit integer for our stack frame. This is automatically handled for you, as you can see; we didn't have to write any special Rust code or anything.
-      When the function exits, its stack frame gets deallocated. This happens automatically as well."
+  explanation: "Leaving no explantion to test for error"
+
   answerKeys:
     - B
   subTopics:
