@@ -1,6 +1,6 @@
 {
   "key": "rust-course",
-  "title": "Rust Course",
+  "title": "Rust Course (work in progress)",
   "summary": "Smart contracts allow users to implement conditions, rules and policies of the blockchain applications. \nIn this course you will learn how to write smart contracts and all the features of Rust language.\n",
   "details": "\"Line1\" \n\"Line2\" \n\"Line3\"\n",
   "duration": "4 - 6 hours",
@@ -6729,7 +6729,7 @@
           "uuid": "434bc0ff-02a9-4287-a469-e74c3b673f70",
           "type": "SingleChoice",
           "content": "What is a Scope?",
-          "hint": null,
+          "hint": "NoHint",
           "explanation": "",
           "answerKeys": [
             "A"
@@ -6793,7 +6793,7 @@
           "uuid": "762de2f4-3e2f-42a3-ba93-770ab7a833dc",
           "type": "SingleChoice",
           "content": "The function's local variables get pushed onto",
-          "hint": "FIFO",
+          "hint": "First in First out",
           "explanation": "pushed accordingly",
           "answerKeys": [
             "D"
@@ -6857,7 +6857,7 @@
           "uuid": "2fe49404-ebe4-4183-a243-510840dbfdcc",
           "type": "SingleChoice",
           "content": "A problem that ownership addresses have is .",
-          "hint": "heap",
+          "hint": "heap memory",
           "explanation": "Not cleaning up the heap data",
           "answerKeys": [
             "A"
