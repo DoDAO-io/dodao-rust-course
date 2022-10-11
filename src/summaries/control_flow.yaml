@@ -1,0 +1,5 @@
+- title: Structs
+  shortTitle: Structs
+  key: structers
+  details: |
+    - Structs are similar to tuples Like tuples, the pieces of a struct can be different types.

@@ -1,0 +1,23 @@
+- uuid: 942b0b68-a5ae-44bb-9dfc-78010ae3283c
+  type: SingleChoice
+  content: |
+    The difference in struct with comparism to tuples is naming data so
+  hint: "Naming clear up any misunderstanding"
+  explanation: "None needed"
+  answerKeys:
+    - A
+  subTopics:
+    - structerrs
+  difficultyLevel: Low
+  choices:
+    - content: "it's clear what the values mean."
+      key: A
+
+    - content: "it's clear what the function mean."
+      key: B
+
+    - content: "it's clear what the struct mean."
+      key: C
+
+    - content: "it's clear what the tuples mean."
+      key: D
