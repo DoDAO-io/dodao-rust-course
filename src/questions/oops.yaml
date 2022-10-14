@@ -1,9 +1,9 @@
 - uuid: 942b0b68-a5ae-44bb-9dfc-88010ae3284b
   type: SingleChoice
   content: |
-    The difference in struct with comparism to tuples is naming data so
+    We take priority in naming struct more than tuples for which of the reason?
   hint: "Naming clear up any misunderstanding"
-  explanation: "None needed"
+  explanation: "Since structs can be a giant group of data we must know what it should contains by looking at the name"
   answerKeys:
     - A
   subTopics:
@@ -25,9 +25,9 @@
 - uuid: 1f2d87c2-2fcc-4246-9f24-122f6755eb51
   type: SingleChoice
   content: |
-    To define a struct, we enter the keyword
+    What is the keyword to start a structure in rust?
   hint: Nohint
-  explanation: "The standard keyword"
+  explanation: "The standard keyword is needed to begin a structure just like fn is needed"
   answerKeys:
     - B
   subTopics:
@@ -49,7 +49,7 @@
 - uuid: c6e8a655-ffa7-4c44-a85c-b8bac238556a
   type: SingleChoice
   content: |
-    To get a specific value from a struct, we use
+    Passing a struct to a function can be achieve with each notation
   hint: Nohint
   explanation: "to access our struct"
   answerKeys:
@@ -58,7 +58,7 @@
     - structs
   difficultyLevel: Low
   choices:
-    - content: plot notation"
+    - content: "plot notation"
       key: A
 
     - content: "not notation"
@@ -75,7 +75,7 @@
   content: |
     Rust also supports structs that look similar to tuples, and they are called
   hint: Nohint
-  explanation: "none"
+  explanation: "It looks like tuples with almost similar feature just as the name implies"
   answerKeys:
     - B
   subTopics:
@@ -97,19 +97,19 @@
 - uuid: 4964a468-beec-47dd-9c31-ccabe918008f
   type: SingleChoice
   content: |
-    _____  are a way of creating more complex data types
+    which is best for creating a more complex data types?
   hint: Nohint
-  explanation: "simple definition"
+  explanation: "sturcts can be missed and used to pass different data and information"
   answerKeys:
     - D
   subTopics:
     - structs
   difficultyLevel: Low
   choices:
-    - content: "Methos"
+    - content: "Methods"
       key: A
 
-    - content: "Function"
+    - content: "Tuples"
       key: B
 
     - content: "Array"
@@ -135,8 +135,8 @@
         }
     ```
 
-  hint: "We call structs like parameter"
-  explanation: "structs can be called into function"
+  hint: "We can call structs like parameter"
+  explanation: "The aim here is to call the origin points from the point struct"
   answerKeys:
     - C
   subTopics:
@@ -182,9 +182,9 @@
 - uuid: b678a8a3-8baa-4a6a-81ae-af64abf54f02
   type: SingleChoice
   content: |
-    To edit a data in struct we make them mutable via
+    What method can we use to edit a struct?
   hint: "Immutable data can become editable"
-  explanation: "None needed"
+  explanation: "If we add the keyword mut to our struct we can edit it ar any time"
   answerKeys:
     - A
   subTopics:
@@ -222,7 +222,7 @@
       }
     ```
   hint: "The values in structs are immutable by default"
-  explanation: "we make them mutable and can now alter as we please"
+  explanation: "we make struct mutable and can now alter as we please"
   answerKeys:
     - D
   subTopics:
@@ -245,8 +245,8 @@
   type: SingleChoice
   content: |
     A struct can include __ to indicate that you want to use a copy of some other struct for some of the values
-  hint: "Update syntax"
-  explanation: "it points to same values of other data when you change a one "
+  hint: "Struct Update syntax"
+  explanation: "We can inherit instances of a struct and have a shorter code"
   answerKeys:
     - B
   subTopics:
@@ -318,7 +318,7 @@
   content: |
     Which of the following is not a type of struct?
   hint: "Type of struct"
-  explanation: "null"
+  explanation: "Method is a function, we can implement a method to a struct but its not a type of struct"
   answerKeys:
     - C
   subTopics:
@@ -331,7 +331,7 @@
     - content: "tuples structs"
       key: B
 
-    - content: " Method structs"
+    - content: "Method structs"
       key: C
 
     - content: "Regular/classic structs"
@@ -341,8 +341,8 @@
   type: SingleChoice
   content: |
     The most common type of structs is
-  hint: Nohint
-  explanation: "None"
+  hint: "the type of struct you see everytime"
+  explanation: "Classic struct can have all the data we need unlike the other type"
   answerKeys:
     - A
   subTopics:
@@ -366,7 +366,7 @@
   content: |
     To make a struct public, we can add ___ keyword
   hint: "to make it accessible to the public"
-  explanation: "none"
+  explanation: "Without the pub keyword other functions outside the scope will not be able to call it"
   answerKeys:
     - C
   subTopics:
@@ -388,9 +388,18 @@
 - uuid: d217a052-4cd3-4c0e-9233-21bd41f57e15
   type: SingleChoice
   content: |
-    Which type of struct has it's field as anonymous?
-  hint: "it's variable are nameless"
-  explanation: "none"
+    What type of struct is used below?
+    ```rust
+        struct Color(i32, i32, i32);
+        struct Point(i32, i32, i32);
+
+        fn main() {
+          let black = Color(0, 0, 0);
+           let origin = Point(0, 0, 0);
+        }
+    ```
+  hint: "its variable are nameless"
+  explanation: "Notice they have a type of field and not a name"
   answerKeys:
     - D
   subTopics:
@@ -421,7 +430,7 @@
          }
     ```
   hint: " it's like an empty tuple"
-  explanation: "none"
+  explanation: "Unit struct don't have any fields"
   answerKeys:
     - B
   subTopics:
@@ -443,9 +452,9 @@
 - uuid: 685b7bb8-5d31-4195-8e19-e20e27f137f2
   type: SingleChoice
   content: |
-    How can i destruct a tuples?
-  hint: "breaking down item"
-  explanation: "naming each fiels since its anonymous"
+    How can a tuples be destructed?
+  hint: "destruct means breaking down item"
+  explanation: "naming each fields in the tuples since its anonymous"
   answerKeys:
     - A
   subTopics:
@@ -467,33 +476,33 @@
 - uuid: add26dd6-b772-436c-9c48-10b62694d605
   type: SingleChoice
   content: |
-    To destruct struct we ____
-  hint: Nohint
-  explanation: "null"
+    Destructing a struct is done via
+  hint: "Destruct of a struct is similar to the destruct of a tuple"
+  explanation: "Using the field name so we directly call the variable with using the dot notation"
   answerKeys:
     - A
   subTopics:
     - destruct
   difficultyLevel: Low
   choices:
-    - content: "use the field names"
+    - content: "using the field names"
       key: A
 
-    - content: "call the field names"
+    - content: "calling the field names"
       key: B
 
-    - content: "declare the field names"
+    - content: "declaring the field names"
       key: C
 
-    - content: "asign the field names"
+    - content: "asigning the field names"
       key: D
 
 - uuid: e729ead8-8940-4f24-8cc4-ea171e5fa10a
   type: SingleChoice
   content: |
-    The ___ operator can be used to ignore some fields when destructuring:
+    What is the symbol use to replace field we dont want when destructing?
   hint: "patial destructing"
-  explanation: "it helps create a more clearn code and other advantages"
+  explanation: "it helps create a more clean code and ignore data you don't want to call at this particular time"
   answerKeys:
     - B
   subTopics:
@@ -515,9 +524,9 @@
 - uuid: b12e0955-60f5-4bed-b0c6-1cafdc586f2a
   type: SingleChoice
   content: |
-    ____ allows the creation of a type which may be one of a few different variants.
-  hint: Nohint
-  explanation: "Any variant which is valid as a struct is also valid as an enum"
+    what feature allows the creation of a type which may be one of a few different variants.
+  hint: "it can be one or more data types"
+  explanation: "Enum uses OR in its method, meaning different of same variant is possible"
   answerKeys:
     - B
   subTopics:
@@ -539,44 +548,48 @@
 - uuid: eb6e5869-5d42-4a06-b17f-1d9e4cb98ada
   type: SingleChoice
   content: |
-    An enum constructor can also be used like a ____?
-  hint: "constructors"
-  explanation: "none"
+    what kind of function is this?
+    ```rust
+        fn main() {
+          enum Message {
+              Write(String),
+          }
+        let m = Message::Write("This is Rust enum constructor".to_string());
+        }
+    ```
+  hint: "we called the enum like a function"
+  explanation: "we can use this simpler method instead of creating another function"
   answerKeys:
     - A
   subTopics:
     - enums
   difficultyLevel: Low
   choices:
-    - content: "Function"
+    - content: "enum constructor"
       key: A
 
-    - content: "Structs"
+    - content: "Structs function"
       key: B
 
     - content: "Methods"
       key: C
 
-    - content: "Array"
+    - content: "function"
       key: D
 
 - uuid: 930e2d75-5ae2-4da3-ac9f-83938c3182f3
   type: SingleChoice
   content: |
-    Rewrite the code below using enum constructor
+    Rewrite the code below using an enum constructor
     ```rust
-          fn main() {
-           enum Message {
-               Write(String),
-                }
-          fn foo(x: String) -> Message {
+          fn bye(x: String) -> Message {
              Message::Write(x)
           }
 
-           let x = foo("Hello, world".to_string());
+           let x = bye("Bye, world".to_string());
           }
     ```
-  hint: Nohint
+  hint: "You can get rid of the function bye"
   explanation: "enums create instances of each variants thereby shorten the code"
   answerKeys:
     - D
@@ -599,9 +612,9 @@
 - uuid: bd089b3e-58cb-49e9-a0ea-728322d0e89c
   type: SingleChoice
   content: |
-    We Use an `enum` when you want one thing __ another thing.
-  hint: "Logical operator"
-  explanation: "null"
+    What logical operator is more realted to enum?
+  hint: "enum is the opposite of struct"
+  explanation: "enum can be of one or same variant unlike struct"
   answerKeys:
     - B
   subTopics:
@@ -623,9 +636,9 @@
 - uuid: de34dc7b-8e47-4a6e-a0b8-bc2cca480693
   type: SingleChoice
   content: |
-    in Rust language, we can use enums to fulfil what ____ feature does in other languages
-  hint: "null feature is replaced with a sub-enums feature in Rust"
-  explanation: "It's a standard library"
+    in Rust language, we can use 'Option<T>'enums to fulfil what ____ feature does in other languages
+  hint: "it is replaced with a sub-enums feature in Rust in returning"
+  explanation: "null is used to return nothing, we can use Option<T> enum which carry the comcept of null "
   answerKeys:
     - D
   subTopics:
@@ -647,16 +660,21 @@
 - uuid: 7d50de8d-62bd-4432-baa4-a59d8f5a47a1
   type: SingleChoice
   content: |
-    Which keyword below is used as an enums null feature in Rust?
-  hint: Nohint
-  explanation: "Basic"
+    What is the syntax of Option<T> enum carrying the null concept?
+  hint: "It should return nothing"
+  explanation: "The concept of null was created as a enum and it has nothing to return"
   answerKeys:
-    - C
+    - A
   subTopics:
     - option-enums
   difficultyLevel: Low
   choices:
-    - content: "None(T)"
+    - content: |
+        "
+           enum Option<T> {
+            None,
+             Some(T),
+         }"
       key: A
 
     - content: "enums-opt<T>"
@@ -672,8 +690,8 @@
   type: SingleChoice
   content: |
     An enums with no varians is called
-  hint: Nohint
-  explanation: "none needed"
+  hint: "it should return zero value but as a enum"
+  explanation: "it is an empty enum and they cannot be instantiated. "
   answerKeys:
     - A
   subTopics:
@@ -729,8 +747,8 @@
   type: SingleChoice
   content: |
     An enum is sometimes called a sum type because
-  hint: Nohint
-  explanation: "the set of possible values of the enum is the sum of the sets of possible values for each variant."
+  hint: "Matching variant"
+  explanation: "Enum values are the sum of the sets of values for each variant."
   answerKeys:
     - B
   subTopics:
@@ -770,7 +788,7 @@
           }
     ```
   hint: "showing how enums are declared and called"
-  explanation: "none needed"
+  explanation: "we can simply call a data from enum into a function using ::"
   answerKeys:
     - D
   subTopics:
@@ -793,8 +811,8 @@
   type: SingleChoice
   content: |
     A ____ is a collection of methods defined for an unknown type: Self
-  hint: Nohint
-  explanation: "simple definition"
+  hint: "It is a language feature that communicate with the rust compiler about functionality"
+  explanation: "it has similar feature as interface to java or abstract classes to C++"
   answerKeys:
     - B
   subTopics:
@@ -817,8 +835,8 @@
   type: SingleChoice
   content: |
     Traits can be implemented for ____ data type.
-  hint: "application is easy and friendly"
-  explanation: "none needed"
+  hint: "it can be implemented easily"
+  explanation: "it is like an extension for functionality and can be used everywhere"
   answerKeys:
     - D
   subTopics:
@@ -862,7 +880,7 @@
              }
      ```
   hint: "Implementing a trait and inbuilt ToString method"
-  explanation: "implemented on the dog struct"
+  explanation: "it was implemented on the dog struct and help us added more meaning to out program"
   answerKeys:
     - B
   subTopics:
@@ -884,11 +902,11 @@
 - uuid: 3c752253-1019-4f90-8d03-72693e380883
   type: SingleChoice
   content: |
-    _____ is a special keyword that is only available within type definitions, trait definitions, and impl blocks
-  hint: Nohint
-  explanation: "none"
+    The _____ keyword is primarily used to define implementations on types
+  hint: "you just to shorten the word and you get the keyword"
+  explanation: "To implement some functionality for a type"
   answerKeys:
-    - A
+    - B
   subTopics:
     - trait
   difficultyLevel: Low
@@ -908,16 +926,17 @@
 - uuid: e48e73cd-d564-45c5-a77d-e6c932724a79
   type: SingleChoice
   content: |
-    To implement a trait we use the keyword _____
-  hint: Nohint
-  explanation: "implementation keyword"
+    What is the syntax for returning a trait-implementing value of some type from position
+
+  hint: "It is a keyword just like the impl but for traits"
+  explanation: "implementation keyword can be used on trait as well which is especially useful in the context of closures and iterators"
   answerKeys:
     - A
   subTopics:
     - trait
   difficultyLevel: Low
   choices:
-    - content: "impl"
+    - content: "impl Trait"
       key: A
 
     - content: "trait"
@@ -934,7 +953,7 @@
   content: |
     What trait lets us customize what happens when a value is about to go out of scope?
   hint: Nohint
-  explanation: "it's functionality is almost always used when implementing a smart pointer"
+  explanation: "drop trait functionality is almost always used when implementing a smart pointer"
   answerKeys:
     - D
   subTopics:
@@ -956,9 +975,9 @@
 - uuid: cf8f7447-c3fc-4c6a-852a-3da6eed7633d
   type: SingleChoice
   content: |
-    Aside trait which other feature provide to restrict types and liferimes to be used as parameters.
-  hint: Nohint
-  explanation: "bounds restriction are standard"
+    which other feature restrict types and lifetimes to be used as parameters?
+  hint: "The other feature that can do this is trait"
+  explanation: "we use it to ensure that references are valid as long as we need them to be"
   answerKeys:
     - B
   subTopics:
@@ -1005,8 +1024,8 @@
   type: SingleChoice
   content: |
     Which of the following is not a bound?
-  hint: "type of bounds"
-  explanation: "its not a bound"
+  hint: "type of bounds, notice the odd one out"
+  explanation: "its not a bound it is more similar to struct"
   answerKeys:
     - D
   subTopics:
@@ -1028,9 +1047,9 @@
 - uuid: 6ed42e0e-0b4f-4bcb-9427-7d5bf314db11
   type: SingleChoice
   content: |
-    ? is only used alongside _____ bound to relax the implicit
-  hint: Nohint
-  explanation: "by definition"
+    ? is only used alongside _____ bound to relax the implicit for type parameters
+  hint: "It has a limit and ? help relax it"
+  explanation: "This help create a relaxed sized with is not the same as an unsized trait"
   answerKeys:
     - A
   subTopics:
@@ -1054,15 +1073,14 @@
   content: |
     The code below is
     ```rust
-        #![allow(unused_variables)]
-        fn main() {
+          fn main() {
             pub trait Summarizable {
                 fn summary(&self) -> String;
          }
         }
     ```
   hint: "definiting a trait"
-  explanation: "define is different from implementation"
+  explanation: "defining a trait is different from implementation of a trait"
   answerKeys:
     - A
   subTopics:
@@ -1084,11 +1102,11 @@
 - uuid: 90fcb73d-ed3c-4f7b-b2b2-bf9f572256da
   type: SingleChoice
   content: |
-    ______ gives us the ability to present a single interface for potentially many different concrete types.
-  hint: Nohint
-  explanation: "to create more flexible APIs and more control"
+    What feature allow us to presents a single interface for different types of concrete?
+  hint: "The ability to present data in different form"
+  explanation: "to create more flexible APIs and more control by reusing code"
   answerKeys:
-    - B
+    - A
   subTopics:
     - polymorphism
   difficultyLevel: Low
@@ -1110,7 +1128,7 @@
   content: |
     What options for polymorphism exist in Rust?
   hint: Nohint
-  explanation: "none needed"
+  explanation: "polymorphism can become complex and Rust only implemented what are needed"
   answerKeys:
     - C
   subTopics:
@@ -1134,7 +1152,7 @@
   content: |
     While static dispatch choses to create copies of all functions, dynamic dispatch choses to store _____
   hint: Nohint
-  explanation: "It store as a dynamic feature"
+  explanation: "It store as a dynamic which is a single generics copy"
   answerKeys:
     - B
   subTopics:
@@ -1156,22 +1174,22 @@
 - uuid: 25e99a74-7792-451b-855f-19ab02c3d96b
   type: SingleChoice
   content: |
-    gives us the ability to present a single interface for potentially many different concrete types
+    Dynamic dispatch is also known as
   hint: Nohint
-  explanation: "simple definition"
+  explanation: "it is known as parametric becasue it uses leverage"
   answerKeys:
     - C
   subTopics:
     - polymorphism
   difficultyLevel: Low
   choices:
-    - content: "Clone"
+    - content: "Clone dsispatch"
       key: A
 
     - content: "Trait"
       key: B
 
-    - content: "polymorphism"
+    - content: "parametric polymorphism"
       key: C
 
     - content: "Maker"
@@ -1180,10 +1198,10 @@
 - uuid: c56550ab-fdf2-49e8-a013-67d4e83ec1e9
   type: SingleChoice
   content: |
-    What is a trait to another trait called?
+    What is a trait ubder another trait called?
 
   hint: "one trait act like a parent"
-  explanation: "none needed"
+  explanation: "The trait"
   answerKeys:
     - B
   subTopics:

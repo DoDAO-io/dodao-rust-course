@@ -2,12 +2,15 @@
   shortTitle: Structs
   key: structs
   details: |
+    - Structures aka structs are a group of related variable in one place and unlike an array struct can contain different data types.
+    - Each variable in a struct is known as a member.
+    - we can put all information about a users in a struct.
     - Structs are similar to tuples Like tuples, the pieces of a struct can be different types. 
-    - Unlike with tuples, in a struct you’ll name each piece of data so it’s clear what the values mean.
+    - Unlike with tuples, in a struct you'll name each piece of data so it's clear what the values mean.
     - To define a struct, we enter the keyword struct and name the entire struct. 
-    - A struct’s name should describe the significance of the pieces of data being grouped together.
+    - A struct's name should describe the significance of the pieces of data being grouped together.
     - To define a struct, we enter the keyword struct and name the entire struct. 
-    - A struct’s name should describe the significance of the pieces of data being grouped together.
+    - A struct's name should describe the significance of the pieces of data being grouped together.
     - Inside curly brackets, we define the names and types of the pieces of data, which we call fields
     - for example
       ```rust
@@ -19,7 +22,7 @@
               }
                 fn main() {}
       ```
-    - To use a struct after we’ve defined it, we create an instance of that struct by specifying concrete values for each of the fields.
+    - To use a struct after we've defined it, we create an instance of that struct by specifying concrete values for each of the fields.
     - To get a specific value from a struct, we use dot notation.
     - If the instance is mutable, we can change a value by using the dot notation and assigning into a particular field.
     - We create an instance by stating the name of the struct and then add curly brackets containing key: value pairs, where the keys are the names of the fields and the values are the data we want to store in those fields.
@@ -34,12 +37,36 @@
                  sign_in_count: 1,
                };
           }
+      ```
+    - We can use methods on structure and this way the methods only works with the struct
+    - we use the 'impl' keyword to define a method within the context of a structure.
+    - The first parameter of a method will be always self, which represents the calling instance of the structure. 
+    - Lets illustrates
+    ```rust
+          //define dimensions of a rectangle
+          struct Rectangle {
+             width:u32, height:u32
+          }
 
+          //logic to calculate area of a rectangle
+          impl Rectangle {
+            fn area(&self)->u32 {
+          //use the . operator to fetch the value of a field via the self keyword
+            self.width * self.height
+            }
+          }
+    ```
+    - We can create instances from other instances with Struct Update Syntax
+    - The syntax '..' specifies that the remaining fields not explicitly set should have the same value as the fields in the given instance.
+    - This help us keep a lesser code as it somehow Inherited what we want it to.
 - title: Type of Structs
   shortTitle: Structs type
   key: type-structs
   details: |
-    - Structs in Rust come in three types: Structs with named fields(regular), tuple structs, and unit structs.
+    - Structs in Rust come in three types: Structs with 
+    - named fields(regular),
+    - tuple structs, and
+    - unit structs.
     - Regular/classic structs are the most commonly used. Each field defined within them has a name and a type, and once defined can be accessed.
     - Adding pub to a field makes it visible to code in other modules, as well as allowing it to be directly accessed and modified.
     - Tuple structs are similar to regular structs, but its fields have no names. They are used like tuples, with deconstruction possible.
@@ -80,12 +107,18 @@
              name: String,
              stories: usize,
            }
-          let teller = ArabianNights { name: "Scheherazade".into(), stories: 1001 };
+          let teller = ArabianNights { 
+          name: "Scheherazade".into(),
+          stories: 1001 };
           {
           let ArabianNights { name, stories } = teller;
               println!("{} told {} stories", name, stories);
             }
       ```
+      - Now, we access the name, and stories fields using the field names directly:
+      - name instead of ArabianNights.name
+      - stories instead of ArabianNights.age
+      - Note that the name of the variables while destructuring should be the same as the name of the fields.
     - Partial Destructing: The .. operator can be used to ignore some fields when destructuring:
       ```rust
           let ArabianNights { name, .. } = teller;
@@ -109,6 +142,7 @@
         - Use an `enum` when you want one thing OR another thing.
     - Enums are for many choices together.
     - Declaring an enum, write enum and use a code block with the options, separated by commas.
+    - We use the :: syntax to use the name of each variant: they're scoped by the name of the enum itself. 
     - Enums are useful and more appropriate when working with IP addresses
     - Two major standards are used for IP addresses: version four and version six.
     - Any IP address can be either a version four or a version six address not both and this is a property that makes enums special
@@ -132,6 +166,28 @@
     - The code above illustrates that you can put any kind of data inside an enum variant: strings, numeric types, or structs.
     - You can even include another enum!
     - we're also able to define methods on enums.
+    - comparing enums and struct below. 
+    ```rust
+      enum Message {
+         Quit,
+         Move { x: i32, y: i32 },
+         Write(String),
+         ChangeColor(i32, i32, i32),
+        }
+
+     fn main() {}
+    ```
+    - The struct equivalent is
+    ```rust
+      struct QuitMessage; // unit struct
+      struct MoveMessage {
+            x: i32,
+            y: i32,
+        }
+      struct WriteMessage(String); // tuple struct
+      struct ChangeColorMessage(i32, i32, i32); // tuple struct 
+
+    ```
     - We can also create an enum with no variants. These are known as zero-variant enums, and we cannot instantiate them.
     - define below
       ```rust
