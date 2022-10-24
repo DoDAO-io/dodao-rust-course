@@ -198,9 +198,9 @@ topics:
        - HashSet<T>
        - VecDeque<T>
        - LinkedList<T>
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+    readings: collections.yaml
+    summaries: collections.yaml
+    questions: collections.yaml
     status: In Progress
     completionWeek: July 18
 

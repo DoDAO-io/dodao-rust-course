@@ -5,19 +5,14 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  
  ## Pointers and Iterators
  
-  **Struct in Rust**
+  **Introduction to Blockchain Technology**
  
- [![Struct in Rust](https://img.youtube.com/vi/n3bPhdiJm9I/0.jpg)](https://www.youtube.com/watch?v=n3bPhdiJm9I)     
+ [![Introduction to Blockchain Technology](https://img.youtube.com/vi/u70_rafPs-0/0.jpg)](https://www.youtube.com/watch?v=u70_rafPs-0)     
  
- This video explains
-* Defining/Using Structs
-* Function Constructors
-* Reusing Instance Data
-* Tuple Structs
-* Example Use Case
-* Method Syntax
-* Associated Functions
+ This video explains about
+* Point 1
+* Point 2
     
  
- Sub Topics: structs    
+ Sub Topics: variables    
  

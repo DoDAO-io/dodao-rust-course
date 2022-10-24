@@ -5,17 +5,15 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 
 ## Collections
  
-This chapter talks about various pre-written Data Structures that are available in rust.
+This chapter talks about various popular pre-written Data Structures that are available in rust.
  - Vec<T>
- - HashMap<T>
- - HashSet<T>
- - VecDeque<T>
- - LinkedList<T>
+ - String
+ - HashMap<K, V>
 
 
 ## Links
-[Reading List](./../../generated/readings/data_types.md)
+[Reading List](./../../generated/readings/collections.md)
 
-[Summary](./../../generated/summaries/data_types.md)
+[Summary](./../../generated/summaries/collections.md)
 
-[Questions](./../../generated/questions/data_types.md)
+[Questions](./../../generated/questions/collections.md)

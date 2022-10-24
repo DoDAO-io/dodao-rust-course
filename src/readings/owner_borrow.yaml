@@ -1,9 +1,58 @@
-- uuid: 1f281079-d174-4036-9ea8-1906bd4ad220
-  title: Struct in Rust
-  shortTitle: struct
+- uuid: 08415e65-cc8d-4123-bdeb-b9b39cb3a4db
+  title: Rust - Ownership and Borrowing
+  shortTitle: Ownership
   type: YoutubeVideo
-  url: https://www.youtube.com/watch?v=n3bPhdiJm9I&ab_channel=Let%27sGetRusty
+  url: https://www.youtube.com/watch?v=1cZ15uAvWro
   subTopics:
-    - "structerrs"
+    - memory-allocation
   details: |
-    This video explains
+    Ownership is one of the most important features of Rust, it helps the language ensure memory safety without the need of garbage collection. Another important concept related to ownership is borrowing.
+    This video explains about
+    * Scope and Ownership
+    * References and Borrowing
+
+- uuid: 24e52953-b7aa-4858-bfe9-0050f871b160
+  title: Rust - Ownership and Borrowing
+  shortTitle: Ownership
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=Tw5Xr68GUSk
+  subTopics:
+    - variable-scope
+    - borrowing
+  details: |
+    Ownership and scope in Rust, writing memory safe code using borrowing.
+    This video explains about
+    * Ownership and Scope
+    * Writing code using borrowing
+    * Immutable and mutable references
+    * Rules for borrowing
+- uuid: 86bf13d1-0e3a-40fa-b55c-bdf8fe5a51c4
+  title: Rust - Ownership and Borrowing
+  shortTitle: Ownership
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=k_WmestbBYw
+  subTopics:
+    - variable-scope
+    - borrowing
+  details: |
+    Ownership and scope in Rust, writing memory safe code using borrowing.
+    This video explains about
+    * Ownership and Scope
+    * Writing code using borrowing
+    * Immutable and mutable references
+    * Rules for borrowing
+- uuid: 014d249b-4e19-4a7c-8ab0-c6e9f4dfd2a8
+  title: Rust - Ownership and Borrowing
+  shortTitle: Ownership
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=6eCV-Q-kjX4
+  subTopics:
+    - variable-scope
+    - borrowing
+  details: |
+    Ownership and scope in Rust, writing memory safe code using borrowing.
+    This video explains about
+    * Ownership and Scope
+    * Writing code using borrowing
+    * Immutable and mutable references
+    * Rules for borrowing

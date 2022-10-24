@@ -1,16 +1,11 @@
-- uuid: 1f281079-d174-4036-9ea8-0406bd4ad220
-  title: Struct in Rust
-  shortTitle: struct
+- uuid: 699f89a5-4c2a-4442-afe7-eabc1fb8f5fa
+  title: Introduction to Blockchain Technology
+  shortTitle: Intro Blockchain
   type: YoutubeVideo
-  url: https://www.youtube.com/watch?v=n3bPhdiJm9I&ab_channel=Let%27sGetRusty
+  url: https://www.youtube.com/watch?v=u70_rafPs-0
   subTopics:
-    - "structs"
+    - variables
   details: |
-    This video explains
-    * Defining/Using Structs
-    * Function Constructors
-    * Reusing Instance Data
-    * Tuple Structs
-    * Example Use Case
-    * Method Syntax
-    * Associated Functions
+    This video explains about
+    * Point 1
+    * Point 2

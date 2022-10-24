@@ -1,5 +1,129 @@
-- title: Structs
-  shortTitle: Structs
-  key: structerrs
+- title: Memory Allocation
+  shortTitle: Memory Allocation
+  key: memory-allocation
   details: |
-    - Structs
+    - Rust has a unique approach towards memory allocation. Data variables are either stored on stack or heap.
+    - Memory Management Approach
+      * Different languages have different approach towards memory management.
+      * In rust data with known, fixed size is stored on stack, data with an unknown size at compile time or size that can change is stored on heap.
+    - Stack
+      * Stacks are last-in first-out and store fixed size variables.
+      * Memory management on stacks is easy.
+      ![Stack](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_stack.jpg?raw=true)
+    - Heap
+      * Heap is less organized, when adding a variable on the heap the memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location.
+      * Keeping track of what parts of code are using what data on the heap, minimizing the amount of duplicate data on the heap, and cleaning up unused data on the heap so you don’t run out of space are all problems that ownership addresses.
+      ![Heap](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_heap.jpg?raw=true)
+
+- title: Variable Scope
+  shortTitle: Variable Scope
+  key: variable-scope
+  details: |
+    - In Rust a variable is valid only in its scope, as soon as it goes out of scope its memory is freed.
+    - Scope:
+      * As the variable goes out of scope it is no longer valid, at this point Rust automatically returns the memory used by the variable.
+      * Rust’s approach to memory management is unique by scoping is simple and robust.
+      * Other languages use different approaches like garbage collection where that regularly looks for no-longer used memory as the program runs, some other languages depend on programmers regularly freeing up the memory. These approaches are less efficient.
+        ```
+          fn main() {
+            {
+              let str = “Hello World”; // str is valid from this point onwards
+            }
+            // str goes out of scope
+          }
+        ```
+
+- title: Ownership
+  shortTitle: Ownership
+  key: ownership
+  details: |
+    - Each variable in Rust has an Owner.
+    - What is Ownership in rust:
+      * Each value in Rust has an owner
+      * Ownership in Rust strictly follows certain rules, if these rules are violated the program will not compile:
+        - each value in Rust has a owner
+        - there can only be one owner at a time
+        - when the owner goes out of scope, value will be dropped
+      * If any of these rules is violated the program will not compile.
+      * None of these rules slow down the execution at runtime.
+    - Moving Data:
+      * When a variable on the heap is assigned to another variable the first one is no longer valid. The ownership of the variable is said to be moved.
+        ```
+          let s1 = String::from(“Hello”);
+          let s2 = s1
+
+          println!(“{}, world!”, s1); // this line gives an error.
+        ```
+      * After the line let s2 = s1, rust considers s1 as no longer valid. Thus trying to use s1 after s2 is created will not work.
+      * While dealing with variables on stack values are not moved, they are rather copied.
+      ![Moving Value](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_move.jpg?raw=true)
+    - Double Free Error
+      * The reason for invalidating the original reference after moving the value is to prevent double free error.
+      * Consider both s1 and s2 remain valid after the assignment. When they both go out of scope, they will both try to free the same memory. This is a memory safety bug called double free error. Freeing memory twice can lead to memory corruption which can result in security vulnerability.
+    - Functions - Passing and Returning Value
+      * Mechanics of passing and returning value from a function is the same as when assigning value.
+      * Value will be moved or copied depending on whether it is on heap or stack.
+        ```
+          fn main() {
+              let s = String::from(“Hello”);
+              takes_ownership(s); // Function takes ownership of s, so it is no longer valid here
+          }
+
+          fn takes_ownership(some_string: String) {
+              println!(some_string);
+          } // some_string goes out of scope after function call
+        ```
+      * To be able to access the value s after function call we need to return it:
+        ```
+          fn main() {
+            let s1 = String::from(“Hello”);
+            let s2 = takes_and_return_ownership(s1); // Function takes ownership of s1
+          }
+
+          fn takes_and_return_ownership(some_string: String) {
+              println!(some_string);
+              some_string;
+          } // some_string moves back to calling function
+        ```
+
+- title: Borrowing
+  shortTitle: Borrowing
+  key: borrowing
+  details: |
+    - The action of creating a reference to a variable is called borrowing.
+    - What is Borrowing:
+      * Moving a variable on the heap is not always convenient.
+      * Consider a situation like passing a variable on heap to a function call, to be able to use a variable after the function call we need to return it from the function. In such situations we can provide a reference to the variable.
+      * Creating a reference to a variable is called borrowing, references can use variables but not own them.
+    - Reference
+      * A reference stores the address of the data and we can follow the reference to access data stored at that address, that data is owned by a different variable.
+      * A reference is always guaranteed to point to a valid value for the life of the referenced value.
+      * The value pointed by the reference is not dropped as the reference goes out of scope as it does not have the ownership.
+      * Ampersands are used to represent references.
+        ```
+          fn main() {
+            let s = String::from(“Hello”);
+            calculate_length(&s); // Function takes reference to s
+          }
+
+          fn calculate_length(string_reference: &String) {
+              string_reference.len();
+          }
+        ```
+        ![Reference](https://github.com/DoDAO-io/dodao-rust-course/blob/2419453a452b44111d5fa63d76663c831ea83901/images/img_reference.jpg?raw=true)
+      - Mutable Reference
+        * References can be easily made mutable:
+          ```
+            fn main() {
+              let mut s = String::from(“Hello”);
+              calculate_length(&mut s); // Function takes reference to s
+            }
+
+            fn calculate_length(string_reference: &mut String) {
+                string_reference.push_str(“, world !”);
+            }
+          ```
+        * At any given time there can be one mutable reference or multiple immutable reference to the variable.
+        * This restriction enables rust to prevent data race at compile time.
+      - Dangling Reference
+        * The Rust compiler ensures that dangling references can never exist. Compiler will guarantee that the data will not go out of scope before the reference to the data.
