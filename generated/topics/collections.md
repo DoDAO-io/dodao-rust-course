@@ -7,8 +7,10 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
  
 This chapter talks about various popular pre-written Data Structures that are available in rust.
  - Vec<T>
- - String
- - HashMap<K, V>
+ - HashMap<T>
+ - HashSet<T>
+ - VecDeque<T>
+ - LinkedList<T>
 
 
 ## Links

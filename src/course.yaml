@@ -192,7 +192,7 @@ topics:
   - title: Collections
     key: collections
     details: |
-      This chapter talks about various pre-written Data Structures that are available in rust.
+      This chapter talks about various popular pre-written Data Structures that are available in rust.
        - Vec<T>
        - HashMap<T>
        - HashSet<T>
