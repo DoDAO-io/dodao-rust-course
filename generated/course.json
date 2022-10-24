@@ -4680,625 +4680,157 @@
       "order": 3,
       "questions": [
         {
-          "uuid": "ab88a2ab-c80b-49f5-9ea0-b5ed8e4933b1",
+          "uuid": "942b0b68-a5ae-44bb-9dfc-88010ae3284b",
           "type": "SingleChoice",
-          "content": "What is the output of the following code snippet:\n \n    ``` \n        fn main() {\n          let x = 12;\n          println!(\"The value of x is: {x}\");\n          x = 8;\n          println!(\"The value of x is: {x}\");\n        } \n    ```\n",
-          "hint": "NoHint",
-          "explanation": "Error would occur, because the variable x isn't set as mutable so it's value can't be changed.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "The value of x is: 8",
-              "key": "A"
-            },
-            {
-              "content": "Error: the variable x is mutable",
-              "key": "B"
-            },
-            {
-              "content": "The value of x is: 12",
-              "key": "C"
-            },
-            {
-              "content": "Error: the variable x is immutable",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "23a0e9e5-6c47-4512-98a5-4cd3ab6eff25",
-          "type": "SingleChoice",
-          "content": "Space taken by a Character data type in rust is",
-          "hint": "It doesn't use ASCII values",
-          "explanation": "Rust's char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "1 byte",
-              "key": "A"
-            },
-            {
-              "content": "4 bytes",
-              "key": "B"
-            },
-            {
-              "content": "8 bytes",
-              "key": "C"
-            },
-            {
-              "content": "16 bytes",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "39385b22-7604-492f-9c2e-aaae409c6b79",
-          "type": "SingleChoice",
-          "content": "Rust is a Dynamically typed language.",
-          "hint": "Does the compiler need to know the data type at compile time?",
-          "explanation": "It is statically typed",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "typed_language"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "6b844c24-f769-4662-a591-83c0a5f8c6c3",
-          "type": "SingleChoice",
-          "content": "Select the incorrect declaration statement",
-          "hint": "NoHint",
-          "explanation": "It is declared as an unsigned integer, but the value is negative",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "let mut x: u32 = 20;",
-              "key": "A"
-            },
-            {
-              "content": "let mut x: i32 = -20;",
-              "key": "B"
-            },
-            {
-              "content": "let mut x: u32 = -20;",
-              "key": "C"
-            },
-            {
-              "content": "let mut x = 20;",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "6f2cb4ae-db4d-4c04-bfd4-37669695dab0",
-          "type": "SingleChoice",
-          "content": "Suppose you declared a variable as u8 and then assigned it a value of \"257\". What would be the output if it’s compiled with a \"`“--release” flag?`\"",
-          "hint": "NoHint",
-          "explanation": "After 255 the digits start rolling back to 0, 1 and so on",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "bit-manupilation"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "257",
-              "key": "A"
-            },
-            {
-              "content": "Error: Integer Overflow",
-              "key": "B"
-            },
-            {
-              "content": "0",
-              "key": "C"
-            },
-            {
-              "content": "1",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "0708f185-46b5-45ee-ac47-3e7e1ca611b3",
-          "type": "SingleChoice",
-          "content": "Are Tuples in rust dynamic in nature?\n\"Eg:-\" \n``` \n  let tup: (i32, f64, bool) = (500, 6.4, true); \n```\n",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Yes",
-              "key": "A"
-            },
-            {
-              "content": "No",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "d11a531f-f32f-4764-a60a-2cc5af348245",
-          "type": "SingleChoice",
-          "content": "Select the correct statements for the two String     types(“String” and “&str”).\n \"a. “Strings” are immutable in nature and cannot be modified. \"\n \"b. “&str” is a primitive data type, whereas “String” is implemented in the standard library.\"\n \"c. To read a file into the strings, we use the read_to_string() method.\"\n",
-          "hint": "NoHint",
-          "explanation": "Strings are mutable in nature",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Only a",
-              "key": "A"
-            },
-            {
-              "content": "Both a & b",
-              "key": "B"
-            },
-            {
-              "content": "Both b & c",
-              "key": "C"
-            },
-            {
-              "content": "None of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "9511276a-dd19-47c4-b086-0d1de8cafedb",
-          "type": "SingleChoice",
-          "content": "Which among the following is not an acceptable keyword in rust?",
-          "hint": "NoHint",
-          "explanation": "var is not a keyword in rust",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "let",
-              "key": "A"
-            },
-            {
-              "content": "var",
-              "key": "B"
-            },
-            {
-              "content": "impl",
-              "key": "C"
-            },
-            {
-              "content": "mut",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "1ed70de2-99c6-43dd-8793-40ad702d6bff",
-          "type": "SingleChoice",
-          "content": "Which of the following brackets are used as placeholders in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
+          "content": "We take priority in naming struct more than tuples for which of the reason?\n",
+          "hint": "Naming clear up any misunderstanding",
+          "explanation": "Since structs can be a giant group of data we must know what it should contains by looking at the name",
           "answerKeys": [
             "A"
           ],
           "subTopics": [
-            "variables"
+            "structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "{}",
+              "content": "it's clear what the values mean.",
               "key": "A"
             },
             {
-              "content": "[ ]",
+              "content": "it's clear what the function mean.",
               "key": "B"
             },
             {
-              "content": "( )",
+              "content": "it's clear what the struct mean.",
               "key": "C"
             },
             {
-              "content": "< >",
+              "content": "it's clear what the tuples mean.",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "7f129510-4d19-4a62-bae1-34109714fa0e",
+          "uuid": "1f2d87c2-2fcc-4246-9f24-122f6755eb51",
           "type": "SingleChoice",
-          "content": "Constants in rust can be defined in which scope?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Global",
-              "key": "A"
-            },
-            {
-              "content": "Method",
-              "key": "B"
-            },
-            {
-              "content": "Local",
-              "key": "C"
-            },
-            {
-              "content": "All of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "b29fa10c-2efa-478c-8207-2e2a80af8700",
-          "type": "SingleChoice",
-          "content": "Which of the following are the scalar data types present in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "integers, floating-point numbers, booleans, characters",
-              "key": "A"
-            },
-            {
-              "content": "integers, signed numbers, unsigned numbers, booleans, characters",
-              "key": "B"
-            },
-            {
-              "content": "integers, strings, signed numbers, unsigned numbers, booleans",
-              "key": "C"
-            },
-            {
-              "content": "integers, floating-point numbers, strings, booleans",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "775949c1-23b7-42bc-b184-bc755c8d2657",
-          "type": "SingleChoice",
-          "content": "The compound data types supported by rust are-",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Arrays, Lists, Red-Black Trees",
-              "key": "A"
-            },
-            {
-              "content": "Arrays, Lists, Vectors",
-              "key": "B"
-            },
-            {
-              "content": "Arrays, Tuples",
-              "key": "C"
-            },
-            {
-              "content": "Arrays, Maps",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "7fd341f0-4921-4e6e-aa0c-c3897f91d3b2",
-          "type": "SingleChoice",
-          "content": "Which are valid array declarations in rust? \n``` \n       let mut arr : {i64, 3} = [2,3,5];\n       let mut arr : {3,3};\n       let mut arr = [2,3,5];\n ```\n",
-          "hint": "Look for the wrong declaration format, you may or may not find it",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Both a & b",
-              "key": "A"
-            },
-            {
-              "content": "Both b & c",
-              "key": "B"
-            },
-            {
-              "content": "Only a",
-              "key": "C"
-            },
-            {
-              "content": "All a, b, & c",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "75d926cd-6f05-4185-916c-fc6c2b90eecd",
-          "type": "SingleChoice",
-          "content": "Which of the following has low memory usage, const or static?",
-          "hint": "How many of these can we update?",
-          "explanation": "Constant doesn't uses any extra heap memory to update",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "const",
-              "key": "A"
-            },
-            {
-              "content": "static",
-              "key": "B"
-            },
-            {
-              "content": "depends upon the data type",
-              "key": "C"
-            },
-            {
-              "content": "both have the same memory usage",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "a7495120-1470-41d4-aeb2-6d9d7ebd876c",
-          "type": "SingleChoice",
-          "content": "To use dynamic-sized variables, which of the following should be used?",
-          "hint": "No hint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Arrays & Tuples",
-              "key": "A"
-            },
-            {
-              "content": "List all the data types",
-              "key": "B"
-            },
-            {
-              "content": "Sized",
-              "key": "C"
-            },
-            {
-              "content": "Dynamic-Sized variables not supported in rust",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "4c564a7d-28d3-4fca-a06d-f3f3fc419d13",
-          "type": "SingleChoice",
-          "content": "What is the importance of the “type” keyword in rust?",
-          "hint": "Used for another types.",
-          "explanation": "Sets an alias of another type.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "used for dynamic-sized data type",
-              "key": "A"
-            },
-            {
-              "content": "used to create a template",
-              "key": "B"
-            },
-            {
-              "content": "used for user-defined data type",
-              "key": "C"
-            },
-            {
-              "content": "used to set an alias of another type",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d677a228-7f5d-4b5f-8bee-9f40052efafb",
-          "type": "SingleChoice",
-          "content": "What is the importance of Cargo in rust?",
-          "hint": "What is npm used for?",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "package-manager"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Collection of rust libraries",
-              "key": "A"
-            },
-            {
-              "content": "Modules Package manager",
-              "key": "B"
-            },
-            {
-              "content": "Build system and Package manager",
-              "key": "C"
-            },
-            {
-              "content": "Used to create and build UI projects in rust",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2715ab2c-35b3-4e6a-9697-f244c6e23676",
-          "type": "SingleChoice",
-          "content": "How to print the data type of a variable in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": " `std::any::type_name` ",
-              "key": "A"
-            },
-            {
-              "content": " `variable.type_name()` ",
-              "key": "B"
-            },
-            {
-              "content": " `std::intrisic::type_name` ",
-              "key": "C"
-            },
-            {
-              "content": " `std::variable::type_name` ",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "e326751d-bb65-44e4-a6ce-fa62faa96f94",
-          "type": "SingleChoice",
-          "content": "Which type cast preserves the mathematical value in all cases?",
-          "hint": "NoHint",
-          "explanation": "Because they can handle both signed and unsigned values, and are typecasted in one data type only.",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "bit-manupilation"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "i32 as i64",
-              "key": "A"
-            },
-            {
-              "content": "i64 as i32",
-              "key": "B"
-            },
-            {
-              "content": "usize as u64",
-              "key": "C"
-            },
-            {
-              "content": "f64 as f32",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "ffac79fe-2367-42d1-82eb-b6e6127aead5",
-          "type": "SingleChoice",
-          "content": "Which of the following cannot be destructed further into smaller segments?",
-          "hint": "Think of the structures they're built upon ",
-          "explanation": "No explanation",
+          "content": "What is the keyword to start a structure in rust?\n",
+          "hint": "Nohint",
+          "explanation": "The standard keyword is needed to begin a structure just like fn is needed",
           "answerKeys": [
             "B"
           ],
           "subTopics": [
-            "value-types"
+            "structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
+            {
+              "content": "tuples",
+              "key": "A"
+            },
+            {
+              "content": "struct",
+              "key": "B"
+            },
+            {
+              "content": "StruTs",
+              "key": "C"
+            },
+            {
+              "content": "fn",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "c6e8a655-ffa7-4c44-a85c-b8bac238556a",
+          "type": "SingleChoice",
+          "content": "Passing a struct to a function can be achieve with each notation\n",
+          "hint": "Nohint",
+          "explanation": "to access our struct",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "plot notation",
+              "key": "A"
+            },
+            {
+              "content": "not notation",
+              "key": "B"
+            },
+            {
+              "content": "dot notation",
+              "key": "C"
+            },
+            {
+              "content": "rot notation",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "cdb615dd-42eb-4e94-a393-6c5fe3abf981",
+          "type": "SingleChoice",
+          "content": "Rust also supports structs that look similar to tuples, and they are called\n",
+          "hint": "Nohint",
+          "explanation": "It looks like tuples with almost similar feature just as the name implies",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "type-structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "structs",
+              "key": "A"
+            },
+            {
+              "content": "tuple structs",
+              "key": "B"
+            },
+            {
+              "content": "Major struct",
+              "key": "C"
+            },
+            {
+              "content": "Named structs",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "4964a468-beec-47dd-9c31-ccabe918008f",
+          "type": "SingleChoice",
+          "content": "which is best for creating a more complex data types?\n",
+          "hint": "Nohint",
+          "explanation": "sturcts can be missed and used to pass different data and information",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Methods",
+              "key": "A"
+            },
             {
               "content": "Tuples",
-              "key": "A"
-            },
-            {
-              "content": "Traits",
               "key": "B"
             },
             {
-              "content": "Arrays",
+              "content": "Array",
               "key": "C"
             },
             {
@@ -5308,752 +4840,688 @@
           ]
         },
         {
-          "uuid": "1b0a3444-3b86-4e09-8021-f4b66cb2ce09",
+          "uuid": "dd32b17c-32db-4624-b02c-24e4fe7858a7",
           "type": "SingleChoice",
-          "content": "Which comment syntax is not legal?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "<//>",
-              "key": "A"
-            },
-            {
-              "content": "/* */",
-              "key": "B"
-            },
-            {
-              "content": "//!",
-              "key": "C"
-            },
-            {
-              "content": "//",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2f9d0f0d-4670-44d7-b69f-d398ecfb3236",
-          "type": "SingleChoice",
-          "content": "Values of the array can be deleted.",
-          "hint": "NoHint",
-          "explanation": "Values can be updated, but can't be deleted",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "d2af3b88-9912-4729-9673-4101b7ec4765",
-          "type": "SingleChoice",
-          "content": "How do you initialize every element of an array of size 5 with 0?",
-          "hint": "Look at the declarations, don't get confused by the order while declaring",
-          "explanation": "The first argument is the integer you want to initialize an element with, and the second argument tells the end posistion till where you want to pre-initialize.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "`let mut arr : {i32;5} = {5;0};`",
-              "key": "A"
-            },
-            {
-              "content": "`let mut arr : {i32;5} = {0;5};`",
-              "key": "B"
-            },
-            {
-              "content": "`let mut arr : {5;i32} = {5;0};`",
-              "key": "C"
-            },
-            {
-              "content": "`let mut arr : {5;i32} = {0;5};`",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "93c0673c-a86b-4bbb-82b0-3bb77bddab67",
-          "type": "SingleChoice",
-          "content": "Tuples in rust are",
-          "hint": "NoHint",
-          "explanation": "They can handle and store different data types",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "finite heterogeneous compound data types",
-              "key": "A"
-            },
-            {
-              "content": "finite homogeneous compound data types",
-              "key": "B"
-            },
-            {
-              "content": "infinite heterogeneous compound data types",
-              "key": "C"
-            },
-            {
-              "content": "infinite homogeneous compound data types",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "8c7f2429-0db2-4288-bd4a-ef694b39206c",
-          "type": "SingleChoice",
-          "content": "What would be the output of the following code snippet?\n  ```\n    Fn main( ) {\t\n      let mut dodao_io = (\"\"Do\"\", 69, \"\"DAO\"\", 420);\n      println!(\"\"{} \"\", dodao_io );\n      println!(\"\"at 0 index = {} \"\", gfg.0 );\n    } \n  ```\n",
-          "hint": "No Hint",
-          "explanation": "The first print statement should've had {;?}",
+          "content": "What is the output?\n```rust\n    struct Point {\n       x: i32,\n       y: i32,\n      }\n\n    fn main() {\n         let origin = Point { x: 1, y: 0 }; // origin: Point\n\n         println!(\"The origin is at ({}, {})\", origin.x, origin.y);\n    }\n```\n",
+          "hint": "We can call structs like parameter",
+          "explanation": "The aim here is to call the origin points from the point struct",
           "answerKeys": [
             "C"
           ],
           "subTopics": [
-            "value-types",
-            "variables"
+            "structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "(\"Do\", 69, \"DAO\", 420) & Do",
+              "content": " Point { x: 1, y: 0 }",
               "key": "A"
             },
             {
-              "content": "(\"Do\", 69, \"DAO\", 420) only",
+              "content": "  x: 1, y: 0 ",
               "key": "B"
             },
             {
-              "content": "Compilation Error",
+              "content": "The origin is at (0, 1)",
               "key": "C"
             },
             {
-              "content": "(\"Do\", 69, \"DAO\", 420) & “Do”",
+              "content": "The origin is at (1, 0)",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "2f6ce66c-3d34-4fa0-b6f6-188b7aa052b9",
+          "uuid": "9dc7a324-25bd-4a6a-8ade-d45de1112c28",
           "type": "SingleChoice",
-          "content": "What is the process of temporarily making a variable mutable known as?",
-          "hint": "NoHint",
-          "explanation": "No explantion",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Pseudo-mutability",
-              "key": "A"
-            },
-            {
-              "content": "Foreshadowing",
-              "key": "B"
-            },
-            {
-              "content": "Shadowing",
-              "key": "C"
-            },
-            {
-              "content": "Overshadowing",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d8a49f56-5da8-4b71-b18c-e745d5913dee",
-          "type": "SingleChoice",
-          "content": "Which of the following is an example of suffix annotation?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "let a_int: i64 = 20;",
-              "key": "A"
-            },
-            {
-              "content": "let a_int = i6420;",
-              "key": "B"
-            },
-            {
-              "content": "let a_int = 20i64;",
-              "key": "C"
-            },
-            {
-              "content": "None of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "419058bf-87e9-4c18-9b8e-3f96c3c820b3",
-          "type": "SingleChoice",
-          "content": "A. println!(\"1 + 2 = {}\", 1u32 + 2);\nB. println!(\"1 - 2 = {}\", 1u32 + 2);\n",
-          "hint": "Solution being Positive or Negative might make a difference",
-          "explanation": "Here, when initialized, 1 is set as unsigned 32 integer u32. In statement A, it works because  1+2=3, and it's positive. But, 1-2=(-1) and as they were unsigned integers, so they cannot hold a negative value, so this statement doesn't compile\n",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Only A compiles",
-              "key": "A"
-            },
-            {
-              "content": "Only B compiles",
-              "key": "B"
-            },
-            {
-              "content": "Both A & B compile",
-              "key": "C"
-            },
-            {
-              "content": "None of them complies",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d97fc146-6c06-4a5c-a738-93a00cf7214e",
-          "type": "SingleChoice",
-          "content": "What is the output of the following code\n\"``` println!(\"{}\", 1_00u32 + 2_0); ```\"\n",
-          "hint": "NoHint",
-          "explanation": "1_000u32 is similar as 100 of u32 type.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "value-types"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "Compilation Error",
-              "key": "A"
-            },
-            {
-              "content": "Runtime Error",
-              "key": "B"
-            },
-            {
-              "content": "3",
-              "key": "C"
-            },
-            {
-              "content": "120",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "2448d741-4c38-46f3-b681-c3ffb44e54ac",
-          "type": "SingleChoice",
-          "content": "String in standard library has more functionalities coded into it than string slice?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Moderate",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "923d11ba-5c1c-4d48-8101-87ee08e0fa0e",
-          "type": "SingleChoice",
-          "content": "What is the output of the following code\n  ```\n  fn main() {\n    let first_string = \"This is some string \".to_string();\n    let second_string = \"Let's add some Data\";\n\n    let final_string = first_string + &second_string;\n\n    println!(\"First string is: {}\", first_string);   \n    println!(\"Second string is: {}\", second_string);\n\n    println!(\"Finally we have: {}\", final_string);\n  }\n  ```\n",
-          "hint": "NoHint",
-          "explanation": "Syntatical Error in the code snippet",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "strings",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Only 1st print statement shows an output",
-              "key": "A"
-            },
-            {
-              "content": "Only 1st and 2nd print statement shows an output",
-              "key": "B"
-            },
-            {
-              "content": "All the 3 string statements show an output",
-              "key": "C"
-            },
-            {
-              "content": "Error occurs",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "ec5e9c9b-cafa-484e-8feb-51db5a0b7a33",
-          "type": "SingleChoice",
-          "content": "Which of the following operator is used by string slices to reference?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "`&`",
-              "key": "A"
-            },
-            {
-              "content": "`%`",
-              "key": "B"
-            },
-            {
-              "content": "`#`",
-              "key": "C"
-            },
-            {
-              "content": "`*`",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "d0b24301-eda6-49d7-bf45-88777b13e15f",
-          "type": "SingleChoice",
-          "content": "Select the incorrect statement from the following",
+          "content": "By convention, structs begin with a ____\n",
           "hint": "Nohint",
-          "explanation": "No explanation",
+          "explanation": "naming convention",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "capital letter",
+              "key": "A"
+            },
+            {
+              "content": "small letter",
+              "key": "B"
+            },
+            {
+              "content": "underscore",
+              "key": "C"
+            },
+            {
+              "content": "digit",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "b678a8a3-8baa-4a6a-81ae-af64abf54f02",
+          "type": "SingleChoice",
+          "content": "What method can we use to edit a struct?\n",
+          "hint": "Immutable data can become editable",
+          "explanation": "If we add the keyword mut to our struct we can edit it ar any time",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "using the keyword mut",
+              "key": "A"
+            },
+            {
+              "content": "editing them on console",
+              "key": "B"
+            },
+            {
+              "content": "Using tuples",
+              "key": "C"
+            },
+            {
+              "content": "Freezing the cargo",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "0e1eeed5-b5bf-4f25-ad43-d7069a28de7e",
+          "type": "SingleChoice",
+          "content": "What is the output?\n```rust\n  struct Point {\n       x: i32,\n       y: i32,\n        }\n\n  fn main() {\n  let mut point = Point { x: 0, y: 0 };\n\n     point.x = 5;\n\n    println!(\"The point is at ({}, {})\", point.x, point.y);\n  }\n```\n",
+          "hint": "The values in structs are immutable by default",
+          "explanation": "we make struct mutable and can now alter as we please",
           "answerKeys": [
             "D"
           ],
           "subTopics": [
-            "strings"
+            "structs"
           ],
-          "difficultyLevel": "High",
+          "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "Once you get a string slice from a string, then you cannot really                 modify that String anymore",
+              "content": "compilation error",
               "key": "A"
             },
             {
-              "content": "Using slices to work with Strings allows us to add an extra                       security measure.",
+              "content": "The point is at (5)",
               "key": "B"
             },
             {
-              "content": "If you attempt to create a string slice in the middle of a                        multibyte character, your program will exit with an error",
+              "content": "The point is at (0, 5)",
               "key": "C"
             },
             {
-              "content": "String Slice mutably borrows the String itself",
+              "content": "The point is at (5, 0)",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "ef79a0da-3da6-445e-92b5-1d0e17799db6",
+          "uuid": "15836f6c-9374-49fb-a268-5a45c8fbfbbb",
           "type": "SingleChoice",
-          "content": "What will happen at the runtime if overflow occurs?",
-          "hint": "NoHint",
-          "explanation": "The memory stack is full and overflows, so a default panic occurs                 and the program crashes",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "High",
-          "choices": [
-            {
-              "content": "Panic and crashes the program",
-              "key": "A"
-            },
-            {
-              "content": "Garbage values will be output",
-              "key": "B"
-            },
-            {
-              "content": "Those values are ignored and the output is as expected",
-              "key": "C"
-            },
-            {
-              "content": "Overflow is handled already by rust, so it doesn’t occur",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "1b152ab5-6524-49e0-b5c0-8bd5153b1ab1",
-          "type": "SingleChoice",
-          "content": "Character literals are specified using double quotes, as opposed to single quotes which stand for string literals.",
-          "hint": "NoHint",
-          "explanation": "No explanation",
+          "content": "A struct can include __ to indicate that you want to use a copy of some other struct for some of the values\n",
+          "hint": "Struct Update syntax",
+          "explanation": "We can inherit instances of a struct and have a shorter code",
           "answerKeys": [
             "B"
           ],
           "subTopics": [
-            "strings",
-            "value-types"
+            "structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "True",
+              "content": "[]",
               "key": "A"
             },
             {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "b49785fb-dd24-43b5-9f5a-e7dedc98cc5f",
-          "type": "SingleChoice",
-          "content": "Strings size is not known at compile time",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "strings"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "True",
-              "key": "A"
-            },
-            {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "504040ac-6167-4304-8d6e-1e559975bac5",
-          "type": "SingleChoice",
-          "content": "For the following code\n ```  \n   fn main() {\n     let mut x = 2.0;\n     x: i32= 3.0; \n   }\n ```\n",
-          "hint": "type declaration",
-          "explanation": "i32 is intialized as a float data type",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [
-            "value-types",
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "The code compiles without errors",
-              "key": "A"
-            },
-            {
-              "content": "The code has errors because of immutability",
+              "content": "..",
               "key": "B"
             },
             {
-              "content": "The code has errors because of illegal type conversion",
+              "content": "??",
               "key": "C"
             },
             {
-              "content": "The code has errors because of no print and return statements",
+              "content": "{}",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "b0ef2f16-b79d-433a-af54-dc218060ef13",
+          "uuid": "84ed7927-1414-4b7a-8e9c-00ce3286217a",
           "type": "SingleChoice",
-          "content": "If you want to store boolean values with the provision of adding more             values at runtime, the most suitable way would be to use",
-          "hint": "Statically and Dynamic in nature",
-          "explanation": "Vector is a Dynamic nature",
+          "content": "what is the output?\n```rust\n   struct Rectangle {\n      width: u32,\n      height: u32,\n   }\n\n    fn main() {\n      let rect1 = Rectangle {\n         width: 30,\n         height: 10,\n        };\n\n       println!(\n         \"The area of the rectangle is {} square pixels.\",\n          area(&rect1)\n      );\n    }\n\n    fn area(rectangle: &Rectangle) -> u32 {\n     rectangle.width * rectangle.height\n   }\n\n```\n",
+          "hint": "simple area of a rectangular but with structs",
+          "explanation": "we create a struct to store values of the rectangle and called it later",
           "answerKeys": [
-            "C"
+            "D"
           ],
           "subTopics": [
-            "value-types"
+            "structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "Arrays",
+              "content": "The area of the rectangle is 1500 square pixels.",
               "key": "A"
+            },
+            {
+              "content": "The area of the rectangle is 10 square pixels.",
+              "key": "B"
+            },
+            {
+              "content": "The area of the rectangle is 30 square pixels.",
+              "key": "C"
+            },
+            {
+              "content": "The area of the rectangle is 300 square pixels.",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "05015d77-954d-4907-9f77-4b9b3166bb2f",
+          "type": "SingleChoice",
+          "content": "Which of the following is not a type of struct?\n",
+          "hint": "Type of struct",
+          "explanation": "Method is a function, we can implement a method to a struct but its not a type of struct",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "type-structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Unit structs",
+              "key": "A"
+            },
+            {
+              "content": "tuples structs",
+              "key": "B"
+            },
+            {
+              "content": "Method structs",
+              "key": "C"
+            },
+            {
+              "content": "Regular/classic structs",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "d8e80d3e-272c-4deb-a291-4b936d0c16af",
+          "type": "SingleChoice",
+          "content": "The most common type of structs is\n",
+          "hint": "the type of struct you see everytime",
+          "explanation": "Classic struct can have all the data we need unlike the other type",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "type-structs"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Regular/classic",
+              "key": "A"
+            },
+            {
+              "content": "Regulated",
+              "key": "B"
+            },
+            {
+              "content": "Rectangle",
+              "key": "C"
             },
             {
               "content": "Tuples",
-              "key": "B"
-            },
-            {
-              "content": "Vectors",
-              "key": "C"
-            },
-            {
-              "content": "bool type Variables",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "c731455f-5296-4b1f-9aee-46a4f77c25c1",
+          "uuid": "72a2990e-e515-4556-82de-01baaaae74e9",
           "type": "SingleChoice",
-          "content": "BOOLEAN is a type of data type that basically gives a tautology or                fallacy.",
-          "hint": "NoHint",
-          "explanation": "No explanation",
+          "content": "To make a struct public, we can add ___ keyword\n",
+          "hint": "to make it accessible to the public",
+          "explanation": "Without the pub keyword other functions outside the scope will not be able to call it",
           "answerKeys": [
-            "A"
+            "C"
           ],
           "subTopics": [
-            "value-types"
+            "type-structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "True",
+              "content": "Public",
               "key": "A"
             },
             {
-              "content": "False",
-              "key": "B"
-            }
-          ]
-        },
-        {
-          "uuid": "f8497eb4-2e55-4e70-98c9-b395f254f412",
-          "type": "SingleChoice",
-          "content": "What are the categories in which keywords are divided in rust?",
-          "hint": "NoHint",
-          "explanation": "No explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Weak",
-              "key": "A"
-            },
-            {
-              "content": "Strict",
+              "content": "Pub",
               "key": "B"
             },
             {
-              "content": "Reserved",
+              "content": "pub",
               "key": "C"
             },
             {
-              "content": "All of the above",
+              "content": "publi",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "836ae5f7-8e1d-41ad-a0b9-e0ce810cbf93",
+          "uuid": "d217a052-4cd3-4c0e-9233-21bd41f57e15",
           "type": "SingleChoice",
-          "content": "Which of the following can be used as a variable name in rust?",
-          "hint": "NoHint",
-          "explanation": "Rest are keywords in rust",
+          "content": "What type of struct is used below?\n```rust\n    struct Color(i32, i32, i32);\n    struct Point(i32, i32, i32);\n\n    fn main() {\n      let black = Color(0, 0, 0);\n       let origin = Point(0, 0, 0);\n    }\n```\n",
+          "hint": "its variable are nameless",
+          "explanation": "Notice they have a type of field and not a name",
           "answerKeys": [
             "D"
           ],
           "subTopics": [
-            "variables",
-            "keywords"
+            "type-structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "crate",
+              "content": "Unit",
               "key": "A"
             },
             {
-              "content": "match",
+              "content": "Regular",
               "key": "B"
             },
             {
-              "content": "await",
+              "content": "tuplet",
               "key": "C"
             },
             {
-              "content": "tuple",
+              "content": "tuples",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "853bbf17-ceb6-4a7c-9a32-c05f048a9ce6",
+          "uuid": "8a30a85e-b583-4dd3-b1aa-d0c5c25e4a60",
           "type": "SingleChoice",
-          "content": "Identify the wrong set of rust keywords",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [
-            "keywords"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "async, await, where, use",
-              "key": "A"
-            },
-            {
-              "content": "Move, return, mut, while",
-              "key": "B"
-            },
-            {
-              "content": "union, dyn, try, abstract",
-              "key": "C"
-            },
-            {
-              "content": "become, box, do, incur",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "118287fb-f962-4c6a-b7bb-f774e36f02bf",
-          "type": "SingleChoice",
-          "content": "Rust variable names can start with",
-          "hint": "noHint",
-          "explanation": "explanation",
-          "answerKeys": [
-            "A"
-          ],
-          "subTopics": [
-            "variables"
-          ],
-          "difficultyLevel": "Low",
-          "choices": [
-            {
-              "content": "Letter, underscore",
-              "key": "A"
-            },
-            {
-              "content": "Letter, digits",
-              "key": "B"
-            },
-            {
-              "content": "Underscore, digits",
-              "key": "C"
-            },
-            {
-              "content": "All of the above",
-              "key": "D"
-            }
-          ]
-        },
-        {
-          "uuid": "6ffbcd01-5b77-44bd-a9e1-56d3adb81a61",
-          "type": "SingleChoice",
-          "content": "q What is the result of the following calculation in rust \"1.0/0.0\"\n",
-          "hint": "noHint",
-          "explanation": "explanation",
+          "content": "What kind of struct is declared below?\n```rust\n    struct Electron;\n\n    fn main() {\n       let x = Electron;\n     }\n```\n",
+          "hint": " it's like an empty tuple",
+          "explanation": "Unit struct don't have any fields",
           "answerKeys": [
             "B"
           ],
           "subTopics": [
-            "value-types"
+            "type-structs"
           ],
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": "A positive number",
+              "content": "Regular",
               "key": "A"
             },
             {
-              "content": "A negative number",
+              "content": "Unit",
               "key": "B"
             },
             {
-              "content": "An unsigned number",
+              "content": "Tuples",
               "key": "C"
             },
             {
-              "content": "None of the above",
+              "content": "Array",
               "key": "D"
             }
           ]
         },
         {
-          "uuid": "e8c7d69e-3899-43aa-aaec-e45870a32a3f",
+          "uuid": "685b7bb8-5d31-4195-8e19-e20e27f137f2",
           "type": "SingleChoice",
-          "content": "In Rust, every value has its data type. The data type tells the compiler what kind of value it is and how to use it.",
-          "hint": "noHint",
-          "explanation": "No explanation",
+          "content": "How can a tuples be destructed?\n",
+          "hint": "destruct means breaking down item",
+          "explanation": "naming each fields in the tuples since its anonymous",
           "answerKeys": [
             "A"
           ],
           "subTopics": [
-            "typed_language"
+            "destruct"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "assign variable names to fields",
+              "key": "A"
+            },
+            {
+              "content": "assign already declared names to fields",
+              "key": "B"
+            },
+            {
+              "content": "seperate with names and comma",
+              "key": "C"
+            },
+            {
+              "content": "Create a struct and call it",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "add26dd6-b772-436c-9c48-10b62694d605",
+          "type": "SingleChoice",
+          "content": "Destructing a struct is done via\n",
+          "hint": "Destruct of a struct is similar to the destruct of a tuple",
+          "explanation": "Using the field name so we directly call the variable with using the dot notation",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "destruct"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "using the field names",
+              "key": "A"
+            },
+            {
+              "content": "calling the field names",
+              "key": "B"
+            },
+            {
+              "content": "declaring the field names",
+              "key": "C"
+            },
+            {
+              "content": "asigning the field names",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "e729ead8-8940-4f24-8cc4-ea171e5fa10a",
+          "type": "SingleChoice",
+          "content": "What is the symbol use to replace field we dont want when destructing?\n",
+          "hint": "patial destructing",
+          "explanation": "it helps create a more clean code and ignore data you don't want to call at this particular time",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "destruct"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "?",
+              "key": "A"
+            },
+            {
+              "content": "..",
+              "key": "B"
+            },
+            {
+              "content": "::",
+              "key": "C"
+            },
+            {
+              "content": "{}",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "b12e0955-60f5-4bed-b0c6-1cafdc586f2a",
+          "type": "SingleChoice",
+          "content": "what feature allows the creation of a type which may be one of a few different variants.\n",
+          "hint": "it can be one or more data types",
+          "explanation": "Enum uses OR in its method, meaning different of same variant is possible",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "structur",
+              "key": "A"
+            },
+            {
+              "content": "enums",
+              "key": "B"
+            },
+            {
+              "content": "methods",
+              "key": "C"
+            },
+            {
+              "content": "tuples",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "eb6e5869-5d42-4a06-b17f-1d9e4cb98ada",
+          "type": "SingleChoice",
+          "content": "what kind of function is this?\n```rust\n    fn main() {\n      enum Message {\n          Write(String),\n      }\n    let m = Message::Write(\"This is Rust enum constructor\".to_string());\n    }\n```\n",
+          "hint": "we called the enum like a function",
+          "explanation": "we can use this simpler method instead of creating another function",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "enum constructor",
+              "key": "A"
+            },
+            {
+              "content": "Structs function",
+              "key": "B"
+            },
+            {
+              "content": "Methods",
+              "key": "C"
+            },
+            {
+              "content": "function",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "930e2d75-5ae2-4da3-ac9f-83938c3182f3",
+          "type": "SingleChoice",
+          "content": "Rewrite the code below using an enum constructor\n```rust\n      fn bye(x: String) -> Message {\n         Message::Write(x)\n      }\n\n       let x = bye(\"Bye, world\".to_string());\n      }\n```\n",
+          "hint": "You can get rid of the function bye",
+          "explanation": "enums create instances of each variants thereby shorten the code",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "High",
+          "choices": [
+            {
+              "content": "Not possible",
+              "key": "A"
+            },
+            {
+              "content": "let m = Message::Write('Hello, world'.to_string());",
+              "key": "B"
+            },
+            {
+              "content": "need to add enum to the end",
+              "key": "C"
+            },
+            {
+              "content": " fn main() { enum Message { Write(String), } let m = Message::Write( 'Hello, world'.to_string()); }",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "bd089b3e-58cb-49e9-a0ea-728322d0e89c",
+          "type": "SingleChoice",
+          "content": "What logical operator is more realted to enum?\n",
+          "hint": "enum is the opposite of struct",
+          "explanation": "enum can be of one or same variant unlike struct",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "AND",
+              "key": "A"
+            },
+            {
+              "content": "OR",
+              "key": "B"
+            },
+            {
+              "content": "NOT",
+              "key": "C"
+            },
+            {
+              "content": "WITH",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "de34dc7b-8e47-4a6e-a0b8-bc2cca480693",
+          "type": "SingleChoice",
+          "content": "in Rust language, we can use 'Option<T>'enums to fulfil what ____ feature does in other languages\n",
+          "hint": "it is replaced with a sub-enums feature in Rust in returning",
+          "explanation": "null is used to return nothing, we can use Option<T> enum which carry the comcept of null ",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "option-enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Compile",
+              "key": "A"
+            },
+            {
+              "content": "Calldata",
+              "key": "B"
+            },
+            {
+              "content": "struct",
+              "key": "C"
+            },
+            {
+              "content": "null",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "7d50de8d-62bd-4432-baa4-a59d8f5a47a1",
+          "type": "SingleChoice",
+          "content": "What is the syntax of Option<T> enum carrying the null concept?\n",
+          "hint": "It should return nothing",
+          "explanation": "The concept of null was created as a enum and it has nothing to return",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "option-enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "\"\n   enum Option<T> {\n    None,\n     Some(T),\n }\"\n",
+              "key": "A"
+            },
+            {
+              "content": "enums-opt<T>",
+              "key": "B"
+            },
+            {
+              "content": "Option<T>",
+              "key": "C"
+            },
+            {
+              "content": "option<t>",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "c627573e-4d09-4319-af37-73f906198f71",
+          "type": "SingleChoice",
+          "content": "An enums with no varians is called\n",
+          "hint": "it should return zero value but as a enum",
+          "explanation": "it is an empty enum and they cannot be instantiated. ",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "zero-variant enums",
+              "key": "A"
+            },
+            {
+              "content": "none-variant enums",
+              "key": "B"
+            },
+            {
+              "content": "no-variant enums",
+              "key": "C"
+            },
+            {
+              "content": "null-variant enums",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "8416ebd5-b70b-4920-950c-2e9e0cbf4f7f",
+          "type": "SingleChoice",
+          "content": "Below is the syntax of enums\n```rust\n    Enums name_of_enum{\n      variant_1,\n      variant_2,\n      .\n      .\n      variant_n\n    }\n```\n",
+          "hint": "enums syntax",
+          "explanation": "You can have many variants and also follow the proper naming style",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "enums"
           ],
           "difficultyLevel": "Low",
           "choices": [
@@ -6064,65 +5532,693 @@
             {
               "content": "False",
               "key": "B"
+            }
+          ]
+        },
+        {
+          "uuid": "e078c272-7ef5-4d45-b681-92d53c8c83f0",
+          "type": "SingleChoice",
+          "content": "An enum is sometimes called a sum type because\n",
+          "hint": "Matching variant",
+          "explanation": "Enum values are the sum of the sets of values for each variant.",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "it is better than struct",
+              "key": "A"
+            },
+            {
+              "content": "A value of the enum can match any of the variants",
+              "key": "B"
+            },
+            {
+              "content": "it contain many different variants",
+              "key": "C"
+            },
+            {
+              "content": "can be used as functions",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "3f455d3d-6ef0-49af-9ef7-c43a90376b8f",
+          "type": "SingleChoice",
+          "content": "What is the output?\n```rust\n      enum Month_name {\n        January,\n        February,\n        March,\n        April,\n        }\n      fn main() {\n        let apr = Month_name :: January;\n        let feb = Month_name :: February;\n        let mar = Month_name :: March;\n        let jan = Month_name :: April;\n\n         println!(\"{:?}\",jan);\n      }\n```\n",
+          "hint": "showing how enums are declared and called",
+          "explanation": "we can simply call a data from enum into a function using ::",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "enums"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "January",
+              "key": "A"
+            },
+            {
+              "content": "Feburary",
+              "key": "B"
+            },
+            {
+              "content": "March",
+              "key": "C"
+            },
+            {
+              "content": "April",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "00d43344-66e9-4fae-9e96-cbb2732d737d",
+          "type": "SingleChoice",
+          "content": "A ____ is a collection of methods defined for an unknown type: Self\n",
+          "hint": "It is a language feature that communicate with the rust compiler about functionality",
+          "explanation": "it has similar feature as interface to java or abstract classes to C++",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Enums",
+              "key": "A"
+            },
+            {
+              "content": "trait",
+              "key": "B"
+            },
+            {
+              "content": "tuples",
+              "key": "C"
+            },
+            {
+              "content": "structs",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "ba474b08-3be8-4652-a773-deb5cb995374",
+          "type": "SingleChoice",
+          "content": "Traits can be implemented for ____ data type.\n",
+          "hint": "it can be implemented easily",
+          "explanation": "it is like an extension for functionality and can be used everywhere",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "private",
+              "key": "A"
+            },
+            {
+              "content": "immutable",
+              "key": "B"
+            },
+            {
+              "content": "mutable",
+              "key": "C"
+            },
+            {
+              "content": "any",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "f47ec2be-f896-4c82-b82b-d3fc618c0d24",
+          "type": "SingleChoice",
+          "content": "what is the output?\n ```rust\n     struct Dog {\n         name: String,\n         age: u32, \n         owner: String\n         }\n\n\n     // Implementing an in-built trait ToString on the Dog struct\n     impl ToString for Dog {\n       fn to_string(&self) -> String{\n         return format!(\"{} is a {} year old dog who belongs to {}.\", self.name, self.age, self.owner);\n         }\n       }\n\n     fn main() {\n        let dog = Dog{name: \"Fred\".to_string(), age: 3, owner: \"Mary\".to_string()};\n           println!(\"{}\", dog.to_string());\n         }\n ```\n",
+          "hint": "Implementing a trait and inbuilt ToString method",
+          "explanation": "it was implemented on the dog struct and help us added more meaning to out program",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Fred is a dog who belongs to Mary.",
+              "key": "A"
+            },
+            {
+              "content": "Fred is a 3 year old dog who belongs to Mary.",
+              "key": "B"
+            },
+            {
+              "content": "compilation error",
+              "key": "C"
+            },
+            {
+              "content": "Mary dog is 3 years old",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "3c752253-1019-4f90-8d03-72693e380883",
+          "type": "SingleChoice",
+          "content": "The _____ keyword is primarily used to define implementations on types\n",
+          "hint": "you just to shorten the word and you get the keyword",
+          "explanation": "To implement some functionality for a type",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "self",
+              "key": "A"
+            },
+            {
+              "content": "impl",
+              "key": "B"
+            },
+            {
+              "content": "Tostring",
+              "key": "C"
+            },
+            {
+              "content": "All of the above",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "e48e73cd-d564-45c5-a77d-e6c932724a79",
+          "type": "SingleChoice",
+          "content": "What is the syntax for returning a trait-implementing value of some type from position\n",
+          "hint": "It is a keyword just like the impl but for traits",
+          "explanation": "implementation keyword can be used on trait as well which is especially useful in the context of closures and iterators",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "impl Trait",
+              "key": "A"
+            },
+            {
+              "content": "trait",
+              "key": "B"
+            },
+            {
+              "content": "tup",
+              "key": "C"
+            },
+            {
+              "content": "pub",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "1c24de10-db5d-44a8-a82c-86a7ef7f9570",
+          "type": "SingleChoice",
+          "content": "What trait lets us customize what happens when a value is about to go out of scope?\n",
+          "hint": "Nohint",
+          "explanation": "drop trait functionality is almost always used when implementing a smart pointer",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "supertrait",
+              "key": "A"
+            },
+            {
+              "content": "iterator",
+              "key": "B"
+            },
+            {
+              "content": "Clone",
+              "key": "C"
+            },
+            {
+              "content": "Drop",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "cf8f7447-c3fc-4c6a-852a-3da6eed7633d",
+          "type": "SingleChoice",
+          "content": "which other feature restrict types and lifetimes to be used as parameters?\n",
+          "hint": "The other feature that can do this is trait",
+          "explanation": "we use it to ensure that references are valid as long as we need them to be",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "trait-bounds"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "impl",
+              "key": "A"
+            },
+            {
+              "content": "lifetime bounds",
+              "key": "B"
+            },
+            {
+              "content": "struct",
+              "key": "C"
+            },
+            {
+              "content": "supertraits",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "b793c0b8-93b7-4679-9bc2-066c10f4a56a",
+          "type": "SingleChoice",
+          "content": "In a generic function, methods from Trait can be called on\n",
+          "hint": "Nohint",
+          "explanation": "its the rule",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "trait-bounds"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Ty values",
+              "key": "A"
+            },
+            {
+              "content": "Trait values",
+              "key": "B"
+            },
+            {
+              "content": "option values",
+              "key": "C"
+            },
+            {
+              "content": "assosiated values",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "fe23d116-a047-4c0a-bd9a-e45ab98426af",
+          "type": "SingleChoice",
+          "content": "Which of the following is not a bound?\n",
+          "hint": "type of bounds, notice the odd one out",
+          "explanation": "its not a bound it is more similar to struct",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [
+            "trait-bounds"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Copy",
+              "key": "A"
+            },
+            {
+              "content": "Clone",
+              "key": "B"
+            },
+            {
+              "content": "Sized",
+              "key": "C"
+            },
+            {
+              "content": "tuples",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "6ed42e0e-0b4f-4bcb-9427-7d5bf314db11",
+          "type": "SingleChoice",
+          "content": "? is only used alongside _____ bound to relax the implicit for type parameters\n",
+          "hint": "It has a limit and ? help relax it",
+          "explanation": "This help create a relaxed sized with is not the same as an unsized trait",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "trait-bounds"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Sized trait",
+              "key": "A"
+            },
+            {
+              "content": "Sized struct",
+              "key": "B"
+            },
+            {
+              "content": "clone trait",
+              "key": "C"
+            },
+            {
+              "content": "copy trait",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "d64d4576-30e5-47a1-9d24-331299f6a72c",
+          "type": "SingleChoice",
+          "content": "The code below is\n```rust\n      fn main() {\n        pub trait Summarizable {\n            fn summary(&self) -> String;\n     }\n    }\n```\n",
+          "hint": "definiting a trait",
+          "explanation": "defining a trait is different from implementation of a trait",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "A definition of a Summarize trait ",
+              "key": "A"
+            },
+            {
+              "content": "Implemantation of Summarize trait",
+              "key": "B"
+            },
+            {
+              "content": "Calling of Summarize trait",
+              "key": "C"
+            },
+            {
+              "content": "Summarize trait method",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "90fcb73d-ed3c-4f7b-b2b2-bf9f572256da",
+          "type": "SingleChoice",
+          "content": "What feature allow us to presents a single interface for different types of concrete?\n",
+          "hint": "The ability to present data in different form",
+          "explanation": "to create more flexible APIs and more control by reusing code",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [
+            "polymorphism"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "polymorphism",
+              "key": "A"
+            },
+            {
+              "content": "tuples",
+              "key": "B"
+            },
+            {
+              "content": "trait",
+              "key": "C"
+            },
+            {
+              "content": "lifetimes",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "1c8ab3b2-46fc-48d5-ac85-45efdb1183f1",
+          "type": "SingleChoice",
+          "content": "What options for polymorphism exist in Rust?\n",
+          "hint": "Nohint",
+          "explanation": "polymorphism can become complex and Rust only implemented what are needed",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "polymorphism"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Copy and clone",
+              "key": "A"
+            },
+            {
+              "content": "Static and clone",
+              "key": "B"
+            },
+            {
+              "content": "Static and Dynamic",
+              "key": "C"
+            },
+            {
+              "content": "Clone and dynamic",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "77c7fd04-6148-4c45-8260-02a372183e30",
+          "type": "SingleChoice",
+          "content": "While static dispatch choses to create copies of all functions, dynamic dispatch choses to store _____\n",
+          "hint": "Nohint",
+          "explanation": "It store as a dynamic which is a single generics copy",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "polymorphism"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "two copies",
+              "key": "A"
+            },
+            {
+              "content": "only a single copy",
+              "key": "B"
+            },
+            {
+              "content": "copies that are public",
+              "key": "C"
+            },
+            {
+              "content": "dynamic copies",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "25e99a74-7792-451b-855f-19ab02c3d96b",
+          "type": "SingleChoice",
+          "content": "Dynamic dispatch is also known as\n",
+          "hint": "Nohint",
+          "explanation": "it is known as parametric becasue it uses leverage",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [
+            "polymorphism"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "Clone dsispatch",
+              "key": "A"
+            },
+            {
+              "content": "Trait",
+              "key": "B"
+            },
+            {
+              "content": "parametric polymorphism",
+              "key": "C"
+            },
+            {
+              "content": "Maker",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "c56550ab-fdf2-49e8-a013-67d4e83ec1e9",
+          "type": "SingleChoice",
+          "content": "What is a trait ubder another trait called?\n",
+          "hint": "one trait act like a parent",
+          "explanation": "The trait",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [
+            "trait"
+          ],
+          "difficultyLevel": "Low",
+          "choices": [
+            {
+              "content": "subclass",
+              "key": "A"
+            },
+            {
+              "content": "Subtraits",
+              "key": "B"
+            },
+            {
+              "content": "mintrait",
+              "key": "C"
+            },
+            {
+              "content": "Traitpointer",
+              "key": "D"
             }
           ]
         }
       ],
       "readings": [
         {
-          "uuid": "699f89a5-4c2a-4442-afe7-eabc1fb8f5fa",
-          "title": "Introduction to Blockchain Technology",
-          "shortTitle": "Intro Blockchain",
+          "uuid": "1f281079-d174-4036-9ea8-5406bd4ad220",
+          "title": "Struct in Rust",
+          "shortTitle": "struct",
           "type": "YoutubeVideo",
-          "url": "https://www.youtube.com/watch?v=u70_rafPs-0",
+          "url": "https://www.youtube.com/watch?v=n3bPhdiJm9I&ab_channel=Let%27sGetRusty",
           "subTopics": [
-            "variables"
+            "structs"
           ],
-          "details": "This video explains about\n* Point 1\n* Point 2\n"
+          "details": "This video explains\n* Defining/Using Structs\n* Function Constructors\n* Reusing Instance Data\n* Tuple Structs\n* Example Use Case\n* Method Syntax\n* Associated Functions\n"
+        },
+        {
+          "uuid": "2359c52b-8cbc-4a96-a3a3-5ca9bbdb4554",
+          "title": "Enums and Options",
+          "shortTitle": "enums",
+          "type": "YoutubeVideo",
+          "url": "https://www.youtube.com/watch?v=-E2qL4bLDKo&ab_channel=TensorProgramming",
+          "subTopics": [
+            "enums",
+            "option-enums"
+          ],
+          "details": "The video describe\n* Enums\n* Options\n"
+        },
+        {
+          "uuid": "776c3c7e-8045-42f5-8695-39ffc2aff4c2",
+          "title": "Traits and generic types",
+          "shortTitle": "traits",
+          "type": "YoutubeVideo",
+          "url": "https://www.youtube.com/watch?v=B9cHhfspDDE&ab_channel=TensorProgramming",
+          "subTopics": [
+            "trait"
+          ],
+          "details": "This video shows\n* traits\n"
+        },
+        {
+          "uuid": "9e210840-642b-4307-8d5c-5e2f67cc1909",
+          "title": "Generic types and traits",
+          "shortTitle": "traits",
+          "type": "YoutubeVideo",
+          "url": "https://www.youtube.com/watch?v=90zlqYOFeig&ab_channel=TomMcGurl",
+          "subTopics": [
+            "trait",
+            "trait-bounds"
+          ],
+          "details": "This video shows\n* traits\n* generic types\n* deep explanations\n* bounds\n"
+        },
+        {
+          "uuid": "e13c2593-2cd3-4651-b309-6545ae09a4f0",
+          "title": "Rust Polymorphism",
+          "shortTitle": "Polymorphism",
+          "type": "YoutubeVideo",
+          "url": "https://www.youtube.com/watch?v=ywskA8CoulM&ab_channel=timClicks",
+          "subTopics": [
+            "polymorphism"
+          ],
+          "details": "This video addsress\n  * Dispatch\n  * Static\n  * Trait bounds\n  * polymorphic\n"
         }
       ],
       "summaries": [
         {
-          "title": "Typed language",
-          "shortTitle": "Typed language",
-          "key": "typed_language",
-          "details": "- Dynamically-Typed Languages\n  * Dynamically-typed languages are the languages where the interpreter assigns variables a data type at runtime based on the variable's value at that time.\n  * Dynamic languages are usually interpreted (with some pre-processing for optimisation) so it is fast to make changes and then immediately run the updated program.\n  * Dynamically-Typed languages allows for Fast Development Cycles and Fast Start-up times.\n  * Some Examples of Dynamically Typed Languages are:- JavaScript, Python, Perl, Ruby, etc.\n- Statically-Typed Languages\n  * Statically-typed languages are the languages where variable types are known at compile time i.e. the type checking is done at compile time.\n  * Many runtime errors become compile time errors as the compiler ensures that you are writing 'correct' code. This leads to a much smoother development experience.\n  * The execution of the code will be faster compared to the dynamically-typed languages.\n  * The compiler can use the type system to provide language features that are more expressive and succinct.\n  * Some examples of Statically-Typed Languages are:- C++, Rust, C, Java, etc.\n- Rust is a Statically-Typed Language\n"
+          "title": "Structs",
+          "shortTitle": "Structs",
+          "key": "structs",
+          "details": "- Structures aka structs are a group of related variable in one place and unlike an array struct can contain different data types.\n- Each variable in a struct is known as a member.\n- we can put all information about a users in a struct.\n- Structs are similar to tuples Like tuples, the pieces of a struct can be different types. \n- Unlike with tuples, in a struct you'll name each piece of data so it's clear what the values mean.\n- To define a struct, we enter the keyword struct and name the entire struct. \n- A struct's name should describe the significance of the pieces of data being grouped together.\n- To define a struct, we enter the keyword struct and name the entire struct. \n- A struct's name should describe the significance of the pieces of data being grouped together.\n- Inside curly brackets, we define the names and types of the pieces of data, which we call fields\n- for example\n  ```rust\n      struct User {\n           active: bool,\n           username: String,\n           email: String,\n           sign_in_count: u64,\n          }\n            fn main() {}\n  ```\n- To use a struct after we've defined it, we create an instance of that struct by specifying concrete values for each of the fields.\n- To get a specific value from a struct, we use dot notation.\n- If the instance is mutable, we can change a value by using the dot notation and assigning into a particular field.\n- We create an instance by stating the name of the struct and then add curly brackets containing key: value pairs, where the keys are the names of the fields and the values are the data we want to store in those fields.\n- the struct definition is like a general template for the type, and instances fill in that template with particular data to create values of the type\n- for example\n  ```rust\n    fn main() {\n         let user1 = User {\n             email: String::from(\"someone@example.com\"),\n             username: String::from(\"someusername123\"),\n             active: true,\n             sign_in_count: 1,\n           };\n      }\n  ```\n- We can use methods on structure and this way the methods only works with the struct\n- we use the 'impl' keyword to define a method within the context of a structure.\n- The first parameter of a method will be always self, which represents the calling instance of the structure. \n- Lets illustrates\n```rust\n      //define dimensions of a rectangle\n      struct Rectangle {\n         width:u32, height:u32\n      }\n\n      //logic to calculate area of a rectangle\n      impl Rectangle {\n        fn area(&self)->u32 {\n      //use the . operator to fetch the value of a field via the self keyword\n        self.width * self.height\n        }\n      }\n```\n- We can create instances from other instances with Struct Update Syntax\n- The syntax '..' specifies that the remaining fields not explicitly set should have the same value as the fields in the given instance.\n- This help us keep a lesser code as it somehow Inherited what we want it to.\n"
         },
         {
-          "title": "Value Types",
-          "shortTitle": "Value Types",
-          "key": "value-types",
-          "details": "- Rust has two major Data Value Types, which include \n    1. Scalar Types\n    2. Compound ypes\n- Scalar Types\n  * A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point numbers, Booleans, and characters.\n  - Integers\n    * An integer is a number without a fractional component.\n    * An integer can be of the following sizes:- 8-bit, 16-bit, 32-bit, 64-bit, 128-bit, arch.\n    * Integers can be either signed or unsigned. Signed and unsigned refer to whether it’s possible for the number to be negative—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).\n    * Integers can be declared using keyword let, and explicitly defining the variable size and it's type of signed or unsigned integer.\n    * For example, we can declare a 64-bit signed and 32-bit unsigned integer in the following ways respectively :- \n    ```\n        1. let mut x: i64 = -20;\n        2. let mut x: u32 = 20;\n    ```\n    * The isize and usize types depend on the architecture of your build, which is denoted in the table as “arch”: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.\n    * The number literals that can be multiple numeric types allow a type suffix, such as `20u32`, to designate the type. Number literals can also use `_` as a visual separator to make the number easier to read, such as `1_000` , which will have the same value as if you had specified `1000`.\n    - Integer Overflow\n      * Let's say you have a variable of type u8 that can hold values between 0 and 255. If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:- \n        1. When you're compiling in `debug` mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.\n        2. When you're compiling in release mode with the `--release` flag, Rust does not include checks for integer overflow that cause panics. Instead, if overflow occurs, Rust performs two’s complement wrapping.\n  - Floating-Point Types\n    * Floating-Point Types are number with the decimal points.\n    * Floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.\n    * All the Floating-Point Types are signed.\n    * The default Floating-Point Type is of 64-bit.\n    * The `f32` type is a single-precision float, and `f64` has double precision.\n    * We can declare a float type variable in the following ways:- \n     ```\n        fn main() {\n              let x = 2.0; // f64\n              let y: f32 = 3.0; // f32\n        }\n      ```\n  - Boolean Type\n    * There are two possible constant values:- True & False.\n    * Booleans are one byte in size.\n    * They are declared using the keyword 'bool'.\n  - Character Type\n    * Character Data Type doesn't use ASCII values like other programming languages but uses Unicode Scalar Value.\n    * It uses 4 bytes i.e. 32 bits of space for each character rather than 1 byte because of Unicode Scalar Values.\n    * We can use many more types of characters in rust, like, Chinese, emojis, etc.\n- Compound Data Types\n  * Compound types can group multiple values into one type. The two primitive compound types in rust are: Tuples and Arrays.\n  - Tuples\n    * A tuple is a general way of grouping together a number of values with a variety of types into one compound type.\n    * Tuples have a fixed length: once declared, they cannot grow or shrink in size.\n    * Tuples are created by a comma seperated List.\n    * Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.\n    * For Example:- \n      ```\n        fn main() {\n          let tup: (i32, f64, u8) = (500, 6.4, 1);\n        }\n      ```\n    * We can access a tuple element directly by using a period `(.)` followed by the index of the value we want to access\n    * The tuple without any values has a special name knows as \"unit\".\n    * \"unit's\" value and its corresponding type are both written () and represent an empty value or an empty return type. \n    * Expressions implicitly return the unit value if they don’t return any other value. \n  - Arrays\n    * Arrays are a collection of multiple values, stored in a single entity.\n    * Unlike a tuple, every element of an array must have the same data type.\n    * Arrays in Rust have a fixed length, i.e. they are not dynamic in nature by default.\n    * Arrays are useful when you want your data allocated on the stack rather than the memory heap.\n    * For Example:- \n      ```\n        fn main() {\n            let a: [i32; 5] = [1, 2, 3, 4, 5];\n        }\n      ```\n      Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements.\n    *  We can access elements of an array using indexing, like this:\n      ```\n        fn main() {\n            let a = [1, 2, 3, 4, 5];\n        \n            let first = a[0]; // outputs 1\n            let second = a[1]; // outputs 2\n        }\n      ```\n"
+          "title": "Type of Structs",
+          "shortTitle": "Structs type",
+          "key": "type-structs",
+          "details": "- Structs in Rust come in three types: Structs with \n- named fields(regular),\n- tuple structs, and\n- unit structs.\n- Regular/classic structs are the most commonly used. Each field defined within them has a name and a type, and once defined can be accessed.\n- Adding pub to a field makes it visible to code in other modules, as well as allowing it to be directly accessed and modified.\n- Tuple structs are similar to regular structs, but its fields have no names. They are used like tuples, with deconstruction possible.\n- For accessing individual variables, the same syntax is used as with regular tuples, namely foo.0, foo.1, etc, starting at zero.\n- Unit structs are most commonly used as marker. They have a size of zero bytes, but unlike empty enums they can be instantiated, making them isomorphic to the unit type ()\n- Unit structs are useful when you need to implement a trait on something, but don’t need to store any data inside it.\n- examples\n  ```rust\n      fn main() {\n        struct Regular {\n              field1: f32,\n              field2: String,\n              pub field3: bool\n        }\n\n        struct Tuple(u32, String);\n\n        struct Unit;\n        }\n  ```\n"
         },
         {
-          "title": "Variables",
-          "shortTitle": "Variables",
-          "key": "variables",
-          "details": "- Variables are used to store the values of a particular data type\n- Variables and Mutability\n  * In Rust, variables are immutable in nature by default.\n  * When a variable is immutable, once a value is bound to a name, you can’t change that value\n  * To make the variables mutable, we use the keyword:- `mut`.\n  * For Example:-\n    ```\n      fn main() {\n          let mut x = 5;\n          println!(\"The value of x is: {x}\");\n          x = 6;\n          println!(\"The value of x is: {x}\");\n      }\n    ```\n- Constants\n  * Constants are values that are bound to a name and are not allowed to change, i.e. they are also immutable.\n  * Usage of keyword `mut` isn't allowed with constants.\n  * Constants are immutable by default, and also they’re always immutable.\n  * We declare constants using the `const` keyword instead of the `let` keyword, and the type of the value must be annotated.\n  * Constants can be declared in any scope, including the global scope, making them useful for values that many parts of code need to know about.\n  * Constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.\n  * For Example:-\n    ```\n      const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;\n    ```\n"
+          "title": "Destructing",
+          "shortTitle": "destruct",
+          "key": "destruct",
+          "details": "- Destructuring is the process of breaking down items into their component parts, binding each to smaller variables.\n  ```rust\n    let (first, second) = (1, 2);\n  ```\n- Destructuring tuples is simple: just assign new variable names to each field of the tuple:\n   ```rust\n     struct TupleStruct(&'static str, i32);\n     let my_tuple_struct = TupleStruct(\"foo\", 123);\n     let TupleStruct(foo, num) = my_tuple_struct;\n  ```\n- Destructuring structs is similar to destructuring tuple structs. Just use the field names:\n  ```rust\n      struct ArabianNights {\n         name: String,\n         stories: usize,\n       }\n      let teller = ArabianNights { \n      name: \"Scheherazade\".into(),\n      stories: 1001 };\n      {\n      let ArabianNights { name, stories } = teller;\n          println!(\"{} told {} stories\", name, stories);\n        }\n  ```\n  - Now, we access the name, and stories fields using the field names directly:\n  - name instead of ArabianNights.name\n  - stories instead of ArabianNights.age\n  - Note that the name of the variables while destructuring should be the same as the name of the fields.\n- Partial Destructing: The .. operator can be used to ignore some fields when destructuring:\n  ```rust\n      let ArabianNights { name, .. } = teller;\n      println!(\"{} survived by her wits\", name);\n  ```\n- Conditional Destructuring: Destructuring structs and tuples is infallible. However, enums can also be destructured, using the if let, while let, and match language constructs.\n  ```rust\n       if let Some(foo) = foo {\n          println!(\"{:?}\", foo);\n        }\n  ```\n"
         },
         {
-          "title": "Keywords",
-          "shortTitle": "Keywords",
-          "key": "keywords",
-          "details": "- Keywords are predefined, reserved words used in programming that have special meanings to the compiler. Rust divides keywords into three categories:\n    1. Strict\n    2. Reserved \n    3. Weak\n- Strict Keywords\n  * These keywords can only be used in their correct contexts. They cannot be used as the names of: Items, Variables and function parameters, etc.\n  * For Example:- ` mut, break, else, continue, return, impl, etc. ` \n- Reserved Variables\n  * These keywords aren't used yet, but they are reserved for future use. They have the same restrictions as strict keywords.\n  * For Example:- ` abstract, try, do, final, typeof, etc. `\n- Weak Keywords\n  * These keywords have special meaning only in certain contexts.\n  * For example, it is possible to declare a variable or method with the name `union`.\n"
+          "title": "Intro to Enums",
+          "shortTitle": "Enums",
+          "key": "enums",
+          "details": "- An enum is short for enumerations. They look very similar to a struct, but are different.\n- A value of the enum can match any of the variants. For this reason, an enum is sometimes called a ‘sum type’\n- The set of possible values of the enum is the sum of the sets of possible values for each variant.\n- The difference:\n    - Use a `struct` when you want one thing AND another thing.\n    - Use an `enum` when you want one thing OR another thing.\n- Enums are for many choices together.\n- Declaring an enum, write enum and use a code block with the options, separated by commas.\n- We use the :: syntax to use the name of each variant: they're scoped by the name of the enum itself. \n- Enums are useful and more appropriate when working with IP addresses\n- Two major standards are used for IP addresses: version four and version six.\n- Any IP address can be either a version four or a version six address not both and this is a property that makes enums special\n- An enum value can only be one of its variants\n```rust\n    fn main() {\n        struct Ipv4Addr {\n              // --snip--\n        }\n\n        struct Ipv6Addr {\n            // --snip--\n        }\n\n        enum IpAddr {\n         V4(Ipv4Addr),\n         V6(Ipv6Addr),\n            }\n        }\n  ```\n- The code above illustrates that you can put any kind of data inside an enum variant: strings, numeric types, or structs.\n- You can even include another enum!\n- we're also able to define methods on enums.\n- comparing enums and struct below. \n```rust\n  enum Message {\n     Quit,\n     Move { x: i32, y: i32 },\n     Write(String),\n     ChangeColor(i32, i32, i32),\n    }\n\n fn main() {}\n```\n- The struct equivalent is\n```rust\n  struct QuitMessage; // unit struct\n  struct MoveMessage {\n        x: i32,\n        y: i32,\n    }\n  struct WriteMessage(String); // tuple struct\n  struct ChangeColorMessage(i32, i32, i32); // tuple struct \n\n```\n- We can also create an enum with no variants. These are known as zero-variant enums, and we cannot instantiate them.\n- define below\n  ```rust\n      enum ZeroEnum {}\n  ```\n- We cannot cast zero variant enums to other types.\n"
         },
         {
-          "title": "Bit Manipulation",
-          "shortTitle": "Bit Manipulation",
-          "key": "bit-manupilation",
-          "details": "- Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result.\n- Bit Mnipulation is strictly done by rust compilers for storing data in variables, for two's compliment and many other purposes.\n"
+          "title": "Option Enum and over null",
+          "shortTitle": "Enums",
+          "key": "option-enums",
+          "details": "- Option is another enum defined by the standard library.\n- The Option type encodes the very common scenario in which a value could be something or it could be nothing.\n- When used properly this functionality can prevent bugs that are extremely common in other programming languages.\n- Rust doesn’t have the null feature that many other languages have.\n- The problem with null values is that if you try to use a null value as a not-null value, you’ll get an error of some kind.\n- Rust does not have nulls, but it does have an enum that can encode the concept of a value being present or absent. \n- This enum is Option<T> which is define as\n```rust   \n    #![allow(unused)]\n    fn main() {\n        enum Option<T> {\n          None,\n          Some(T),\n          }\n      }\n```\n- The Option<T> enum is so useful that it’s even included in the prelude; you don’t need to bring it into scope explicitly.\n- Its variants are also included in the prelude: you can use Some and None directly without the Option:: prefix\n- The Option<T> enum is still just a regular enum, and Some(T) and None are still variants of type Option<T>\n- Example of using Option values to hold number types and string types:\n```rust\n    fn main() {\n      let some_number = Some(5);\n      let some_char = Some('e');\n\n      let absent_number: Option<i32> = None;\n    }\n```\n"
         },
         {
-          "title": "Strings",
-          "shortTitle": "Strings",
-          "key": "strings",
-          "details": "- There are two types of strings in Rust: `String` and `&str`.\n- String\n  * Strings are formed by a list of characters, which is really an \"array of characters\".\n  * A String is stored as a vector of bytes `(Vec<u8>)`.\n  * A String is made up of three components: a pointer to some bytes, a length, and a capacity.\n  * The pointer points to an internal buffer String uses to store its data.\n  * The length is the number of bytes currently stored in the buffer, and the capacity is the size of the buffer in bytes. As such, the length will always be less than or equal to the capacity.\n  * The buffer is always stored on the heap.\n  * It is guaranteed to always be a valid `UTF-8` sequence. \n  * String is heap allocated, growable and not null terminated.\n  * We can create a String from a literal string with `String::from`\n  * We can append a char to a String with the push method, and append a &str with the `push_str` method\n- &str\n  * The str type, also called a 'string slice', is the most primitive string type.\n  * A &str is made up of two components: a pointer to some bytes, and a length.\n  * `&str` is `(&[u8])` that always points to a valid UTF-8 sequence.\n  * It can be used to view into a String, just like `&[T]` is a view into `Vec<T>`.\n"
+          "title": "Traits",
+          "shortTitle": "Traits",
+          "key": "trait",
+          "details": "- A trait defines functionality a particular type has and can share with other types.\n- We can use trait bounds to specify that a generic type can be any type that has certain behavior.\n- To implement a trait, declare an impl block for the type you want to implement the trait for.\n- The syntax is impl <trait> for <type>. \n- To define a trait, we use the trait keyword:\n```rust\n    trait WithName {\n         fn new(name: String) -> Self;\n\n         fn get_name(&self) -> &str;\n\n         fn print(&self) {\n           println!(\"My name is {}\", self.get_name())\n               }\n          }\n  ```\n  -  While most traits exist to share behavior, Rust also has something called marker traits.\n  - In a trait definition, we have access to a special type: Self.\n  - Self is a special keyword that is only available within type definitions, trait definitions, and impl blocks.\n  - We can use traits as function parameters to allow the function to accept any type that can do x, where x is some behavior defined by a trait.\n  - We can also use trait bounds to refine and restrict generics, such as by saying we accept any type T that implements a specified trait.\n  - Consider these two functions:\n  ```rust\n      use std::fmt::Debug;\n\n      fn f(a: &Debug, b: &Debug) {\n            todo!()\n      }\n\n      fn g<T: Debug>(a: &T, b: &T) {\n            todo!()\n      }\n  ```\n  - The function f will accept any two arguments that implement the Debug trait, even if they are two different types. \n  - On the other hand, g will only accept two arguments of the same type, but that type can be any type that implements Debug.\n  - We can use traits as return types from functions. There are two different ways to do this: impl Trait and Box<dyn Trait>. \n  - You may want to use multiple traits together. This is what’s known as a trait combo.\n  - Rust has a way to specify that a trait is an extension of another trait, giving us something similar to subclassing in other languages. we call them subtraits\n  - Generics traits can do anything associated types can.\n  - Although associated types constrains the implementing type to only have a single implementation of this trait. \n  - This is useful in a number of situations, such as in the Iterator and Deref traits.\n  - Traits can also have associated constants. \n  - This is less common than trait methods, but is not without its uses.\n  - Sometimes, implementing a trait requires implementing another trait:\n  - Inherited traits looks like this\n  ```rust     \n    #![allow(unused_variables)]\n    fn main() {\n       trait Foo {\n    fn foo(&self);\n      }\n    trait FooBar : Foo {\n     fn foobar(&self);\n      }\n      struct Baz;\n\n      impl Foo for Baz {\n      fn foo(&self) { println!(\"foo\"); }\n        }\n\n      impl FooBar for Baz {\n      fn foobar(&self) { println!(\"foobar\"); }\n      }\n    }\n  ```\n  - Drop trait lets us customize what happens when a value is about to go out of scope.\n  - The Iterator trait implements the iterators over collections such as arrays.\n  - Clone trait is for types that can make copies of themselves\n  -\n"
         },
         {
-          "title": "Package Manager",
-          "shortTitle": "Package Manager",
-          "key": "package-manager",
-          "details": "- A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.\n- Cargo is the Rust package manager.\n"
+          "title": "Traits and bounds",
+          "shortTitle": "Traits bounds",
+          "key": "trait-bounds",
+          "details": "- Trait and lifetime bounds provide a way for generic items to restrict which types and lifetimes are used as their parameters.\n- Bounds can be provided on any type in a where clause. \n- There are also shorter forms for certain common cases:\n  * Bounds written after declaring a generic parameter: fn f<A: Copy>() {} is the same as fn f<A> where A: Copy () {}.\n  * In trait declarations as bounds on associated types: trait A { type B: Copy; } is equivalent to trait A where Self::B: Copy { type B; }\n- Bounds on an item must be satisfied when using the item\n- Bounds that don't use the item's parameters or higher-ranked lifetimes are checked when the item is defined. \n- Lifetime bounds can be applied to types or to other lifetimes. \n- The bound 'a: 'b is usually read as 'a outlives 'b. 'a: 'b means that 'a lasts at least as long as 'b, so a reference &'a () is valid whenever &'b () is valid.\n- Type bounds may be higher ranked over lifetimes. \n- These bounds specify a bound that is true for all lifetimes. \n- We can also specify multiple trait bounds to a generic type using the + symbol.\n```rust\n    impl<K: Hash + Eq, V> HashMap<K, V, RandomState>\n```\n- We can also combine traits to create a new traits.\n- Debug is implemented by most standard library types and is a very convenient way to get a developer-friendly string representation of your types\n- Defining Display for your own types is straightforward but needs to be explicit, since the compiler cannot reasonably guess what the output format must be (unlike with Debug)\n- The write! macro is a relative of our friend println! where the first parameter is anything that implements Write\n- Any type that implements Display automatically implements ToString\n- Default is easy to implement for your own structs, providing the type of each field implements Default\n- An important pair of traits is From/Into.\n- From (and its mirror image Into) describe how distinct types are converted into each other\n- Copy, Clone, and Sized bounds are also checked for certain generic types when using the item, even if the use does not provide a concrete type.\n- Clone describes how a new value of the same type can be created.\n- To clone a string involves allocating that buffer and copying the original bytes into it. \n- Copy is a marker trait (there are no methods to implement) which says that a type may be copied by just moving bits\n- ? is only used to relax the implicit Sized trait bound for type parameters or associated types.\n"
+        },
+        {
+          "title": "Polymorphism using trait objects",
+          "shortTitle": "Polymorphism",
+          "key": "polymorphism",
+          "details": "- polymorphism gives us the ability to present a single interface for potentially many different concrete types\n- There are several practical advantages to using polymorphism, but one of the biggest is code re-use.\n- Polymorphism allows us to create functions that accept any type, as long as those types exhibit certain behaviors or properties that we need them to have.\n- There are two primary ways, and both of these have trade-offs to consider when it comes to performance as well as binary size:\n    - Static Dispatch - this approach leverages generics (also called parametric polymorphism) and (usually) trait bounds to provide the flexibility we need while still maintaining full type safety, and without requiring a lot of duplicate code\n    - Dynamic Dispatch - this approach uses “trait objects” to punt the decision of which type is required to satisfy some kind of polymorphic interface to runtime.\n- we can define a generic type in the function signature, and then reference that type for one of the parameters:\n  ```\n    fn static_dispatch<T: Growler>(t: T) {\n           t.growl();\n        }\n  ```\n- Dynamic dispatch can be characterized as the opposite of static dispatch.\n- Where static dispatch choses to create copies of all functions that use generic parameters and store these in the binary, dynamic dispatch choses to store only a single copy, but then calculates the necessary concrete implementation at runtime.\n- In Rust, this approach leverages “Trait Objects” to achieve polymorphism\n- Trait bounds is an optional constraint you can add to generic parameters.\n- Trait objects actually cannot be used with generics at all, and instead are the required method for performing dynamic dispatch in Rust\n"
         }
       ]
     },

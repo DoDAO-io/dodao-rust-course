@@ -15,19 +15,6 @@
     * Method Syntax
     * Associated Functions
 
-- uuid: 7ce2ec52-45db-4100-a7f4-4d0dfbfaf598
-  title: Destructing
-  shortTitle: destruct
-  type: Article
-  url: https://exercism.org/tracks/rust/concepts/destructuring
-  subTopics:
-    - "destruct"
-  details: |
-    This articles describle
-      * Destructing
-      * destructing tuple, stuct 
-      * Partial and Conditional destructing
-
 - uuid: 2359c52b-8cbc-4a96-a3a3-5ca9bbdb4554
   title: Enums and Options
   shortTitle: enums
@@ -40,19 +27,6 @@
     The video describe
     * Enums
     * Options
-
-- uuid: 2eb7a446-64a8-49b8-8a5a-ef57faa3acdd
-  title: Rust traits- A deep dive
-  shortTitle: traits
-  type: Article
-  url: https://blog.logrocket.com/rust-traits-a-deep-dive/
-  subTopics:
-    - "trait"
-  details: |
-    This articles touched
-    * Traits
-    * implementing traits
-    * Use of traits
 
 - uuid: 776c3c7e-8045-42f5-8695-39ffc2aff4c2
   title: Traits and generic types
@@ -79,18 +53,6 @@
     * generic types
     * deep explanations
     * bounds
-
-- uuid: d6f29136-2811-4d63-a0eb-8ba59de9ab22
-  title: The common Rust traits
-  shortTitle: trait-bounds
-  type: Article
-  url: https://stevedonovan.github.io/rustifications/2018/09/08/common-rust-traits.html
-  subTopics:
-    - "trait-bounds"
-  details: |
-    The articles talks about
-      * Trait
-      * standard library of Trait
 
 - uuid: e13c2593-2cd3-4651-b309-6545ae09a4f0
   title: Rust Polymorphism

@@ -40,8 +40,8 @@ This chapter covers all the important object oriented programming concepts with 
 
 
 ## Links
-[Reading List](./../../generated/readings/data_types.md)
+[Reading List](./../../generated/readings/oops.md)
 
-[Summary](./../../generated/summaries/data_types.md)
+[Summary](./../../generated/summaries/oops.md)
 
-[Questions](./../../generated/questions/data_types.md)
+[Questions](./../../generated/questions/oops.md)

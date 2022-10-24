@@ -146,9 +146,9 @@ topics:
           5. Polymorphism using trait objects 
             a. Dispatch
             b. Trait Objects
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+    readings: oops.yaml
+    summaries: oops.yaml
+    questions: oops.yaml
     status: In Progress
     completionWeek: July 18
 
