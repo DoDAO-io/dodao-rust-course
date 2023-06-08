@@ -1,4 +1,4 @@
-title: Rust Course (In Progress)
+title: Rust Course (work in progress)
 key: rust-course
 summary: |
   Smart contracts allow users to implement conditions, rules and policies of the blockchain applications. 
@@ -146,9 +146,9 @@ topics:
           5. Polymorphism using trait objects 
             a. Dispatch
             b. Trait Objects
-    readings: data_types.yaml
-    summaries: data_types.yaml
-    questions: data_types.yaml
+    readings: oops.yaml
+    summaries: oops.yaml
+    questions: oops.yaml
     status: In Progress
     completionWeek: July 18
 
@@ -194,8 +194,10 @@ topics:
     details: |
       This chapter talks about various popular pre-written Data Structures that are available in rust.
        - Vec<T>
-       - String
-       - HashMap<K, V>
+       - HashMap<T>
+       - HashSet<T>
+       - VecDeque<T>
+       - LinkedList<T>
     readings: collections.yaml
     summaries: collections.yaml
     questions: collections.yaml

@@ -1,0 +1,69 @@
+- uuid: 1f281079-d174-4036-9ea8-5406bd4ad220
+  title: Struct in Rust
+  shortTitle: struct
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=n3bPhdiJm9I&ab_channel=Let%27sGetRusty
+  subTopics:
+    - "structs"
+  details: |
+    This video explains
+    * Defining/Using Structs
+    * Function Constructors
+    * Reusing Instance Data
+    * Tuple Structs
+    * Example Use Case
+    * Method Syntax
+    * Associated Functions
+
+- uuid: 2359c52b-8cbc-4a96-a3a3-5ca9bbdb4554
+  title: Enums and Options
+  shortTitle: enums
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=-E2qL4bLDKo&ab_channel=TensorProgramming
+  subTopics:
+    - "enums"
+    - "option-enums"
+  details: |
+    The video describe
+    * Enums
+    * Options
+
+- uuid: 776c3c7e-8045-42f5-8695-39ffc2aff4c2
+  title: Traits and generic types
+  shortTitle: traits
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=B9cHhfspDDE&ab_channel=TensorProgramming
+  subTopics:
+    - "trait"
+  details: |
+    This video shows
+    * traits
+
+- uuid: 9e210840-642b-4307-8d5c-5e2f67cc1909
+  title: Generic types and traits
+  shortTitle: traits
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=90zlqYOFeig&ab_channel=TomMcGurl
+  subTopics:
+    - "trait"
+    - "trait-bounds"
+  details: |
+    This video shows
+    * traits
+    * generic types
+    * deep explanations
+    * bounds
+
+- uuid: e13c2593-2cd3-4651-b309-6545ae09a4f0
+  title: Rust Polymorphism
+  shortTitle: Polymorphism
+  type: YoutubeVideo
+  url: https://www.youtube.com/watch?v=ywskA8CoulM&ab_channel=timClicks
+  subTopics:
+    - "polymorphism"
+  details: |
+    This video addsress
+      * Dispatch
+      * Static
+      * Trait bounds
+      * polymorphic
