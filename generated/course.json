@@ -12,12 +12,14 @@
   ],
   "publishStatus": "Live",
   "thumbnail": "https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/Rust/rust-logo-512x512.png",
+  "courseAdmins": [],
   "topics": [
     {
       "title": "Your First Solana Smart Contract",
       "key": "first-smart-contract",
       "details": "This chapter introduces you to the world of solana smart contracts written in rust. Covered topics in this chapter\n - Introduction to a simple smart contract\n - Explanation of the whole smart contract\n - Project Management with Cargo Crates\n    1. Installing Cargo\n    2. Packages and Crates\n    3. toml and Project formats\n    4. Cargo Commands\n",
       "order": 0,
+      "explanations": [],
       "questions": [
         {
           "uuid": "ab88a2ab-c80b-49f5-9ea0-b5ed8e4933b1",
@@ -1471,6 +1473,7 @@
       "key": "first-smart-contract",
       "details": "This chapter covers all in-depth knowledge about variables, mutability, and the various data types available in rust. Covered topics in this chapter\n - Variables and Immutability\n    1. How to declare variables\n    2. How mut works\n    3. Constants\n    4. Shadowing\n - Different Data Types\n    1. Scalar Data Types\n    2. Compound Data Types\n - Scalar Data Type\n    1. Integer Types\n      a. Signed and Unsigned Integers\n      b. Allowed integer sizes in rust\n      c. Declaration and Rules for Integers\n    2. Floating-Point Types\n      a. Types of Floating-points available\n      b. Declaration and Rules for Floating-Points\n    3. Boolean Types\n      a. Types of booleans\n      b. Declaration and Rules\n    4. Characters\n      a. ASCII vs Unicode Scalar Values\n      b. How character types in rust are different\n  - Compound Data Types\n    1. Arrays\n      a. When and how to use Arrays\n      b. Declaration and general rules for Arrays\n    2. Tuples\n      a. When and how to use Tuples\n      b. Declaration and general rules for Tuples\n      c. Difference between Arrays and Tuples.\n  - Strings\n    1. UTF8 set\n    2. Owned Strings: \"String\"\n    3. String Slice: \"&str\"\n    4. Difference between \"String\" and \"&str\"\n",
       "order": 1,
+      "explanations": [],
       "questions": [
         {
           "uuid": "ab88a2ab-c80b-49f5-9ea0-b5ed8e4933b1",
@@ -2924,6 +2927,7 @@
       "key": "control-flow-functions",
       "details": "This chapter talks in-depth about the conditional statements, for and while loops, functions in rust, and Error handling.\n - Conditional Statements\n    1. If-Else statements\n    2. Nested If-Else, nested If statements\n    3. Match, pattern matching\n - Loops\n    1. For Loops\n      a. Nested for loops, range-based for loops\n    2. While Loops\n - Functions\n    1. Parameters, Statements\n    2. Functions with Return Values\n - Error Handling\n    1. Recoverable Errors\n      a. Option\n      b. Result\n    2. Combinators\n      a. Using combinators on Options and Results\n      b. Conversion between Options and Results\n    3. Early Returns and \"?\" operator\n    4. Non-recoverable errors\n      a. Panics\n    5. Custom Errors\n",
       "order": 2,
+      "explanations": [],
       "questions": [
         {
           "uuid": "0111a385-b650-4db6-a8ae-434b6d26c36e",
@@ -4678,6 +4682,7 @@
       "key": "oops",
       "details": "This chapter covers all the important object oriented programming concepts with rust.\n - Structs\n    1. Introduction and Defining a Struct\n    2. Different types of structs\n      a. Classic\n      b. Tuple\n      c. Unit\n    3. Creating new instances of a struct\n    4. Destructing\n - Enums\n    1. Introduction and Defining Enums\n    2. Declaring Enums using types\n    3. Option and Result type Enums\n      a. Option Enum Advantages over NULL values\n    4. Difference between Enums and Strcuts\n - Traits\n    1. Introduction and Defining Traits\n    2. Different Types of Traits\n      a. Marker\n      b. Simple\n      c. Generic\n      d. Associated\n      e. Inherited\n    3. Trait Bounds\n      a. Trait Bounds on types\n      b. on generic functions, \n      c. on impl blocks, \n      d. ‘+’ to compose trait bounds\n    4. Standard Library Traits\n    5. Polymorphism using trait objects \n      a. Dispatch\n      b. Trait Objects\n",
       "order": 3,
+      "explanations": [],
       "questions": [
         {
           "uuid": "942b0b68-a5ae-44bb-9dfc-88010ae3284b",
@@ -6227,6 +6232,7 @@
       "key": "owner-borrow",
       "details": "This chapter introduces the high level memory management and safety with ownership and borrowing.\n - Memory Allocation and Memory Types\n    1. Stacks\n    2. Heaps\n    3. Memory alignment\n    4. Std::mem modules\n - How Rust’s Memory Mode is different from others\n - Ownership\n    1. What is Ownership in rust\n    2. What are Scopes\n    3. Move and Copy Semantics\n - Duplicating Types via Traits\n    1. Copy\n    2. Clone\n - Ownership and Memory Safety\n    1. Dangling Pointers\n    2. Double Free\n    3. Memory Leaks\n - Borrowing\n    1. Borrowing rules\n    2. References and multiple references\n    3. Dangling References\n    4. Method types using borrowing\n - Lifetimes\n    1. Parameters\n    2. Lifetime rules\n    3. Multiple lifetimes\n    4. Lifetime in impl blocks\n",
       "order": 4,
+      "explanations": [],
       "questions": [
         {
           "uuid": "e1ccd55d-91f0-48ad-9ec5-9aa3fcf3c241",
@@ -6679,6 +6685,7 @@
       "key": "collections",
       "details": "This chapter talks about various popular pre-written Data Structures that are available in rust.\n - Vec<T>\n - HashMap<T>\n - HashSet<T>\n - VecDeque<T>\n - LinkedList<T>\n",
       "order": 5,
+      "explanations": [],
       "questions": [
         {
           "uuid": "1469d4ec-d02a-4a3c-83a6-cbe9f2fb7fe7",
@@ -7047,6 +7054,7 @@
       "key": "point-iter",
       "details": "This chapter explains about pointers and iterators in detail.\n - Reference type pointers\n - Raw Pointers\n - Smart Pointers \n    1. Types\n    2. Drop\n    3. Deref and DerefMUT\n - Uses of Interior Mutability\n - Introduction to Iterators\n - Uses and advantages of Iterators\n",
       "order": 6,
+      "explanations": [],
       "questions": [
         {
           "uuid": "ab88a2ab-c80b-49f5-9ea0-b5ed8e4933b1",
